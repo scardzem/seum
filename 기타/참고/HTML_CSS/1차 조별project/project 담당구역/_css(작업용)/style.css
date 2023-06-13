@@ -1,0 +1,464 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+#home {
+    background-color: #E9E5DC;
+}
+
+.wrapper {
+    width: 1100px;
+    min-width: 1100px;
+    height: 100vh;
+    min-height: 929px;
+    margin: 0 auto;
+    /* background-color: aquamarine; */
+    /* padding: 0 4%; */
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.left {
+    /* background-color: blue; */
+    width: 35%;
+    border: 2px lightgrey solid;
+    box-sizing: border-box;
+}
+
+.right {
+    /* background-color: rgb(42, 140, 165); */
+    width: 65%;
+    border-style: solid;
+    border-color: lightgrey;
+    border-width: 2px 2px 2px 0px;
+    box-sizing: border-box;
+}
+
+.logo {
+    /* background-color: red; */
+    width: 100%;
+    height: 15%;
+    border-style: solid;
+    border-color: lightgrey;
+    border-width: 0px 0px 0px 0px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+
+.logo img {
+    width: 221px;
+    height: 138px;
+}
+
+.category {
+    /* background-color: orange; */
+    width: 100%;
+    height: 15%;
+    border-style: solid;
+    border-color: lightgrey;
+    border-width: 0px 0px 0px 0px;
+    box-sizing: border-box;
+    /* border-bottom-right-radius: 30px; */
+}
+
+.category img {
+    width: 100px;
+    height: 100px;
+}
+
+.category div {
+    list-style: none;
+    display: flex;
+    justify-content:space-between center;
+    box-sizing: border-box;
+    padding-top: 15px;
+    padding-left: 20px;
+}
+
+.category button {
+    
+    border-radius: 15px;
+    margin-right: 20px;
+}
+
+.beer {
+    background-color: orange;
+}
+
+.yangju {
+    background-color: rgb(182, 84, 28);
+}
+
+.wine {
+    background-color: brown;
+}
+
+.soju {
+    background-color: green;
+}
+
+.nav {
+    /* background-color: yellow; */
+    width: 100%;
+    height: 22%;
+    border-style: solid;
+    border-color: lightgrey;
+    border-width: 0px 0px 0px 0px;
+    box-sizing: border-box;
+}
+
+.nav div {
+    display: block;
+    box-sizing: border-box;
+    height: 65px;
+    /* border-bottom: 2px solid lightgrey; */
+    padding: 10px;
+    padding-left: 25px;
+    display: flex;
+    align-items: center;
+    /* border-bottom-right-radius: 30px; */
+    
+}
+
+.nav img {
+    display: inline;
+    border-radius: 20%;
+    /* border: 1px solid grey; */
+    margin-right: 20px;
+    width: 35px;
+}
+
+.profile img {
+    width: 32px;
+    margin-right: 23px;
+}
+
+.nav p {
+    display: inline;
+    font-size: 30px;
+    /* margin-bottom: 40px; */
+    vertical-align: 10px;
+}
+
+.chat {
+    /* background-color: green; */
+    width: 100%;
+    height: 48%;
+    /* border: 1px grey solid; */
+    display:flex;
+    align-items: baseline;                   /*align 수정함 center-> baseline*/
+    justify-content: center;
+}
+
+.chatwrap {
+    /*background-color:rgba(135, 180, 197, 0.596);*/
+    background-color: #E9E5DC;
+    width: 92%;
+    height: 98%;
+    border-radius: 10px;
+    border: 2px solid #dfd4bd;
+}
+
+#search {
+    width: 100%;
+    height: 12%;
+    border-style: solid;
+    border-color: lightgrey;
+    border-width: 0px 0px 2px 0px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+    align-items: center;
+}
+
+.searchwrap {
+    width: 600px;
+    height: 70px;
+    /* background-color: blue; */
+    display: flex;
+    align-items: center;
+}
+
+.searchwrap img{
+    width: 65%;
+}
+
+#search .icon {
+    width: 60px;
+    height: 60px;
+    background-color: rgb(206, 206, 206);
+    margin-left: 5px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#search .input {
+    width: 85%;
+    height: 60px;
+    background-color: rgb(230, 230, 230);
+    border: 2px solid rgb(206, 206, 206);
+    border-radius: 0px 10px 10px 0px;
+    display: flex;
+    align-items: center;
+}
+
+.input input {
+    height: fit-content;
+    font-size: 30px;
+    margin-left: 20px;
+}
+
+.content {
+
+}
+
+/*
+----------------------------------------------------------성훈----------------------------------------------------------
+
+*/
+/* main */
+.first{
+    width:1100px;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 0;
+    min-height:900px;
+    vertical-align: middle;
+}
+
+.second{
+    width:100%;
+    height:15%;
+    /*border-bottom: 2px lightgray solid;*/
+    margin-bottom:3%;
+}
+
+.third{
+    width:100%;
+    height:78vh;
+    padding: 0 20px;
+}
+
+
+/* main_page */
+/*
+.logo{
+    width: 221px;
+    height: 138px;
+    margin-top: 0px;
+    margin-bottom:30px;
+}
+*/
+
+.middle{
+    width:100%;
+    height:50%;
+    display:grid;
+    gap:10px;
+    /*grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));*/
+    grid-template-columns: repeat(3, 1fr);
+
+}
+
+.middle img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5%;
+}
+
+.middle .item {
+    width:100%;
+    height:100%;
+}
+
+
+.middle .item img{
+    vertical-align: middle;
+}
+
+.item{
+    /*max-width:200px;*/
+    margin:0 auto;
+}
+
+.item img{
+    display: block; 
+    margin: 0px auto;
+}
+
+.bottom{
+    height: 50%;
+    /*border-top: lightgray 2px solid;*/
+    padding: 25px 0 0 0;
+    margin-top: 20px;
+}
+
+.bottom img{
+    border-radius:20%;
+    max-width: 80%
+    
+}
+
+/*
+강사님 도움
+grid속성 지우고 flex로 바꿔서 정렬함
+justify-content는 flex 주축방향에 대해서 정렬
+align-items는 주축이 아닌 방향에 대해서 정렬하는 명령어
+justify랑 align은 정렬이 flex일 때 쓰는 거라고 함
+*/
+.main-nav{
+    height: 90%;
+    padding: 0 50px;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.beer1 {
+    background-color: rgba(255, 166, 0, 0.7);
+}
+
+.yangju1 {
+    background-color: rgba(182, 84, 28, 0.7);
+}
+
+.wine1 {
+    background-color: rgba(165, 42, 42, 0.7);
+}
+
+.soju1 {
+    background-color: rgba(0, 128, 0, 0.7);
+}
+
+.main-nav img{
+    vertical-align: bottom;
+}
+
+
+
+/*chat*/
+.chat {
+    /* background-color: green; */
+    width: 100%;
+    height: 48%;
+    /* border: 1px grey solid; */
+    display:flex;
+    align-items: baseline;                   /*align 수정함 center-> baseline*/
+    justify-content: center;
+}
+
+.chatwrap {
+    /*background-color:rgba(135, 180, 197, 0.596);*/
+    background-color: #E9E5DC;
+    width: 92%;
+    height: 98%;
+    border-radius: 10px;
+    border: 3px solid #dfd4bd;
+}
+
+.chatbox{
+    margin:15px 0 15px 15px;
+    width:90%;
+    height:50px;
+    background-color: #dfd4bd;
+    border-radius: 10px;
+    border: 2px solid #cec0a1;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.chatbox img{
+    width:50px;
+    height:50px;
+    border-radius:10px;
+}
+.chatbox .div1{
+    display:flex;
+    padding-left: 5px;
+    justify-content: baseline;
+    align-items: center;
+    width:25%
+}
+.chatbox .div2{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:75%
+}
+
+
+.chatwrap_b {
+    /*background-color:rgba(135, 180, 197, 0.596);*/
+    width: 92%;
+    height: 98%;
+    border-radius: 10px;
+}
+
+
+/* 대화창 페이지 위, 아래 나눔*/
+.b_head{
+    width: 100%;
+    height: 7%;
+    background-color: #dfd4bd;
+    display: flex;
+    justify-items: center;
+    border-radius:5px;
+    
+}
+
+.b_middle{
+    height:93%;
+    width:100%;
+    background-color: #E9E5DC;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/*------------------------------채팅창 소스-----------------------------------*/
+
+/*border 기존색  rgba(135, 180, 197, 0.596)*/
+.chat_wrap { border:1px solid #cec0a1; border-radius:5px; width:100%; height: 100%; padding:2px; font-size:13px; color:#333}
+/* chat_wrap border 없앴음 아래는 초기 세팅
+.chat_wrap { border:1px solid #999; width:100%; height: 100%; padding:0px; font-size:13px; color:#333}
+*/
+/*inner 초기 height : 400px backgroundcolor : #acc2d2*/
+.chat_wrap .inner{background-color:#E9E5DC; border-radius:5px; padding:10px; overflow-y:scroll;height: 90%;}
+.chat_wrap .item{margin-top:15px}
+.chat_wrap .item:first-child{margin-top:0px}
+.chat_wrap .item .box{display:inline-block; max-width:180px; position:relative}
+.chat_wrap .item .box::before{content:""; position:absolute; left:-8px; top:9px; border-top:0px solid transparent; border-bottom:8px solid transparent;border-right:8px solid #fff;}
+.chat_wrap .item .box .msg {background:#fff; border-radius:10px; padding:8px; text-align:left}
+.chat_wrap .item .box .time {font-size:11px; color:#999; position:absolute; right: -75px; bottom:5px; width:70px}
+.chat_wrap .item.mymsg{text-align:right}
+.chat_wrap .item.mymsg .box::before{left:auto; right:-8px; border-left:8px solid #fee600; border-right:0;}
+.chat_wrap .item.mymsg .box .msg{background:#fee600}
+.chat_wrap .item.mymsg .box .time{right:auto; left:-75px}
+.chat_wrap .item .box{transition:all .3s ease-out; margin:0 0 0 20px;opacity:0}
+.chat_wrap .item.mymsg .box{transition:all .3s ease-out; margin:0 20px 0 0;}
+.chat_wrap .item.on .box{margin:0; opacity: 1;}
+
+input[type="text"]{border:0; width:100%;background:#ddd; border-radius:5px; height:30px; padding-left:5px; box-sizing:border-box; margin-top:5px}
+input[type="text"]::placeholder{color:#999}
+
+/*---------------------------------------------------------------------------*/
+
+
+.closebox{
+    width: 100%;
+    
+    font-size: 16px;
+    
+}
+
+.friend_list{
+    width:90%;
+    height:90%;
+    background-color: blue;
+}

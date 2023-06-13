@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>블록 레벨 요소와 인라인 레벨 요소</title>
+    <style>
+        div{
+            width: 500px;
+            height: 300px;
+        }
+        .dv1{
+            background-color: green;
+        }
+        .dv2{
+            background-color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="dv1"></div> <!--블록레벨요소-한 줄을 다 쓰기 때문에 다음 div는 아랫줄요 표시됨-->
+    <div class="dv2"></div>
+    <div><img src="images/bg1.png" alt="배경1"> <!--인라인 레벨 요소-한 줄에 두 개 표시됨-->
+         <img src="images/bg2.jpg" alt="배경2"></div>
+</body>
+</html>

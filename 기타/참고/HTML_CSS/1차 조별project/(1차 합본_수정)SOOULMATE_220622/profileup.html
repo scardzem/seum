@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/ress.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/mainframe_style.css">
+    <link rel="stylesheet" href="css/feed_style.css">
+    <link rel="stylesheet" href="css/chatting_style.css">
+    <link rel="stylesheet" href="css/write_reply_style.css">
+    <link rel="stylesheet" href="css/profileup_style.css">
+    <!--글꼴 link 태그로 불러오기-->
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <!--파비콘 설정-->
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <title>SOOULMATE</title>
+    <style>
+        .modal-khj {
+            background-color: rgba(0, 1, 2, 0);
+        }
+
+    </style>
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div id="home">
+        <div class="wrapper">
+            <div class="left">
+                <button class="logo" type="button" onclick="location.href='mainpage.html'">
+                    <img src="img/logo.png" alt="로고">
+                </button>
+                <div class="category">
+                    <div>
+                        <button class="beer"><img src="img/beericon.png" alt="맥주아이콘"></button>
+                        <button class="yangju"><img src="img/yangjuicon.png" alt="양주아이콘"></button>
+                        <button class="wine"><img src="img/wineicon.png" alt="와인아이콘"></button>
+                    </div>
+                </div>
+                <div class="nav">
+                    <button class="plus">
+                        <img src="img/plus.png" alt="+아이콘">
+                        <p data-bs-toggle="modal" data-bs-target="#intro">게시글 등록</p>
+                    </button>
+                    <button class="star" onclick="location.href='popularGrid.html'">
+                        <img src="img/star.png" alt="*아이콘">
+                        <p>인기 게시물</p>
+                    </button>
+                    <button class="profile" onclick="location.href='profile.html'">
+                        <img src="img/profile1.png" alt="=아이콘">
+                        <p>프로필</p>
+                    </button>
+                </div>
+                <div class="chat">
+                    <div class="chatwrap">
+                        
+                        <button class="chatbox" style="margin-top:20px;" id="bg1">
+                            <div class="div1"><img src="img/sh_img/대화상대사진/김연아.png" alt="김연아"></div>
+                            <div class="div2">대화중인 상대 1</div>
+                        </button>
+                        <button class="chatbox" style="margin-top:20px;" id="bg2">
+                            <div class="div1"><img src="img/sh_img/대화상대사진/박민영.png" alt="김연아"></div>
+                            <div class="div2">대화중인 상대 2</div>
+                        </button>
+                        <button class="chatbox" style="margin-top:20px;" id="bg3">
+                            <div class="div1"><img src="img/sh_img/대화상대사진/신세경.png" alt="김연아"></div>
+                            <div class="div2">대화중인 상대 3</div>
+                        </button>
+                        <button class="chatbox" style="margin-top:20px;" id="bg4">
+                            <div class="div1"><img src="img/sh_img/대화상대사진/손예진.png" alt="김연아"></div>
+                            <div class="div2">대화중인 상대 4</div>
+                        </button>
+                        <button class="chatbox" style="margin-top:20px;" id="bg5">
+                            <div class="div1"><img src="img/sh_img/대화상대사진/금새록.png" alt="김연아"></div>
+                            <div class="div2">대화중인 상대 5</div>
+                        </button>
+                    </div>
+                    
+                    <!--대화 선택후 채팅창으로 이동된 화면-->
+                    <div class="chatwrap_b" id="b_bg1">
+                        <div class="b_head">
+                            <button class="closebox">
+                                    닫기
+                            </button>
+                        </div>
+                        <!--        채팅창        -->
+                        <div class="b_middle">
+
+                            <div class="chat_wrap">
+                                <div class="inner">
+                                </div>    
+                                <input type="text" class="mymsg" placeholder="my내용 입력">
+                                <!--<input type="text" class="yourmsg" placeholder="yhour내용 입력">-->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="chatwrap_b" id="b_bg2">
+                        <div class="b_head">
+                            <button class="closebox">
+                                    닫기
+                            </button>
+                        </div>
+                        <!--        채팅창        -->
+                        <div class="b_middle">
+
+                            <div class="chat_wrap">
+                                <div class="inner">
+                                </div>    
+                                <input type="text" class="mymsg" placeholder="my내용 입력">
+                                <!--<input type="text" class="yourmsg" placeholder="yhour내용 입력">-->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chatwrap_b" id="b_bg3">
+                        <div class="b_head">
+                            <button class="closebox">
+                                    닫기
+                            </button>
+                        </div>
+                        <!--        채팅창        -->
+                        <div class="b_middle">
+
+                            <div class="chat_wrap">
+                                <div class="inner">
+                                </div>    
+                                <input type="text" class="mymsg" placeholder="my내용 입력">
+                                <!--<input type="text" class="yourmsg" placeholder="yhour내용 입력">-->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chatwrap_b" id="b_bg4">
+                        <div class="b_head">
+                            <button class="closebox">
+                                    닫기
+                            </button>
+                        </div>
+                        <!--        채팅창        -->
+                        <div class="b_middle">
+
+                            <div class="chat_wrap">
+                                <div class="inner">
+                                </div>    
+                                <input type="text" class="mymsg" placeholder="my내용 입력">
+                                <!--<input type="text" class="yourmsg" placeholder="yhour내용 입력">-->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chatwrap_b" id="b_bg5">
+                        <div class="b_head">
+                            <button class="closebox">
+                                    닫기
+                            </button>
+                        </div>
+                        <!--        채팅창        -->
+                        <div class="b_middle">
+
+                            <div class="chat_wrap">
+                                <div class="inner">
+                                </div>    
+                                <input type="text" class="mymsg" placeholder="my내용 입력">
+                                <!--<input type="text" class="yourmsg" placeholder="yhour내용 입력">-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div class="right">
+                    <div id="search">
+                        <div class="searchwrap">
+                            <button class="icon">
+                                <img src="img/searchicon.png" alt="검색아이콘">
+                            </button>
+                            <div class="input">
+                                <input type="search" placeholder="Search" aria-label="Search">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row-wrapper">
+                    <div class="input-form-backgroud">
+                        <div class="input-form col-lg-12">
+                            <div class="profileimg1" style="height: fit-content;">
+                                <img style="width: 210px;
+                                height: 210px;
+                                /* background-color: dimgray; */
+                                border-radius: 50%;" src="img/profileimg1.png" alt="프로필아이콘">
+                            </div>
+                            <form class="validation-form" novalidate>
+                                <div class="col-md-11 ml-2">
+                                    <label for="name-id"></label>
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="customer-id"
+                                      placeholder="유저1"
+                                      maxlength="12"
+                                      required
+                                    />
+                                    <div class="invalid-feedback">이름을 입력해주세요.</div>
+                                </div>
+                                <div calss="row"> 
+                                    <div class="col-md-11 ml-2">
+                                        <label for="customer-id "></label>
+                                        <input
+                                        type="text"
+                                        class="form-control"
+                                        id="customer-id"
+                                        placeholder="user1"
+                                        maxlength="12"
+                                        readonly
+                                        style="background: #ddd;"
+                                        >
+                                        <div class="invalid-feedback">아이디를 입력해주세요.</div>
+                                    </div>
+                                </div>    
+                                
+                                <div class="col-md-11 ml-2">
+                                    <label for="name-id"></label>
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="customer-id"
+                                      placeholder="mjh@naver.com"
+                                      maxlength="12"
+                                      required
+                                    />
+                                    <div class="invalid-feedback">이메일을 입력해주세요.</div>
+                                </div> 
+                                <div class="form-box">
+                                    <div class="col-md-3 ml-2">
+                                        <div class="classWithPad0">
+                                            <label for="phonenumber"></label>
+                                                <input
+                                                type="text"
+                                                class="form-control"
+                                                placeholder="010"
+                                                maxlength="3"
+                                                required
+                                                />
+                                        </div>     
+                                    </div>
+                                    <div class="col-md-4 ml-2">
+                                        <div class="classWithPad1">
+                                            <label for=""><br></label>
+                                                <input
+                                                type="text"
+                                                class="form-control"
+                                                id=""
+                                                placeholder="1234"
+                                                value=""
+                                                maxlength="4"
+                                                required
+                                                />
+                                        </div>        
+                                    </div>  
+                                    <div class="col-md-4 ml-2">
+                                        <div class="classWithPad2"> 
+                                            <label for=""><br></label>
+                                                <input
+                                                type="text"
+                                                class="form-control"
+                                                id=""
+                                                placeholder="5678"
+                                                value=""
+                                                maxlength="4"
+                                                required
+                                                />
+                                        </div>        
+                                    </div> 
+                                    <div class="col-md-5 ml-2">
+                                        <div class="classWithPad3"> 
+                                            <select class="form-control" style="background-color: #ddd ;">
+                                                <option style="background-color: #fff ;">주류취향</option>
+                                                <option value="1" style="background-color: #fff ;">양주</option>
+                                                <option value="2" style="background-color: #fff ; " selected>소주</option>
+                                                <option value="3" style="background-color: #fff ;">맥주</option>
+                                                <option value="4" style="background-color: #fff ;">와인</option>
+                                            </select>
+                                        </div>    
+                                    </div> 
+                                </div>
+                            </form>
+                            </div>
+                        </div>
+                        
+                    <div class="box_form">
+                        <div class="right_box">
+                                <!-- <button class="btn-d" style="width: 50%; font-size: larger; background-color: #b6a97c;">프로필<br>편집</button> -->
+
+                                <button class="btn-d" data-bs-toggle="modal" data-bs-target="#exampleModal" style="width: 50%; font-size: larger">비밀번호<br>변경</button>
+
+                                <button class="btn-d" data-bs-toggle="modal" data-bs-target="#exampleModal1" style="width: 50%; font-size: larger">회원탈퇴</button>
+                        </div>
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content" style="background-color: rgb(225, 225, 225);">
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="md-6">
+                                            <label for="password-pw" class="col-form-label">이전 비밀번호</label>
+                                            <input type="text" class="form-control" id="password-pw" style="background-color: white;">
+                                            </div>
+                                        </form> 
+                                        <form>
+                                            <div class="md-6">
+                                            <label for="password-pw" class="col-form-label">새 비밀번호</label>
+                                            <input type="text" class="form-control" id="password-pw" style="background-color: white;">
+                                            </div>
+                                        </form>
+                                        <form>
+                                            <div class="md-6">
+                                            <label for="password-pw" class="col-form-label">새 비밀번호 확인</label>
+                                            <input type="text" class="form-control" id="password-pw" style="background-color: white;">
+                                            </div>
+                                        </form>  
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn socondary"data-bs-dismiss="modal" style="font-size:20px; width: 80px; height:40px; background-color: grey; padding-left: 7px; padding-top: 5px; color:white">CANCEL</button>
+                                    <button type="button" id="pwchg" class="btn btn success" data-bs-dismiss="modal" style="font-size:20px; width: 80px; height:40px; background-color: grey; padding-left: 30px; padding-top: 5px; color:white">OK</button>
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>
+                    </div> 
+                </div>
+                    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered ">
+                            <div class="modal-content" style="background-color: rgb(225, 225, 225);">
+                                <div class="modal-header">
+                                    <h6 class="madal-title" id="eampleModalLabel"><span style="color: red;">탈퇴</span> 후 회원정보가 모두 삭제됩니다.<br>
+                                        메일주소, 핸드폰 번호/기타 연락처 등 회원정보가 모두 삭제되며,<br>
+                                        삭제된 데이터는 복구되지 않습니다.</h6>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="md-6">
+                                        <label for="password-pw" class="col-form-label">비밀번호 확인</label>
+                                        <input type="text" class="form-control" id="password-pw" style="background-color: white;">
+                                        </div>
+                                    </form> 
+                                </div>
+                                <div class="modal-footer" style="display: flex; justify-content:space-between;">
+                                    <button type="button" class="btn btn socondary"data-bs-dismiss="modal" style="font-size:20px; width: 80px; height:40px; background-color: grey; padding-left: 7px; padding-top: 5px; color:white">CANCEL</button>
+                                    <button type="button" id="accdel" class="btn btn success" data-bs-dismiss="modal" style="font-size:20px; width: 80px; height:40px; background-color: grey; padding-left: 30px; padding-top: 5px; color:white" onclick="location.href='login.html'">OK</button>
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
+
+                </div>
+            </div>
+            <div class="modal fade" id="intro"><div class="modal-dialog">
+                <div class="modal-content modal-khj">                                    
+                        <div class="modal-body">
+                            <div class="test">
+                                <div id="maindiv">
+                                    <div class="flex-container">
+                                        <div class="flex-item color-red1">
+                                            <img src="img/feed2.jpg" alt="" id="grim">
+                                        </div>
+                                        <div class="flex-item color-red2">
+                                            <textarea class="textarea1" placeholder="내용을 입력해 주세요."></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="flex-container">
+                                        <div class="flex-item color-blue1">
+                                            <div class="top-slide">
+                                                <div class="carousel slide" data-bs-ride="carousel" id="slide">
+                                                    <div class="carousel-indicators">
+                                                        <button type="button" data-bs-target="#slide"
+                                                        data-bs-slide-to="0" class="active"></button>
+                                                        <button type="button" data-bs-target="#slide"
+                                                        data-bs-slide-to="1"></button>
+                                                        <button type="button" data-bs-target="#slide"
+                                                        data-bs-slide-to="2"></button>
+                                                        <button type="button" data-bs-target="#slide"
+                                                        data-bs-slide-to="3"></button>
+                                                    </div>
+                                                    <a href="#slide" class="carousel-control-prev"
+                                                    data-bs-slide="prev">
+                                                        <span class="carousel-control-prev-icon"></span>
+                                                    </a>
+                                                    <a href="#slide" class="carousel-control-next"
+                                                    data-bs-slide="next">
+                                                        <span class="carousel-control-next-icon"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex-container2">
+                                            <div class="flex-item color-blue2" id="alcIcon1">
+                                                <img src="img/sojuicon.png" alt="" class="grim2" id="sojuI">
+                                            </div>
+                                            <div class="flex-item color-blue3" id="alcIcon2">
+                                                <img src="img/beericon.png" alt="" class="grim2" id="beerI">
+                                            </div>
+                                            <div class="flex-item color-blue4" id="alcIcon3">
+                                                <img src="img/yangjuicon.png" alt="" class="grim2" id="yangI">
+                                            </div>
+                                            <div class="flex-item color-blue5" id="alcIcon4">
+                                                <img src="img/wineicon.png" alt="" class="grim2" id="wineI">
+                                            </div>                                            
+                                        </div>
+                                        <script>                                            
+                                            $(function() {
+                                                $("#alcIcon1").on("click", function() {
+                                                    $("#alcIcon1").toggleClass("opacity");
+                                                    $("#sojuI").toggleClass("opacity");
+                                                });
+                                            });
+                                            $(function() {
+                                                $("#alcIcon2").on("click", function() {
+                                                    $("#alcIcon2").toggleClass("opacity")
+                                                    $("#beerI").toggleClass("opacity")
+                                                });
+                                            });
+                                            $(function() {
+                                                $("#alcIcon3").on("click", function() {
+                                                    $("#alcIcon3").toggleClass("opacity")
+                                                    $("#yangI").toggleClass("opacity")
+                                                });
+                                            });
+                                            $(function() {
+                                                $("#alcIcon4").on("click", function() {
+                                                    $("#alcIcon4").toggleClass("opacity")
+                                                    $("#wineI").toggleClass("opacity")
+                                                });
+                                            });
+                                        </script>
+                                    </div>
+                                    <div class="btn">
+                                        <button type="button">올리기</button>
+                                        <button type="button" data-bs-dismiss="modal">취 소</button>
+                                    </div>                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>        
+            </div>        
+        </div>
+    </div>
+    <script>
+        
+
+        // <!----------------------채팅창 소스---------------------->
+
+        var currentTime = function(){
+            var date = new Date();
+            var hh = date.getHours();
+            var mm = date.getMinutes();
+            var apm = hh >12 ? "오후":"오전";
+            var ct = apm + " "+hh+":"+mm+"";
+            return ct;
+        }
+
+        $(function(){
+            $(".chatwrap_b").hide();
+        })
+
+        $(function(){
+            
+            $(".chatbox").on("click", function(){
+                var idx = $(".chatwrap>button").index(this);
+                msginput(idx);
+                $(".chatwrap").hide();
+                $(".chatwrap_b").eq(idx).show();
+            });
+
+        });
+
+        $(".closebox").on("click", function(){
+            $(".chatwrap_b").hide();
+            $(".chatwrap").show();
+        });
+
+        function msginput(idx) {
+            console.log("idx111111111111: " + idx);
+            $("input[type='text']").eq(idx).keypress(function(e){
+                if(e.keyCode == 13 && $(this).val().length){
+                    
+                    console.log("idx22222222222: " + idx);
+                    var _val = $(this).val();
+                    var _class = $(this).attr("class");
+                    $(this).val('');
+                    var _tar = $(".chat_wrap .inner").eq(idx).append('<div class="item '+_class+'"><div class="box"><p class="msg">'+_val+'</p><span class="time">'+currentTime()+'</span></div></div>');
+
+                    var lastItem = $(".chat_wrap .inner").eq(idx).find(".item:last");
+                    setTimeout(function(){
+                        lastItem.addClass("on");
+                    },10);
+
+                    var position = lastItem.position().top + $(".chat_wrap .inner").eq(idx).scrollTop();
+                    console.log(position);
+
+                    $(".chat_wrap .inner").eq(idx).stop().animate({scrollTop:position},500);
+                }
+            });
+        }
+
+        $(function() {
+            $("#pwchg").on("click", function() {
+                alert("비밀번호 변경 완료");
+            });
+
+            $("#accdel").on("click", function() {
+                alert("회원 탈퇴 완료");
+            });
+
+        });
+
+        
+    </script>
+</body>
+</html>

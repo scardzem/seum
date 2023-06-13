@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상클래스</title>
+    <style>
+        /*+ 형제 선택자 : 같은 레벨에 있는 형제 선택*/
+input:checked + span{
+    color:blue;
+}
+    </style>
+</head>
+<body>
+    <p>과목 선택</p>
+    <label>
+        <input type="radio" name="subject" value="c"><span>C언어</span>
+    </label>
+    <label>
+        <input type="radio" name="subject" value="java"><span>JAVA</span>
+    </label>
+    <label for="">
+        <input type="radio" name="subject" value="python"><span>Python</span>
+    </label>
+</body>
+</html>

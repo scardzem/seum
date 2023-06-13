@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="sh_folder/css/bootstrap.min.css">
+    <script src="sh_folder/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/frdlist_style.css">
+    <link rel="stylesheet" href="css/mainframe_style.css">
+    <script type="text/javascript" src="sh_folder/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <button class="btn btn-primary" type="button"
+            data-bs-toggle="modal" data-bs-target="#intro">
+        모달창으로 보기
+
+    </button>
+
+    <div class="modal fade" id="intro">
+        <div class="modal-dialog">
+            <div class="modal-content frdlist-modal-content">
+                <div class="modal-body">
+                    <div class="modal-header">
+                        <h5 class="modal-title"><strong>내 깐부</strong></h5>
+                    </div>
+
+                    <div class="friendbox" id="friendbox_1">
+                        <button class="friendbox_item1">
+                            <div class="f_div1">
+                            <img src="img/sh_img/대화상대사진/금새록.png" alt="금새록">
+                            </div>
+                            <div class="f_div2">
+                                <div class="f_div2-1">친구1 아이디</div>
+                                <div class="f_div2-2">상태메시지</div>
+                            </div>
+                        </button>
+                        <button class="friendbox_item2" type="button" id="btn1">
+                            <img src="img/sh_img/icons8-창-닫기-50.png" alt="친구해제" id="remove_1">
+                        </button>
+                    </div>
+
+                    <div class="friendbox" id="friendbox_2">
+                        <button class="friendbox_item1">
+                            <div class="f_div1">
+                            <img src="img/sh_img/대화상대사진/김연아.png" alt="김연아">
+                            </div>
+                            <div class="f_div2">
+                                <div class="f_div2-1">친구2 아이디</div>
+                                <div class="f_div2-2">상태메시지</div>
+                            </div>
+                        </button>
+                        <button class="friendbox_item2" type="button" id="btn2">
+                            <img src="img/sh_img/icons8-창-닫기-50.png" alt="친구해제" id="remove_1">
+                        </button>
+                    </div>
+
+                    <div class="friendbox" id="friendbox_3">
+                        <button class="friendbox_item1">
+                            <div class="f_div1">
+                            <img src="img/sh_img/대화상대사진/박민영.png" alt="박민영">
+                            </div>
+                            <div class="f_div2">
+                                <div class="f_div2-1">친구3 아이디</div>
+                                <div class="f_div2-2">상태메시지</div>
+                            </div>
+                        </button>
+                        <button class="friendbox_item2" type="button" id="btn3">
+                            <img src="img/sh_img/icons8-창-닫기-50.png" alt="친구해제" id="remove_1">
+                        </button>
+                    </div>
+
+                    <div class="friendbox" id="friendbox_4">
+                        <button class="friendbox_item1">
+                            <div class="f_div1">
+                            <img src="img/sh_img/대화상대사진/손예진.png" alt="손예진">
+                            </div>
+                            <div class="f_div2">
+                                <div class="f_div2-1">친구4 아이디</div>
+                                <div class="f_div2-2">상태메시지</div>
+                            </div>
+                        </button>
+                        <button class="friendbox_item2" type="button" id="btn4">
+                            <img src="img/sh_img/icons8-창-닫기-50.png" alt="친구해제" id="remove_1">
+                        </button>
+                    </div>
+
+                    <div class="friendbox" id="friendbox_5">
+                        <button class="friendbox_item1">
+                            <div class="f_div1">
+                            <img src="img/sh_img/대화상대사진/신세경.png" alt="신세경">
+                            </div>
+                            <div class="f_div2">
+                                <div class="f_div2-1">친구5 아이디</div>
+                                <div class="f_div2-2">상태메시지</div>
+                            </div>
+                        </button>
+                        <button class="friendbox_item2" type="button" id="btn5">
+                            <img src="img/sh_img/icons8-창-닫기-50.png" alt="친구해제" id="remove_1">
+                        </button>
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <!--
+                        data-bs-dismiss="modal" : 모달 창 닫기
+                    -->
+                    <button type="button" class="btn btn-primary"
+                            data-bs-dismiss="modal"> 
+
+                        닫기
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    
+    $(function(){
+        
+        $(".friendbox_item2 img").hover(
+            function() {
+                $(this).attr("src", "img/sh_img/icons8-창-닫기-100.png");
+            },
+            function() {
+                $(this).attr("src", "img/sh_img/icons8-창-닫기-50.png");
+            }
+        );
+
+
+        $("#btn1").on("click", function(){
+            if(confirm("정말?")){
+            $("#friendbox_1").remove();
+            }
+        });
+        $("#btn2").on("click", function(){
+            if(confirm("정말?")){
+            $("#friendbox_2").remove();
+            }
+        });
+        $("#btn3").on("click", function(){
+            if(confirm("정말?")){
+            $("#friendbox_3").remove();
+            }
+        });
+        $("#btn4").on("click", function(){
+            if(confirm("정말?")){
+            $("#friendbox_4").remove();
+            }
+        });
+        $("#btn5").on("click", function(){
+            if(confirm("정말?")){
+            $("#friendbox_5").remove();
+            }
+        });
+
+    });
+
+    </script>
+</body>
+</html>

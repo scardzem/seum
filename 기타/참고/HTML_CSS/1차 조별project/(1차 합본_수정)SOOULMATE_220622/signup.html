@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="css/signup_style.css">
+    <link rel="stylesheet" href="css/ress.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--글꼴 link 태그로 불러오기-->
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <!--파비콘 설정-->
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <title>SOOULMATE</title>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <div id="home">
+        <div class="wrapper">
+            <div class="left">
+                <div class="logo">
+                    <button class="logo" type="button">
+                        <img src="img/logo.png" alt="로고">
+                    </button>
+                </div>
+            </div>
+            <div class="center">
+                <div class="input-form">
+                    <div class="input-form col-lg-12">
+                        <div class="profileimg1" style="height: fit-content;">
+                            <img style="width: 210px;
+                            height: 210px;
+                            /* background-color: dimgray; */
+                            border-radius: 50%;" src="img/profileimg1.png" alt="프로필아이콘">
+                        </div>
+                        <form class="validation-form" novalidate>
+                            <div class="col-md-11 ml-2">
+                                <label for="name-id"></label>
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  id="customer-id"
+                                  placeholder="이름 입력"
+                                  maxlength="12"
+                                  required
+                                />
+                                <div class="invalid-feedback">이름을 입력해주세요.</div>
+                            </div>
+                            <div class="col-md-11 ml-2">
+                                 <label for="customer-id "></label>
+                                 <input
+                                  type="text"
+                                  class="form-control"
+                                  id="customer-id"
+                                  placeholder="아이디 입력"
+                                  maxlength="12"
+                                  required
+                                />
+                                <div class="invalid-feedback">아이디를 입력해주세요.</div>
+                                <div class="box2">
+                                    <form action="" role="form"></form>
+                                        <button class="btn btn-dark" style="background-color: grey; width: 70px; height: 38px; font-size: 1rem; margin-top: 7px;">중복체크</button>
+                                </div>
+                            </div>
+                            <div class="col-md-11 ml-2">
+                                <label for="name-id"></label>
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  id="customer-id"
+                                  placeholder="비밀번호입력"
+                                  maxlength="12"
+                                  required
+                                />
+                                <div class="invalid-feedback">비밀번호를 입력해주세요.</div>
+                            </div>
+                            <div class="col-md-11 ml-2">
+                                <label for="name-id"></label>
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  id="password-pw"
+                                  placeholder="비밀번호확인"
+                                  maxlength="12"
+                                  required
+                                />
+                                <div class="invalid-feedback">비밀번호 확인을 입력해주세요.</div>
+                            </div>
+                            <div class="col-md-11 ml-2">
+                                <label for="name-id"></label>
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  id="customer-id"
+                                  placeholder="you@example.com"
+                                  maxlength="12"
+                                  required
+                                />
+                                <div class="invalid-feedback">이메일을 입력해주세요.</div>
+                            </div> 
+                            <div class="form-box">
+                                <div class="col-md-3 ml-2">
+                                    <div class="classWithPad0">
+                                        <label for="phonenumber"></label>
+                                            <input
+                                            type="text"
+                                            class="form-control"
+                                            placeholder="010"
+                                            maxlength="3"
+                                            required
+                                            />
+                                    </div>     
+                                </div>
+                                <div class="col-md-4 ml-2">
+                                    <div class="classWithPad1">
+                                        <label for=""><br></label>
+                                            <input
+                                            type="text"
+                                            class="form-control"
+                                            id=""
+                                            placeholder="0000"
+                                            value=""
+                                            maxlength="4"
+                                            required
+                                            />
+                                    </div>        
+                                </div>  
+                                <div class="col-md-4 ml-2">
+                                    <div class="classWithPad2"> 
+                                        <label for=""><br></label>
+                                            <input
+                                            type="text"
+                                            class="form-control"
+                                            id=""
+                                            placeholder="0000"
+                                            value=""
+                                            maxlength="4"
+                                            required
+                                            />
+                                    </div>        
+                                </div> 
+                                <div class="col-md-5 ml-2">
+                                    <div class="classWithPad3"> 
+                                        <select class="form-control">
+                                            <option>주류취향</option>
+                                            <option value="1">양주</option>
+                                            <option value="2">소주</option>
+                                            <option value="3">맥주</option>
+                                            <option value="4">와인</option>
+                                        </select>
+                                    </div>    
+                                </div> 
+                            </div>
+                            <div class="box1">
+                                <form action="" role="form"></form>
+                                     <button onclick="location.href='login.html'" class="btn btn-dark" style="background-color: grey; width: 80px; height: 50px; font-size: 1.5rem; margin-top: 7px;">가입</button>
+                             </div>
+                        </form>
+                     </div>
+                </div>
+            </div>
+            <div class="right">
+                
+            </div> 
+        </div>
+    </div>
+</body>
+</html>

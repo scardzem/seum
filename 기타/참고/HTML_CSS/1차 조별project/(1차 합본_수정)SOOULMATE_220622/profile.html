@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/ress.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/mainframe_style.css">
+    <link rel="stylesheet" href="css/feed_style.css">
+    <link rel="stylesheet" href="css/chatting_style.css">
+    <link rel="stylesheet" href="css/write_reply_style.css">
+    <link rel="stylesheet" href="css/profile_style.css">
+    <link rel="stylesheet" href="css/frdlist_style.css">
+    <!--글꼴 link 태그로 불러오기-->
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <!--파비콘 설정-->
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <title>SOOULMATE</title>
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div id="home">
+        <div class="wrapper">
+            <div class="left">
+                <button class="logo" type="button" onclick="location.href='mainpage.html'">
+                    <img src="img/logo.png" alt="로고">
+                </button>
+                <div class="category">
+                    <div>
+                        <button class="beer"><img src="img/beericon.png" alt="맥주아이콘"></button>
+                        <button class="yangju"><img src="img/yangjuicon.png" alt="양주아이콘"></button>
+                        <button class="wine"><img src="img/wineicon.png" alt="와인아이콘"></button>
+                    </div>
+                </div>
+                <div class="nav">
+                    <button class="plus">
+                        <img src="img/plus.png" alt="+아이콘">
+                        <p data-bs-toggle="modal" data-bs-target="#intro">게시글 등록</p>
+                    </button>
+                    <button class="star" onclick="location.href='popularGrid.html'">
+                        <img src="img/star.png" alt="*아이콘">
+                        <p>인기 게시물</p>
+                    </button>
+                    <button class="profile" onclick="location.href='profile.html'">
+                        <img src="img/profile1.png" alt="=아이콘">
+                        <p>프로필</p>
+                    </button>
+                </div>
+                <div class="chat">
+                    <div class="chatwrap">
+                        
+                        <button class="chatbox" style="margin-top:20px;" id="bg1">
+                            <div class="div1"><img src="img/sh_img/대화상대사진/김연아.png" alt="김연아"></div>
+                            <div class="div2">대화중인 상대 1</div>
+                        </button>
+                        <button class="chatbox" style="margin-top:20px;" id="bg2">
+                            <div class="div1"><img src="img/sh_img/대화상대사진/박민영.png" alt="김연아"></div>
+                            <div class="div2">대화중인 상대 2</div>
+                        </button>
+                        <button class="chatbox" style="margin-top:20px;" id="bg3">
+                            <div class="div1"><img src="img/sh_img/대화상대사진/신세경.png" alt="김연아"></div>
+                            <div class="div2">대화중인 상대 3</div>
+                        </button>
+                        <button class="chatbox" style="margin-top:20px;" id="bg4">
+                            <div class="div1"><img src="img/sh_img/대화상대사진/손예진.png" alt="김연아"></div>
+                            <div class="div2">대화중인 상대 4</div>
+                        </button>
+                        <button class="chatbox" style="margin-top:20px;" id="bg5">
+                            <div class="div1"><img src="img/sh_img/대화상대사진/금새록.png" alt="김연아"></div>
+                            <div class="div2">대화중인 상대 5</div>
+                        </button>
+                    </div>
+                    
+                    <!--대화 선택후 채팅창으로 이동된 화면-->
+                    <div class="chatwrap_b" id="b_bg1">
+                        <div class="b_head">
+                            <button class="closebox">
+                                    닫기
+                            </button>
+                        </div>
+                        <!--        채팅창        -->
+                        <div class="b_middle">
+
+                            <div class="chat_wrap">
+                                <div class="inner">
+                                </div>    
+                                <input type="text" class="mymsg" placeholder="my내용 입력">
+                                <!--<input type="text" class="yourmsg" placeholder="yhour내용 입력">-->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="chatwrap_b" id="b_bg2">
+                        <div class="b_head">
+                            <button class="closebox">
+                                    닫기
+                            </button>
+                        </div>
+                        <!--        채팅창        -->
+                        <div class="b_middle">
+
+                            <div class="chat_wrap">
+                                <div class="inner">
+                                </div>    
+                                <input type="text" class="mymsg" placeholder="my내용 입력">
+                                <!--<input type="text" class="yourmsg" placeholder="yhour내용 입력">-->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chatwrap_b" id="b_bg3">
+                        <div class="b_head">
+                            <button class="closebox">
+                                    닫기
+                            </button>
+                        </div>
+                        <!--        채팅창        -->
+                        <div class="b_middle">
+
+                            <div class="chat_wrap">
+                                <div class="inner">
+                                </div>    
+                                <input type="text" class="mymsg" placeholder="my내용 입력">
+                                <!--<input type="text" class="yourmsg" placeholder="yhour내용 입력">-->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chatwrap_b" id="b_bg4">
+                        <div class="b_head">
+                            <button class="closebox">
+                                    닫기
+                            </button>
+                        </div>
+                        <!--        채팅창        -->
+                        <div class="b_middle">
+
+                            <div class="chat_wrap">
+                                <div class="inner">
+                                </div>    
+                                <input type="text" class="mymsg" placeholder="my내용 입력">
+                                <!--<input type="text" class="yourmsg" placeholder="yhour내용 입력">-->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chatwrap_b" id="b_bg5">
+                        <div class="b_head">
+                            <button class="closebox">
+                                    닫기
+                            </button>
+                        </div>
+                        <!--        채팅창        -->
+                        <div class="b_middle">
+
+                            <div class="chat_wrap">
+                                <div class="inner">
+                                </div>    
+                                <input type="text" class="mymsg" placeholder="my내용 입력">
+                                <!--<input type="text" class="yourmsg" placeholder="yhour내용 입력">-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div id="search">
+                    <div class="searchwrap">
+                        <button class="icon">
+                            <img src="img/searchicon.png" alt="검색아이콘">
+                        </button>
+                        <div class="input">
+                            <input type="search" placeholder="Search" aria-label="Search">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="profilehead">
+                    <img id="profileimg" src="img/profileimg1.png" alt="프로필">
+                    <div class="profile-wrap">
+                        <div class="profilename">
+                            <h2>user1 <img src="img/sojufav.png"  alt="양주"></h2>
+                        </div>
+                        <div class="logout">
+                            
+                        </div>
+                        <div class="post">
+                            <br>
+                            <br>
+                            <h4>게시글 9</h4>
+                        </div>
+                        <div class="follower" >
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#frdlist">깐부 5</a>
+                        </div>
+                    </div>
+                    <div class="friend-wrap">
+                        <div style="margin-top:50px;">
+                            <a href="profileup.html">프로필 편집</a><a href="login.html">로그아웃</a>
+                            
+                        </div>
+                        <div class="memo">
+                            <h4>일요일에<br> 취하고<br>월요일에 출근 <br>장난하냐?</h4>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grid">
+                    <div class="griditem">
+                        <img src="img/feed2.jpg" alt="사진1">
+                    </div>
+                    <div class="griditem">
+                        <img src="img/pro2.jpg" alt="사진2">
+                    </div>
+                    <div class="griditem">
+                        <img src="img/pro3.jpg" alt="사진3">
+                    </div>
+                    <div class="griditem">
+                        <img src="img/pro4.jpg" alt="사진4">
+                    </div>
+                    <div class="griditem">
+                        <img src="img/pro5.jpg" alt="사진5">
+                    </div>
+                    <div class="griditem">
+                        <img src="img/pro6.jpg" alt="사진6">
+                    </div>
+                    <div class="griditem">
+                        <img src="img/pro7.jpg" alt="사진7">
+                    </div>
+                    <div class="griditem">
+                        <img src="img/pro8.jpg" alt="사진8">
+                    </div>
+                    <div class="griditem">
+                        <img src="img/pro9.jpg" alt="사진9">
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal fade" id="intro"><div class="modal-dialog">
+                <div class="modal-content">                                    
+                        <div class="modal-body">
+                            <div class="test">
+                                <div id="maindiv">
+                                    <div class="flex-container">
+                                        <div class="flex-item color-red1">
+                                            <img src="img/feed2.jpg" alt="" id="grim">
+                                        </div>
+                                        <div class="flex-item color-red2">
+                                            <textarea class="textarea1" placeholder="내용을 입력해 주세요."></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="flex-container">
+                                        <div class="flex-item color-blue1">
+                                            <div class="top-slide">
+                                                <div class="carousel slide" data-bs-ride="carousel" id="slide">
+                                                    <div class="carousel-indicators">
+                                                        <button type="button" data-bs-target="#slide"
+                                                        data-bs-slide-to="0" class="active"></button>
+                                                        <button type="button" data-bs-target="#slide"
+                                                        data-bs-slide-to="1"></button>
+                                                        <button type="button" data-bs-target="#slide"
+                                                        data-bs-slide-to="2"></button>
+                                                        <button type="button" data-bs-target="#slide"
+                                                        data-bs-slide-to="3"></button>
+                                                    </div>
+                                                    <a href="#slide" class="carousel-control-prev"
+                                                    data-bs-slide="prev">
+                                                        <span class="carousel-control-prev-icon"></span>
+                                                    </a>
+                                                    <a href="#slide" class="carousel-control-next"
+                                                    data-bs-slide="next">
+                                                        <span class="carousel-control-next-icon"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex-container2">
+                                            <div class="flex-item color-blue2" id="alcIcon1">
+                                                <img src="img/sojuicon.png" alt="" class="grim2" id="sojuI">
+                                            </div>
+                                            <div class="flex-item color-blue3" id="alcIcon2">
+                                                <img src="img/beericon.png" alt="" class="grim2" id="beerI">
+                                            </div>
+                                            <div class="flex-item color-blue4" id="alcIcon3">
+                                                <img src="img/yangjuicon.png" alt="" class="grim2" id="yangI">
+                                            </div>
+                                            <div class="flex-item color-blue5" id="alcIcon4">
+                                                <img src="img/wineicon.png" alt="" class="grim2" id="wineI">
+                                            </div>                                            
+                                        </div>
+                                        <script>                                            
+                                            $(function() {
+                                                $("#alcIcon1").on("click", function() {
+                                                    $("#alcIcon1").toggleClass("opacity");
+                                                    $("#sojuI").toggleClass("opacity");
+                                                });
+                                            });
+                                            $(function() {
+                                                $("#alcIcon2").on("click", function() {
+                                                    $("#alcIcon2").toggleClass("opacity")
+                                                    $("#beerI").toggleClass("opacity")
+                                                });
+                                            });
+                                            $(function() {
+                                                $("#alcIcon3").on("click", function() {
+                                                    $("#alcIcon3").toggleClass("opacity")
+                                                    $("#yangI").toggleClass("opacity")
+                                                });
+                                            });
+                                            $(function() {
+                                                $("#alcIcon4").on("click", function() {
+                                                    $("#alcIcon4").toggleClass("opacity")
+                                                    $("#wineI").toggleClass("opacity")
+                                                });
+                                            });
+                                        </script>
+                                    </div>
+                                    <div class="btn">
+                                        <button type="button">올리기</button>
+                                        <button type="button" data-bs-dismiss="modal">취 소</button>
+                                    </div>                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>        
+            </div>
+            
+            
+
+            <div class="modal fade" id="frdlist">
+                <div class="modal-dialog">
+                    <div class="modal-content frdlist-modal-content">
+                        <div class="modal-body">
+                            <div class="modal-header">
+                                <h5 class="modal-title"><strong>내 깐부</strong></h5>
+                            </div>
+        
+                            <div class="friendbox" id="friendbox_1">
+                                <button class="friendbox_item1">
+                                    <div class="f_div1">
+                                    <img src="img/sh_img/대화상대사진/금새록.png" alt="금새록">
+                                    </div>
+                                    <div class="f_div2">
+                                        <div class="f_div2-1">친구1 아이디</div>
+                                        <div class="f_div2-2">상태메시지</div>
+                                    </div>
+                                </button>
+                                <button class="friendbox_item2" type="button" id="btn1">
+                                    <img src="img/sh_img/icons8-창-닫기-50_2.png" alt="친구해제" id="remove_1">
+                                </button>
+                            </div>
+        
+                            <div class="friendbox" id="friendbox_2">
+                                <button class="friendbox_item1">
+                                    <div class="f_div1">
+                                    <img src="img/sh_img/대화상대사진/김연아.png" alt="김연아">
+                                    </div>
+                                    <div class="f_div2">
+                                        <div class="f_div2-1">친구2 아이디</div>
+                                        <div class="f_div2-2">상태메시지</div>
+                                    </div>
+                                </button>
+                                <button class="friendbox_item2" type="button" id="btn2">
+                                    <img src="img/sh_img/icons8-창-닫기-50_2.png" alt="친구해제" id="remove_1">
+                                </button>
+                            </div>
+        
+                            <div class="friendbox" id="friendbox_3">
+                                <button class="friendbox_item1">
+                                    <div class="f_div1">
+                                    <img src="img/sh_img/대화상대사진/박민영.png" alt="박민영">
+                                    </div>
+                                    <div class="f_div2">
+                                        <div class="f_div2-1">친구3 아이디</div>
+                                        <div class="f_div2-2">상태메시지</div>
+                                    </div>
+                                </button>
+                                <button class="friendbox_item2" type="button" id="btn3">
+                                    <img src="img/sh_img/icons8-창-닫기-50_2.png" alt="친구해제" id="remove_1">
+                                </button>
+                            </div>
+        
+                            <div class="friendbox" id="friendbox_4">
+                                <button class="friendbox_item1">
+                                    <div class="f_div1">
+                                    <img src="img/sh_img/대화상대사진/손예진.png" alt="손예진">
+                                    </div>
+                                    <div class="f_div2">
+                                        <div class="f_div2-1">친구4 아이디</div>
+                                        <div class="f_div2-2">상태메시지</div>
+                                    </div>
+                                </button>
+                                <button class="friendbox_item2" type="button" id="btn4">
+                                    <img src="img/sh_img/icons8-창-닫기-50_2.png" alt="친구해제" id="remove_1">
+                                </button>
+                            </div>
+        
+                            <div class="friendbox" id="friendbox_5">
+                                <button class="friendbox_item1">
+                                    <div class="f_div1">
+                                    <img src="img/sh_img/대화상대사진/신세경.png" alt="신세경">
+                                    </div>
+                                    <div class="f_div2">
+                                        <div class="f_div2-1">친구5 아이디</div>
+                                        <div class="f_div2-2">상태메시지</div>
+                                    </div>
+                                </button>
+                                <button class="friendbox_item2" type="button" id="btn5">
+                                    <img src="img/sh_img/icons8-창-닫기-50_2.png" alt="친구해제" id="remove_1">
+                                </button>
+                            </div>
+        
+                        </div>
+        
+                        <div class="modal-footer">
+                            <!--
+                                data-bs-dismiss="modal" : 모달 창 닫기
+                            -->
+                            <button type="button" class="btn btn-primary frdlist-modal-btn"
+                                    data-bs-dismiss="modal"> 
+        
+                                닫기
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <script>
+        var like_amt = new Array(542, 321, 87);
+
+
+        for (let i = 0; i < like_amt.length; i++) {
+            $(".like").eq(i).parent().find('p').text("짠 " + like_amt[i] + "회" );         
+        }       
+
+        $(".like").on("click", function () {
+            var idx = $(".like").index(this);
+            console.log(idx);
+            if($(".like").eq(idx).attr('src') == "img/binjan.png") {
+                $(".like").eq(idx).attr('src', "img/fulljan.png");
+                like_amt[idx]++;
+            } else {
+                $(".like").eq(idx).attr('src', "img/binjan.png");
+                like_amt[idx]--;
+            }
+            $(".like").eq(idx).parent().find('p').text("짠 " + like_amt[idx] + "회" );
+        });
+
+        $("#friend").on("click",function(){
+        if($("#friend").css("backgroundColor") == "rgb(128, 128, 128)"){
+            $("#friend").css("backgroundColor", "rgb(34, 162, 173");
+            $("#test01").text("깐부신청");
+            console.log("1" + $("#friend").css("backgroundColor"));
+        } else {
+            $("#friend").css("backgroundColor", "grey");
+            $("#test01").text("깐부취소");
+            console.log("2" + $("#friend").css("backgroundColor"));
+        }
+       });
+
+        // <!----------------------채팅창 소스---------------------->
+
+        var currentTime = function(){
+            var date = new Date();
+            var hh = date.getHours();
+            var mm = date.getMinutes();
+            var apm = hh >12 ? "오후":"오전";
+            var ct = apm + " "+hh+":"+mm+"";
+            return ct;
+        }
+
+        $(function(){
+            $(".chatwrap_b").hide();
+        })
+
+        $(function(){
+            
+            $(".chatbox").on("click", function(){
+                var idx = $(".chatwrap>button").index(this);
+                msginput(idx);
+                $(".chatwrap").hide();
+                $(".chatwrap_b").eq(idx).show();
+            });
+
+        });
+
+        $(".closebox").on("click", function(){
+            $(".chatwrap_b").hide();
+            $(".chatwrap").show();
+        });
+
+        function msginput(idx) {
+            console.log("idx111111111111: " + idx);
+            $("input[type='text']").eq(idx).keypress(function(e){
+                if(e.keyCode == 13 && $(this).val().length){
+                    
+                    console.log("idx22222222222: " + idx);
+                    var _val = $(this).val();
+                    var _class = $(this).attr("class");
+                    $(this).val('');
+                    var _tar = $(".chat_wrap .inner").eq(idx).append('<div class="item '+_class+'"><div class="box"><p class="msg">'+_val+'</p><span class="time">'+currentTime()+'</span></div></div>');
+
+                    var lastItem = $(".chat_wrap .inner").eq(idx).find(".item:last");
+                    setTimeout(function(){
+                        lastItem.addClass("on");
+                    },10);
+
+                    var position = lastItem.position().top + $(".chat_wrap .inner").eq(idx).scrollTop();
+                    console.log(position);
+
+                    $(".chat_wrap .inner").eq(idx).stop().animate({scrollTop:position},500);
+                }
+            });
+        }
+
+        $(function() {
+            $(".follow").on("click", function() {
+                alert("깐부 신청 완료");
+            });
+        });
+
+        ////////////// 깐부 리스트 
+        
+        $(function(){
+        
+        $(".friendbox_item2 img").hover(
+            function() {
+                $(this).attr("src", "img/sh_img/icons8-창-닫기-50_3.png");
+            },
+            function() {
+                $(this).attr("src", "img/sh_img/icons8-창-닫기-50_2.png");
+            }
+        );
+
+
+        $("#btn1").on("click", function(){
+            if(confirm("정말?")){
+            $("#friendbox_1").remove();
+            }
+        });
+        $("#btn2").on("click", function(){
+            if(confirm("정말?")){
+            $("#friendbox_2").remove();
+            }
+        });
+        $("#btn3").on("click", function(){
+            if(confirm("정말?")){
+            $("#friendbox_3").remove();
+            }
+        });
+        $("#btn4").on("click", function(){
+            if(confirm("정말?")){
+            $("#friendbox_4").remove();
+            }
+        });
+        $("#btn5").on("click", function(){
+            if(confirm("정말?")){
+            $("#friendbox_5").remove();
+            }
+        });
+
+    });
+
+    </script>
+</body>
+</html>

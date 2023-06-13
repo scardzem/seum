@@ -1,0 +1,87 @@
+1. 가상클래스(3일차에 이어서)
+    - :checked : 라디오 버튼이나 체크박스의 상태(체크된 input에만)
+                 스타일 적용
+--_78_virtual_class002.html
+
+    - 선택자 : 가상클래스
+    - :nth-child(n) : n번째 있는 자식요소에만 스타일 적용
+                       odd-홀수, 2n+1-홀수, even-짝수, 2n+0-짝수, 2n-짝수
+--_79_virtual_class003.html
+
+    - :first-child, :last-child : 자식요소 중 첫번째나 마지막 자식요소에만 스타일 적용
+--_80_virtual_class004.html
+    - not : 특정 요소가 아닐 때 스타일 적용
+             :not(아이디, 클래스 등 적용 가능)
+--_81_virtual_class005.html
+
+2. 가상 요소
+    - :before, :after :요소의 내용 앞뒤에 내용 추가하기
+--_82_virtual_class006.html (81번 복사)
+
+3. CSS와 애니메이션
+    - 요소의 크기를 변화하거나 요소의 위치를 이동시킨다.
+4. 2차원 변형
+    - transform 속성을 사용하여 변형한다.
+    - 요소를 이동시키는 translate 함수
+        transform: translate(x좌표, y좌표);
+--_83_translate.html
+
+    - 요소를 확대시키는 scale 함수
+      transform: scale(x확대값, y확대값);
+--_84_scale.html
+    - 요소를 회전시키는 rotate 함수
+      transform: rotate(각도(deg));
+--_85_rotate.html
+    
+5. 변형과 관련된 속성들
+    - transform-origin 속성 : 변형의 기준점 설정하기
+                              x축 y축 z축 | initial | inherit;
+                              1) x축 : 길이 값이나 left | center | right
+                              2) y축 : 길이 값이나 top | center | bottom
+                              3) z축 : 길이 값만 설정 가능
+    - perspective 속성 : 원근감 표시하기
+                         3차원 변형 시에 사용
+                         0보다 큰 값으로 지정
+                         커질 수록 사용자와 멀어지는 느낌을 주게 됨
+6. 트랜지션
+    - 요소의 배경색이나 모양 또는 테두리 등을 변형시키는 것
+    - transition-property 속성 : 트랜지션을 적용할 속성 지정하기
+                                 all | none | 속성 이름
+                                 1) all : 모든 속성 변경
+                                 2) none : 변경하지 않음
+                                 3) 속성 이름 : 변경할 속성 지정
+    - transition-duration 속성 : 트랜지션 진행 시간 정하기
+                                 시간 값을 입력
+--_86_transition.html
+--_87_transition_rotate.html (86번 복사)
+    - transition-timing-function 속성 : 트랜지션 진행 속도 지정하기
+                                        1) linear : 시작부터 끝까지 동일한 속도로 진행
+                                        2) ease : 처음에는 천천히, 점점 빨라지다가 마지막에는 천천히
+                                                  기본값.
+                                        3) ease-in : 시작을 느리게
+                                        4) ease-out : 마지막을 느리게
+                                        5) ease-in-out : 시작과 마지막을 느리게
+    - transition-delay 속성 : 지연시간 지정하기
+                              시간 값(초단위)
+                              지연된 시간부터 트랜지션 시작
+    - transition 속성 : 트랜지션 관련 속성을 한 번에 지정
+
+7. 애니메이션
+    - CSS로 애니메이션을 만들 때는 @keyframe 속성을 이용해서 정의해야 됨
+    - CSS 애니메이션에서 사용하는 속성들
+        1) @keyframes : 애니메이션이 바뀌는 지점 지정
+        2) animation-delay : 애니메이션의 지연시간 지정
+        3) animation-direction : 애니메이션 종료 후 처음부터 시작할 지
+                                 역방향으로 진행할 지 지정
+        4) animation-duration : 애니메이션의 진행 시간 지정
+        5) animation-fill-mode : 애니메이션이 진행 되지 않을 때의 상태 지정
+        6) animation-iteration-count : 애니메이션의 반복 회수 지정
+        7) animation-name : @keyframe으로 설정해놓은 중간 상태의 이름 지정
+        8) animation-play-state : 애니메이션을 중단하거나 다시 시작
+        9) animation-timing-function : 애니메이션의 진행 속도 지정
+        10) animation : 위 속성들을 한 번에 지정
+--_89_keyframe.html
+--_90_animation.html
+
+8. 퍼블리셔 포트폴리오 사이트
+    - https://github.com/webstoryboy/portfolio

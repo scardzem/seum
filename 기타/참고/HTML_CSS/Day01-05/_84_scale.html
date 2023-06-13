@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소 확대하기</title>
+    <style>
+        .scalex:hover {
+            /*수평으로 1.2배 확대*/
+            transform: scaleX(1.2);
+        }
+        
+        .scaley:hover {
+            /*수직으로 1.5배 확대*/
+            transform: scaley(1.5);
+        }
+
+        .scalexy:hover {
+            /*수평 수직으로 0.7배 축소*/
+            transform: scale(0.7, 0.7);
+        }
+        </style>
+</head>
+<body>
+    <div class="wrap">
+        <div>
+            <img class="scalex" src="images/bg2.jpg" alt="배경2">
+        </div>
+    </div>
+    <div class="wrap">
+        <div>
+            <img class="scaley" src="images/bg2.jpg" alt="배경2">
+        </div>
+    </div>
+    <div class="wrap">
+        <div>
+            <img class="scalexy" src="images/bg2.jpg" alt="배경2">
+        </div>
+    </div>
+</body>
+</html>

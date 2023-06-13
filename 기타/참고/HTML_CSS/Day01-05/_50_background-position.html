@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경 이미지 크기 조절</title>
+    <style>
+        div{
+            width: 60%;
+            height: 500px;
+            background-image: url('images/bg2.jpg');
+            background-repeat: no-repeat;
+            margin-top: 20px;
+        }
+        .bg1{
+            background-position: left top;
+        }
+        .bg2{
+            /* 수평 위치와 수직 위치가 동일 값이면 하나의 값으로 설정 */
+            background-position: center;
+        }
+
+    </style>
+</head>
+<body>
+    <!--div.bg1*5-->
+    <div class="bg1"></div>
+    <div class="bg2"></div>
+</body>
+</html>

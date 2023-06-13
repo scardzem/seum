@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>SOOULMATE</title>
+    <link rel="stylesheet" href="css/ress.min.css">
+    <!----------------------jquery 추가---------------------->
+    <script type="text/javascript" src="sh_folder/jquery-3.6.0.min.js"></script>
+    <!----------------------채팅창 소스---------------------->
+    <!-- <script>
+        $(function(){
+            $("input[type='text']").keypress(function(e){
+                if(e.keyCode == 13 && $(this).val().length){
+                    var _val = $(this).val();
+                    var _class = $(this).attr("class");
+                    $(this).val('');
+                    var _tar = $(".chat_wrap .inner").append('<div class="item '+_class+'"><div class="box"><p class="msg">'+_val+'</p><span class="time">'+currentTime()+'</span></div></div>');
+
+                    var lastItem = $(".chat_wrap .inner").find(".item:last");
+                    setTimeout(function(){
+                        lastItem.addClass("on");
+                    },10);
+
+                    var position = lastItem.position().top + $(".chat_wrap .inner").scrollTop();
+                    console.log(position);
+
+                    $(".chat_wrap .inner").stop().animate({scrollTop:position},500);
+                }
+            });
+        });
+        var currentTime = function(){
+            var date = new Date();
+            var hh = date.getHours();
+            var mm = date.getMinutes();
+            var apm = hh >12 ? "오후":"오전";
+            var ct = apm + " "+hh+":"+mm+"";
+            return ct;
+        }
+
+    </script> -->
+</head>
+
+<body>
+    <div id="home">
+        <div class="wrapper">
+            <div class="left">
+                <div class="logo">
+                    <img style="border-style:none;" src="img/logo.png" alt="로고">
+                </div>
+                <div class="category">
+                    <div>
+                        <button class="beer"><img src="img/beericon.png" alt="맥주아이콘"></button>
+                        <button class="yangju"><img src="img/yangjuicon.png" alt="양주아이콘"></button>
+                        <button class="wine"><img src="img/wineicon.png" alt="와인아이콘"></button>
+                    </div>
+                </div>
+                <div class="nav">
+                    <div class="plus">
+                        <img src="img/plus.png" alt="+아이콘">
+                        <p>게시글 등록</p>
+                    </div>
+                    <div class="star">
+                        <img src="img/star.png" alt="*아이콘">
+                        <p>인기 게시물</p>
+                    </div>
+                    <div class="profile">
+                        <img src="img/profile1.png" alt="=아이콘">
+                        <p>프로필</p>
+                    </div>
+                </div>
+                <!----------------------------chat------------------------------->
+                <div class="chat">
+                    <div class="chatwrap">
+                        
+                        <button class="chatbox" style="margin-top:20px;" id="bg1">
+                            <div class="div1"><img src="img/sh_img/대화상대사진/김연아.png" alt="김연아"></div>
+                            <div class="div2">대화중인 상대 1</div>
+                        </button>
+                        <button class="chatbox" style="margin-top:20px;" id="bg2">
+                            <div class="div1"><img src="img/sh_img/대화상대사진/박민영.png" alt="김연아"></div>
+                            <div class="div2">대화중인 상대 2</div>
+                        </button>
+                        <button class="chatbox" style="margin-top:20px;" id="bg3">
+                            <div class="div1"><img src="img/sh_img/대화상대사진/신세경.png" alt="김연아"></div>
+                            <div class="div2">대화중인 상대 3</div>
+                        </button>
+                        <button class="chatbox" style="margin-top:20px;" id="bg4">
+                            <div class="div1"><img src="img/sh_img/대화상대사진/손예진.png" alt="김연아"></div>
+                            <div class="div2">대화중인 상대 4</div>
+                        </button>
+                        <button class="chatbox" style="margin-top:20px;" id="bg5">
+                            <div class="div1"><img src="img/sh_img/대화상대사진/금새록.png" alt="김연아"></div>
+                            <div class="div2">대화중인 상대 5</div>
+                        </button>
+                    
+
+                        
+
+                        
+                    </div>
+                    
+                    <!--대화 선택후 채팅창으로 이동된 화면-->
+                    <div class="chatwrap_b" id="b_bg1">
+                        <div class="b_head">
+                            <button class="closebox">
+                                    닫기
+                            </button>
+                        </div>
+                        <!--        채팅창        -->
+                        <div class="b_middle">
+
+                            <div class="chat_wrap">
+                                <div class="inner">
+                                </div>    
+                                <input type="text" class="mymsg" placeholder="my내용 입력">
+                                <!--<input type="text" class="yourmsg" placeholder="yhour내용 입력">-->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="chatwrap_b" id="b_bg2">
+                        <div class="b_head">
+                            <button class="closebox">
+                                    닫기
+                            </button>
+                        </div>
+                        <!--        채팅창        -->
+                        <div class="b_middle">
+
+                            <div class="chat_wrap">
+                                <div class="inner">
+                                </div>    
+                                <input type="text" class="mymsg" placeholder="my내용 입력">
+                                <!--<input type="text" class="yourmsg" placeholder="yhour내용 입력">-->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chatwrap_b" id="b_bg3">
+                        <div class="b_head">
+                            <button class="closebox">
+                                    닫기
+                            </button>
+                        </div>
+                        <!--        채팅창        -->
+                        <div class="b_middle">
+
+                            <div class="chat_wrap">
+                                <div class="inner">
+                                </div>    
+                                <input type="text" class="mymsg" placeholder="my내용 입력">
+                                <!--<input type="text" class="yourmsg" placeholder="yhour내용 입력">-->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chatwrap_b" id="b_bg4">
+                        <div class="b_head">
+                            <button class="closebox">
+                                    닫기
+                            </button>
+                        </div>
+                        <!--        채팅창        -->
+                        <div class="b_middle">
+
+                            <div class="chat_wrap">
+                                <div class="inner">
+                                </div>    
+                                <input type="text" class="mymsg" placeholder="my내용 입력">
+                                <!--<input type="text" class="yourmsg" placeholder="yhour내용 입력">-->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chatwrap_b" id="b_bg5">
+                        <div class="b_head">
+                            <button class="closebox">
+                                    닫기
+                            </button>
+                        </div>
+                        <!--        채팅창        -->
+                        <div class="b_middle">
+
+                            <div class="chat_wrap">
+                                <div class="inner">
+                                </div>    
+                                <input type="text" class="mymsg" placeholder="my내용 입력">
+                                <!--<input type="text" class="yourmsg" placeholder="yhour내용 입력">-->
+                            </div>
+                        </div>
+                    </div>
+ 
+
+
+                    <!--채팅 내용 표시 창 전환
+                    <script>
+                       
+                        $(function(){
+                            $(".chatwrap_b").hide();
+                        })
+
+                        $(".chatbox").on("click", function(){
+                            $(".chatwrap").hide();
+                            $("#b_bg").show();
+                        });
+
+                        $(".closebox").on("click", function(){
+                            $(".chatwrap_b").hide();
+                            $(".chatwrap").show();
+                        });
+                    </script>
+                    -->
+
+                    <script>
+                        $(function(){
+                            $(".chatwrap_b").hide();
+                        })
+                        $(function(){
+                            
+                            $(".chatbox").on("click", function(){
+                                var idx = $(".chatwrap>button").index(this);
+                                msginput(idx);
+                                $(".chatwrap").hide();
+                                $(".chatwrap_b").eq(idx).show();
+                            });
+
+                        });
+
+                        $(".closebox").on("click", function(){
+                            $(".chatwrap_b").hide();
+                            $(".chatwrap").show();
+                        });
+
+                     function msginput(idx) {
+                            console.log("idx111111111111: " + idx);
+                            $("input[type='text']").eq(idx).keypress(function(e){
+                                if(e.keyCode == 13 && $(this).val().length){
+                                    
+                                    console.log("idx22222222222: " + idx);
+                                    var _val = $(this).val();
+                                    var _class = $(this).attr("class");
+                                    $(this).val('');
+                                    var _tar = $(".chat_wrap .inner").eq(idx).append('<div class="item '+_class+'"><div class="box"><p class="msg">'+_val+'</p><span class="time">'+currentTime()+'</span></div></div>');
+
+                                    var lastItem = $(".chat_wrap .inner").eq(idx).find(".item:last");
+                                    setTimeout(function(){
+                                        lastItem.addClass("on");
+                                    },10);
+
+                                    var position = lastItem.position().top + $(".chat_wrap .inner").eq(idx).scrollTop();
+                                    console.log(position);
+
+                                    $(".chat_wrap .inner").eq(idx).stop().animate({scrollTop:position},500);
+                                }
+                            });
+                        }
+                       
+        var currentTime = function(){
+            var date = new Date();
+            var hh = date.getHours();
+            var mm = date.getMinutes();
+            var apm = hh >12 ? "오후":"오전";
+            var ct = apm + " "+hh+":"+mm+"";
+            return ct;
+        }
+
+                    </script>
+                    
+                </div>
+
+
+
+                <!--------------------------------------------------------------->
+            </div>
+            <div class="right">
+                <div id="search">
+                    <div class="searchwrap">
+                        <button class="icon">
+                            <img src="img/searchicon.png" alt="검색아이콘">
+                        </button>
+                        <div class="input">
+                            <input type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

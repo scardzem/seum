@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사용자 입력 값을 받는 폼 태그</title>
+</head>
+<body>
+    <form action="_11_link.html" name="loginForm" method="post"> 
+        <!--input에 지정한 name속성이 키 값이 됨(get, post 방식 둘 다 동일)-->
+        <input type="text" name="id" title="아이디">
+        <input type="text" name="pw" title="비밀번호">
+        <!--type="submit"은 action을 동작하게 하는 버튼-->
+        <input type="submit" value="로그인">
+        <!--button 태그를 사용하여 submit을 생성하여도 동일하게 동작
+            button 태그의 type의 초기값은 submit
+            submit 버튼이 아닌 일반 버튼을 생성하려면 
+            type="button"-->
+
+        <button type="button">기능 없는 버튼</button>
+    </form>
+</body>
+</html>

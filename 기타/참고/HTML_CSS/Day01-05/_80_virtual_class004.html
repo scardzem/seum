@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상클래스</title>
+    <style>
+        ul{
+            list-style-type: none;
+
+        }
+        ul li{
+            display: inline;
+            border: 1px solid black;
+        }
+        ul.navi li:first-child{
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
+        ul.navi li:last-child{
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!--ul.navi>li*4-->
+    <ul class="navi">
+        <li>Home</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>    
+</body>
+</html>

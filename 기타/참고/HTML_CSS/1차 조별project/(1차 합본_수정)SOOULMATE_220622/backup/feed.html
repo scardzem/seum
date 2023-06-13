@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/ress.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/mainframe_style.css">
+    <link rel="stylesheet" href="css/posting_style.css">
+    <link rel="stylesheet" href="css/feed_style.css">
+    <!--글꼴 link 태그로 불러오기-->
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <!--파비콘 설정-->
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <title>SOOULMATE</title>
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div id="home">
+        <div class="wrapper">
+            <div class="left">
+                <div class="logo">
+                    <img src="img/logo.png" alt="로고">
+                </div>
+                <div class="category">
+                    <div>
+                        <button class="beer"><img src="img/beericon.png" alt="맥주아이콘"></button>
+                        <button class="yangju"><img src="img/yangjuicon.png" alt="양주아이콘"></button>
+                        <button class="wine"><img src="img/wineicon.png" alt="와인아이콘"></button>
+                    </div>
+                </div>
+                <div class="nav">
+                    <div class="plus">
+                        <img src="img/plus.png" alt="+아이콘">
+                        <p>게시글 등록</p>
+                    </div>
+                    <div class="star">
+                        <img src="img/star.png" alt="*아이콘">
+                        <p>인기 게시물</p>
+                    </div>
+                    <div class="profile">
+                        <img src="img/profile1.png" alt="=아이콘">
+                        <p>프로필</p>
+                    </div>
+                </div>
+                <div class="chat">
+                    <div class="chatwrap">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div id="search">
+                    <div class="searchwrap">
+                        <button class="icon">
+                            <img src="img/searchicon.png" alt="검색아이콘">
+                        </button>
+                        <div class="input">
+                            <input type="search" placeholder="Search" aria-label="Search">
+                        </div>
+                    </div>
+                </div>
+                <div id="contentbox">
+                    <div class="contentwrap">
+                        <div class="feedbox">
+                            <div class="uploader">
+                                <img src="img/profileimg1.png" alt="프사"></img>
+                                <p class="uploadername">user1</p>
+                            </div>
+                            <img class="picture" src="img/feed1.jpg" alt="피드1"></img>
+                            <div class="funcs">
+                                <p>짠 342회</p>
+                                    <img class="like" src="img/binjan.png" alt="짠" onclick="imgtoggle(0)"></img>
+                                    <img class="reply" src="img/bubble.PNG" alt="댓글"></img>
+                                    <img class="follow" src="img/kkbicon.png" alt="깐부신청"></img>
+                            </div>
+                            <div class="content">
+                                <p>형식이 내용의 존재 방식이자 대상의 표면 현상이라면, 내용은 예술작품에 있어서 그 안에 포함된 것, 또는 미적 대상의 정신적인 것이나 내적인 면에 의존하는 미적 가치체계를 가리킨다. </p>
+                            </div>
+                        </div>
+
+                        <div class="feedbox">
+                            <div class="uploader">
+                                <img src="img/profileimg2.png" alt="프사"></img>
+                                <p class="uploadername">user2</p>
+                            </div>
+                            <img class="picture" src="img/feed2.jpg" alt="피드2"></img>
+                            <div class="funcs">
+                                <p>짠 342회</p>
+                                <img class="like" src="img/binjan.png" alt="짠" onclick="imgtoggle(1)"></img>
+                                <img class="reply" src="img/bubble.PNG" alt="댓글"></img>
+                                <img class="follow" src="img/kkbicon.png" alt="깐부신청"></img>
+                            </div>
+                            <div class="content">
+                                <p>형식이 내용의 존재 방식이자 대상의 표면 현상이라면, 내용은 예술작품에 있어서 그 안에 포함된 것, 또는 미적 대상의 정신적인 것이나 내적인 면에 의존하는 미적 가치체계를 가리킨다. </p>
+                            </div>
+                        </div>
+
+                        <div class="feedbox">
+                            <div class="uploader">
+                                <img src="img/profileimg3.jpg" alt="프사"></img>
+                                <p class="uploadername">user3</p>
+                            </div>
+                            <img class="picture" src="img/feed3.jpg" alt="피드3"></img>
+                            <div class="funcs">
+                                <p>짠 342회</p>
+                                <img class="like" src="img/binjan.png" alt="짠" onclick="imgtoggle(2)"></img>
+                                <img class="reply" src="img/bubble.PNG" alt="댓글"></img>
+                                <img class="follow" src="img/kkbicon.png" alt="깐부신청"></img>
+                            </div>
+                            <div class="content">
+                                <p>형식이 내용의 존재 방식이자 대상의 표면 현상이라면, 내용은 예술작품에 있어서 그 안에 포함된 것, 또는 미적 대상의 정신적인 것이나 내적인 면에 의존하는 미적 가치체계를 가리킨다. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var like_amt = new Array(542, 321, 87);
+
+        console.log($(".funcs").eq().find('p'));
+
+        for (let i = 0; i < like_amt.length; i++) {
+            $(".funcs").eq(i).find('p').text("짠 " + like_amt[i] + "회" );         
+        }       
+
+        function imgtoggle(num) {
+            if($(".funcs").eq(num).find('.like').attr('src') == "img/binjan.png") {
+                $(".funcs").eq(num).find('.like').attr('src', "img/fulljan.png");
+                like_amt[num]++;
+            } else {
+                $(".funcs").eq(num).find('.like').attr('src', "img/binjan.png");
+                like_amt[num]--;
+            }
+            $(".funcs").eq(num).find('p').text("짠 " + like_amt[num] + "회" );
+        }
+
+
+
+    </script>
+</body>
+</html>

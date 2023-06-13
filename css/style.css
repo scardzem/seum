@@ -1,0 +1,12 @@
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family: "adobe-clean", sans-serif;
+}
+
+.titlebarContainer{
+    font-size:14px;
+    width: 100%;
+    background-color: #fff;
+}

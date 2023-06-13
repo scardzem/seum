@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션 지점 지정하기</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            animation-name: change-bg;
+            animation-duration: 3s;
+            /*alternate : 역으로 재생, normal:처음으로 돌아가서 다시 재생*/
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
+        @keyframes change-bg{ /*<-- 애니메이션 이름*/
+        from{
+            background-color: blue;
+            border: 1px solid pink;
+        }
+        to{
+            background-color: skyblue;
+            border: 1px solid blue;
+            border-radius: 50%;
+        }
+    }
+    
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

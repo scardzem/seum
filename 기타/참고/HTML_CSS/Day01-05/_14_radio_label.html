@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>라디오버튼과 label 태그</title>
+    <style>
+        ul{
+            list-style: none;
+        }
+        li{
+            margin:20px;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+<ul>
+    <li>
+            <!--radio는 동일한 name을 지정 시 하나의 입력 값만 선택된다.
+                        name="subject" 세 개 모두 동일하게 입력해줘서 하나만 선택되도록 한다.-->
+            <!--label 태그를 지워보면 라디오버튼을 직접 클릭해야된다
+                실행해보면 C언어는 글자를 클릭하면 버튼 눌러지고 아래 
+                두개는 버튼을 직접 눌러야된다.-->
+        <label>
+            <input type="radio" name="subject" value="C">C언어
+        </label>    
+    </li>
+    <li>
+        <input type="radio" name="subject" value="Java">Java
+    </li>
+    <li>
+        <input type="radio" name="subject" value="Python">Python
+    </li>
+</ul>
+
+    </form>
+</body>
+</html>
