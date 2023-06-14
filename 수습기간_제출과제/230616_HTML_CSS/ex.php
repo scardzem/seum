@@ -207,5 +207,5 @@ include_once("./_common.php");
 	function add_number(){
 		alert('ㅎㅇ');
 	}
-
+ 
 </script> -->

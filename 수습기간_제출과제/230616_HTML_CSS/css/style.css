@@ -292,7 +292,8 @@
         .con_4_leftBox {
             width: auto;
             height: auto;
-            background-color: rgba(0,0,0,0.2);
+            /*영역 확인용*/
+            /* background-color: rgba(0,0,0,0.2); */
         }
         .con_4_leftBox .con_4_left_bottom {
             height:300px; 
