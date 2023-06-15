@@ -2,7 +2,7 @@
 
     /*전체 레이아웃*/
         /* #wrap{color: #000; background-color: #555;} */
-        #wrap{width: 1922px; color: #000; border:1px solid gray; position: relative; left:50%; top:0; transform:translate(-50%,0);z-index:99999;}
+        #wrap{width: 1923px; color: #000; border:1px solid gray; position: relative; left:50%; top:0; transform:translate(-50%,0);z-index:99999;}
         /* #header{background: #888; display:flex; justify-content: center; position:absolute; z-index: 100; left:50%; translate: -50%;} */
         #header{display:flex; justify-content: center; position:absolute; z-index: 1000; left:50%; translate: -50%; background-color:#fff;}
         /* #contents{background: #777;} */
@@ -107,14 +107,14 @@
            left: 50%;
            transform: translate(-50%, -50%);
            font-weight: 900;
-           font-family: 'Rowdies', cursive;
+           font-family: 'Archivo Black', sans-serif;
        }
        #cont_ban1 .container .banner_sub_title{
            position: absolute;
            left: 370px;
            top: 78%;
            font-size: 28px;
-           font-family: 'Rowdies', cursive;
+           font-family: 'Archivo Black', sans-serif;
        }
        #cont_ban1 .sub_con p{
            position: absolute;
@@ -165,12 +165,14 @@
             font-family: 'Montserrat', sans-serif;
             margin-bottom: 20px;
             font-size: 18px;
+            padding-left:1px;
         }
         .banner_2_text>p:nth-child(n+3):nth-child(-n+4){
-            font-family: 'Rowdies', cursive;
+            font-family: 'Archivo Black', sans-serif;
         }
         .banner_2_text>p:nth-child(3){
             font-size: 28px;
+            padding-left:1px;
         }
         .banner_2_text>p:nth-child(4){
             font-size: 78px;
@@ -181,7 +183,7 @@
             font-size: 18px;
         }
         .banner_2_text>p:nth-last-child(1){
-            font-family: 'Rowdies', cursive;
+            font-family: 'Archivo Black', sans-serif;
             font-size: 18px;
             display:inline-block;
         }
@@ -339,3 +341,86 @@
         }
     /* content_4 요소 E */
 
+    /* footer 요소 S */
+        #footer-info .container{
+            position: relative;
+            margin-top: 150px;
+            padding-top: 40px;
+        }
+        .midbox{
+            width:1180px;
+            position: absolute;
+            top:0;
+            left:50%;
+            translate: -50%;
+            /* footer 영역 확인 */
+            /* background: orange; */
+        }
+        
+        .midbox .midbox-top {           /* footer_mid_top */
+            padding-top: 40px;
+            width: 100%;
+            height: 225px;
+            /* footer 윗부분 확인 */
+            /* background: rgba(0,0,0,0.2); */
+            display: flex;
+            justify-content: start;   
+            float: left;
+            font-size: 24px;
+            color: #777;
+            font-size: 14px;
+            font-family: 'Pretendard';
+        }
+        #footer-info .midbox-top li {
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+        #footer-info .midbox-top li:nth-last-child(1) {
+            margin-bottom: 0;
+        }
+        #footer-info .midbox-top>p:nth-child(1){
+            font-family: 'Montserrat', sans-serif;
+        }
+        #footer-info .midbox-top ul {
+            margin-left: 50px;
+        }
+        #footer-info .midbox-top>p>span{
+            font-size: 34px;
+            font-weight: 600;
+            color: #000;
+        } 
+        
+        .midbox .midbox-bottom {            /* footer_mid_bottom */
+            clear: both;
+            width: 100%;
+            height: 185px;
+            /* footer 아랫부분 확인 */
+            /* background: rgba(0,0,0,0.4); */
+        }
+        .sns_img_border{
+            position:relative;
+            width: 47px;
+            height: 47px;
+            border: 1px solid #000;
+            border-radius: 50%;
+            margin-left: 20px;
+        }
+        .sns_img{
+            top: 40px;
+            left: 50%;
+            transform:translate(-50%, 0);
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+        .sns_img>.sns_img_border>img{
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .midbox-bottom>P{
+            text-align: center;
+            position: absolute;
+        }
+    /* footer 요소 E */

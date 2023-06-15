@@ -14,28 +14,18 @@ include_once("./_common.php");
                     family=Montserrat:wght@100;200;300;400;500;600;700;800;900&
                     family=Noto+Sans+KR:wght@100;300;400;500;700;900&
                     family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
-                    <link rel="stylesheet" type="text/css" href='https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css'> <!--footer에 사용된 pretendard 글꼴-->
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Archivo+Black&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href='https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css'> <!--footer에 사용된 pretendard 글꼴-->
 <title>연습</title>
 <style>
 
-    /* 간격 맞추기 위해서 박스 삽입
-        (padding, margin으로 하려다가 시간 내에 실패) */
-.box_for_distance_1{
-    height:106px;
-    background:yellow;
-    visibility:hidden;
-}
-.box_for_distance_2{
-    height:34px;
-    background:yellow;
-    visibility:hidden;
-}
-.box_for_distance_3{
-    height:50px;
-    background:yellow;
-    visibility:hidden;
-}
-    
+/* 간격 맞추기 위해서 박스 삽입
+    (padding, margin으로 하려다가 시간 내에 실패) */
+    .get_distance{background:yellow; visibility:hidden;}        
+    .box_for_distance_1{height:106px;}
+    .box_for_distance_2{height:34px;}
+    .box_for_distance_3{height:50px;}
+/* 콘텐츠 영역 확인 */    
 #area1180{
     width:1180px;
     position: absolute;
@@ -47,88 +37,7 @@ include_once("./_common.php");
     transform: translate(-50%, -50%);
 }
 
-#footer-info .container{
-    position: relative;
-    margin-top: 150px;
-    padding-top: 40px;
-}
-.midbox{
-    width:1180px;
-    position: absolute;
-    top:0;
-    left:50%;
-    translate: -50%;
-    /* footer 영역 확인 */
-    /* background: orange; */
-}
 
-.midbox .midbox-top {           /* footer_mid_top */
-    padding-top: 40px;
-    width: 100%;
-    height: 225px;
-    /* footer 윗부분 확인 */
-    /* background: rgba(0,0,0,0.2); */
-    display: flex;
-    justify-content: start;   
-    float: left;
-    font-size: 24px;
-    color: #777;
-    font-size: 14px;
-    font-family: 'Pretendard';
-}
-#footer-info .midbox-top li {
-    line-height: 1;
-    margin-bottom: 10px;
-}
-#footer-info .midbox-top li:nth-last-child(1) {
-    margin-bottom: 0;
-}
-#footer-info .midbox-top>p:nth-child(1){
-    font-family: 'Montserrat', sans-serif;
-}
-#footer-info .midbox-top ul {
-    margin-left: 50px;
-}
-#footer-info .midbox-top>p>span{
-    font-size: 34px;
-    font-weight: 600;
-    color: #000;
-} 
-
-.midbox .midbox-bottom {            /* footer_mid_bottom */
-    clear: both;
-    width: 100%;
-    height: 185px;
-    /* footer 아랫부분 확인 */
-    /* background: rgba(0,0,0,0.4); */
-}
-.sns_img_border{
-    position:relative;
-    width: 47px;
-    height: 47px;
-    border: 1px solid #000;
-    border-radius: 50%;
-    margin-left: 20px;
-}
-.sns_img{
-    top: 40px;
-    left: 50%;
-    transform:translate(-50%, 0);
-    display: flex;
-    justify-content: center;
-    position: relative;
-}
-.sns_img>.sns_img_border>img{
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-.midbox-bottom>P{
-    text-align: center;
-    position: absolute;
-
-}
 </style>
 </head>
 <body>
@@ -175,7 +84,7 @@ include_once("./_common.php");
                 <img src="images/bg.jpg" alt="banner_2_bg" width="373" height="597">
                 <img src="images/banner-product2.png" alt="banner_2_pd">
                 <div class="banner_2_text">
-                    <div class="box_for_distance_1" style="">간격 맞추기 위해서 삽입</div>
+                    <div class="box_for_distance_1 get_distance" style="">간격 맞추기 위해서 삽입</div>
                     <p>PERFUME COSMETIC</p>
                     <p>Best Seller</p>
                     <p>MISTER
@@ -190,7 +99,7 @@ include_once("./_common.php");
             </div>
         </div>
         <!-- /banner_2 -->
-        <div class="box_for_distance_2"></div> <!-- 간격 -->
+        <div class="box_for_distance_2 get_distance"></div> <!-- 간격 -->
         <div id="con_1">
             <div class="container">
                 <img src="images/br-banner-product1.jpg" class="product1" alt="">
@@ -198,7 +107,7 @@ include_once("./_common.php");
         </div>
         <!-- content_1 -->
 
-        <div class="box_for_distance_3"></div> <!-- 간격 -->
+        <div class="box_for_distance_3 get_distance"></div> <!-- 간격 -->
         <div id="con_2">
             <div class="container">
                 <nav id="cont2_nav">
