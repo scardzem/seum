@@ -1,26 +1,44 @@
 @charset "utf-8";
 
     /*전체 레이아웃*/
-        #wrap{color: #000;}
-        #header{background: #888; display:flex; justify-content: center; position:absolute; z-index: 100; left:50%; translate: -50%;}
-        #contents{background: #777;}
-        #footer{height: 450px; background: #666;}
+        /* #wrap{color: #000; background-color: #555;} */
+        #wrap{width: 1922px; color: #000; border:1px solid gray; position: relative; left:50%; top:0; transform:translate(-50%,0);z-index:99999;}
+        /* #header{background: #888; display:flex; justify-content: center; position:absolute; z-index: 100; left:50%; translate: -50%;} */
+        #header{display:flex; justify-content: center; position:absolute; z-index: 1000; left:50%; translate: -50%; background-color:#fff;}
+        /* #contents{background: #777;} */
+        /* #footer{height: 450px; background: #666;} */
+        #footer{height: 450px;}
 
     /*레이아웃*/
-        #header-title{height: 92px; background:#ffd7d7;}
+        /*확인용*/
+        /*#header-title{height: 92px; background:#ffd7d7;}
         #header-nav{height: 92px; background:#ffc6c6;}
         #cont_ban1{height: 1080px; background:#ffb0b0;}
         #cont_ban2{height: 717px; background:#ff9d9d;}
         #con_1{height: 750px; background:#ff8b8b;}
-        #con_2{height: 1205px; background:#ff7979;} /* 샘플은 1223px인데 멀어보여서 조정 */
-        #con_3{height: 775px; background:#ce6060;} 
+        #con_2{height: 1205px; background:#ff7979;}*/
+        /* #con_3{height: 775px; background:#ce6060;} 
         #con_4{height: 580px; background:#ff5656;}
-        #footer-info{height: 450px; background:#ff3939;}
+        #footer-info{height: 450px; background:#ff3939;} */
+
+        #header-title{height: 92px;}
+        #header-nav{height: 92px;}
+        #cont_ban1{height: 1080px;}
+        #cont_ban2{height: 750px;} 
+        #con_1{height: 750px;}
+        #con_2{height: 1173px;}
+        #con_3{height: 775px;} 
+        #con_4{height: 580px;}
+        #footer-info{height: 450px; background-color: #F8F8F8;}
 
     /* 컨테이너 */
-        .container{width:1920px; margin: 0 auto; height: inherit; background: rgba(0,0,0,0.3);}
+        /*확인용*/
+        /* .container{width:1920px; margin: 0 auto; height: inherit; background: rgba(0,0,0,0.3);}
         .container_left{width:672px;  margin: 0 auto; height: inherit; background: rgba(0,0,0,0.3);}
-        .container_right{width:1248px;  margin: 0 auto; height: inherit; background: rgba(0,0,0,0.3);}
+        .container_right{width:1248px;  margin: 0 auto; height: inherit; background: rgba(0,0,0,0.3);} */
+        .container{width:1920px; margin: 0 auto; height: inherit;}
+        .container_left{width:672px;  margin: 0 auto; height: inherit;}
+        .container_right{width:1248px;  margin: 0 auto; height: inherit;}
 
     /* header 요소 */
         .container_left{
@@ -35,7 +53,7 @@
         .container_left #logo{
             position:absolute;
             top:43px;
-            left: 365px;
+            left: 370px;
         }
         
         .container_right ul{
@@ -59,7 +77,7 @@
         }
         li a{
             text-decoration: none;
-            font-size: 22px;
+            font-size: 16px;
             color: #000;
         }
         li a:hover{
@@ -93,7 +111,7 @@
        }
        #cont_ban1 .container .banner_sub_title{
            position: absolute;
-           left: 365px;
+           left: 370px;
            top: 78%;
            font-size: 28px;
            font-family: 'Rowdies', cursive;
@@ -125,38 +143,47 @@
         }
         #cont_ban2 img:nth-child(1){
             right:197px;
-            top:45px;
+            top:77px;
         }
         #cont_ban2 img:nth-child(2){
             width:333px;
             height:500px;
             right:280px;
-            top:142px;
+            top:171px;
         }
         /* banner2 텍스트영역 */
         .banner_2_text {
-            margin-left: 365px;
-            padding-top: 74px;
+            margin-left: 370px;
+            /* padding-top: 106px; */  /*html에서 div .box_for_distance로 간격 맞춤*/
+
+            line-height:1;
         }
         .banner_2_text>p{
-            /* font-family: 'Montserrat', sans-serif; */
             font-family: 'Noto Sans KR', sans-serif;
         }
-        .banner_2_text>p:nth-child(1){
+        .banner_2_text>p:nth-child(2){
             font-family: 'Montserrat', sans-serif;
+            margin-bottom: 20px;
+            font-size: 18px;
         }
-        .banner_2_text>p:nth-child(n+2):nth-child(-n+3){
+        .banner_2_text>p:nth-child(n+3):nth-child(-n+4){
             font-family: 'Rowdies', cursive;
         }
-        .banner_2_text>p:nth-child(2){
+        .banner_2_text>p:nth-child(3){
             font-size: 28px;
         }
-        .banner_2_text>p:nth-child(3){
+        .banner_2_text>p:nth-child(4){
             font-size: 78px;
+            margin-bottom: 10px;
+        }
+        .banner_2_text>p:nth-child(n+5):nth-child(-n+8){
+            line-height: 1.5;
+            font-size: 18px;
         }
         .banner_2_text>p:nth-last-child(1){
             font-family: 'Rowdies', cursive;
-            font-size: 21px;
+            font-size: 18px;
+            display:inline-block;
         }
     /* banner_2 요소 E*/
 
@@ -166,17 +193,19 @@
             background-repeat: no-repeat;
             background-position: bottom;
             position: relative;
+            
         }
         #con_1 .container .product1{
             position: absolute;
             top: 0;
-            left: 365px;
+            left: 370px;
         }
     /* content_1 요소 E */
 
     /* content_2 요소 S */
         #cont2_nav ul {
-            padding-top: 50px;
+            /*html에서 div .box_for_distance로 간격 맞춤*/
+            /* padding-top: 50px; */
             display:flex;
             justify-content: center;
             align-items: center;

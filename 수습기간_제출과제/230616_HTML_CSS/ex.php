@@ -14,17 +14,127 @@ include_once("./_common.php");
                     family=Montserrat:wght@100;200;300;400;500;600;700;800;900&
                     family=Noto+Sans+KR:wght@100;300;400;500;700;900&
                     family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+                    <link rel="stylesheet" type="text/css" href='https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css'> <!--footer에 사용된 pretendard 글꼴-->
 <title>연습</title>
 <style>
 
+    /* 간격 맞추기 위해서 박스 삽입
+        (padding, margin으로 하려다가 시간 내에 실패) */
+.box_for_distance_1{
+    height:106px;
+    background:yellow;
+    visibility:hidden;
+}
+.box_for_distance_2{
+    height:34px;
+    background:yellow;
+    visibility:hidden;
+}
+.box_for_distance_3{
+    height:50px;
+    background:yellow;
+    visibility:hidden;
+}
+    
+#area1180{
+    width:1180px;
+    position: absolute;
+    height: 12000px;
+    background: rgba(0,0,0,0.2);
+    z-index:99999;
+    left:50%;
+    top:0;
+    transform: translate(-50%, -50%);
+}
 
+#footer-info .container{
+    position: relative;
+    margin-top: 150px;
+    padding-top: 40px;
+}
+.midbox{
+    width:1180px;
+    position: absolute;
+    top:0;
+    left:50%;
+    translate: -50%;
+    /* footer 영역 확인 */
+    /* background: orange; */
+}
+
+.midbox .midbox-top {           /* footer_mid_top */
+    padding-top: 40px;
+    width: 100%;
+    height: 225px;
+    /* footer 윗부분 확인 */
+    /* background: rgba(0,0,0,0.2); */
+    display: flex;
+    justify-content: start;   
+    float: left;
+    font-size: 24px;
+    color: #777;
+    font-size: 14px;
+    font-family: 'Pretendard';
+}
+#footer-info .midbox-top li {
+    line-height: 1;
+    margin-bottom: 10px;
+}
+#footer-info .midbox-top li:nth-last-child(1) {
+    margin-bottom: 0;
+}
+#footer-info .midbox-top>p:nth-child(1){
+    font-family: 'Montserrat', sans-serif;
+}
+#footer-info .midbox-top ul {
+    margin-left: 50px;
+}
+#footer-info .midbox-top>p>span{
+    font-size: 34px;
+    font-weight: 600;
+    color: #000;
+} 
+
+.midbox .midbox-bottom {            /* footer_mid_bottom */
+    clear: both;
+    width: 100%;
+    height: 185px;
+    /* footer 아랫부분 확인 */
+    /* background: rgba(0,0,0,0.4); */
+}
+.sns_img_border{
+    position:relative;
+    width: 47px;
+    height: 47px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+.sns_img{
+    top: 40px;
+    left: 50%;
+    transform:translate(-50%, 0);
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.sns_img>.sns_img_border>img{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.midbox-bottom>P{
+    text-align: center;
+    position: absolute;
+
+}
 </style>
 </head>
 <body>
 
 <div id="wrap">
-    <!-- 작업용으로 접어놓기용 div (삭제해야 페이지 제대로 나옴) -->
-<!-- <div></div> -->
+<div id="area1180"></div>
     <!-- header -->
     <header id="header">
         <div id="header-title">
@@ -65,6 +175,7 @@ include_once("./_common.php");
                 <img src="images/bg.jpg" alt="banner_2_bg" width="373" height="597">
                 <img src="images/banner-product2.png" alt="banner_2_pd">
                 <div class="banner_2_text">
+                    <div class="box_for_distance_1" style="">간격 맞추기 위해서 삽입</div>
                     <p>PERFUME COSMETIC</p>
                     <p>Best Seller</p>
                     <p>MISTER
@@ -79,7 +190,7 @@ include_once("./_common.php");
             </div>
         </div>
         <!-- /banner_2 -->
-
+        <div class="box_for_distance_2"></div> <!-- 간격 -->
         <div id="con_1">
             <div class="container">
                 <img src="images/br-banner-product1.jpg" class="product1" alt="">
@@ -87,6 +198,7 @@ include_once("./_common.php");
         </div>
         <!-- content_1 -->
 
+        <div class="box_for_distance_3"></div> <!-- 간격 -->
         <div id="con_2">
             <div class="container">
                 <nav id="cont2_nav">
@@ -194,7 +306,56 @@ include_once("./_common.php");
     <footer id="footer">
         <div id="footer-info">
             <div class="container">
-            footer
+                <div class="midbox">
+                    <div class="midbox-top">
+                            <p><span>LOGO</span><br>COMPANY</p>
+                            <ul>
+                                <li style="font-weight:bolder">CS CENTER</li>
+                                <li>월~금 AM 09:00 ~ PM 05:30</li>
+                                <li>점심 PM 12:30 ~ PM 01:30</li>
+                                <li>주말 및 공휴일은 휴무입니다.</li>
+                            </ul>
+                            <ul>
+                                <li style="font-weight:bolder">BANK INFO</li>
+                                <li>국민은행 00000000</li>
+                                <li>예금주 임시</li>
+                            </ul>
+                            <ul>
+                                <li style="font-weight:bolder">COMPANY INFO</li>
+                                <li><span style="line-height:1.2;">서울특별시 금천구 가산디지털1로 1
+                                    <br>(가산동, 더루벤스밸리) 1409<span></li>
+                                <li>대표 이대홍</li>
+                                <li>TEL 02-6487-6047</li>
+                                <li>MAIL seumweb@seumweb.com</li>
+                                <li>사업자등록번호 486-86-02701</li>
+                            </ul>
+                            <ul>
+                                <li style="font-weight:bolder">OFFICIAL</li>
+                                <li>브랜드 스토리</li>
+                                <li>이용약관</li>
+                                <li>이용안내</li>
+                                <li>개인정보처리방침</li>
+                            </ul>
+                            <ul>
+                                <li style="font-weight:bolder">HELP</li>
+                                <li>1:1문의</li>
+                                <li>상품후기</li>
+                                <li>상품문의</li>
+                                <li>공지사항</li>
+                            </ul>
+                    </div>
+                    <div class="midbox-bottom">
+                        <hr style="border:solid 1px #000;">
+                        <div class="sns_img">
+                            <div class="sns_img_border"><img src="images/instagram.png" width="24" height="24" alt=""></div>
+                            <div class="sns_img_border"><img src="images/facebook.png" width="28" height="28" alt=""></div>
+                            <div class="sns_img_border"><img src="images/kakao-talk.png" width="24" height="24" alt=""></div>
+                            <div class="sns_img_border"><img src="images/naver.png" width="20" height="20" alt=""></div>
+                        </div>
+                        <p>HOSTING BY 엔에이치고도(주)</p>
+                    </div>
+                </div>
+                
             </div>
         </div>
     </footer>
