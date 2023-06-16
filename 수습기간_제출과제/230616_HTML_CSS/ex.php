@@ -9,13 +9,15 @@ include_once("./_common.php");
 <link rel="stylesheet" href="css/style.css">
 <!--fonts-->
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?
-                    family=Montserrat:wght@100;200;300;400;500;600;700;800;900&
-                    family=Noto+Sans+KR:wght@100;300;400;500;700;900&
-                    family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Archivo+Black&display=swap" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href='https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css'> <!--footer에 사용된 pretendard 글꼴-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?
+                        family=Montserrat:wght@100;200;300;400;500;600;700;800;900&
+                        family=Noto+Sans+KR:wght@100;300;400;500;700;900&
+                        family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Archivo+Black&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href='https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css'> <!--footer에 사용된 pretendard 글꼴-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
 <title>연습</title>
 <style>
 /* 간격 맞추기 위해서 박스 삽입
@@ -35,6 +37,78 @@ include_once("./_common.php");
     left:50%;
     top:0;
     transform: translate(-50%, -50%);}
+.con_3_box_wrap{
+    width:3000px;
+    height:700px;
+    /* background-color: rgba(0,0,0,0.3); */
+}
+/* con_2에 hover 창 */
+.con2_hover{
+    position:absolute;
+    background-color:rgba(0,0,0,0.3);
+    width:380px;
+    height:380px;
+    top:0;
+    left:0;
+}
+.con2_hover_txt_area{
+    width:360px;
+    height:35%;
+    position:absolute;
+    transform:translate(-50%);
+    left:50%;bottom:10px;
+    /* background-color:#222; */
+    color:#fff;
+}
+.con2_hover_txt_area_2{
+    position:relative;
+    width:100%;
+    height:100%;
+}
+.con2_hover_item1{
+    display:flex;
+    justify-content:space-between;
+}
+.con2_hover_item1>div:nth-child(1){
+    /* color:#fff; */
+    font-size:18px;
+    font-weight:400;
+    font-family:'Montserrat', sans-serif;
+    margin:0 0 10px 0;
+}
+.con2_hover_item1>div:nth-child(2){
+    /* color:#fff; */
+    font-size:18px;
+    font-weight:400;
+    font-family:'Montserrat', sans-serif;
+}
+.con2_hover_item2{
+    /* color:#fff; */
+    width:100%;
+    height:25px;
+    border-top:solid 1px #fff;
+    line-height:2.5;
+}
+.con2_hover_item3{
+    /* color:#fff; */
+    font-size:20px;position:absolute;
+    bottom:20px;
+    left:50%;transform:translate(-50%);
+    border:solid 1px #fff; 
+    width:100%;
+    height:35px;
+    text-align:center;
+    color:#fff;
+    font-weight:500;
+}
+.con2_hover_item3 button{
+    width:100%;
+    height:100%;
+}
+.con2_hover_item3:hover{
+    background-color: #fff;
+    color: #000;
+}
 </style>
 </head>
 <body>
@@ -44,8 +118,8 @@ include_once("./_common.php");
         <header id="header">
             <div id="header-title">
                 <div class="container_left">
-                    <div style="height:5500px;position:absolute;left:101px; background-color: green; visibility:hidden;"><!--visibility 안쓰고 배경색 없애도 되는데 써봤음.-->
-                        <a href=""><img src="images/menubutton.png" alt="" style="position:sticky;top:58px; visibility:visible;"></a><!--visibility 안써도 되는데 써봤음.-->
+                    <div style="height:5500px;position:absolute;left:101px; background-color: green; visibility:hidden;">
+                        <a href=""><img src="images/menubutton.png" alt="" style="position:sticky;top:58px; visibility:visible;"></a>
                     </div>
                     <a href="#"><img src="images/logo.png" id="logo" alt="로고"></a>
                 </div>
@@ -122,7 +196,7 @@ include_once("./_common.php");
     
             <div class="box_for_distance_3 get_distance"></div> <!-- 간격 맞추기 위해 삽입 -->
             <div id="con_2">
-                <div class="container">
+            <div class="container">
                     <nav id="cont2_nav">
                         <ul>
                             <li><a href="">PERFUME</a></li>
@@ -134,35 +208,137 @@ include_once("./_common.php");
                     <div id="cont_2_body">
                         <hr style="border: solid 1px #000; margin-bottom:20px;">
                         <div class="grid-container">
-                            <div class="grid_item">
-                                <a href="#" ><img src="images/tab1.jpg" alt=""></a>
+                            <div class="grid_item grid_item_1">
+                                <img src="images/tab1.jpg" alt="">
                                 <p>FOR REST</p>
                                 <p>Portable Perfume</p>
+                                <!-- hover 영역 -->
+                                <div class="con2_hover">
+                                    <div class="con2_hover_txt_area">
+                                        <div class="con2_hover_txt_area_2">
+                                            <div class="con2_hover_item1">
+                                                <div>30ml/1.0oz</div>
+
+                                                <div>59,000 KRW</div>
+                                            </div>
+                                            <div class="con2_hover_item2">
+                                                Hinoki, Frankincense, Turkish rose, Yuzu, Nutmeg
+                                            </div>
+                                            <button><div class="con2_hover_item3">Add to Cart</div></button>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                             <div class="grid_item">
-                                <a href="#" ><img src="images/tab2.jpg" alt=""></a>
+                                <img src="images/tab2.jpg" alt="">
                                 <p>IN THE SHOWER</p>
                                 <p>Perfume</p>
+
+                                <!-- hover 영역 -->
+                                <div class="con2_hover">
+                                    <div class="con2_hover_txt_area">
+                                        <div class="con2_hover_txt_area_2">
+                                            <div class="con2_hover_item1">
+                                                <div>100ml/3.4oz</div>
+                                                <div>128,000 KRW</div>
+                                            </div>
+                                            <div class="con2_hover_item2">
+                                                Patchouli, Tobacco, Bitter orange, Campari, ...
+                                            </div>
+                                            <button><div class="con2_hover_item3">Add to Cart</div></button>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                             <div class="grid_item">
-                                <a href="#" ><img src="images/tab3.jpg" alt=""></a>
+                                <img src="images/tab3.jpg" alt="">
                                 <p>FORGET ME NOW</p>
                                 <p>Perfume</p>
+
+                                <!-- hover 영역 -->
+                                <div class="con2_hover">
+                                    <div class="con2_hover_txt_area">
+                                        <div class="con2_hover_txt_area_2">
+                                            <div class="con2_hover_item1">
+                                                <div>100ml/4.3oz</div>
+                                                <div>128,000 KRW</div>
+                                            </div>
+                                            <div class="con2_hover_item2">
+                                                Basil, Pink pepper, Green, Gardenia, Amber
+                                            </div>
+                                            <button><div class="con2_hover_item3">Add to Cart</div></button>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                             <div class="grid_item">
-                                <a href="#" ><img src="images/tab4.jpg" alt=""></a>
+                                <img src="images/tab4.jpg" alt="">
                                 <p>GAIAC FLOWER</p>
                                 <p>Portable Perfume</p>
+                                
+                                <!-- hover 영역 -->
+                                <div class="con2_hover">
+                                    <div class="con2_hover_txt_area">
+                                        <div class="con2_hover_txt_area_2">
+                                            <div class="con2_hover_item1">
+                                                <div>30ml/1.0oz</div>
+                                                <div>59,000 KRW</div>
+                                            </div>
+                                            <div class="con2_hover_item2">
+                                                Wild rose, Guaiac, Oriental, Vanilla, Amber
+                                            </div>
+                                            <button><div class="con2_hover_item3">Add to Cart</div></button>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                             <div class="grid_item">
-                                <a href="#" ><img src="images/tab5.jpg" alt=""></a>
+                                <img src="images/tab5.jpg" alt="">
                                 <p>SANTAL CREAM</p>
                                 <p>Portable Perfume</p>
+                                
+                                <!-- hover 영역 -->
+                                <div class="con2_hover">
+                                    <div class="con2_hover_txt_area">
+                                        <div class="con2_hover_txt_area_2">
+                                            <div class="con2_hover_item1">
+                                                <div>30ml/1.0oz</div>
+                                                <div>59,000 KRW</div>
+                                            </div>
+                                            <div class="con2_hover_item2">
+                                                Sandalwood, Vetiver, Fig, Cardamom, Giner, ...
+                                            </div>
+                                            <button><div class="con2_hover_item3">Add to Cart</div></button>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                             <div class="grid_item">
-                                <a href="#" ><img src="images/tab6.jpg" alt=""></a>
+                                <img src="images/tab6.jpg" alt="">
                                 <p>GENTLE NIGHT</p>
                                 <p>Perfume</p>
+                                
+                                <!-- hover 영역 -->
+                                <div class="con2_hover">
+                                    <div class="con2_hover_txt_area">
+                                        <div class="con2_hover_txt_area_2">
+                                            <div class="con2_hover_item1">
+                                                <div>100ml/3.4oz</div>
+                                                <div>128,000 KRW</div>
+                                            </div>
+                                            <div class="con2_hover_item2">
+                                                Suede, White tea, Fig, Moss, Cedarwood, Musk
+                                            </div>
+                                            <button><div class="con2_hover_item3">Add to Cart</div></button>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -203,8 +379,8 @@ include_once("./_common.php");
                                     <img src="images/bottom-banner1.jpg" width="280" height="280" style="border:solid 1px #000" alt="">
                                 </div>
                                 <div class="con_4_left_bottom">
-                                    <p style="position: absolute; top:0; left:0;">LOGO</p>
-                                    <p style="position: absolute; bottom:0; right:0;">BRAND<br>NAME</p>
+                                    <p style="position: absolute; top:20px; left:0;">LOGO</p>
+                                    <p style="position: absolute; bottom:-12px; right:0;">BRAND<br>NAME</p>
     
                                 </div>
                             </div>

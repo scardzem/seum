@@ -194,7 +194,7 @@
         /*banner2 하단 페이지 영역*/
         .bottom_number{
             position:absolute;
-            bottom:0;
+            bottom:20px;
             left:50%;
             transform: translate(-50%);
             width:260px;
@@ -221,7 +221,7 @@
         .ban2_bottom_center_border{
             border-top:solid 3px #777;
             width:100%;
-            height:10px;
+            height:13px;
             position:absolute;
             bottom:0;
         }
@@ -278,7 +278,6 @@
         .grid-container {
             display: grid;
             max-width: 1180px;
-        
             grid-template-columns: repeat(3, 1fr);
             grid-gap: 30px 20px;
             grid-auto-rows: minmax(380px, 465px);
@@ -289,6 +288,10 @@
             border: 1px solid maroon;
             padding: 0;
         } */
+
+        .grid-container .grid_item {
+            position: relative;
+        }
         .grid-container img {
             display:block;
         }
@@ -394,7 +397,7 @@
     /* footer 요소 S */
         #footer-info .container{
             position: relative;
-            margin-top: 150px;
+            margin-top: 151px;
             padding-top: 40px;
         }
         .midbox{
@@ -408,7 +411,7 @@
         }
         
         .midbox .midbox-top {           /* footer_mid_top */
-            padding-top: 40px;
+            padding-top: 42px;
             width: 100%;
             height: 225px;
             /* footer 윗부분 확인 */
@@ -431,15 +434,16 @@
         }
         #footer-info .midbox-top>p:nth-child(1){
             font-family: 'Montserrat', sans-serif;
-        }
-        #footer-info .midbox-top ul {
-            margin-left: 50px;
+            font-size: 24px;
         }
         #footer-info .midbox-top>p>span{
             font-size: 34px;
             font-weight: 600;
             color: #000;
         } 
+        #footer-info .midbox-top ul {
+            margin-left: 50px;
+        }
         
         .midbox .midbox-bottom {            /* footer_mid_bottom */
             clear: both;
@@ -479,3 +483,16 @@
             font-family: 'Noto Sans KR', sans-serif;
         }
     /* footer 요소 E */
+
+
+
+.con2_hover{
+    opacity: 0;
+}
+
+
+    .con2_hover:hover{
+        opacity: 1;
+        transition-property: opacity;
+        transition-duration: 0.5s;
+    }

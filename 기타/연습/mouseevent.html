@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마우스 이벤트</title>
+    <style>
+        button{
+            margin: 30px;
+
+        }
+    </style>
+</head>
+<body>
+    <!--button#btn1[type="button"]*4-->
+    <button id="btn1" type="button">클릭</button>
+    <button id="btn2" type="button">더블클릭</button>
+    <button id="btn3" type="button">마우스오버</button>
+    <button id="btn4" type="button">마우스아웃</button>
+
+    <script>
+        var btn1 = document.getElementById('btn1');
+        var btn2 = document.getElementById('btn2');
+        var btn3 = document.getElementById('btn3');
+        var btn4 = document.getElementById('btn4');
+
+        var body = document.getElementsByTagName('body');
+
+        btn1.onclick = function(){
+            body[0].style.backgroundColor = 'red';
+        }
+        btn2.ondblclick = function(){
+            body[0].style.backgroundColor = 'yellow';
+        }
+        btn3.onmouseover = function(){
+            body[0].style.backgroundColor = 'green';
+        }
+        btn4.onmouseout = function(){
+            body[0].style.backgroundColor = 'blue';
+        }
+    </script>
+</body>
+</html>
