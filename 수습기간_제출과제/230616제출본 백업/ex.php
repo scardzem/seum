@@ -42,7 +42,73 @@ include_once("./_common.php");
     height:700px;
     /* background-color: rgba(0,0,0,0.3); */
 }
-
+/* con_2에 hover 창 */
+.con2_hover{
+    position:absolute;
+    background-color:rgba(0,0,0,0.3);
+    width:380px;
+    height:380px;
+    top:0;
+    left:0;
+}
+.con2_hover_txt_area{
+    width:360px;
+    height:35%;
+    position:absolute;
+    transform:translate(-50%);
+    left:50%;bottom:10px;
+    /* background-color:#222; */
+    color:#fff;
+}
+.con2_hover_txt_area_2{
+    position:relative;
+    width:100%;
+    height:100%;
+}
+.con2_hover_item1{
+    display:flex;
+    justify-content:space-between;
+}
+.con2_hover_item1>div:nth-child(1){
+    /* color:#fff; */
+    font-size:18px;
+    font-weight:400;
+    font-family:'Montserrat', sans-serif;
+    margin:0 0 10px 0;
+}
+.con2_hover_item1>div:nth-child(2){
+    /* color:#fff; */
+    font-size:18px;
+    font-weight:400;
+    font-family:'Montserrat', sans-serif;
+}
+.con2_hover_item2{
+    /* color:#fff; */
+    width:100%;
+    height:25px;
+    border-top:solid 1px #fff;
+    line-height:2.5;
+}
+.con2_hover_item3{
+    /* color:#fff; */
+    font-size:20px;position:absolute;
+    bottom:20px;
+    left:50%;transform:translate(-50%);
+    border:solid 1px #fff; 
+    width:100%;
+    height:35px;
+    text-align:center;
+    color:#fff;
+    font-weight:500;
+}
+.con2_hover_item3 button{
+    width:100%;
+    height:100%;
+}
+.con2_hover_item3:hover{
+    background-color: #fff;
+    color: #000;
+}
 </style>
 </head>
 <body>

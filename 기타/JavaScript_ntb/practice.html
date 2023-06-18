@@ -5,16 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="main.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
 </head>
 <body>
-    <button onclick="document.getElementById('alert').style.display='block';">버튼</button>
-    <!-- <button onclick="document.getElementById('alert').style.display='none';">닫기</button> -->
-    <button onclick="closeButton()">닫기</button>
-    <div id="alert" class="alert-box">Alert 박스</div>
+    <!--코딩애플 웹개발로 배우는 자바스크립트 기초 6강. jQuery 맛보기-->
+    <h4 id="test" class="test1">안녕하세요</h4>
+
+    <h3 id="test2">안녕하세요</h3>
+
+    <!--숙제(다음강의 없음)-->
+    <!--main.css에 .yellow-bg를 작성했다. js나 jQuery코드를 한 줄 넣어서 #test2에 class="yellow-bg"가 추가되도록 할 것.-->
+
     <script>
-        function closeButton(){
-            document.getElementById('alert').style.display='none';
-        }
+        $("#test2").attr('class', 'yellow-bg');
     </script>
+
+
+
+    <script>
+        //자바스크립트 문법
+        // document.getElementById('test').innerHTML = '???';
+        //jQuery문법
+        //$('#test').html('???');  //위의 자바스크립트 문법과 거의 같은 기능을 함. 함수를 더 짧게 쓸 수 있다. jQuery는 자바스크립트와 똑같은 것이고, 코드를 더 짧게 쓸 수 있게 해주는 라이브러리이다.
+        //$('#test').text('???'); //.html은 #test인 것들의 모든 html요소를 ???로 바꾸고 .text는 text만 바꾼다고한다. 바꾸지 않고 출력만 하고싶으면 $('#test').html(); 이렇게 쓰면 된다.
+
+        //$('#test').css('color', 'red')  //이건 스타일 속성을 바꿀 수 있는 함수 첫번째 매개변수에 속성을 쓰고 두번째 매개변수에 속성값을 넣으면 된다. (매개변수 두 개를 입력하도록 만들어진 함수니 사용법 외워서 쓰면 된다.)
+        //$('#test').attr('src', 'dddd.jpg')  //이건 html의 수많은 세부 속성들을 바꿀 수 있는 함수. (attribute의 약자임.)
+        //$('#test') 이게 document.getElementById('test')와 같은 부분인데 더 강력하다. 괄호 안에 표현은 css셀렉터처럼 적어줘야 한다(#test, .test와 같이). 클래스명으로 선택하려면 $('.test1')
+        //이것과 비슷한 게 자바스크립트에도 있다. document.querySelector('#test') 이렇게 사용하면 위의 선택자들과 같은 의미. 그런데 쿼리셀렉터는 하나밖에 못찾음. 여러개를 찾고싶으면 .querySelectorAll('#test')[0]같은 걸 사용해야 함.
+        //그런데 이건 길기 때문에 jQuery를 사용하는 것이 더 편하기 때문에 사람들이 선호함.
+        //$('#test').innerHTML 이렇게 쓰는건 안된다. .innerHTML은 쌩 js문법이기 때문에 jQuery와 호환이 되지 않는다. jQuery함수들이 따로 있다.
+        
+        
+    </script>
+
+
 </body>
 </html>
