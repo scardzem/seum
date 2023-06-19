@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> else if문 </title>
+<script>
+	var mon = prompt("현재는 몇 월입니까?", "0");
+	if(3<=mon && mon<=5){
+		document.write("봄이군요");
+	} else if(6<=mon && mon<=8){
+		document.write("여름이군요");
+	}else if(9<=mon && mon<=11){
+		document.write("가을이군요");
+	}else if(1<=mon && mon<=2 || mon==12){
+		document.write("겨울이군요");
+	} else {
+		var alar = confirm("1~12까지만 입력해주세요");
+		alar
+		if(alar==true){
+			location.reload();	
+		}
+		
+	}
+</script>
+</head>
+<body>
+</body>
+</html>

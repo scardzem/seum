@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 중첩 if문 </title>
+<script>
+	var id = "easy1004";
+	var pw = "112233";
+var userId = prompt("아이디 입력","")
+var userPw = prompt("비번 입력","")
+
+if(id==userId){
+	if(id!=userId){
+	}
+	if(pw==userPw){
+		document.write(userId,"님 반갑습니다.");
+	} else {
+		var conf = confirm('비밀번호가 틀렸습니다.');
+		if(conf){
+			location.reload();
+		}
+	}	
+	} else {
+		var conf = confirm('아이디가 틀렸습니다.')
+		if(conf){
+			location.reload();
+		}
+	}
+</script>
+</head>
+<body>
+</body>
+</html>
