@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>toggle()</title>
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <button type="button" id="btn">토글</button>
+    <h1>내용</h1>
+    <script>
+        $(function(){
+            $("#btn").on("click", function(){
+                //$("h1").fadeToggle();
+                $("h1").fadeToggle(1000, function(){
+                    if($("h1").css("display") == "none"){
+                        alert("숨김 완료");
+                    } else {
+                        alert("표출 완료");
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

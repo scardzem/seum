@@ -1,0 +1,128 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="EAE6CCCA-8F33-1E85-657C-10ECF9CE3E82" name="T_BOARD_REPLY">
+<createdBy>bitcamp</createdBy>
+<createdTime>2022-05-25 06:35:09 UTC</createdTime>
+<ownerDesignName>BIT</ownerDesignName>
+<ordsAlias>table_5</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="BOARD_NO" id="9D1241CD-1BD3-F6A7-C7D5-054B78DEAA6B">
+<createdBy>bitcamp</createdBy>
+<createdTime>2022-05-25 06:38:24 UTC</createdTime>
+<ownerDesignName>BIT</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2E42381B-DFE9-6686-6D45-8CDF622BCC3B" referredColumn="511BC780-99C7-37D6-4AD9-A16B7B892791"/>
+</associations>
+</Column>
+<Column name="REPLY_NO" id="ACC25D7B-9776-108B-4550-69EB00ED8EBE">
+<createdBy>bitcamp</createdBy>
+<createdTime>2022-05-25 06:38:24 UTC</createdTime>
+<ownerDesignName>BIT</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="REPLY_LEVEL" id="29584739-A828-B9CE-97BD-9133AE05A962">
+<createdBy>bitcamp</createdBy>
+<createdTime>2022-05-25 06:38:24 UTC</createdTime>
+<ownerDesignName>BIT</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="REPLY_CONTENT" id="F7F53CC2-3908-00CD-DB32-B965AA7663A8">
+<createdBy>bitcamp</createdBy>
+<createdTime>2022-05-25 06:38:24 UTC</createdTime>
+<ownerDesignName>BIT</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1000 BYTE</dataTypeSize>
+<ownDataTypeParameters>1000 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="REPLY_USER" id="911D1F8D-4129-72BA-EBB7-A621875C31BF">
+<createdBy>bitcamp</createdBy>
+<createdTime>2022-05-25 06:38:24 UTC</createdTime>
+<ownerDesignName>BIT</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1000 BYTE</dataTypeSize>
+<ownDataTypeParameters>1000 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="USE_YN" id="A04F9DDC-8195-5703-FA71-8D29D1EA09ED">
+<createdBy>bitcamp</createdBy>
+<createdTime>2022-05-25 06:38:24 UTC</createdTime>
+<ownerDesignName>BIT</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="REPLY_REGIST_DATE" id="618149C4-9C48-879B-C9A8-93BDCD694743">
+<createdBy>bitcamp</createdBy>
+<createdTime>2022-05-25 06:38:24 UTC</createdTime>
+<ownerDesignName>BIT</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="REPLY_MODIFY_DATE" id="6F7F7A39-404B-CD9E-F1EF-0F5C641F93DC">
+<createdBy>bitcamp</createdBy>
+<createdTime>2022-05-25 06:38:24 UTC</createdTime>
+<ownerDesignName>BIT</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="44E35605-6BF4-BD93-E10E-145808B8468A" name="T_BOARD_REPLY_PK">
+<createdBy>bitcamp</createdBy>
+<createdTime>2022-05-25 06:38:24 UTC</createdTime>
+<ownerDesignName>BIT</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9D1241CD-1BD3-F6A7-C7D5-054B78DEAA6B"/>
+<colUsage columnID="ACC25D7B-9776-108B-4550-69EB00ED8EBE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="84AA3CF7-336B-55B2-2D93-58969C479B62" name="T_BOARD_REPLY_T_BIT_BOARD_FK">
+<createdBy>bitcamp</createdBy>
+<createdTime>2022-05-25 07:06:42 UTC</createdTime>
+<ownerDesignName>BIT</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9D1241CD-1BD3-F6A7-C7D5-054B78DEAA6B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setInterval/cleainterval</title>
+</head>
+<body>
+    <button type="button" onclick="clearInterval(interval)">
+        인터벌 해제
+    </button>
+    <script>
+        var i = 0;
+        var interval = setInterval(function() {
+            console.log(i++);
+        }, 1000);
+    </script>
+</body>
+</html>
+

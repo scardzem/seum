@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>화살표 함수는 this 바인딩 불가</title>
+</head>
+<body>
+    <script>
+        var counter1 = {
+            num: 1,
+            increase: function() {
+                return ++this.num;
+            }
+        }
+        console.log(counter1.increase());
+
+        const counter2 = {
+            num: 1,
+            increase: () => {
+                return ++this.num;
+            }
+        }
+        console.log(counter2.increase());
+    </script>
+</body>
+</html>

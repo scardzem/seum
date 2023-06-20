@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>var의 중복선언</title>
+</head>
+<body>
+    <script>
+        var x = 1;
+        var y = 1;
+
+        //중복선언
+        var x = 100;
+
+        //초기화 없는 선언문은 무시
+        var y;
+        
+        document.write(x, "<br>");
+        document.write(y, "<br>");
+    </script>
+</body>
+</html>

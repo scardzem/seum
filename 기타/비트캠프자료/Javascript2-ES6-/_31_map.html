@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열 함수 map</title>
+</head>
+<body>
+    <script>
+        const numbers = [1, 4, 9];
+
+        //각 숫자에 제곱근을 씌운 roots라는 배열을 만듦
+        const roots = numbers.map(number => Math.sqrt(number));
+        console.log(roots);
+
+        //원본 배열은 변하지 않음
+        console.log(numbers);
+    </script>
+</body>
+</html>

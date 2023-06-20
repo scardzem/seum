@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+/* body */
+#home{
+    background-color: #E9E5DC;
+}
+
+.first{
+    width:1100px;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 0 20px;
+    min-height:900px;
+}
+
+
+/* main_page */
+.logo{
+    width:250px;
+    margin-top: 0px;
+    margin-bottom:30px;
+}
+img{
+    max-width: 250px;
+}
+
+.main-nav{
+    margin:0px 0 50px;
+    padding: 0 50px;
+    display:grid;
+    gap:10px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+
+
+.middle{
+    display:grid;
+    gap:10px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.middle img {
+    width: 250px;
+    height: 250px;
+}
+
+
+
+/* 하단 아이콘별 배경색 지정 */
+.main-nav .content1{
+    border: 2px #85a2ff86 solid;
+    border-radius: 20%;
+    background-color: #85a2ff86;
+}
+.main-nav .content2{
+    border: 2px #ffce85 solid;
+    border-radius: 20%;
+    background-color: #ffce85;
+}
+.main-nav .content3{
+    border: 2px #473821b9 solid;
+    border-radius: 20%;
+    background-color: #473821b9;
+}
+.main-nav .content4{
+    border: 2px #6e1111cc solid;
+    border-radius: 20%;
+    background-color: #6e1111cc;
+}

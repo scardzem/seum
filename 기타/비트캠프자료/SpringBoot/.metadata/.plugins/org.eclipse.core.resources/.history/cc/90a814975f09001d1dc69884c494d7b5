@@ -1,0 +1,17 @@
+package com.spring.boardweb.service.board;
+
+import java.util.List;
+
+import com.spring.boardweb.entity.Board;
+
+public interface BoardService {
+	Page<Board> getBoardList(Pageable pageable);
+	
+	void insertBoard(Board board);
+	
+	Board getBoard(int boardSeq);
+	
+	void deleteBoard(int boardSeq);
+	
+	void updateBoard(Board board);
+}

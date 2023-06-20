@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="BIT" id="A74235D4-BBA5-D900-5206-F90E9C71AC41" version="3.5">
+<createdBy>bitcamp</createdBy>
+<createdTime>2022-05-25 06:21:44 UTC</createdTime>
+<ownerDesignName>BIT</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>A74235D4-BBA5-D900-5206-F90E9C71AC41</designId>
+</OSDM_Design>

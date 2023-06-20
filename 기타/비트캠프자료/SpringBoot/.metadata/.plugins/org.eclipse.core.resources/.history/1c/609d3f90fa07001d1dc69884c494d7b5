@@ -1,0 +1,9 @@
+package com.spring.boardweb.controller.user;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMappin("/user")
+public class UserController {
+
+}

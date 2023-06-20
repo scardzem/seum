@@ -1,0 +1,94 @@
+.grid {
+    /*타일형으로 배치하고 싶을 때*/
+    display: grid;
+    gap: 10px;
+    margin-top: 10px;
+    margin-left: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 90%;
+}
+/* @media screen and (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+} */
+
+.griditem {
+    width: 200px;
+    height: 200px;
+}
+
+.griditem > img {
+    width: 200px;
+    height: 200px;
+}
+
+.profilehead {
+    height: 250px;
+    display: flex;
+}
+
+.profile-wrap {
+    /* display: inline-block; */
+    /* position: absolute; */
+    margin-left: 25px;
+    min-width: 275px;
+}
+
+.profile-wrap div {
+    display: inline-block;
+}
+
+#profileimg {
+    border-radius: 100%;
+    width: 210px;
+    height: 210px;
+    margin-left: 35px;
+    margin-top: 20px;
+}
+
+#friend {
+    background-color: rgb(34, 162, 173);
+    color: white;
+    padding: 5px;
+    gap: 5px;
+    /* margin-top: 40px; */
+}
+
+.friend-wrap {
+    /* display: inline-block; */
+    margin-left: 25px;
+    /* margin-top: 50px; */
+}
+
+.memo{
+    margin-top: 30px;
+}
+ .post h4 {
+    font-size: 1.1rem;
+   margin-left: 5px;
+ }
+
+ .memo h4 {
+    font-size: 1.3rem;
+ }
+
+ .follower {
+    margin-left: 25px;
+   
+ }
+
+ .follower a{
+    text-decoration: none;
+    font-size: 1.1rem;
+ }
+
+ .profilename >h2 > img {
+    width: 30px;
+ }
+
+.friend-wrap > div >a {
+    text-decoration: none;
+    margin-right: 15px;
+    font-size: 0.8rem;
+}

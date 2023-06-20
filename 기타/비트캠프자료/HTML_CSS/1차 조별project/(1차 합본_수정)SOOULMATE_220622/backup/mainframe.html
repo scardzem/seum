@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/ress.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="css/mainframe_style.css">
+     <!--글꼴 link 태그로 불러오기-->
+     <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+     <!--파비콘 설정-->
+     <link rel="icon" type="image/png" href="img/logo.png">
+    <title>SOOULMATE</title>
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <div id="home">
+        <div class="wrapper">
+            <div class="left">
+                <button class="logo" type="button" onclick="location.href='./feed.html';">
+                    <img src="img/logo.png" alt="로고">
+                </button>
+                <div class="category">
+                    <div>
+                        <button class="beer"><img src="img/beericon.png" alt="맥주아이콘"></button>
+                        <button class="yangju"><img src="img/yangjuicon.png" alt="양주아이콘"></button>
+                        <button class="wine"><img src="img/wineicon.png" alt="와인아이콘"></button>
+                    </div>
+                </div>
+                <div class="nav">
+                    <button class="plus">
+                        <img src="img/plus.png" alt="+아이콘">
+                        <p data-bs-toggle="modal" data-bs-target="#intro">게시글 등록</p>
+                    </button>
+                    <button class="star">
+                        <img src="img/star.png" alt="*아이콘">
+                        <p>인기 게시물</p>
+                    </button>
+                    <button class="profile">
+                        <img src="img/profile1.png" alt="=아이콘">
+                        <p>프로필</p>
+                    </button>
+                </div>
+                <div class="chat">
+                    <div class="chatwrap">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div id="search">
+                    <div class="searchwrap">
+                        <button class="icon">
+                            <img src="img/searchicon.png" alt="검색아이콘">
+                        </button>
+                        <div class="input">
+                            <input type="search" placeholder="Search" aria-label="Search">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

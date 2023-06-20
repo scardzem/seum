@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class의 상속</title>
+</head>
+<body>
+    <script>
+        class Animal {
+            constructor(age, weight){
+                this.age = age;
+                this.weight = weight;
+            }
+
+            eat(){
+                return 'eat';
+            }
+
+            move(){
+                return 'move';
+            }
+        }
+
+        //Animal을 상속 받을 Bird 클래스 생성
+        class Bird extends Animal {
+            //생성자 함수를 생략하면
+            //기본적으로 부모 클래스의 생성자를 호출
+            //constructor(...args){
+            //  super(...args);
+            //}
+            fly(){
+                return 'fly';
+            }
+        }
+
+        const bird = new Bird(1, 5);
+        console.log(bird);
+        console.log(bird instanceof Bird);
+        console.log(bird instanceof Animal);
+
+        console.log(bird.eat());
+        console.log(bird.move());
+        console.log(bird.fly());
+
+    </script>
+</body>
+</html>

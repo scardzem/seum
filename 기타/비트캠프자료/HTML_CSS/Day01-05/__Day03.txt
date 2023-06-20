@@ -1,0 +1,252 @@
+1. 배경색을 지정하는 Background-color 속성
+    - 배경색도 폰트색상 지정하는 것과 마찬가지로
+      16진수 값, rgb, rgba 값으로 지정 가능
+    - background-color : 속성 값(16진수 값, rgb값, rgba값)
+--_45_backgroundcolor.html
+
+2. 배경색의 적용 범위를 조절하는 bacground-clip 속성
+    - background-clip : border-box|padding-box|content-box
+    - border-box : 박스 모델의 테두리까지 배경 적용
+    - padding-box : 박스 모델의 테두리를 뺀 부분까지 배경 적용
+    - content-box : 박스 모델에서 내용 부분만 배경 적용
+--_46_backgroundclip.html
+
+3. 배경에 이미지를 넣어주는 background-image 속성
+    - 배경 이미지를 넣을 때 사용
+    - background-image : url(이미지경로);
+--_47_backgroundimage.html
+
+4. 배경 이미지 반복 방법을 지정하는 background-repeat 속성
+    - 배경 이미지의 반복여부와 반복방향을 지정함
+    - background-repeat: repeat | repeat-x | repeat-y | no-repeat
+        - repeat : 화면이 가득 찰 때까지 가로와 세로로 반복
+        - repeat-x : 가로로 반복
+        - repeat-y : 세로로 반복
+        - no-repeat : 반복 없음. 한 번만 표시
+        - 지정 안 할 시 기본 값은 repeat
+--_48_backgroundrepeat.html (47번 복사해서함)
+
+5. 배경 이미지의 크기를 조절하는 background-size 속성
+    - 배경 이미지를 여러 사이즈로 조절하고 싶을 때 사용
+    - background-size: auto | contain | cover | 크기 값 | 백분율;
+    - auto: 원래 이미지 크기대로 표출
+    - contain: 요소 안에 이미지가 다 들어오도록 확대 및 축소
+    - cover : 요소를 이미지가 다 덮도록 확대 및 축소
+    - 크기 값: 지정된 크기 만큼 이미지 표출
+    - 백분율: 요소의 크기를 기준으로 확대 및 축소
+--_49_backgroundsize.html
+
+6. 배경 이미지의 위치를 조절하는 background-position 속성
+    - 배경 이미지가 표출되는 위치 조절
+    - background-position: left | center | right | 백분율 | 길이 값 | top | center | bottom | 백분율 | 길이 값
+    - 수평 위치와 수직 위치를 동시에 지정해줘야 됨
+        ex) background-position: center bottom;
+--_50_background-position.html
+
+7. 그라데이션 효과
+    - background-image나 background 속성에서 그라데이션 효과를 줄 수 있음
+    - 수직이나 수평 또는 대각선방향으로 색상이 일정하게 변하는 것을 그라데이션이라고 한다.
+
+8. 선형 그라데이션
+    - 선형 그라데이션은 방향과 색상을 지정
+    - linear-gradient(각도 to 방향, 색상 증단점, ......);
+        - to 방향에서 사용 가능한 속성
+            1) to top : 아래에서 시작해서 위로 그라데이션 생성
+            2) to left : 오른쪽에서 시작해서 왼쪽으로 그라데이션 생성
+            3) to right : 왼쪽에서 시작해서 오른쪽으로 그라데이션 생성
+            4) to bottom : 위에서 시작해서 아래쪽으로 그라데이션 생성
+        - 각도 : 그라데이션이 끝나는 각도
+                12시가 0도로 기준이 됨. deg 키워드를 사용하여 표시
+                시계방향으로 각도가 증가
+        - 색상 중단점 : 색상이 바뀌는 위치 지정. 생략 가능
+--_51_linear_gradient.html
+--_52_linear_degree.html
+--_53_linear_colortop.html
+
+9. 원형 그라데이션
+    - 원이나 타원의 중심부터 동심원을 그리면서 바깥 방향으로 색상이 바뀌는 그라데이션
+    - 색상이 바뀌는 원의 중심과 크기, 그라데이션의 모양을 지정
+    - radial-gradient(최종모양 크기 at 위치, 색상 중단점, ......);
+        - 최종모양 : 원형(circle)과 타원형(ellipse)
+                    기본 값은 타원형(ellipse)
+        - 위치 : 그라데이션이 시작되는 원의 중심점
+                at 키워드와 사용
+                at left | center | right top | center | bottom이나 백분율
+        - 크기 : 그라데이션의 크기 지정
+                 closest-side : 그라데이션의 가장자리가 중심에서 가장 가까운
+                                모서리와 만남
+                 closest-corner : 그라데이션의 가장자리가 중심에서 가장 가까운
+                                  꼭지점에 닿도록 함
+                 farthest-side : 그라데이션의 가장자리가 중심에서 가장 먼
+                                 모서리와 만남
+                 farthest-corner : 그라데이션의 가장자리가 중심에서 가장 먼
+                                   꼭지점과 닿도록 함
+--_54_radial_gradient.html
+--_55_radial_position.html
+--_56_radial_size.html
+
+10. 그라데이션의 반복
+    - 그라데이션의 반복은 단순 색상을 반복하는 것이 아니고
+      그라데이션의 패턴을 반복하는 것.
+    - 선형 그라데이션의 반복은 repeating-linear-gradient
+    - 원형 그라데이션의 반복은 repeating-radial-gradient
+--_57_repeating_linear_gradient.html
+--_58_repeating_radial_gradient.html
+
+11. CSS와 박스모델(중요)
+    - 블록 레벨 요소
+      웹 문서에서 한 줄을 다 차지하는 요소
+      마진, 패딩, 사이즈 및 위치를 조정할 수 있음
+      (한 줄을 다 차지하기 때문에) 좌우에 다른 요소가 올 수 없음
+      p, h1~h6, ul, ol, li, div, form, hr, table 등이 있다.
+    - 인라인 레벨 요소
+      한 줄을 다 차지하지 않는 요소
+      화면에 표시되는 컨텐츠 만큼 영역을 차지하고 나머지 공간에
+      다른 요소들이 올 수 있음
+      한 줄에 여러개의 인라인 레벨 요소를 표시할 수 있음
+      img, br, span, input, textarea, label, button 등이 있다.
+--_59_block_inline.html
+
+12. display 속성
+    - 블록 레벨 요소를 인라인 레벨 요소로 변경하거나
+      인라인 레벨 요소를 블록 레벨 요소로 변경해준다.
+    - display : block;
+      인라인 레벨 요소들을 블록 레벨 요소로 변경
+    - display : inline;
+      블록 레벨 요소들을 인라인 레벨 요소로 변경
+    - display : inline-block;
+      요소들의 배치는 인라인 요소로 배치하고
+      블록 레벨에서 지정 가능한 마진, 패딩, 사이즈, 위치 등을 사용할 수 있다.
+    - display : none;
+      해당 요소 자체를 화면에 표시하지 않음
+      요소의 공간도 차지하지 않음
+        visibility : hidden; => 공간은 그대로 차지, 화면에만 표시 안 됨
+--_60_display001.html
+--_61_display002.html
+
+13. 테두리 관련 속성들
+    - border-style : 테두리 스타일 지정하기
+                     none | solid | dashed | dotted | double......
+                     1) none : 테두리 표출 안 함
+                     2) solid : 실선 테두리 표출
+                     3) dashed : 직선 모양의 점선으로 테두리 표출
+                     4) dotted : 원 모양의 점선으로 테두리 표출
+                     5) double : 테두리를 이중 선으로 표출
+    - border-width : 테두리 두께 지정
+                     크기 | thin | medium | thick
+                     모든 방향 동일 지정시 하나의 크기만 지정
+                      ex) border_width: 10px;  => 상하좌우 10px
+                     위 아래 묶고 좌우 묶어서 지정 시에는 두 개 값 지정
+                      ex) border-width : 10px 20px;  => 상하 10px 좌우 20px
+                    네 방향 모두 다르게 지정시 네 개의 값 지정
+                      ex) border-width: 1px 5px 10px 15px;  =>상 1px 우 5px 하 10px 좌 15px
+                          (시계방향으로 적용)
+    - border-color : 테두리 색상 지정
+                        16진수값 | rgb | rgba | 색상 이름
+    - border : 테두리 관련 속성을 모아서 지정
+               ex) border : 1px solid #ccc;
+--_62_border.html
+    - border-radius : 박스 모서리 둥글게 만들기
+                      크기나 백분율로 반지름의 길이를 지정
+--_63_border_radius.html
+
+14. 요소들간의 간격 조절하는 margin 속성 
+    - margin : 크기 | 백분율;
+    - 백분율 : 박스 모델을 포함하고 있는 부모요소 기준으로 %단위로 지정
+    - 네 방향 동일하게 지정할 때는 하나의 값만 지정
+    - 상하 묶고 좌우 묶어서 지정할 때는 두 개의 값 지정
+    - 네 방향 모두 다르게 지정할 때는 네 개의 값 지정
+    - margin-top, margin-bottom, margin-left, margin-right로 사용가능
+--_64_margin.html
+
+15. 테두리와 콘텐츠 사이의 간격을 조절하는 padding 속성
+    - 테두리 안쪽의 여백을 설정
+    - padding: 크기|백분율
+      백분율 : 박스 모델의 길이를 기준으로 %단위로 지정
+      padding-top, padding-bottom, padding-left, padding-right로도 설정 가능
+--_65_padding.html
+
+16. 박스 모델의 크기를 지정하는 width, height 속성
+    - width : 박스 모델의 가로 길이
+    - height : 박스 모델의 세로 길이
+    - 크기|백분율|auto
+      1) 크기 : px단위로 지정
+      2) 백분율 : 박스모델을 포함하고 있는 부모요소를 기준으로 %단위로 지정
+      3) auto : 콘텐츠 양에 따라서 자동으로 지정. 기본값
+    - 크기의 기준을 지정하는 box-sizing 속성
+      content-box | border-box
+      1) content-box : 지정하는 크기를 콘텐츠영역의 크기로 사용. 이게 기본값
+      2) border-box : 박스 모델 전체의 크기를 지정
+--_66_width_height.html
+
+17. 요소를 왼쪽이나 오른쪽에 배치하는 float 속성
+    - 요소를 문서 위에 떠있게 만듦
+    - 왼쪽 구석이나 오른쪽 구석에 요소를 배치
+    (float은 inline이나 이런거 상관없이 좌,우부터 차곡차곡 쌓인다..)
+    - left | right
+    - clear 속성 : 왼쪽이나 오른쪽 배치가 더 이상 유효하지 않도록 설정
+      left | right | both
+--_67_float.html
+--_68_float_clear.html
+
+18. 배치 방법을 지정해주는 position 속성
+    - 문서 안에서 요소들을 자유자재로 배치해주는 속성
+    - static | relative | absolute | fixed
+        1) static : 문서의 흐름대로 배치. 기본값
+                    top, bottom, left, right 사용 불가
+                    float 속성으로 좌우 배치는 가능
+        2) relative : 이전 요소에 자연스럽게 연결해서 배치
+                      top, bottom, left, right로 위치 조정 가능
+        3) absolute : 원하는 위치를 지정해서 배치
+                      top, bottom, left, right로 위치 지정 가능
+                      기준이 되는 위치는 부모 요소 중 
+                      position : relative인 요소를 기준으로 잡음
+        4) fixed : 원하는 위치에 고정해서 배치
+                    브라우저 창 왼쪽 꼭지점을 (0, 0) 기준점으로 잡아서 배치
+                    top, bottom, left, right로 위치 지정
+                    고정돼서 표시되기 때문에 브라우저 창의 스크롤을 내려도
+                    그 위치에 표시가 됨
+--_69_relative.html
+--_70_absolute.html
+--_71_fixed.html 
+
+19. 요소를 숨기거나 보이게 하는 visibility 속성
+    - visible | hidden
+    - display : none 요소의 공간 자체가 사라짐
+    - visibility : hidden 요소의 공간은 남아있고 안 보이게 숨김
+--_72_visibility.html
+
+20. 요소를 쌓는 순서를 정하는 z-index 속성
+    - z-index: 숫자
+    - 숫자가 작을수록 아래에 쌓이고 클수록 위에 쌓임
+    - z-index를 명시하지 않으면 처음 삽입된 요소가 1로 지정되고
+      다음에 삽입되는 요소들이 1씩 증가된 z-index 값을 갖게 됨
+--_73_z_index.html
+
+21. 테이블 관련 속성들
+    - border 속성 : 테이블의 테두리 지정
+                    박스 모델의 border 속성과 동일한 속성 값
+    - border-collapse 속성 : 테두리 분리, 통합 여부 결정
+                             1) collapse : 테두리 통합
+                             2) separate : 테두리 분리, 기본값
+--_74_table_border.html
+    - width, height 속성 : 테이블의 가로길이와 세로길이 지정
+    - text-align 속성 : 셀 안의 내용의 수평 정렬 지정
+                        left | center | right
+    - vertical-align 속성 : 셀 안의 내용의 수직 정렬 지정
+                            top | middle | bottom
+--_75_table_align.html
+
+22. 속성 선택자
+    - 선택자[속성] : 속성을 갖는 선택자를 선택하여 스타일 적용
+    - 선택자[속성=값] : 속성이 특정 값을 갖는 선택자를 선택하여 스타일 적용
+--_76_attribute_selector001.html
+
+23. 가상클래스와 가상요소
+    - 사용자 동작에 반응하는 가상클래스를 사용하여 스타일 적용
+    - :link : 방문하지 않은 링크에 스타일 적용
+    - :visited : 방문한 링크에 스타일 적용
+    - :hover : 마우스 커서 올려놓을 때 스타일 적용
+    - :active : 웹 요소를 활성화했을 때 스타일 적용
+    - :focus : 웹 요소에 포커스가 갔을 때 스타일 적용
+--_77_virtual_class.html

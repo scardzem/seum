@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6의 class</title>
+</head>
+<body>
+    <script>
+        class Person{
+            //생성자 함수
+            constructor(name){
+                //속성 생성 및 초기화
+                this.name = name;
+            }
+
+            //프로토타입 메소드
+            sayHi(){
+                console.log(`Hi! ${this.name}`);
+            }
+
+            //정적 메소드
+            //static 키워드 사용
+            static sayHello(){
+                console.log(`Hello`);
+            }
+        }
+
+        //인스턴스 생성
+        //new 키워드 사용해서 객체 생성
+        const me = new Person('lee');
+
+        console.log(me);
+        //프로토타입 메소드 호출
+        me.sayHi();
+
+        //정적 메소드 호출
+        Person.sayHello();
+    </script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+1. 자바스크립트 시작하기
+    - html 문서에 <script type="text/javascript>로 선언하여 사용
+    - 현재 많은 개발자들이 스크립트를 <head>태그 안에서 사용
+    - 제일 좋은 방식은 <body>안에 최하단에 스크립트를 작성하는 것.
+      이유는 <body>태그 최하단에 있어야 모든 html 태그들이 로드 된 후에 스크립트가 실행 됨
+    (현업에 가보면 헤드에도 있고 바디에도 있고 html 중간중간에 있기도 함)
+--_01_HelloJavaScript.html
+
+2. 외부 자바스크립트 사용
+    - 순수 자바스크립트 파일(.js)로 만들어서 html 문서에서 호출
+    - 호출 방식 : <script type="text/javascript" src="js파일 경로">
+--js/hellojavascript.js
+--_02_out_javascript.html
+
+3. 변수 선언
+    - ES5에서는 모든 변수는 var로 선언
+    - var 변수명; 또는 var 변수명 = 초기화 값;
+    - var로 저장 할 수 있는 타입은 정수형, 실수형, 문자열, 논리형, null 등..
+    - 문자형 데이터는 ''나 ""로 묶어서 표시
+    - 문자형 데이터에 태그를 포함하면 html 태그로 인식
+    - 숫자형 데이터는 숫자만 지정해야 됨 "100" -> 문자열로 인식
+    - 논리형 데이터는 true, false만 지정 가능, 조건식으로도 true나 false 지정 가능
+      ex) var bool = 10 < 100;   (<--- bool = true가 됨)
+    - undefined은 변수에 아무 값이 등록되어 있지 않은 상태 
+      ex) var s;   (<-- s = undefied 상태)
+    - null은 변수에 null 값을 저장한 상태
+      ex) var t = null;
+
+4. typeof 메소드
+    - 변수에 저장된 데이터 형을 알고 싶을 때 사용
+--_03_variables.html
+
+5. 연산자
+    - 산술연산자 : +, -, *, /, %
+    - 문자열 결합 연산자 : +
+                          문자열 + 문자열 = 문자열
+                          문자열 + 숫자형 + 문자열
+    - 대입연산자 : =, +=, -=, *=, /=, %=
+    - 증감연산자 : ++, --
+    - 비교연산자 : >, <, >=, <=, ==, !=, ===, !==
+--_04_operator.html
+    - 논리연산자 : ||, &&, !
+    - 삼항 조건연산자 : 조건식 ? 결과1 : 결과2 
+                    (조건식이 tru면 결과1, false면 결과2)
+--_05_operator.html
+
+6. 조건문
+    - if문과 switch case문이 존재
+    - if(조건식1) {
+
+        } else if(조건식2) {
+            
+        } else {
+
+        }
+    - switch(변수){
+            case 조건1 :
+                실행문1
+                break;
+            case 조건2 :
+                실행문2
+                break;
+            default:
+                실행문3;
+        }
+--_06_if_else.html
+--_06_switch_case.html
+
+7. 반복문
+    - while, do while, for문이 있음
+        1) while문
+            while(조건식) {
+                실행문;
+            }
+        2) do while문
+            do{
+                실행문;
+            } while(조건식);
+        3) for문
+            for(초기값; 조건식; 증감식) {
+                실행문;
+            }
+--_07_while.html
+--_08_do_while.html
+--_09_for.html
+
+8. 객체
+    - 자바스크립트도 객체지향 언어로 객체를 생성하고 사용 가능하다.
+
+9. 객체의 종류
+    - 내장 객체 : String, Date, Array, Math 등...
+    - BOM(Browser Object Model) : 브라우저에 접근할 수 있는 객체
+                                  window, screen, location, history, navigator 등...
+    - DOM(Document Object Model) : HTML 문서에 접근 할 수 있는 객체
+                                   HTML 태그들에 접근하여 직접 조작 가능
+
+10. 내장 객체
+    - Date : 현재 날짜 정보를 제공하는 객체
+--_10_Date.html
+    - Number : 자바스크립트에서 숫자를 표기할 때 사용
+               숫자의 속성이나 메소드 사용 가능
+--_11_Number.html
+    - Math : 수학과 관련된 속성과 메소드를 제공하는 객체
+    - Array : 하나의 배열에 모든 데이터 타입이 들어갈 수 있다.
+              길이도 지정 안 해도 된다.(자바와 조금 다름)
+              배열 선언 방식
+               1) var arr = new Array();
+                    arr[0] = 1;
+                    arr[1] = "홍길동";
+                    arr[2] = true;
+               2) var arr = new Array(1, "홍길동", true);
+               3) var arr = [1, "홍길동", true];
+               배열 데이터 접근 : arr[index]
+--_13_Array.html
+    - String : 문자열 객체, 자바스크립트에서 가장 많이 사용됨
+                문자열 선언
+                1. var str = new String(문자열);
+                2. var str = "문자열";
+--_14_String.html                
+
+11. BOM(Browser Object Model)
+    - window가 최상위 객체
+    - window - document, screen, location, history, navigatior
+    - window의 메소드
+        1) window.open('url', 창이름, 옵션,);
+            새 창이나 팝업을 띄울 때 주로 사용
+--_15_window_open.html  
+        2) alert('경고메시지');
+            알림 창을 띄워줌
+        3) prompt('질의내용', 초기값);
+            사용자 입력을 받을 수 있는 창을 하나 띄워줌
+        4) confirm('질의내용');
+            확인창 띄워줌, 확인 클릭 시 true, 취소 클릭 시 false 반환
+        5) setInterval/clearInterval
+            - setInterval은 특정 시간 간격으로 동일한 동작 실행
+                ex) var interval = setInterval(function(){
+                    반복될 동작;
+                }, 반복 시간 간격(ms));     <---ms: 밀리 초
+            - clearInterval은 setInterval로 동작하는 동작을 취소할 때 사용
+                ex) clearInterval(인터벌 변수 명);
+--_16_interval.html
+        6) setTimeout/clearTimeout
+            - setTimeout : 특정 시간 후에 동작을 한 번 실행 시킴
+                ex) var timeout = setTimeout(function() {
+                    실행될 동작
+                    }, 특정시간(ms));
+            - clearTimeout은 setTimeout을 해지함
+                ex) clearTimeout(타임아웃 변수명);
+            - setTimeout을 재귀함수로 호출 시 setInterval과 동일한 결과를 얻을 수 있음
+
+12. DOM(Document Object Model)
+    - HTML 문서에 선언된 태그들에 직접 접근하여 조작이 가능한 객체
+    - 선택자의 종류
+       1) document.getElementById('아이디명') : 태그에 지정된 아이디로 요소를 선택
+       2) document.getElementsByTagName('태그명') : 태그명으로 요소를 선택
+       3) document..getElementsByClassName('클래스명') : 태그에 지정된 클래스로 요소를 선택
+    - css 적용법
+       1) document.선택자.style.속성 = 속성값;
+    - 요소의 속성 값 변경 및 생성
+       1) 요소선택.속성명; : 현재 속성에 지정된 값을 불러움
+       2) 요소선택.속성명=값; : 요소의 속성에 새로운 값을 넣어줌
+       3) 요소선택.getAttribute('속성') : 현재 속성에 지정된 값 불러옴
+       4) 요소선택.setAttribute('속성', '값') : 요소의 속성에 새로운 값을 넣어줌
+       5) 요소선택.innerHTML; : 선택된 요소의 모든 하위 요소들을 문자열로 반환
+       6) 요소선택.innerHTML = 새요소; : 선택된 요소의 하위 요소를 삭제하고 새 요소 추가
+    - 이벤트핸들러
+       1) 요소선택.이벤트종류 = function() {
+                                실행문;
+                                }  
+            onclick, onmouseover, onmouseout, submit
+--_16_DOM_attribute.html
+--_17_DOM2_style2.html
+--_18_innerHTML.html

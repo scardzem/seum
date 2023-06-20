@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest 파라미터</title>
+</head>
+<body>
+    <script>
+        function fnc1(...rest){
+            console.log(rest);
+        }
+        fnc1(1, 2, 3, 4, 5);
+        //매개변수 중 하나만 사용하고 나머지 값들도 받을 수 있다.
+        function fnc2(num1, ...rest){
+            console.log(num1);
+            console.log(rest);
+        }
+        fnc2(1, 2, 3, 4, 5);
+
+        function fnc3(a, b, c, ...rest){
+            console.log(a);
+            console.log(b);
+            console.log(c);
+            console.log(rest);
+        }
+        fnc3(1, 2, 3, 4, 5);
+
+        const fnc4 = (a, b, c, ...rest) => {
+            console.log(a);
+            console.log(b);
+            console.log(c);
+            console.log(rest);
+        }
+        fnc4(2, 3, 4, 5, 6);
+    </script>
+</body>
+</html>

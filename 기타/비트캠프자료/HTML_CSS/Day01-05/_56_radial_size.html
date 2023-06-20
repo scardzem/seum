@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>원형 그라데이션 크기</title>
+    <style>
+        div{
+            width: 500px;
+            height: 300px;
+            margin: 10px;
+        }
+        .grad1{
+            background-color: darkgreen;
+            background: radial-gradient(circle closest-side at 30% 40%, white, yellow, green);
+        }
+        .grad2{
+            background-color: darkgreen;
+            background: radial-gradient(circle closest-corner at 30% 40%, white, yellow, green);
+        }
+        .grad3{
+            background-color: darkgreen;
+            background: radial-gradient(circle farthest-side at 30% 40%, white, yellow, green);
+        }
+        .grad4{
+            background-color: darkgreen;
+            background: radial-gradient(circle farthest-corner at 30% 40%, white, yellow, green);
+        }
+    </style>
+</head>
+<body>
+    <div class="grad1"></div>
+    <div class="grad2"></div>
+    <div class="grad3"></div>
+    <div class="grad4"></div>
+</body>
+</html>

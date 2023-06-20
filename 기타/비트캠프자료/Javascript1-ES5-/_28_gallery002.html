@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자동 갤러리 만들기</title>
+</head>
+<body>
+    
+    <div id="galleryZone">
+        <p>
+            <img src="images/pic_1.jpg" alt="배경이미지" id="photo">
+        </p>
+        <!--p>button[type="button"]*2-->
+        <p>
+
+        </p>
+        
+        <script>
+            //var num = 1;
+       
+
+            num = 1
+            var interval;
+
+
+            function gallery(direction){
+                interval = setInterval(function(){
+                    if(num ==8)
+                        num=0;
+                    num++;
+                    var img = document.getElementById('photo');
+                    img.setAttribute('src', 'images/pic_' + num + '.jpg');
+                }, 1000);
+            }
+
+            gallery();
+
+        </script>
+    </div>
+
+
+
+</body>
+</html>

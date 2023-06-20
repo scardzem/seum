@@ -1,0 +1,105 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="58146199-D5BE-F769-9967-9FD6A3023F4D" name="T_BIT_BOARD">
+<createdBy>bitcamp</createdBy>
+<createdTime>2022-05-25 06:28:14 UTC</createdTime>
+<ownerDesignName>BIT</ownerDesignName>
+<ordsAlias>table_2</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="BOARD_NO" id="511BC780-99C7-37D6-4AD9-A16B7B892791">
+<createdBy>bitcamp</createdBy>
+<createdTime>2022-05-25 06:30:55 UTC</createdTime>
+<ownerDesignName>BIT</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BOARD_TITLE" id="3AD009CA-EA1A-6179-C851-FE67DB71A179">
+<createdBy>bitcamp</createdBy>
+<createdTime>2022-05-25 06:30:55 UTC</createdTime>
+<ownerDesignName>BIT</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1000 BYTE</dataTypeSize>
+<ownDataTypeParameters>1000 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BOARD_CONTENT" id="E535E760-6743-B201-1A81-395CF338264E">
+<createdBy>bitcamp</createdBy>
+<createdTime>2022-05-25 06:30:55 UTC</createdTime>
+<ownerDesignName>BIT</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000 BYTE</dataTypeSize>
+<ownDataTypeParameters>4000 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BOARD_USER" id="776BE288-A930-DB5B-852D-AB14AB0EEBCB">
+<createdBy>bitcamp</createdBy>
+<createdTime>2022-05-25 06:30:55 UTC</createdTime>
+<ownerDesignName>BIT</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1000 BYTE</dataTypeSize>
+<ownDataTypeParameters>1000 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BOARD_USE_YN" id="2B68A59C-453C-1CE2-5057-75C44EB2F7F5">
+<createdBy>bitcamp</createdBy>
+<createdTime>2022-05-25 06:30:55 UTC</createdTime>
+<ownerDesignName>BIT</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BOARD_REGIST_DATE" id="DD6528E7-84C8-48DA-EF6A-45E380C5C72F">
+<createdBy>bitcamp</createdBy>
+<createdTime>2022-05-25 06:30:55 UTC</createdTime>
+<ownerDesignName>BIT</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BOARD_MODIFY_DATE" id="69BE04EE-051C-8B32-7260-A8B95D8C29FA">
+<createdBy>bitcamp</createdBy>
+<createdTime>2022-05-25 06:30:55 UTC</createdTime>
+<ownerDesignName>BIT</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A1280262-9180-0DFB-832A-8A27F9638462" name="T_BIT_BOARD_PK">
+<createdBy>bitcamp</createdBy>
+<createdTime>2022-05-25 06:30:55 UTC</createdTime>
+<ownerDesignName>BIT</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="511BC780-99C7-37D6-4AD9-A16B7B892791"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

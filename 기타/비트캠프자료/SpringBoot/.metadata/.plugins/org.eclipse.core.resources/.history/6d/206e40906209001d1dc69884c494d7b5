@@ -1,0 +1,9 @@
+package com.spring.boardweb.api;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class BoardApi {
+	@GetMapping("/api/pageboardlist")
+	public Page<Board> pageBoardList(@PageableDefault(page = 0, size = 10) Pageable pageable)
+}

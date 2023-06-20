@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prepend/prependTo()</title>
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <ul id="listZone">
+        <li id="list1">항목1</li>
+        <li>항목2</li>
+        <li>항목3</li>
+        <li>항목4</li>
+        <li>항목5</li>
+        <li>항목6</li>
+
+    </ul>
+    <script>
+        $(function(){
+            //1. prepend()
+            $("#listZone").prepend("<li>새로 추가된 항목</li>");
+            //2. prependTo()
+            $("<li>두번째로 추가된 항목</li>").prependTo("#listZone");
+        });
+            
+    </script>
+</body>
+</html>

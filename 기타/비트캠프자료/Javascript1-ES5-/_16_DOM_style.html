@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 객체 CSS 적용</title>
+</head>
+<body>
+    <h1 id="title1">안녕하세요.</h1>
+    <h2 id="title2">Hello javascript</h2>
+    <script>
+        var $h1 = document.getElementById('title1');
+        var $h2 = document.getElementById('title2');
+        $h1.style.color = 'red';
+        $h1.style.backgroundColor = 'yellow';
+        $h2.style.color = 'green';
+        $h2.style.fontSize = '50px';
+    </script>
+    
+</body>
+</html>

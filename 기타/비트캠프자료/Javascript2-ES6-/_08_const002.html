@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>const 블록 단위 변수, 호이스팅 불가</title>
+</head>
+<body>
+    <script>
+        {
+            //호이스팅 불가
+            //document.write(x, "<br>");
+            const x = 100;
+        }
+        //블록단위 변수라 사용 불가능
+        document.write(x, "<br>");
+    </script>
+</body>
+</html>

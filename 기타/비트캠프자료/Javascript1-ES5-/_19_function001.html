@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메소드1</title>
+</head>
+<body>
+    <button type="button" id="btn" onclick="changeBg()">
+        색상바꾸기
+    </button>
+    <script>
+        var color = ['yellow', 'green', 'blue', 'red'];
+
+            var i = 0;
+
+            function changeBg(){
+                i++;
+
+                if(i > color.length)
+                i = 0;
+
+                var body = document.getElementsByTagName('body');
+
+                body[0].style.backgroundColor = color[i];
+            }
+
+            var btn = document.getElementById('btn');
+
+            btn.onclick = function(){
+                changeBg();
+            }
+    </script>
+</body>
+</html>

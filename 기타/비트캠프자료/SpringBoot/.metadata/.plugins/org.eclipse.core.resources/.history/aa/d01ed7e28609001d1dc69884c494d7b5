@@ -1,0 +1,10 @@
+package com.spring.boardweb.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.spring.boardweb.entity.BoardFile;
+import com.spring.boardweb.entity.BoardFileId;
+
+public interface BoardFileRepository extends JpaRepository<BoardFile, BoardFileId>{
+	public List<BoardFile> findByBoardSeq(int boardSeq);
+}

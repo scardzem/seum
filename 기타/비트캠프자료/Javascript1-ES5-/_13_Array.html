@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array 내장객체</title>
+</head>
+<body>
+    <script>
+        var arr = ['사당', '교대', '강남', '역삼'];
+
+        document.write(arr, "<br>");
+        document.write(typeof arr, "<br>");
+
+        //join : 배열의 값들을 하나의 문자열로 반환
+        document.write(arr.join('-'), "<br>");
+        document.write(typeof arr.join('-'), "<br>");
+
+        //reverse : 배열의 순서를 역순으로 바꿈
+        document.write(arr.reverse(), "<br>");
+
+        //sort : 배열의 값들을 오름차순으로 정렬
+        document.write(arr.sort(), "<br>");
+
+        //splice : 배열의 index 구간만큼 데이터 삭제 후 새 데이터 추가
+        //아래는 2번째부터 1개 데이터 삭제 후에 그 자리에 서초, 방배 추가
+        arr.splice(2, 1, '서초', '방배');
+        document.write(arr, "<br>");
+
+        //slice : 원하는 구간 만큼 잘라서 배열로 반환
+        //index 1부터 3"이전"의 데이터 (index: 0,1,2인 데이터 반환)
+        document.write(arr.slice(1, 3), "<br>");
+
+        //pop : 배열의 마지막 요소를 꺼내고 원본 배열에서 꺼낸 요소 삭제
+        document.write(arr.pop(), "<br>");
+        document.write(arr, "<br>");
+
+        //push : 배열의 마지막 요소 뒤에 새 데이터 추가
+        arr.push('신논현');
+        document.write(arr, "<br>");
+    </script>
+</body>
+</html>

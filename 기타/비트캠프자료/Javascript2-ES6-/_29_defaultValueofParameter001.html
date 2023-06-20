@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>매개변수의 기본 값 지정</title>
+</head>
+<body>
+    <script>
+        //ES5
+        function sum1(a, b){
+            //undefined일 때 값을 지정
+            a = a || 0;
+            b = b || 0;
+
+            return a + b;
+        }
+
+        console.log(sum1(1, 2));
+        console.log(sum1(1));
+
+
+        //ES6
+        function sum2(a = 0, b = 0){
+            return a + b;
+        }
+
+        console.log(sum1(2, 3));
+        console.log(sum1(2));
+
+        //화살표 함수로도 잘 동작 함
+        const sum4 = (a = 0, b = 0) => {
+            return a + b;
+        }
+        console.log(sum1(3, 4));
+        console.log(sum1(3));
+
+
+        //Rest 파라미터에는 기본 값을 지정할 수 없다.
+        // function sum3(...rest = []){
+        //     console.log(rest);
+        // }
+    </script>
+</body>
+</html>

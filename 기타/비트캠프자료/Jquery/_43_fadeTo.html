@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fadeTo()</title>
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <button type="button" id="btn1">투명도(30%)</button>
+    <button type="button" id="btn2">투명도(100%)</button>
+    <h1>내용</h1>
+    <script>
+        $(function(){
+            $("#btn1").on("click", function(){
+                $("h1").fadeTo(1000, 0.3, function(){
+                    alert("투명도(30%) 적용완료");
+                });
+            });
+
+            $("#btn2").on("click", function(){
+                $("h1").fadeTo(2000, 1, function(){
+                    alert("투명도(30%) 적용완료");
+                });
+            });
+        });
+    </script>
+</body>
+</html>

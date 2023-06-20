@@ -1,0 +1,18 @@
+SELECT * FROM EMP;
+
+SELECT * FROM DEPT;
+
+SELECT * FROM SALGRADE;
+
+INSERT INTO EMP(
+    eno,
+    ename
+ ) VALUES (
+    '9999',
+    '¿Âº∫»∆'
+ );
+ 
+ DESC EMP;
+ DESC DEPT;
+ DESC SALGRADE;
+ COMMIT;

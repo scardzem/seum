@@ -1,0 +1,65 @@
+/*인기게시물 그리드*/
+.grid {
+    /*타일형으로 배치하고 싶을 때*/
+    display: grid;
+    gap: 3px;
+    margin-top: 30px;
+    /*grid-template-columns: 1fr 1fr 1fr;*/
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 465px;
+}
+
+/* @media screen and (max-width: 713px) {
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+} */
+
+.qlrqkrtm {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;   
+}
+
+.qlrqkrtm img {
+    height: 98%;
+    width: 98%;
+    cursor: pointer;
+}
+
+.qlrqkrtmxn {
+    grid-column: 1 / 3;
+    grid-row: 4 / 6;  
+}
+
+.qlrqkrtmxn img {
+    height: 98%;
+    width: 98%;
+    cursor: pointer;
+}
+
+.gridwrapper{
+
+}
+
+.pgriditem {
+    height: 150px;
+    width: 150px;
+    cursor: pointer;
+}
+
+.pgriditem > img {
+    width: 150px;
+    height: 150px;
+}
+
+.whdkdyqjxms > img {
+    display: block;
+}
+
+#bin {
+    cursor: pointer;
+}
+
+.funcs > img {
+    cursor: pointer;
+}

@@ -1,0 +1,11 @@
+package com.spring.boardweb.api;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class TestApi {
+	@GetMapping("/testapi1")
+	public Map<String, String> testapi1() {
+		
+	}
+}

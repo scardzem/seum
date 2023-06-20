@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <!--div.navbar-->
+    <!--
+        navbar : 네비게이션 바 선언
+        navbar-dark : 다크 테마 적용
+        bg-dark : 어두운 배경색 적용
+        navbar-expand-lg : 화면크기에 따라 네브바 표출방식 변경
+    -->
+    <div class="navbar navbar-dark bg-dark navbar-expand-lg">
+        <div class="container">
+            <!--
+                navbar-brand : 네비게이션 바의 제목 설정, 홈 버튼
+            -->
+            <a href="#" class="navbar-brand">BootStrap</a>
+            <!--
+                navbar-toggler : collapse 플러그인 toggle 기능 추가
+                data-bs-toggle : 콘텐츠 숨김 설정
+                data-bs-target : 숨겨질 콘텐츠 지정
+            -->
+            <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#navbar-content">
+                    <!--콘텐츠를 펼쳤을 때 보이는 버튼-->
+                    <span class="navbar-toggler-icon"></span>
+            </button>
+                    <!--id는 target으로 준 아이디로.-->
+            <div class="collapse navbar-collapse" id="navbar-content">
+                
+
+                <!--
+                    navbar-nav : 네비게이션 바 콘텐츠 선언
+                    me-auto: 좌우마진 auto로 설정
+                    nav-item : 네비게이션 바 콘텐츠
+                    dropdown : 드롭다운 목록
+                -->
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item dropdown">
+                        <!--
+                            nav-link : 네비게이션 바 링크 선언
+                            dropdown-toggle : 드롭다운 목록 숨김 설정
+                        -->
+                        <a href="" class="nav-link dropdown-toggle"
+                        data-bs-toggle="dropdown">HTML5</a>
+
+                        <!--
+                            dropdown-menu : 드롭다운 영역 설정
+                        -->
+                        <div class="dropdown-menu">
+
+                            <!--
+                                dropdown-item : 드롭다운 콘텐츠 추가
+                            -->
+                            <a href="#" class="dropdown-item">Geolocation</a>
+                            <a href="#" class="dropdown-item">Drag And Drop</a>
+                            <!--
+                                dropdown-divider : 드롭다운 목록에 가로줄 추가
+                            -->
+                            <div class="dropdown-divider"></div>
+                            <a href="#" class="dropdown-item">Motion</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">CSS3</a></li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">ECMAScript5</a></li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Node.js</a></li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">API</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

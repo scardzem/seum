@@ -1,0 +1,187 @@
+6.13
+1. 객체 조작 메소드
+    - 객체 조작 메소드는 DOM 객체 접근하여 요소를 삭제, 추가 또는 요소의
+      속성값 조작할 수 있는 메소드
+    - 선택자.html() : 선택한 요소의 하위요소들을 반환
+    - 선택자.html("새 요소") : 선택한 요소의 하위요소들을 새 요소로 변경
+    - 선택자.text() : 선택한 요소의 텍스트를 불러옴
+--_14_html_method.html
+    - 선택자.text("새 텍스트") : 선택한 요소의 텍스트를 새 텍스트로 변경
+                                (예시는 day1숙제 중 시계문제 참고)
+    - 선택자.css("속성") : 선택한 요소의 해당 스타일 속성의 속성 값 반환
+    - 선택자.css("속성", "속성 값") : 선택한 요소의 해당 스타일 속성의 값을 변경
+--_15_css.method.html
+    - 선택자.attr("속성") : 선택한 요소의 해당 속성의 속성 값 반환
+    - 선택자.attr("속성", "속성 값") : 선택한 요소의 해당 속성의 속성 값 변경
+    - 선택자.removeAttr("속성") : 선택한 요소에서 해당 속성 삭제
+--_16_attr_method.html
+    - 선택자.addClass("클래스명") : 선택한 요소에 해당 클래스를 추가
+    - 선택자.removeClass("클래스명") : 선택한 요소에서 해당 클래스를 삭제
+    - 선택자.toggleClass("클래스명") : 선택한 요소에 해당 클래스가 있으면 클래스 삭제
+                                      해당 클래스가 없으면 클래스 추가
+    - 선택자.hasClass("클래스명") : 선택한 요소에 해당 클래스가 있으면 true,
+                                    없으면 false 반환
+--_17_addClass_removeClass.html
+--_18_toggleClass.html
+    - 선택자.val() : 입력 요소에 있는 value 속성의 속성 값 반환
+    - 선택자.val("새 값") : 입력 요소에 있는 value 속성의 속성 값 변경
+--_19_val_method.html
+
+2. 수치 조작 메소드
+    - 수치 조작 메소드는 속성 조작 메소드인 attr이나 css와 비슷하지만
+      선택한 요소의 수치와 관련된 속성만 변경 또는 값을 불러올 수 있다.
+    - 선택자.height() : 선택한 요소의 높이 반환
+    - 선택자.height("새 값") : 선택한 요소의 높이 변경
+    - 선택자.width() : 선택한 요소의 가로길이 반환
+    - 선택자.width("새 값") : 선택한 요소의 가로길이 변경
+--_20_width_height.html
+    - 선택자.position().left(|right|top|bottom) : 선택한 요소의 left, right, top, bottom 값을 반환
+--_21_position_method.html
+
+3. 객체 편집 메소드
+    - 선택자.before("새 요소") : 선택한 요소의 이전 위치에 새 요소 삽입
+    - $("새 요소").insertBefore("선택자") : 선택한 요소의 이전 위치에 새 요소 삽입(위와 동일한 기능)
+--_22_before_insertBefore.html
+    - 선택자.after("새 요소") : 선택한 요소의 다음 위치에 새 요소 삽입
+    - $("새 요소").insertAfter("선택자") : 선택한 요소에 다음 위치에 새 요소 삽입
+--_23_after_insertAfter.html
+    - 선택자.append("새 요소") : 선택한 요소 마지막 위치에 새 요소 삽입
+    - $("새 요소").appendTo("선택자") : 선택한 요소 마지막 위치에 새 요소 삽입
+--_24_append_appendTo.html
+    - 선택자.prepend("새 요소") : 선택한 요소 첫 번째 위치에 새 요소 삽입
+    - $("새 요소").prepend("선택자") : 선택한 요소 첫 번째 위치에 새 요소 삽입
+_25_prepend_prependTo.html
+    - 선택자.empty() : 선택한 요소의 하위 요소들 모두 삭제
+    - 선택자.remove() : 선택한 요소를 삭제
+_26_empty_remove.html
+    - 선택자.replaceWith("새 요소") : 선택한 요소를 새 요소로 변경
+    - $("새 요소").replaceAll("선택자") : 선택한 요소를 새 요소로 변경
+_27_replaceWith_replaceAll.html
+    - 선택자.unwrap() : 선택한 요소의 부모 요소를 삭제
+    - 선택자.wrap(새 요소) : 선택한 요소을 부모 요소로 감쌈
+    - 선택자.wrapAll(새 요소) : 선택한 요소 전체를 하나의 부모 요소로 감쌈
+    - 선택자.wrapInner(새 요소) : 선택한 요소의 모든 하위 요쇼를 부모 요소로 감쌈
+--_28_wrap_mathod.html
+
+4. 이벤트 등록 메소드
+    - 어떠한 요소에서 특정 동작이 일어났을 때 실행되는 실행문
+    - Jquery 이벤트의 종류
+        1) 로딩 이벤트
+        2) 마우스 이벤트
+        3) 포커스 이벤트
+        4) 키보드 이벤트
+        5) 기타 이벤트
+
+5. 로딩 이벤트
+    - 로딩 이벤트는 HTML에 지정된 문서 객체의 로딩이나 이미지 또는 프레임
+      로드된 후에 실행되는 메소드
+    - ready() : 문서 객체를 먼저 불러올 때 사용
+    - load() : 이미지나 프레임이 로드된 후에 동작
+        ex) $(document).ready(function{
+                실행문
+            });
+            DOM 객체 로드 완료되면 실행문 실행
+        ex) $(이미지나 프레임 선택자).on("load", function(){
+                실행문
+            });
+            이미지나 프레임 로드가 완료된 후 실행문 실행
+_29_ready_load.html
+
+6. 마우스 이벤트
+    - click() : 마우스 클릭 시 실행될 동작
+    - dblclick() : 마우스 더블클릭 시 실행될 동작
+        ex) 선택자.click||dblclick(function(){
+                실행문
+            });
+        ex) 선택자.on("click"||"dblclick", function(){
+                실행문
+            })
+    - 선택자.click||dblclick() : 강제로 마우스 클릭||더블클릭 이벤트 발생
+--_30_click_dblclick.html
+    - click/dblclick을 a태그와 함께 사용해야 될 때 주의점 
+      (a태그에는 클릭이벤트가 이미 있어서 이걸 없애고 클릭이벤트를 만들어야됨)
+            //이벤트를 매개변수로 받음
+        ex) a.click(function(e){
+            //링크를 타고 이동하는 기존 클릭이벤트를 막음
+            e.preventDefault();
+        });
+--_31_atag_click.html
+    - mouseover() : 요소에 마우스를 올릴 때 동작
+    - mouseout() : 요소에서 마우스가 빠져나갈 때 동작
+    - hover() : 마우스가 올라갈 때, 마우스가 빠져나갈 때 각각 동작
+        ex) 선택자.mouseover||mouseout(function(){
+                실행문
+            });
+        ex) 선택자.on("mouseover"||"mouseout", function(){
+                실행문
+            });
+        ex) 선택자.hover(
+                //마우스오버일 때
+                function(){
+                    실행문1
+                },
+                //마우스아웃일 때
+                function(){
+                    실행문2
+                }
+            );
+        ex) 선택자.mouseover()||mouseout() : 강제 이벤트 발생
+--_32_mouseover_out.html
+
+7. 포커스 이벤트
+    - focus()/focusin() : 선택한 요소에 포커스가 이동되었을 때 동작
+    - blur()/focusout() : 선택한 요소에서 포커스가 빠져나갔을 때 동작
+        ex) 선택자.focus||focusin||blur||focusout(function(){
+                실행문
+            });
+        ex) 선택자.on("focus"||"focusin"||"blur"||"focusout", function(){
+                실행문
+            });
+        ex) 선택자.focus()||blur() : 강제 이벤트 발생
+--_33_focus_blur.html
+
+8. 키보드 이벤트
+    - keydown() : 키보드가 눌렸을 때 동작, 눌렸을 때 한 번만 이벤트 발생
+    - keypress() : 키보드가 눌렸을 때 동작, 누르고 있으면 계속 이벤트 발생
+    - keyup() : 키보드 자판을 눌렀다 뗐을 때 동작
+        ex) 선택자.keydown||keypress||keyup(function(){
+                실행문
+            });
+        ex) 선택자.on("keydown"||"keypress"||"keyup", function(){
+                실행문
+            });
+        ex) 선택자.keydown()||keypress()||keyup() : 강제 이벤트 발생
+--_34_keydown_keypress_keyup.html
+
+9. 기타 이벤트
+    - change() : 선택한 입력 요소의 value값이 변경되고 포커스가 다른
+                 요소로 이동했을 때 동작
+        ex) 선택자.change(function(){
+                실행문    
+            });
+        ex) 선택자.on("change", function(){
+                실행문
+            });
+        ex) 선택자.change() : 강제 이벤트 발생
+--_35_change_method.html
+    - index() : 이벤트를 등록한 요소 중 이벤트가 발생한 요소의 인덱스
+                값을 반환
+--_36_index_method.html
+
+10. 그룹 이벤트 등록
+    - on 키워드를 이용한 여러가지 이벤트를 동시에 등록할 수 있다.
+        ex) 선택자.on("이벤트1, 이벤트2, 이벤트3, ...", function(){
+                if(e.type == ''){
+                    실행문1;
+                } else if(e.type == ''){
+                    실행문2;
+                } ...
+            })
+        ex) 선택자.on({
+                "이벤트1":function() {
+                    실행문1;
+                },
+                "이벤트2": function(){
+                    실행문2;
+                }, ...
+            });

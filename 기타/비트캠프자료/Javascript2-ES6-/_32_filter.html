@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열 함수 filter</title>
+</head>
+<body>
+    <script>
+        
+        const arr1 = [1, 2, 3, 4, 5];
+
+        let result = arr1.filter(num => num<4);
+        console.log(result);
+
+        //나머지 값이 1이면 true, 0이면 false 리턴 
+        //(자바에서 베웠듯이 프로그램에서는 0이 아닌 값들은 true로 취급)
+        result = arr1.filter(num => num % 2);
+        console.log(result);
+
+        //원본 배열은 변하지 않음
+        console.log(arr1);
+
+    </script>
+</body>
+</html>

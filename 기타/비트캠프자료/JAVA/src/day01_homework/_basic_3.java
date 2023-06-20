@@ -1,0 +1,12 @@
+package day01_homework;
+
+public class _basic_3 {
+
+	public static void main(String[] args) {
+		for(int i=10; i>=1; i--) {
+			System.out.println(i);
+		}
+
+	}
+
+}

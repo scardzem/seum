@@ -1,0 +1,76 @@
+package com.spring.boardweb.service.board.impl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
+
+import com.spring.boardweb.entity.Board;
+import com.spring.boardweb.entity.BoardFile;
+import com.spring.boardweb.repository.BoardFileRepository;
+import com.spring.boardweb.repository.BoardRepository;
+import com.spring.boardweb.service.board.BoardService;
+
+@Service
+public class BoardServiceImpl implements BoardService {
+	@Autowired
+	BoardRepository boardRepository;
+	
+	@Autowired
+	BoardFileRepository boardFileRepository;
+	
+	@Override
+	public Page<Board> getBoardList(Pageable pageable) {
+		return boardRepository.findAll(pageable);
+	}
+	
+	@Override
+	public int insertBoard(Board board) {
+		boardRepository.save(board);
+		boardRepository.flush();
+		return board.getBoardSeq();
+	}
+	
+	@Override
+	public Board getBoard(int boardSeq) {
+		return boardRepository.findById(boardSeq).get();
+	}
+	
+	@Override
+	public void deleteBoard(int boardSeq) {
+		boardRepository.deleteById(boardSeq);
+	}
+	
+	@Override
+	public void updateBoard(Board board) {
+		boardRepository.save(board);
+	}
+	
+	@Override
+	public void insertBoardFileList(List<BoardFile> fileList) {
+		boardFileRepository.saveAll(fileList);
+	}
+	
+	@Override
+	public List<BoardFile> getBoardFileList(int boardSeq) {
+		
+		Board board = new Board();
+		
+		board.setBoardSeq(boardSeq);
+		
+		List<BoardFile> fileList = boardFileRepository.findByBoard(board);
+		
+		if(fileList == null || fileList.isEmpty()) {
+			return null;
+		} else {
+			return fileList;
+		}
+	}
+	
+	@Override
+	public void deleteBoardFile(BoardFile boardFile) {
+		
+	}
+}

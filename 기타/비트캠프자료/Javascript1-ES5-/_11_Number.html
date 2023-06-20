@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number 내장 객체</title>
+</head>
+<body>
+    <script>
+        var num1 = 3.45678;
+        var num2 = 700000;
+        var num3 = "30.5px";
+        var num4 = 40;
+
+        document.write("표현 가능한 가장 큰 수: " + Number.MAX_VALUE + "<br>");
+        document.write("표현 가능한 가장 작은 수: " + Number.MIN_VALUE + "<br>");
+
+        document.write((num1.toString() + 1) + "<br>");
+        document.write(num4.valueOf() + "<br>");
+        document.write((parseInt(num3) + num4) + "<br>");
+        document.write((parseFloat(num3) + num4) + "<br>");
+    </script>
+</body>
+</html>

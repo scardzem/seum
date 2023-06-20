@@ -1,0 +1,7 @@
+package com.spring.boardweb.entity;
+
+import java.io.Serializable;
+
+public class BoardFileId implements Serializable{
+
+}

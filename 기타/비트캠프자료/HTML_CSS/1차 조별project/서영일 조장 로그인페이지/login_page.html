@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인페이지</title>
+    <style>
+        div{
+            background-image: url(sm_img/mainbg.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width:1500px;
+            height:929px;
+        }
+        li{
+            list-style-type: none;
+            margin: 10px;
+        }
+        #user_id, #user_pw{
+            border:2px solid gray;
+            width:200px;
+            height:20px;
+            line-height:50px;
+        }
+        li label{
+            width : 40px;
+            float : left;
+            font-size:14px;
+            font-weight:bold;
+            line-height:25px;
+            background-color: rgba(0,0,0,0.3);
+            text-align: center;
+            margin:0px 2px;
+        }
+        #ab{
+            position:absolute;
+            top:30%;
+            right:10%;
+        }
+    </style>
+</head>
+<body>
+<div id="ab">
+    <form action="">
+        <ul>
+            <li>
+                <label for="user_id">ID</label>
+                <input type="text" id="user_id">
+            </li>
+            <li>
+                <label for="user_pw">PW</label>
+                <input type="text" id="user_pw">
+            </li>
+        </ul>
+        
+        
+    </form>
+</div>
+</body>
+</html>

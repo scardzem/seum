@@ -1,0 +1,115 @@
+/*내프로필*/
+/*인기게시물 그리드*/
+.grid {
+    /*타일형으로 배치하고 싶을 때*/
+    display: grid;
+    gap: 1px;
+    margin-top: 60px;
+    margin-left: 55px;
+    /*grid-template-columns: 1fr 1fr 1fr;*/
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 450px;
+}
+
+@media screen and (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+}
+
+.item {
+    height: 200px;
+    width: 200px;
+}
+
+.item > img {
+    width: 200px;
+}
+
+#profileimg{
+    margin-left: 45px;
+    margin-top: 30px;
+    width: 210px;
+    border-radius: 100%;
+}
+
+.profilehead{
+    display: flex;
+    height: 250px;
+}
+
+.profilename{
+    width: 100px;
+    margin-top: 40px;
+    margin-left: 20px;
+}
+
+.profilename a{
+    font-size: 0.7rem;
+    text-decoration: none;
+}
+
+.logout{
+    margin-top: 85px;
+}
+
+.logout a{
+    font-size: 0.7rem;
+    text-decoration: none;
+}
+
+.post h4{
+    margin-left: 50px;
+    font-size: 16px;
+}
+
+.follower {
+    margin-left: 40px;
+    margin-top: 45px;
+}
+
+.follower a {
+    text-decoration: none;
+}
+
+
+/*다른사용자 프로필*/
+
+.otherprofilehead {
+    height: 250px;
+}
+
+.otherprofile-wrap {
+    display: inline-block;
+    position: absolute;
+    top: -30px;
+    margin-left: 25px;
+}
+
+.otherprofile-wrap div {
+    display: inline-block;
+}
+
+#otherprofileimg {
+    border-radius: 100%;
+    width: 210px;
+    height: 210px;
+    margin-left: 35px;
+    margin-top: 35px;
+}
+
+#friend {
+    background-color: rgb(34, 162, 173);
+    color: white;
+    padding: 5px;
+    gap: 5px;
+}
+
+.friend-wrap {
+    display: inline-block;
+    margin-left: 25px;
+}
+
+.memo{
+    margin-top: 30px;
+}

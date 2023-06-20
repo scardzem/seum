@@ -1,0 +1,658 @@
+
+.flex-container{
+    display: flex;
+}
+.flex-item{
+    width: 50px;
+    height: 50px;
+    margin: 4px;
+    text-align: center;
+    border-radius: 5px;
+}
+.color-red1{
+    background-color: darksalmon;
+    width: 300px;
+    height: 300px;
+    margin: 30px;
+    display: flex;
+}
+.color-red1>img.grim{
+    object-fit: none;  
+}
+.color-red2{
+    background-color: rgb(255, 255, 255);
+    width: 370px;
+    height: fit-content;
+    margin-top: 30px;
+}
+.textarea1 {
+    width: 370px;
+    height: 300px;
+    resize: none;
+    padding: 10px;
+}
+.color-blue1{
+
+    width: 200px;
+    height: 80px;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+.color-blue2{
+    background-color: green;
+    width: 85px;
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+    opacity: 60%;
+}
+.color-blue3{
+    background-color: orange;
+    width: 85px;
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+}
+.color-blue4{
+    background-color: rgb(182, 84, 28);
+    width: 85px;
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+}
+.color-blue5{
+    background-color: brown;
+    width: 85px;
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+}
+.grim2 {
+    width: 90px;
+    height: 90px;
+    opacity: 60%;
+}
+
+.flex-container2 {
+    display: flex;
+    margin-left: 77px;
+}
+
+.btnwi {
+    border-radius: 5px;
+    margin-right: 30px;
+    display: flex;
+    float: right;
+    margin-left: 100px;
+}
+
+.btnwi > button {
+    border-radius: 5px;
+    padding: 2px;
+    background-color: rgb(211, 211, 211);
+    margin: 10px;
+    width: 80px;
+    height: 40px;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+}
+
+.btnwiUp {
+    border-radius: 5px;
+    margin-right: 40px;
+    float: left;
+    margin-left: 20px;
+}
+
+.btnwiUp > button {
+    border-radius: 5px;
+    padding: 2px;
+    background-color: rgb(211, 211, 211);
+    margin: 10px;
+    width: 80px;
+    height: 40px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+/* .btn button {
+    border-radius: 5px;
+    padding: 2px;
+    background-color: rgba(156, 156, 156, 0.836);
+    margin: 10px;
+    width: 80px;
+    height: 40px;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+}  */
+
+.test {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-indicators>button {
+    width: 20px !important;
+    height: 20px !important;
+    border-radius: 50%;
+    margin-right: 10px !important;
+    bottom: 0;
+}
+
+span.carousel-control-prev-icon {
+    margin-top: 37px;
+}
+
+span.carousel-control-next-icon {
+    margin-top: 37px;
+}
+
+.flex-container-container{
+    display: flex;
+}
+
+.flex-container2-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.flex-item2{
+    width: 50px;
+    height: 50px;
+    margin: 4px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.color-red1-red1{
+    background-color: darksalmon;
+    width: 300px;
+    height: 300px;
+    margin: 30px;
+}
+.color-red1-red1>img.grim{
+    object-fit: none;  
+}
+
+
+.textarea2 {
+    width: 300px;
+    height: 250px;
+    resize: none;
+}
+
+.flex-item3 {
+    width: 370px;
+    height: 360px;
+    display: flex;
+    margin: 10px;
+    background-color: aqua;
+    flex-direction: column;
+}
+.reply1 {
+    width: 350px;
+    height: 180px;
+    background-color: white;
+    border-radius: 5px;
+    margin-left: 8px;
+    margin-top: 5px;
+}
+
+.reply2 {
+    width: 350px;
+    height: 50px;
+    background-color: white;
+    border-radius: 5px;
+    margin-left: 8px;
+    margin-top: 7px;
+}
+
+.reply3 {
+    width: 350px;
+    height: 50px;
+    background-color: white;
+    border-radius: 5px;
+    margin-left: 8px;
+    margin-top: 7px;
+}
+
+.reply4 {
+    width: 350px;
+    height: 50px;
+    background-color: white;
+    border-radius: 5px;
+    margin-left: 8px;
+    margin-top: 7px;
+}
+
+.txtarea2 {
+    width: 350px;
+    height: 70px;
+    border-radius: 5px;
+    display: flex;
+    background-color: white;
+}
+
+.txtarea3 {
+    width: 300px;
+    height: 70px;
+    border-radius: 5px;
+    float: right;
+    resize: none;
+    display: flex;
+}
+
+#profpt1 {
+    border-radius: 100%;
+    width: 70px;
+    margin-left: 13px;
+    margin-top: 15px;
+}
+
+.tkdydwk1 {
+    display: flex;
+}
+/* ---------main----------- */
+#maindiv {
+    background-color: rgb(219, 213, 202);
+    width: 750px;
+    height: 550px;
+    border: 1px solid black;
+    border-radius: 5px;    
+}
+.flex-container{
+    display: flex;
+    float: right;
+    margin-top: 10px;
+}
+
+.flex-containerwnfb{
+    display: flex;
+    float: right;
+    margin-top: 10px;
+    margin-right: 13px;
+}
+
+.flex-item{
+    width: 50px;
+    height: 50px;
+    margin: 4px;
+    text-align: center;
+    border-radius: 5px;
+}
+.color-red1{
+    background-color: darksalmon;
+    width: 300px;
+    height: 300px;
+    margin: 30px;
+}
+.color-red1>img.grim{
+    object-fit: none;  
+}
+.color-red2{
+    background-color: rgb(255, 255, 255);
+    width: 370px;
+    height: 250px;
+    margin-top: 50px;
+    margin-right: 15px;
+}
+.textarea1 {
+    width: 370px;
+    height: 250px;
+    resize: none;
+}
+.color-blue1-blue{
+    margin-left: 15px;
+    width: 330px;
+    height: 330px;
+    margin-top: 20px;
+    margin-right: 15px;
+    border-radius: 5px;
+}
+.color-blue2{
+    background-color: green;
+    width: 85px;
+    height: 85px;
+    cursor: pointer;
+}
+.color-blue3{
+    background-color: orange;
+    width: 85px;
+    height: 85px;
+    cursor: pointer;
+}
+.color-blue4{
+    background-color: rgb(182, 84, 28);
+    width: 85px;
+    height: 85px;
+    cursor: pointer;
+}
+.color-blue5{
+    background-color: brown;
+    width: 85px;
+    height: 85px;
+    cursor: pointer;
+}
+.grim2 {
+    width: 94px;
+    height: 94px;
+}
+
+.flex-container2 {
+    display: flex;
+    margin-left: 60px;
+}
+.btn {
+    border-radius: 5px;
+    margin-right: 30px;
+    display: flex;
+    float: right;
+    margin-top: 40px;
+}
+.btn > button {
+    border-radius: 5px;
+    padding: 2px;
+    background-color: rgb(211, 211, 211);
+    margin: 10px;
+    width: 200px;
+    height: 40px;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+}
+
+.test {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-indicators>button {
+    width: 20px !important;
+    height: 20px !important;
+    border-radius: 50%;
+    margin-right: 10px !important;
+    bottom: 0;
+}
+
+span.carousel-control-prev-icon {
+    margin-top: 37px;
+}
+
+span.carousel-control-next-icon {
+    margin-top: 37px;
+}
+
+.flex-container-container{
+    display: flex;
+    height: 370px;
+}
+
+.flex-container2-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.flex-item2{
+    width: 50px;
+    height: 50px;
+    margin: 4px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.color-red1-red1{
+    background-color: darksalmon;
+    width: 300px;
+    height: 300px;
+    margin: 30px;
+}
+.color-red1-red1>img.grim{
+    object-fit: none;
+}
+
+
+.textarea2 {
+    width: 300px;
+    height: 250px;
+    resize: none;
+}
+
+.flex-item3 {
+    width: 370px;
+    height: 360px;
+    display: flex;
+    margin: 10px;
+    flex-direction: column;
+    background: none;
+}
+.reply1 {
+    width: 350px;
+    height: 180px;
+    background-color: white;
+    border-radius: 5px;
+    margin-left: 8px;
+    margin-top: 5px;
+}
+
+.reply2 {
+    width: 350px;
+    height: 50px;
+    background-color: white;
+    border-radius: 5px;
+    margin-left: 8px;
+    margin-top: 7px;
+}
+
+.reply3 {
+    width: 350px;
+    height: 50px;
+    background-color: white;
+    border-radius: 5px;
+    margin-left: 8px;
+    margin-top: 7px;
+}
+
+.reply4 {
+    width: 350px;
+    height: 50px;
+    background-color: white;
+    border-radius: 5px;
+    margin-left: 8px;
+    margin-top: 7px;
+}
+
+.txtarea2 {
+    width: 350px;
+    height: 70px;
+    border-radius: 5px;
+    display: block;
+    margin: 0;
+    background: none;
+    float: right;
+    margin-right: 20px;
+}
+
+.txtarea3 {
+    width: 350px;
+    height: 70px;
+    border-radius: 5px;
+    float: right;
+    resize: none;
+    display: flex;
+    background-color: white;
+}
+
+#profpt1 {
+    border-radius: 100%;
+    width: 70px;
+    margin-left: 13px;
+    margin-top: 15px;
+}
+
+.tkdydwk1-wrapper {
+    display: inline-block;
+    width: 70%;
+}
+
+.tkdydwk1 {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.tkdydwk1-tkdydwk1 {
+    display: block;
+}
+
+#profpt2 {
+    border-radius: 100%;
+    width: 40px;
+    margin-top: 5px;
+    margin-left: 15px;
+}
+
+#profpt3 {
+    border-radius: 100%;
+    width: 40px;
+    margin-top: 5px;
+    margin-left: 15px;
+}
+
+#profpt4 {
+    border-radius: 100%;
+    width: 40px;
+    margin-top: 5px;
+    margin-left: 15px;
+}
+
+.tkdydwk2 {
+    display: flex;
+    font-weight: bold;
+}
+
+.tkdydwk3 {
+    display: flex;
+    font-weight: bold;
+}
+
+.tkdydwk4 {
+    display: flex;
+    font-weight: bold;
+}
+
+.tkdydwk1 div {
+    margin-top: 20px;
+}
+
+.whdkdy {
+    width: 300px;
+    height: 50px;
+    background-color: aquamarine;
+}
+
+.whdkdyqjxms {
+    width: 350px;
+    height: 40px;
+}
+
+.whdkdyqjxms > img {
+    width: 35px;
+    height: 30px;
+    float: right;
+    margin: 3px;
+}
+
+.flex-item3 > div {
+    font-size: 13px;
+}
+
+.tkdydwk1 a {
+    text-decoration: none;
+    color: black;
+}
+
+.tkdydwk2 a {
+    text-decoration: none;
+    color: black;
+}
+
+.tkdydwk3 a {
+    text-decoration: none;
+    color: black;
+}
+
+.tkdydwk4 a {
+    text-decoration: none;
+    color: black;
+}
+
+#bin, #kkan {
+    cursor: pointer;
+}
+
+
+
+/* --------write--------- */
+
+.test2 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#maindiv2 {
+    background-color: rgb(219, 213, 202);
+    width: 750px;
+    height: 550px;
+    border: 1px solid black;
+    border-radius: 5px;    
+}
+
+.opacity {
+    opacity: 100%;
+}
+
+.like {
+    cursor: pointer;
+}
+
+.reply {
+    cursor: pointer;
+}
+
+.follow {
+    cursor: pointer;
+}
+
+.carousel-item > img {
+    border-radius: 5px;
+    width: 330px;
+    height: 370px;
+}
+
+.txtqjxms-container {
+    display: block;
+    width: 350px;
+    height: 200px;
+    float: right;
+}
+

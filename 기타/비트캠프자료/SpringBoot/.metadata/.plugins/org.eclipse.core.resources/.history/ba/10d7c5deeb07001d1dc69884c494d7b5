@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="ko"
+	  xmlns:th="http;www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">\
+	  <head th:fragment="config">
+	  	<title>thymeleaf layout</title>
+	  	
+	  	<!-- 공통적으로 사용되는 css -->
+	  	<link rel="stylesheet" href="@{/css/style.css}"
+	  </head>
+</html>

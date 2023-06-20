@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>innerHTML</title>
+    <style>
+        table, tr, td{
+            border: 1px black solid;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <table id="tb">
+
+    </table>
+    <script>
+        var table = document.getElementById('tb');
+        var strHtml="";
+        strHtml += "<tr>";
+            strHtml += "    <td>1</td>";
+            strHtml += "    <td>2</td>";
+            strHtml += "    <td>3</td>";
+            strHtml +="</tr>"
+        strHtml += "<tr>";
+            strHtml += "    <td>1</td>";
+            strHtml += "    <td>2</td>";
+            strHtml += "    <td>3</td>";
+            strHtml +="</tr>"
+        strHtml += "<tr>";
+            strHtml += "    <td>1</td>";
+            strHtml += "    <td>2</td>";
+            strHtml += "    <td>3</td>";
+            strHtml +="</tr>"
+
+            table.innerHTML = strHtml;
+    </script>
+</body>
+</html>

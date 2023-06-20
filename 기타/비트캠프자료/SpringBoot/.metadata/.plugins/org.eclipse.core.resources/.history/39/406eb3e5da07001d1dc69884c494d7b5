@@ -1,0 +1,27 @@
+package com.spring.boardweb.configuration;
+
+import org.apache.catalina.core.ApplicationContext;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
+
+import com.zaxxer.hikari.HikariConfig;
+
+@Configuration
+@PropertySource("classpath:/application.properties")
+public class DataConfiguration {
+	@Autowired
+	private ApplicationContext applicationContext;
+	
+	@Bean
+	@ConfigurationProperties(prefix="spring.datasource.hikari")
+	public HikariConfig hicariConfig() {
+		return new HikariConfig();
+	}
+	
+	public DataSource dataSource() throws Exception {
+		
+	}
+}

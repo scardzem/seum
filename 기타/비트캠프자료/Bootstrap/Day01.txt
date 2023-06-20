@@ -1,0 +1,5 @@
+6.14
+1. Bootstrap이란
+    - HTML5, CSS3 기반의 웹 디자인 프레임워크
+    - 현재 웹 디자인 프레임워크 중에 가장 많이 사용되고 있음
+    - Javascript, Jquery와도 연동 가능

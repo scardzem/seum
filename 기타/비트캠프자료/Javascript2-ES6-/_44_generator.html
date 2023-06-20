@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제너레이터</title>
+</head>
+<body>
+    <script>
+        function* genFnc(){
+            //yield, return에 있는 숫자는 의미는 없다. 순서를 나타내기 위해 쓴 것.
+            console.log("1");
+            yield 1;
+            console.log("2");
+            yield 2;
+            console.log("3");
+            yield 3;
+            return 4;
+        }
+
+        const generator = genFnc();
+        //yield가 중지되는 지점이라고 생각하면 되고 next함수를 써서 다음 yield를 만날때까지 실행
+        generator.next();
+        generator.next();
+        generator.next();
+        generator.next();
+
+    </script>
+</body>
+</html>

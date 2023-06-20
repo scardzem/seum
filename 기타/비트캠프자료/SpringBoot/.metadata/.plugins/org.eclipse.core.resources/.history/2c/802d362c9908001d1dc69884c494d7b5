@@ -1,0 +1,16 @@
+#hikari cp database connection properties
+spring.datasource.hikari.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.datasource.hikari.jdbc-url=jdbc:mysql://localhost:3306/studydb?serverTimezone=UTC
+spring.datasource.hikari.username=study
+spring.datasource.hikari.password=!dkdlxl1234
+spring.datasource.hikari.connection-test-query=SELECT 1
+
+#jpa propeties
+#jpa에서 사용할 DB
+spring.jpa.database=mysql
+#jpa에서 사용할 구문 또는 문법(DB마다 문법이 조금씩 다르기 때문에) 필수설정
+spring.jpa.database-platform=org.hibernate.dialect.MySQL5InnoDBDialect
+spring.jpa.hibernate.ddl-auto=create
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.format_sql=true
+spring.jpa.hibernate.naming.physical-strategy=org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy

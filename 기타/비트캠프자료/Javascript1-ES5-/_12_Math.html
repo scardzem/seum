@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math 내장 객체</title>
+</head>
+<body>
+    <script>
+        var num = 2.1234;
+
+        //매개변수 중 가장 큰 수 반환
+        var maxNum = Math.max(10, 20, 30, 1);
+        
+        //매개변수 중 가장 작은 수 반환
+        var minNum = Math.min(10, 20, 30, 1);
+
+        //반올림 값 반환
+        var roundNum = Math.round(num);
+
+        //0~1사이의 난수 반환
+        var randNum = Math.random();
+
+        //0~9.99999999999999사이의 난수 반환(실수)
+        var randNum2 = Math.random() * 10;
+
+        //0~10사이의 난수 반환(정수)
+        var randNum3 = Math.floor(Math.random()*11);
+
+        //1~10 사이의 난수 반환(정수)
+        var randNum4 = Math.floor((Math.random()*10 + 1))
+
+
+        //원주율 반환
+        var piNum = Math.PI;
+
+        document.write(maxNum + "<br>");
+        document.write(minNum + "<br>");
+        document.write(roundNum + "<br>");
+        document.write(randNum + "<br>");
+        document.write(randNum2 + "<br>");
+        document.write(randNum3 + "<br>");
+        document.write(randNum4 + "<br>");
+        document.write(piNum + "<br>");
+    </script>
+</body>
+</html>

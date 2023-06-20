@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연산자</title>
+</head>
+<body>
+    <script>
+        //1. 산술 연산자
+        document.write("1. 산술 연산자<br>");
+        var num1 = 10;
+        var num2 = 20;
+        document.write(num1 + num2, "<br>");
+        document.write(num1 - num2, "<br>");
+        document.write(num1 * num2, "<br>");
+        document.write(num1 / num2, "<br>");
+        document.write(num1 % num2, "<br>");
+    
+        //2. 문자 결합 연산자
+        document.write("2. 문자 결합 연산자<br>");
+        var str1 = "10";
+
+        document.write(str1 + num2, "<br>");
+
+        //3. 대입연산자
+        document.write("3. 대입연산자<br>");
+        var num3 = 30;
+        num3 += num1;
+        document.write(num3, "<br>");
+        num3 /= num2;
+        document.write(num3, "<br>");
+
+        //4. 증감연산자
+        document.write("4. 증감연산자<br>");
+        document.write(num1++, "<br>");
+        document.write(++num1, "<br>");
+        document.write(num1--, "<br>");
+        document.write(--num1, "<br>");
+
+        //5. 대입자로 태그 생성
+        document.write("5. 대입자로 태그 생성<br>");
+        var t = "<table border='1'>"
+            t += "<tr>";
+            t += "<td>1</td>";
+            t += "<td>2</td>";
+            t += "<td>3</td>";
+            t += "</tr>";
+            t += "</table>";
+            document.write(t);
+
+
+    </script>
+</body>
+</html>

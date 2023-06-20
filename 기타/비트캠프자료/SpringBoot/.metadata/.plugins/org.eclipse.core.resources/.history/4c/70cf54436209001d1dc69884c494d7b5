@@ -1,0 +1,6 @@
+package com.spring.boardweb.api;
+
+@RestController
+public class BoardApi {
+
+}

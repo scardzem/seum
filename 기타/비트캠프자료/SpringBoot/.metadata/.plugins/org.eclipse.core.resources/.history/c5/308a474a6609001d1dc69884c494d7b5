@@ -1,0 +1,8 @@
+package com.spring.boardweb.entity;
+
+@Entity
+@Table(name="T_Board_File")
+@Data
+public class BoardFile {
+
+}

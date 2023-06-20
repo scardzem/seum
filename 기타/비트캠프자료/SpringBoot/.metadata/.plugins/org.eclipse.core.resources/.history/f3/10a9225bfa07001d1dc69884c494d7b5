@@ -1,0 +1,6 @@
+package com.spring.boardweb.controller.user;
+
+@RestController
+public class UserController {
+
+}

@@ -1,0 +1,241 @@
+@charset "uft-8";
+#maindiv {
+    background-color: rgb(215, 213, 209);
+    width: 750px;
+    height: 550px;
+    border: 1px solid black;
+    border-radius: 5px;    
+}
+.flex-container{
+    display: flex;
+}
+.flex-item{
+    width: 50px;
+    height: 50px;
+    margin: 4px;
+    text-align: center;
+    border-radius: 5px;
+}
+.color-red1{
+    background-color: darksalmon;
+    width: 300px;
+    height: 300px;
+    margin: 30px;
+    display: flex;
+}
+.color-red1>img.grim{
+    object-fit: none;  
+}
+.color-red2{
+    background-color: rgb(255, 255, 255);
+    width: 370px;
+    height: fit-content;
+    margin-top: 30px;
+}
+.textarea1 {
+    width: 370px;
+    height: 300px;
+    resize: none;
+    padding: 10px;
+}
+.color-blue1{
+
+    width: 200px;
+    height: 80px;
+    margin-top: 30px;
+    margin-left: 80px;
+}
+.color-blue2{
+    background-color: green;
+    width: 85px;
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+}
+.color-blue3{
+    background-color: orange;
+    width: 85px;
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+}
+.color-blue4{
+    background-color: rgb(182, 84, 28);
+    width: 85px;
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+}
+.color-blue5{
+    background-color: brown;
+    width: 85px;
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+}
+.grim2 {
+    width: 90px;
+    height: 90px;
+}
+
+.flex-container2 {
+    display: flex;
+    margin-left: 77px;
+}
+.btn {
+    border-radius: 5px;
+    margin: 1px;
+    margin-right: 30px;
+    display: flex;
+    float: right;
+}
+.btn button {
+    border-radius: 5px;
+    padding: 2px;
+    background-color: rgba(156, 156, 156, 0.836);
+    margin: 10px;
+    width: 80px;
+    height: 40px;
+    color: white;
+    /* font-weight: bold;
+    display: flex; */
+    font-size: 25px;
+    text-align: center;
+}
+
+.test {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-indicators>button {
+    width: 20px !important;
+    height: 20px !important;
+    border-radius: 50%;
+    margin-right: 10px !important;
+    bottom: 0;
+}
+
+span.carousel-control-prev-icon {
+    margin-top: 37px;
+}
+
+span.carousel-control-next-icon {
+    margin-top: 37px;
+}
+
+.flex-container-container{
+    display: flex;
+}
+
+.flex-container2-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.flex-item2{
+    width: 50px;
+    height: 50px;
+    margin: 4px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.color-red1-red1{
+    background-color: darksalmon;
+    width: 300px;
+    height: 300px;
+    margin: 30px;
+}
+.color-red1-red1>img.grim{
+    object-fit: none;  
+}
+
+
+.textarea2 {
+    width: 300px;
+    height: 250px;
+    resize: none;
+}
+
+.flex-item3 {
+    width: 370px;
+    height: 360px;
+    display: flex;
+    margin: 10px;
+    background-color: aqua;
+    flex-direction: column;
+}
+.reply1 {
+    width: 350px;
+    height: 180px;
+    background-color: white;
+    border-radius: 5px;
+    margin-left: 8px;
+    margin-top: 5px;
+}
+
+.reply2 {
+    width: 350px;
+    height: 50px;
+    background-color: white;
+    border-radius: 5px;
+    margin-left: 8px;
+    margin-top: 7px;
+}
+
+.reply3 {
+    width: 350px;
+    height: 50px;
+    background-color: white;
+    border-radius: 5px;
+    margin-left: 8px;
+    margin-top: 7px;
+}
+
+.reply4 {
+    width: 350px;
+    height: 50px;
+    background-color: white;
+    border-radius: 5px;
+    margin-left: 8px;
+    margin-top: 7px;
+}
+
+.txtarea2 {
+    width: 350px;
+    height: 70px;
+    border-radius: 5px;
+    display: flex;
+    background-color: white;
+    margin-left: 38px;
+    margin-top: 37px;
+}
+
+.txtarea3 {
+    width: 300px;
+    height: 70px;
+    border-radius: 5px;
+    float: right;
+    resize: none;
+    display: flex;
+}
+
+#profpt1 {
+    border-radius: 100%;
+    width: 70px;
+    margin-left: 13px;
+    margin-top: 15px;
+}
+
+.tkdydwk1 {
+    display: flex;
+}
+

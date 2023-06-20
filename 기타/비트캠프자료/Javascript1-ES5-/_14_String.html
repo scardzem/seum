@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String 내장 객체</title>
+</head>
+<body>
+    <script>
+        var str = "Hello Thank you good luck to you";
+
+        //charAt(index) : index에 있는 문자 반환
+        // 공백도 문자로 취급
+        document.write(str.charAt(16), "<br>");
+
+        //indexOf(문자열) : 문자열이 발견된 최초의 index 반환
+        document.write(str.indexOf('you'), "<br>");
+
+        //indexOf(문자열, index) : index이후에 발견된 문자열이 발견된 최초의 index 반환
+        document.write(str.indexOf('you', 16), "<br>");
+
+        //lastIndexOf(문자열) : 문자열이 마지막으로 발견된 index 반환
+        document.write(str.lastIndexOf('you'), "<br>");
+
+        //substr(index, count) : index로부터 count개 만큼 문자열 잘라서 반환
+        document.write(str.substr(21, 4), "<br>");
+
+        //substring(index1, index2) : index1부터 index2 이전까지의 문자열 잘라서 반환
+        //index가 6~11번째 문자열 반환
+        document.write(str.substring(6, 12), "<br>");
+
+        //replace('문자열1', '문자열2') : 최초로 발견된 문자열1을 문자열2로 치환
+        document.write(str.replace('Hello', 'Hi'), "<br>");
+
+        //replaceAll('문자열1', '문자열2') : 발견된 모든 문자열1을 문자열2로 치환
+        document.write(str.replaceAll('you', 'me'), "<br>");
+
+        //length : 문자열의 길이 반환 (이건 메소드는 아니고 속성 값임)
+        document.write(str.length, "<br>");
+
+        //split(문자열) : 특정 문자열 기준으로 문자열을 잘라서 배열로 반환
+        var arr = str.split(' ');
+        for(var i = 0; i < arr.length; i++){
+            document.write(arr[i], "<br>");
+        }
+    </script>
+</body>
+</html>

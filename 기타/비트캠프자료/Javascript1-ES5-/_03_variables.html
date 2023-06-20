@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수 선언과 사용</title>
+</head>
+<body>
+    <script>
+        var num = 100;
+        var strNum = "100";
+        var bool1;
+        var bool2;
+        var t = null;
+        var s;
+        var htmlStr = "<h1>hi<h1>";
+
+        document.write("typeof num : " + typeof num, "<br>");
+        document.write("typeof strNum : " + typeof strNum, "<br>");
+
+        document.write("var s : " + s, "<br>");
+        document.write("var t = null : " + t, "<br>");
+
+        //==은 값만 비교
+        if(num == strNum) {
+            bool1 = true;
+        } else {
+            bool1 = false;
+        }
+
+        //===은 값과 데이터 타입까지 비교
+        if(num === strNum){
+            bool2 = true;
+        } else {
+            bool2 = false;
+        }
+
+        document.write("bool1 : " + bool1, "<br>");
+        document.write("bool2 : " + bool2, "<br>");
+        document.write(htmlStr, "<br>");
+    </script>
+</body>
+</html>

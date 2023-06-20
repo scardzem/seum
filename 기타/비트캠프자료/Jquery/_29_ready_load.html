@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ready()/load()</title>
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div id="wrap"></div>
+    <iframe src="http://www.daum.net" frameborder="0"
+            width="300" height="300"></iframe>
+
+            <script>
+                //1. 프레임 로드가 완료된 후 실행
+                //DOM 객체가 먼저 레디가 완료 되고
+                //이미지나 프레임이 로드 됨.
+
+                $("iframe").on("load", function(){
+                    $("#wrap").append("<p>로딩완료</p>");
+                });
+
+                //2. DOM객체 로드 완료 후 실행
+                $(document).ready(function(){
+                    $("#wrap").append("<p>레디완료</p>");
+                });
+            </script>
+</body>
+</html>

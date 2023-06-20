@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BootStrap Modal</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <button class="btn btn-primary" type="button"
+            data-bs-toggle="modal" data-bs-target="#intro">
+        모달창으로 보기
+        
+    </button>
+    <!--여기부터 모달창 영역-->
+    <!--
+        modal : 모달 영역 설정
+        fade : 모달창이 열리는 애니메이션 효과
+    -->
+    <div class="modal fade" id="intro">
+        <!--
+            modal-dialog : 모달 창 영역 설정
+        -->
+        <div class="modal-dialog">
+            <!--
+                modal-content : 모달 콘텐트 영역 설정
+            -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">프로그래밍 언어</h4>
+                </div>
+                <div class="modal-body">
+                    <h3>객체지향언어</h3>
+                    <p>
+                        웹 개발자는 객체지향 언어에 익숙해져야 된다.
+                        웹 개발에 포함되는 다부분의 언어들이 객체지향 언어이기 때문이다.
+                        따라서 클래스를 설계하고 객체를 만들어서 사용하는 연습이 필요하다.
+                    </p>
+                    <br>
+                    <p>
+                        웹 개발자는 객체지향 언어에 익숙해져야 된다.
+                        웹 개발에 포함되는 다부분의 언어들이 객체지향 언어이기 때문이다.
+                        따라서 클래스를 설계하고 객체를 만들어서 사용하는 연습이 필요하다.
+                    </p>
+                    <br>
+                    <p>
+                        웹 개발자는 객체지향 언어에 익숙해져야 된다.
+                        웹 개발에 포함되는 다부분의 언어들이 객체지향 언어이기 때문이다.
+                        따라서 클래스를 설계하고 객체를 만들어서 사용하는 연습이 필요하다.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <!--
+                        data-bs-dismiss="modal" : 모달 창 닫기
+                    -->
+                    <button type="button" class="btn btn-primary"
+                            data-bs-dismiss="modal"> 
+
+                        닫기
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

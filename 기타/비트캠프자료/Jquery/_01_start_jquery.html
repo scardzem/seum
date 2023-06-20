@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery 시작하기</title>
+    <!--로컬 다운 파일 사용-->
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+    <!--네트워크 전송 방식-->
+    <!--<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>-->
+    </script>
+    <style>
+        div{
+            width:100px;
+            height:100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <script>
+        //DOM 문서가 모두 로드되면 실행
+        $(document).ready(function(){
+            //아이디 선택자
+            //div의 배경색 변경
+            $("#box").css("backgroundColor", "blue");
+        });
+    </script>
+</body>
+</html>

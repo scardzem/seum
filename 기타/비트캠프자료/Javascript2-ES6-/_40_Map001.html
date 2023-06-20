@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+</head>
+<body>
+    <script>
+        const map1 = new Map();
+        console.log(map1);
+
+        const map2 = new Map([['key1', 'value1'], ['key2', 'value2']]);
+        console.log(map2);
+
+        //value 값만 지정했을 때는 에러가 발생
+        //const map3 = new Map([1, 2]);
+
+        //중복된 키로 값을 전달하면 키에 해당되는 값이 덮어써짐
+        const map4 = new Map([['key1', 'value1'], ['key1', 'value2']]);
+        console.log(map4);
+
+        //Map 요소 개수 확인 size
+        console.log('map2의 size:'+map2.size);
+        const {size} = map4;
+        console.log(size);
+        console.log(map4.size);
+
+        //Map의 요소를 추가하는 set
+        map4.set('key2', 'value3');
+        //Set은 체이닝기법 지원
+        map4.set('key3', 'value4')
+            .set('key4', 'value5');
+        console.log(map4);
+        //set도 마찬가지로 중복된 키값으로 value를 추가하면
+        //그 키 값의 value가 덮어써짐
+        map4.set('key1', 'value11');
+        console.log(map4);
+
+        //객체의 키 값은 문자열과 심벌만 가능
+        const lee = {name: 'lee'};
+        const kim = {name: 'kim'};
+
+        const map5 = new Map();
+        //객체 자체를 키값으로 지정 ㅓ가능
+        map5.set(lee, 'dev')
+            .set(kim, 'oper');
+            console.log(map5);
+
+        //Map에서 요소를 하나씩 꺼내는 get
+        //get을 사용할 때는 매개변수로 키 값을 전달해야 됨
+        console.log(map5.get(kim));
+        console.log(map4.get('key1'));
+        //존재하지 않는 키 값에 접근하면 undefined가 출력됨
+        console.log(map4.get('key'));
+
+        //요소의 존재 여부를 확인하는 has
+        //has도 매개변수로 키 값을 전달해야 됨
+        console.log(map5.has(lee));
+        console.log(map5.has('hong'));
+
+        //요소를 삭제하는 delete
+        //키 값을 매개변수로 전달, 없는 값 입력하면 무시
+        map5.delete(kim);
+        console.log(map5);
+
+        //요소를 모두 삭제하는 clear
+        //map4.clear();
+        console.log(map4);
+    </script>
+</body>
+</html>

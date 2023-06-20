@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class 동적 상속</title>
+</head>
+<body>
+    <script>
+        //생성자 함수
+        function Base(age) {
+            this.age = age;
+        }
+
+        //생성자 함수를 상속받는 자식 클래스
+        class Derived extends Base {}
+
+        const derived = new Derived(1);
+
+        console.log(derived);
+        console.log(derived instanceof Base);
+        console.log(derived instanceof Derived);
+    </script>
+</body>
+</html>

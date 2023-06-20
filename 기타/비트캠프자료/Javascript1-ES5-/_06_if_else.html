@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if 조건문</title>
+</head>
+<body>
+    <script>
+        //prompt 메소드 : 사용자 입력값 받기(자바의 scanner와 같은 역할)
+        //prompt는 입력 받은 값은 무조건 String 형태로 값을 받는다(숫자를 써도)
+        //숫자 값의 비교는 가능하다
+        var month = prompt("현재는 몇월 몇 일 입니까?", "0");
+
+        //confirm 메소드 : 확인창 띄워줌(확인 클릭 시 true, 취소 누르면 false)
+        var confirm = confirm(month + "월이 맞습니까?");
+
+    if(confirm) {
+        if(month >= 9 && month <= 11){
+            document.write("가을입니다.");
+        } else if(month >= 6 && month <= 8){
+            document.write("여름입니다.");
+        } else if(month >= 3 && month <= 5){
+            document.write("봄입니다.");
+        } else {
+            document.write("겨울입니다.");
+        }
+    } else{
+        //현재 페이지 다시 로드
+        location.reload();
+    }
+
+    </script>
+</body>
+</html>

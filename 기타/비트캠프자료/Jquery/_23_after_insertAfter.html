@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>after()/insertAfter()</title>
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <ul>
+        <li id="list1">항목1</li>
+    </ul>
+    <script>
+        $(function(){
+            //1. after()
+            $("#list1").after("<li>새로 추가된 항목</li>");
+            //2. insertAfter()
+            $("<li>두번째로 추가된 항목</li>").insertAfter("#list1");
+        });
+            
+    </script>
+</body>
+</html>

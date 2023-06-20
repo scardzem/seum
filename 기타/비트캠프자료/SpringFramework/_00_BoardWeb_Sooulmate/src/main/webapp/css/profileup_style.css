@@ -1,0 +1,122 @@
+
+.profileimg1{
+    width:90%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    margin-top: -5%;  
+}
+
+.profileimg1 img {
+    width: 152px;
+    height: 80%;
+
+}
+
+.row-wrapper {
+    display: flex;
+}
+
+.input-form {
+    display: flex;
+    flex-direction: column;
+    width:415px;
+    height: 600px;
+    margin-top: 10%;
+    margin-left: 13%;
+}
+
+.form-box{
+    display: flex;
+    justify-content: center;   
+}  
+
+.classWithPad0 { 
+    margin:-3px;
+    margin-left: 62px;
+    margin-right: -25px; 
+    padding:3px;   
+}
+
+.classWithPad1 {
+    margin: -3px;
+    margin-left: 25px;
+    margin-right: 29px; 
+    padding:3px;  
+}
+  
+.classWithPad2 { 
+    margin: -3px;
+    margin-left: -29px;
+    margin-right: 79px; 
+    padding:3px;
+}
+
+.classWithPad3 { 
+    margin:21px;
+    margin-left: -26px;
+    margin-right: 97px; 
+    padding:3px;
+}
+
+.box1{
+    margin-top: 1%;
+    margin-left: -20%;
+    margin-right: 0%; 
+}
+
+.box2{
+    width: 22%;
+    margin: -6px auto;
+    margin-top: -10%;
+    margin-left: 78%;
+}
+
+
+.box_form{
+    width: 20%;
+    padding-top: 10px;
+}
+
+.box_form :hover {
+    text-shadow: 1px 1px 1px gray; ;
+}
+
+.right_box{
+    height: fit-content;
+}
+
+a {
+    color: black;
+  }
+a:hover {
+    text-decoration: none;
+  }
+
+.modal-content{
+    background-color: rgb(250, 246, 246);    
+}  
+
+.input-form-backgroud {
+    width: 80%;
+    display: flex;
+    justify-content: right;
+}
+
+.btn-d {
+    width: 100px;
+    height: 60px;
+    text-align: center;
+    background-color: #dfd4bd;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.t{
+    width:100%;
+    height: 45px;
+    background-color:  #dfd4bd;
+    color: white;
+    margin-top: -10%;
+}
+

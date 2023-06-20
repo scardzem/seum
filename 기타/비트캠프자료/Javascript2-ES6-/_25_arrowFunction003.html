@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>화살표 함수는 prototype이 생성되지 않음</title>
+</head>
+<body>
+    <script>
+        function Base1() {
+
+        }
+        console.log(Base1.hasOwnProperty('prototype'));
+        
+
+        const Base2 = () => {
+
+        }
+
+        console.log(Base2.hasOwnProperty('prototype'));
+
+        //일반함수는 prototype이 생성돼서 true가 나오고
+        //화살표함수는 prototype이 생성되지 않아서 false가 나온다.
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keydown()/keypress()/keyup()</title>
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <p>
+        <input type="text" id="userId">
+    </p>
+    <p id="txt1"></p>
+    <p id="txt2"></p>
+    <script>
+        $(function(){
+            $("#userId").keydown(function(e){
+                $(this).css("background", "yellow");
+                $("#txt1").text(e.keyCode);
+            });
+
+            $("#userId").keypress(function(e){
+                $("#txt2").text(e.keyCode);
+            });
+
+            $("#userId").keyup(function(e) {
+                $(this).css("background", "green");
+            });
+        });
+    </script>
+</body>
+</html>

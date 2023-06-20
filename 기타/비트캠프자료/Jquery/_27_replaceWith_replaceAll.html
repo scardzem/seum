@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>replaceWith()/replaceAll()</title>
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>replaceWith()/replaceAll()</h1>
+    <p>내용1</p>
+    <p>내용2</p>
+
+    <script>
+        $(function(){
+            //1. replaceWith()
+            $("h1").replaceWith("<h3>변경된 제목</h3>");
+
+            //2. replaceAll()
+            $("<h5>내용3</h5>").replaceAll("p");
+        });
+    </script>
+</body>
+</html>

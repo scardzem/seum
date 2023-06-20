@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>focus()/blur()</title>
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <p>
+        <input type="text" id="userName">
+    </p>
+    <p>
+        <input type="text" id="userId" value="아이디 입력">
+    </p>
+    <script>
+        //선택한 요소에 포커스
+        $(function(){
+            $("#userName").focus();
+        
+            
+            $("#userId").focus(function(){
+                //this는 이벤트가 발생한 객체
+                //즉 userId input박스
+                $(this).val("");
+            });
+
+            //포커스 빠져나갔을 때 다시 글 나오게
+            $("#userId").blur(function(){
+                $(this).val("아이디 입력");
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set</title>
+</head>
+<body>
+    <script>
+        const set1 = new Set();
+        console.log(set1);
+
+        const set2 = new Set([1, 2, 2, 3, 3]);
+        console.log(set2);
+
+        const set3 = new Set('hello');
+        console.log(set3);
+
+        //Set이 등장하기 전 중복 제거
+        //v : 현재 검사할 요소
+        //i : 현재 index
+        //self : array 자체(this라고 생각하면 됨)
+        //filter는 true인 것만 담는다.
+        const uniq = array => array.filter((v, i, self) => (self.indexOf(v) === i));
+        console.log(uniq([2, 1, 2, 3, 4, 4, 3, 2, 1]));
+
+        //Set 중복 제거
+        const uniq1 = array => [...new Set(array)];
+        console.log(uniq1([2, 1, 2, 3, 4, 4, 3, 2, 1]));
+
+        //Set의 요소 개수 확인 : size를 이용
+        const {size} = set3;
+        console.log(size);
+        console.log(set3.size);
+
+        //Set에 요소를 추가할 때 add 사용
+        //add 쓰기 전에는 set1에 값이 없어야 되는데 호이스팅 돼서 입력이 돼있다. 강사님이 이건 알아본다고함
+        //=> 개발자 도구(F12, Devtools)에서 f5누르면 제대로 나옴
+        console.log(set1);
+        set1.add(1);
+        console.log(set1);
+
+        set1.add(2).add(3).add(4);
+        console.log(set1);
+        set1.add(1);
+        console.log(set1);
+
+        //모든타입의 변수를 가지고있을 수 있다.
+        set1.add("a").add(true).add(null).add(undefined);
+        console.log(set1);
+
+        //Set 요소 존재 여부 확인 has
+        console.log(set1.has('b'));
+        console.log(set1.has('a'));
+
+        //Set 요소를 제거하는 delete
+        set1.delete('a');
+        //존재하지 않는 요소를 제거하려고 하면 무시함.        
+        set1.delete('b');
+        console.log(set1);
+        //add랑 달리 체이닝기법을 지원하지 않음
+        //set1.delete(1).delete(2);
+
+        //요소를 일괄 삭제할 때는 clear 사용
+        set1.clear();
+        console.log(set1);
+
+    </script>
+</body>
+</html>

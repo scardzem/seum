@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date 내장객체</title>
+</head>
+<body>
+    <script>
+        //1. 데이트 객체 사용
+        var now = new Date();
+        document.write("현재 월: " + (now.getMonth() + 1) + "<br>");
+        document.write("현재 일: " + now.getDate() + "<br>");
+        document.write("현재 요일: " + now.getDay() + "<br>");
+
+        var startDate = new Date(2022, 4, 9); //아래 월에 +1해야돼서 4월로 지정해놔야 맞게 출력 가능.
+        document.write("강의시작 월: " + (startDate.getMonth() + 1) + "<br>");
+        document.write("강의시작 일: " + startDate.getDate() + "<br>");
+        document.write("강의시작 요일: " + startDate.getDay() + "<br>");
+
+        //2. 연말까지 남은 일자 계산
+        var nowYear = now.getFullYear();
+
+        var theDate = new Date(nowYear, 11, 31);
+
+        //밀리초 단위로 계산 된 시간이 리턴
+        var diffDate = theDate - now;
+
+        //밀리초 -> 일로 변환 1000 * 60 * 60 * 24 (1000곱해서 초로, 분, 시간, 일 단위로)
+        var result = Math.ceil(diffDate / (1000 * 60 * 60 * 24));
+
+        document.write("연말까지 남은 일 수는: " + result + "일");
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouseover()/mouseout()/hover()</title>
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+    <style>
+        div{
+            width:100px;
+            height:100px;
+        }
+    </style>
+</head>
+<body>
+    <button type="button" id="btn1">mouseover/mouseout</button>
+    <button type="button" id="btn2">hover</button>
+    <div></div>
+    <script>
+        $(function(){
+            $("#btn1").mouseover(function(){
+                console.log();
+                $("div").css("background", "aqua");
+            });
+            $("#btn1").mouseout(function(){
+                $("div").css("background", "gray");
+            });
+
+            $("#btn2").hover(
+                //마우스 오버
+                function(){
+                    $("div").css("background", "orange");
+                },
+                //마우스 아웃
+                function(){
+                    $("div").css("background", "lightgreen");
+                }
+            );
+
+            var timeout=setTimeout(function(){
+                //이벤트 강제 발생
+                $("#btn1").mouseover();
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>지역변수와 전역변수</title>
+</head>
+<body>
+    <script>
+        var num1 = 200;
+        
+        function fnc(){
+            var num2 = 500;
+
+            
+        }
+
+        document.write(num1, "<br>");
+        document.write(num2, "<br>");
+
+
+        //실행해보면 num1만출력됨
+        //f12로 보면 num2는 지역 변수라서 에러 나옴
+
+        /*
+        num2 출력하고싶으면
+
+        function fnc(){
+            var num2 = 500;
+            document.write(num2, "<br>");
+        }
+        fnc();
+        */
+    </script>
+</body>
+</html>

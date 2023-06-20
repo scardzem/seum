@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>click/dblclick</title>
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+    <style>
+        div{
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <!--button[type="button"]#btn1*2-->
+    <button type="button" id="btn1">click</button>
+    <button type="button" id="btn2">dblclick</button>
+    <div></div>
+    <script>
+
+
+    $(function(){
+        //1. 클릭 이벤트 등록
+        $("#btn1").on("click", function(){
+            $("div").css("background", "red");
+        });
+
+        //2. 더블클릭 이벤트 등록
+        $("#btn2").on("dblclick", function(){
+            $("div").css("background", "blue");
+        });
+
+                //3. 강제 이벤트 호출
+                var timeout = setTimeout(function(){
+            //$("#btn1").click();
+            $("#btn2").dblclick();
+        },500);
+    });
+    </script>
+</body>
+</html>

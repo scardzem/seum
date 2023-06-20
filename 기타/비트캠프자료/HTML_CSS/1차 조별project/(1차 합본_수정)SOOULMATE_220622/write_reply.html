@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/ress.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/mainframe_style.css">
+    <link rel="stylesheet" href="css/feed_style.css">
+    <link rel="stylesheet" href="css/write_reply_style.css">
+    <!--글꼴 link 태그로 불러오기-->
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <!--파비콘 설정-->
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <title>SOOULMATE</title>
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+    <!-- merge.html 에 붙여서 write.html 만듬 -->
+</head>
+<body>
+    <div id="home">
+        <div class="wrapper">
+            <div class="left">
+                <button class="logo" type="button" onclick="location.href='./feed.html';">
+                    <img src="img/logo.png" alt="로고">
+                </button>
+                <div class="category">
+                    <div>
+                        <button class="beer"><img src="img/beericon.png" alt="맥주아이콘"></button>
+                        <button class="yangju"><img src="img/yangjuicon.png" alt="양주아이콘"></button>
+                        <button class="wine"><img src="img/wineicon.png" alt="와인아이콘"></button>
+                    </div>
+                </div>
+                <div class="nav">
+                    <button class="plus">
+                        <img src="img/plus.png" alt="+아이콘">
+                        <p data-bs-toggle="modal" data-bs-target="#intro">게시글 등록</p>
+                    </button>
+                    <button class="star">
+                        <img src="img/star.png" alt="*아이콘">
+                        <p>인기 게시물</p>
+                    </button>
+                    <button class="profile">
+                        <img src="img/profile1.png" alt="=아이콘">
+                        <p>프로필</p>
+                    </button>
+                </div>
+                <div class="chat">
+                    <div class="chatwrap">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div id="search">
+                    <div class="searchwrap">
+                        <button class="icon">
+                            <img src="img/searchicon.png" alt="검색아이콘">
+                        </button>
+                        <div class="input">
+                            <input type="search" placeholder="Search" aria-label="Search">
+                        </div>
+                    </div>
+                </div>
+                <div id="contentbox">
+                    <div class="contentwrap">
+                        <div class="feedbox">
+                            <div class="uploader">
+                                <img src="img/profileimg1.png" alt="프사"></img>
+                                <p class="uploadername">user1</p>
+                            </div>
+                            <img class="picture" src="img/feed1.jpg" alt="피드1"></img>
+                            <div class="funcs">
+                                <p>짠 342회</p>
+                                    <img class="like" src="img/binjan.png" alt="짠" onclick="imgtoggle(0)"></img>
+                                    <img class="reply" src="img/bubble.PNG" alt="댓글" data-bs-toggle="modal" data-bs-target="#intro2"></img>
+                                    <img class="follow" src="img/kkbicon.png" alt="깐부신청"></img>
+                                    <script>
+                                        $(function() {
+                                            $(".follow").on("click", function() {
+                                                 alert("깐부 신청 완료");
+                                             });
+                                        });
+                                    </script>
+                            </div>
+                            <div class="content">
+                                <p>형식이 내용의 존재 방식이자 대상의 표면 현상이라면, 내용은 예술작품에 있어서 그 안에 포함된 것, 또는 미적 대상의 정신적인 것이나 내적인 면에 의존하는 미적 가치체계를 가리킨다. </p>
+                            </div>
+                        </div>
+
+                        <div class="feedbox">
+                            <div class="uploader">
+                                <img src="img/profileimg2.png" alt="프사"></img>
+                                <p class="uploadername">user2</p>
+                            </div>
+                            <img class="picture" src="img/feed2.jpg" alt="피드2"></img>
+                            <div class="funcs">
+                                <p>짠 342회</p>
+                                <img class="like" src="img/binjan.png" alt="짠" onclick="imgtoggle(1)"></img>
+                                <img class="reply" src="img/bubble.PNG" alt="댓글" data-bs-toggle="modal" data-bs-target="#intro2"></img>
+                                <img class="follow" src="img/kkbicon.png" alt="깐부신청"></img>
+                            </div>
+                            <div class="content">
+                                <p>형식이 내용의 존재 방식이자 대상의 표면 현상이라면, 내용은 예술작품에 있어서 그 안에 포함된 것, 또는 미적 대상의 정신적인 것이나 내적인 면에 의존하는 미적 가치체계를 가리킨다. </p>
+                            </div>
+                        </div>
+
+                        <div class="feedbox">
+                            <div class="uploader">
+                                <img src="img/profileimg3.jpg" alt="프사"></img>
+                                <p class="uploadername">user3</p>
+                            </div>
+                            <img class="picture" src="img/feed3.jpg" alt="피드3"></img>
+                            <div class="funcs">
+                                <p>짠 342회</p>
+                                <img class="like" src="img/binjan.png" alt="짠" onclick="imgtoggle(2)"></img>
+                                <img class="reply" src="img/bubble.PNG" alt="댓글" data-bs-toggle="modal" data-bs-target="#intro2"></img>
+                                <img class="follow" src="img/kkbicon.png" alt="깐부신청"></img>
+                            </div>
+                            <div class="content">
+                                <p>형식이 내용의 존재 방식이자 대상의 표면 현상이라면, 내용은 예술작품에 있어서 그 안에 포함된 것, 또는 미적 대상의 정신적인 것이나 내적인 면에 의존하는 미적 가치체계를 가리킨다. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="modal fade" id="intro"><div class="modal-dialog">
+        <div class="modal-content">                                    
+                <div class="modal-body">
+                    <div class="test">
+                        <div id="maindiv">
+                            <div class="flex-container">
+                                <div class="flex-item color-red1">
+                                    <img src="img/feed2.jpg" alt="" id="grim">
+                                </div>
+                                <div class="flex-item color-red2">
+                                    <textarea class="textarea1" placeholder="내용을 입력해 주세요."></textarea>
+                                </div>
+                            </div>
+                            <div class="flex-container">
+                                <div class="flex-item color-blue1">
+                                    <div class="top-slide">
+                                        <div class="carousel slide" data-bs-ride="carousel" id="slide">
+                                            <div class="carousel-indicators">
+                                                <button type="button" data-bs-target="#slide"
+                                                data-bs-slide-to="0" class="active"></button>
+                                                <button type="button" data-bs-target="#slide"
+                                                data-bs-slide-to="1"></button>
+                                                <button type="button" data-bs-target="#slide"
+                                                data-bs-slide-to="2"></button>
+                                                <button type="button" data-bs-target="#slide"
+                                                data-bs-slide-to="3"></button>
+                                            </div>
+                                            <a href="#slide" class="carousel-control-prev"
+                                            data-bs-slide="prev">
+                                                <span class="carousel-control-prev-icon"></span>
+                                            </a>
+                                            <a href="#slide" class="carousel-control-next"
+                                            data-bs-slide="next">
+                                                <span class="carousel-control-next-icon"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex-container2">
+                                    <div class="flex-item color-blue2" id="alcIcon1">
+                                        <img src="img/sojuicon.png" alt="" class="grim2" id="sojuI">
+                                    </div>
+                                    <div class="flex-item color-blue3" id="alcIcon2">
+                                        <img src="img/beericon.png" alt="" class="grim2" id="beerI">
+                                    </div>
+                                    <div class="flex-item color-blue4" id="alcIcon3">
+                                        <img src="img/yangjuicon.png" alt="" class="grim2" id="yangI">
+                                    </div>
+                                    <div class="flex-item color-blue5" id="alcIcon4">
+                                        <img src="img/wineicon.png" alt="" class="grim2" id="wineI">
+                                    </div>                                            
+                                </div>
+                                <script>                                            
+                                    $(function() {
+                                        $("#alcIcon1").on("click", function() {
+                                            $("#alcIcon1").toggleClass("opacity");
+                                            $("#sojuI").toggleClass("opacity");
+                                        });
+                                    });
+                                    $(function() {
+                                        $("#alcIcon2").on("click", function() {
+                                            $("#alcIcon2").toggleClass("opacity")
+                                            $("#beerI").toggleClass("opacity")
+                                        });
+                                    });
+                                    $(function() {
+                                        $("#alcIcon3").on("click", function() {
+                                            $("#alcIcon3").toggleClass("opacity")
+                                            $("#yangI").toggleClass("opacity")
+                                        });
+                                    });
+                                    $(function() {
+                                        $("#alcIcon4").on("click", function() {
+                                            $("#alcIcon4").toggleClass("opacity")
+                                            $("#wineI").toggleClass("opacity")
+                                        });
+                                    });
+                                </script>
+                            </div>
+                            <div class="btn">
+                                <button type="button">올리기</button>
+                                <button type="button" data-bs-dismiss="modal">취 소</button>
+                            </div>                                    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </div>
+    <div class="modal fade" id="intro2"><div class="modal-dialog">
+        <div class="modal-content">                                    
+                <div class="modal-body">
+                    <div class="test2">
+                        <div id="maindiv2">
+                            <div class="flex-container-container">
+                                <div class="flex-item2 color-red1-red1">
+                                    <img src="../SOOULMATE/img/feed1.jpg" alt="" id="grim">
+                                </div>
+                                <div class="flex-item3 color-red2-red2">
+                                    <div class="reply1">
+                                        <img src="img/feed2.jpg" alt="" id="profpt1">
+                                        <div class="tkdydwk1-wrapper">
+                                            <div class="tkdydwk1">
+                                                <div style="margin-top: 20px; margin-left: 10px;">
+                                                    <a href="">tkdydwk1</a>
+                                                </div>
+                                                <div>
+                                                    같이 한잔 하실??<br>                                                    
+                                                    처처 맛집!<br><br> 
+                                                    <a href="">#처음처럼</a> <a href="">#먹고죽자</a> <a href="">#소주맛집</a>                                                   
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="reply2">
+                                        <div class="tkdydwk2">
+                                            <img src="img/otherpro1.png" alt="" id="profpt2">
+                                            <div style="margin-top: 10px; margin-left: 15px;">
+                                                <a href="">tkdydwk2</a>  
+                                            </div> 
+                                            <div style="margin: 10px">
+                                                손 손!!!!!!!!!!
+                                            </div>                                      
+                                        </div>
+                                    </div>
+                                    <div class="reply3">
+                                        <div class="tkdydwk3">
+                                            <img src="img/poto3.jpg" alt="" id="profpt3">
+                                            <div style="margin-top: 10px; margin-left: 15px;">
+                                                <a href="">tkdydwk3</a>  
+                                            </div>  
+                                            <div style="margin: 10px">
+                                                혼술 하자..........
+                                            </div>                                    
+                                        </div>
+                                    </div>
+                                    <div class="reply4">
+                                        <div class="tkdydwk4">
+                                            <img src="img/pro5.jpg" alt="" id="profpt4">
+                                            <div style="margin-top: 10px; margin-left: 15px;">
+                                                <a href="">tkdydwk4</a>  
+                                            </div> 
+                                            <div style="margin: 10px">
+                                                일끝나고 소주가 진리...ㅇㅇ
+                                            </div>                                      
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex-container2-container">
+                                <div class="flex-item4 color-blue1">
+                                    <div class="top-slide">
+                                        <div class="carousel slide" data-bs-ride="carousel" id="slide">
+                                            <div class="carousel-indicators">
+                                                <button type="button" data-bs-target="#slide"
+                                                data-bs-slide-to="0" class="active"></button>
+                                                <button type="button" data-bs-target="#slide"
+                                                data-bs-slide-to="1"></button>
+                                                <button type="button" data-bs-target="#slide"
+                                                data-bs-slide-to="2"></button>
+                                                <button type="button" data-bs-target="#slide"
+                                                data-bs-slide-to="3"></button>
+                                            </div>
+                                            <a href="#slide" class="carousel-control-prev"
+                                            data-bs-slide="prev">
+                                                <span class="carousel-control-prev-icon"></span>
+                                            </a>
+                                            <a href="#slide" class="carousel-control-next"
+                                            data-bs-slide="next">
+                                                <span class="carousel-control-next-icon"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="txtarea2">
+                                    <div class="whdkdyqjxms">
+                                        <img id="kkan" src="img/kkbicon.png" alt="">
+                                        <img id="bin" src="img/binjan.png" alt="">
+                                        <script>
+                                            var $bin = document.getElementById('bin');
+                                            console.log($bin);
+                                            
+                                            $bin.onclick = function() {
+                                                if($bin.getAttribute('src') == "img/binjan.png")
+                                                $bin.src = "img/fulljan.png";
+                                                else
+                                                $bin.src = "img/binjan.png";
+                                            }
+                                            
+                                            $(function() {
+                                                $("#kkan").on("click", function() {
+                                                    alert("깐부 신청 완료");
+                                                });
+                                            });
+                                            </script>
+                                    </div>
+                                    <textarea class="txtarea3" placeholder="내용을 입력해 주세요."></textarea>
+                                </div>
+                                
+                            </div>
+                            <div class="btn">
+                                <button type="button">올리기</button>
+                                <button type="button" data-bs-dismiss="modal">취 소</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+    <script>
+        var like_amt = new Array(542, 321, 87);
+
+        console.log($(".funcs").eq().find('p'));
+
+        for (let i = 0; i < like_amt.length; i++) {
+            $(".funcs").eq(i).find('p').text("짠 " + like_amt[i] + "회" );         
+        }       
+
+        function imgtoggle(num) {
+            if($(".funcs").eq(num).find('.like').attr('src') == "img/binjan.png") {
+                $(".funcs").eq(num).find('.like').attr('src', "img/fulljan.png");
+                like_amt[num]++;
+            } else {
+                $(".funcs").eq(num).find('.like').attr('src', "img/binjan.png");
+                like_amt[num]--;
+            }
+            $(".funcs").eq(num).find('p').text("짠 " + like_amt[num] + "회" );
+        }
+    </script>
+</body>
+</html>

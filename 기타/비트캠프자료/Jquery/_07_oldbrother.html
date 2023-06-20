@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>형 요소 선택자</title>
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js">
+
+    </script>
+</head>
+<body>
+    <h1>형 요소 선택자</h1>
+    <ul id="wrap">
+        <li>내용1
+            <ul>
+                <li>내용2</li>
+                <li>내용2_2</li>
+                <li>내용2_3</li>
+                <li>내용2_4</li>
+                <li class="second">내용3</li>
+                <li>내용4</li>
+                <li>내용4</li>
+            </ul>
+        </li>
+    </ul>
+
+    <script>
+        //ready 안의 함수가 즉시 실행 함수여서
+        //DOM요소들이 모두 로드되면 즉시 실행 됨
+        $(document).ready(function(){
+            $(".second").prev().css("border", "1px solid green");
+        });
+    </script>
+</body>
+</html>

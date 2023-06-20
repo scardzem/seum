@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스프레드 문법</title>
+</head>
+<body>
+    <script>
+        //...을 빼고 실행해보면 스프레드가 어떻게 적용됐는지 알아보기 쉽다.
+        console.log(...[1, 2, 3]);
+        console.log(...'hello');
+
+        //객체는 스프레드 문법을 사용할 수 없다.
+        // console.log(...{
+        //     a: 1,
+        //     b: 2
+        // });
+
+        //스프레드 문법의 결과값을 변수에 담을 수 없다.
+        //const list = ...[1,2,3];
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>생성자 함수</title>
+</head>
+<body>
+    <script>
+        //생성자 함수 정의
+        function car(color, price, company){
+            this.color = color;
+            this.price = price;
+            this.company = company;
+
+            //30번 한 다음 다음에 prototype 설명 중 prototype 추가함
+            //this.info=function()에서 car.prototype.info~~로 수정된거임
+            //prototype을 쓰는 이유는 현대,기아에 각각 info를 등록하지 않고
+            //prototype에 info를 한 번에 저장해서 메모리를 줄이려는 목적임
+            car.prototype.info = function(){
+                document.write("car 색상 : " + this.color, "<br>");
+                document.write("car 가격 : " + this.price, "<br>");
+                document.write("car 제조사 : " + this.company, "<br>");
+            }
+        }
+
+        //생성자 함수를 통한 객체 생성
+        var kiaCar = new car('red', 30000000, '기아');
+        kiaCar.info();
+
+        var hyCar = new car('black', 5000000, '현대');
+        hyCar.info();
+
+        //콘솔 로그 넣고 실행해서 f12눌러서 콘솔 보면 프로토타입 있다.
+        //prototype은 최상위 객체임
+        console.log(kiaCar);
+        console.log(hyCar);
+
+    </script>
+</body>
+</html>

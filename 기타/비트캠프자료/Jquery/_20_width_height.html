@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>width()/height()</title>
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        $(function(){
+            console.log("변경 전")
+            console.log($("div").width());
+            console.log($("div").height());
+            var timeout = setTimeout(function(){
+                $("div").width("500")
+                        .height("50");
+                        console.log("변경 후");
+                        console.log($("div").width());
+                        console.log($("div").height());
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

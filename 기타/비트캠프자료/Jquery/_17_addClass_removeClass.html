@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addClass()/removeClass()</title>
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background: black;
+        }
+        .red{
+            background: red;
+        }
+        .green{
+            background: green;
+        }
+        .blue{
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3 blue"></div>
+    <script>
+        $(function(){
+            var timeout = setTimeout(function(){
+                $(".box1").addClass("red");
+                $(".box2").addClass("green");
+                $(".box3").removeClass("blue");
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

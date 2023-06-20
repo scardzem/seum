@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>a태그와 click()</title>
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+    <style>
+        div{
+            width:100px;
+            height:100px;
+        }
+    </style>
+</head>
+<body>
+    <a href="http://www.naver.com" id="btn">네이버</a>
+    <div></div>
+    <script>
+        //클릭 이벤트를 매개변수로 받음(function(e))
+        $("#btn").on("click", function(e){
+            //a 태그 클릭 시 이동되는 하이퍼링크 기능을 막아줌
+            e.preventDefault();
+            //온클릭 이벤트로 동작할 기능
+            $("div").css("background", "green");
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탬플릿 리터럴의 표현식 삽입</title>
+</head>
+<body>
+    <script>
+        //ES5
+        var first = "gildong";
+        var last = "hong";
+
+        var str1 = '제 이름은' + last + first + "입니다"
+        console.log(str1);
+
+        //ES6 탬플릿 리터럴
+        const first1 = "gildong";
+        const last1 = "hong";
+
+        const str2 = `제 이름은 ${last1} ${first1}입니다.`;
+        console.log(str2);
+
+        //ES5
+        console.log('1 + 2 = ' +(1 + 2));
+
+        //탬플릿 리터럴
+        console.log(`1 + 2 = ${1 + 2}`);
+
+        //리액트에서의 태그드 탬플릿 (라이브러리 다운받아야 사용할 수 있어서 지금은 적용은 안 됨.)
+        // const div = styled.div({
+        //     `css:
+            
+        //     `
+        // });
+    </script>
+</body>
+</html>

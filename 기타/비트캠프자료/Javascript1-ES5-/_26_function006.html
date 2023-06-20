@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>지역함수와 전역함수</title>
+</head>
+<body>
+    <script>
+        var num = 100;
+        
+        // plus1() : 전역함수
+        function minus(){
+            num--;
+            document.write(num, "<br>");
+        }
+
+        // plus() : 지역함수
+        (function(){
+            function plus(){
+                num++;
+                document.write(num, "<br>");
+            }
+            //지역함수는 선언된 함수내에서만 사용 가능
+            plus();
+        })();
+
+        minus();
+        plus();
+
+        //plus(); 는 지역함수라 위의 즉시실행 함수 밖에서는 호출 할 수 없다.
+    </script>
+</body>
+</html>

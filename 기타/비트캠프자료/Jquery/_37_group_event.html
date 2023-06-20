@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group Event</title>
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    
+    <h1><a href="#">버튼1</a></h1>
+    <h2></h2>
+    <script>
+        $(function(){
+            $("h1 a").on({
+                //마우스오버, 포커스 두 개 동시에
+                "mouseover focus": function(){
+                    $(this).css("color", "red");
+                },
+                "mouseout blur": function(){
+                    $(this).css("color", "yellow");
+                }
+            });
+
+            // $("h2 a").on("mouseover focus", function(){
+            //     $(this).css("background", "aqua");
+            // });
+
+            $("h2 a").on("mouseout blur", function(){
+                $(this).css("background", "yellow");
+            });
+            //h2의 이벤트를 먼저 위에서 지정하고 아래처럼 동적 요소를 추가하면
+            //이벤트가 발동되지 않는다.
+            $("h2").append("<a href='#'>생성된 요소</a>");
+
+            //동적으로 할당된 요소에 이벤트 추가하는 방법
+            //이 방식을 사용하면 나중에 등록될 태그에도 이벤트 할당 가능
+            $(document).on("mouseout blur", "h2 a", function(){
+                $(this).css("background", "yellow");
+            });
+        });
+    </script>
+</body>
+</html>

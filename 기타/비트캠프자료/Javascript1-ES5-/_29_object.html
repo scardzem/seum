@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사용자 정의 객체</title>
+</head>
+<body>
+    <script>
+        //사용자 정의 객체 생성 방법
+        //Object 생성자 함수 이용
+        //class의 개념이 없어서 생성자 함수 Object로 객체 생성
+        var tv = new Object();
+
+        //생성된 객체에 속성 및 메소드 할당
+        tv.color = "white";
+        tv.price = 3000000;
+
+        tv.info = function(){
+            //this 객체의 사용
+            //this -> 현재 선택된 객체
+            //tv.info 호출 시 tv 객체가 선택됨
+            document.write("tv 색상 : " + this.color, "<br>");
+            document.write("tv 가격 : " + this.price, "<br>");
+        }
+
+        //사용자 정의 객체 생성방법2
+        // 객체의 속성과 메소드를 지정하여 생성
+        var car = {
+            color: 'red',
+            price: 5000000,
+            info: function(){
+                document.write("car 색상 : " + this.color, "<br>");
+                document.write("car 가격 : " + this.price, "<br>");
+            }
+        }
+
+        //객체 메소드 호출
+        tv.info();
+        car.info();
+
+        //객체 속성 값 접근하여 값 변경
+        car.color = 'black';
+        car.price = 10000000;
+        car.info();
+
+        //새로운 속성 및 메소드 추가
+        car.company = '현대';
+        car.info2 = function(){
+            document.write("car 색상 : " + this.color, "<br>");
+            document.write("car 가격 : " + this.price, "<br>");
+            document.write("car 제조사 : " + this.company, "<br>");
+        };
+
+        car.info2();
+    </script>
+</body>
+</html>

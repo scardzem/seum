@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경 범위 조절</title>
+    <style>
+        div{
+            width : 300px;
+            padding : 35px;
+            border: 10px solid rgba(0,0,0,0);
+            background-color: skyblue;
+            margin: 20px;
+            margin-top: 20px;
+        }
+        .bg1{
+            background-clip: border-box;
+        }
+        .bg2{
+            background-clip: padding-box;
+        }
+        .bg3{
+            background-clip: content-box;
+        }
+    </style>
+</head>
+<body>
+    <!--(div.bg1>p)*3-->
+    <div class="bg1">
+        <p>background-clip 속성은 배경의 범위를 조절합니다.
+            border-box는 테두리까지 배경을 적용합니다.
+        </p>
+    </div>
+    <div class="bg2">
+        <p>
+            background-clip 속성은 배경의 범위를 조절합니다.
+            padding-box는 테두리를 뺀 부분까지 배경을 적용합니다.
+        </p>
+    </div>
+    <div class="bg3">
+        <p>background-clip 속성은 배경의 범위를 조절합니다.
+            content-box는 내용부분까지만 배경을 적용합니다.
+        </p>
+    </div>
+</body>
+</html>

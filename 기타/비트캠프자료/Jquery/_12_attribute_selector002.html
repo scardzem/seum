@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>checked 선택자</title>
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <!--p>input[type="checkbox"]#chk1+label-->
+    <p><input type="checkbox" id="chk1" checked>
+        <label for="chk1">체크1</label>
+    </p>
+    <p><input type="checkbox" id="chk2">
+        <label for="chk2">체크2</label>
+    </p>
+
+    <script>
+        $(document).ready(function(){
+            $(":checked").attr("checked", false);
+            console.log($("#chk2").is(":checked"));
+        });
+    </script>
+</body>
+</html>

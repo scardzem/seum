@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 객체 CSS 적용</title>
+    <style>
+        #box1{
+            width: 300px;
+            height: 300px;
+            background-color: green;
+            display: inline;
+            position: absolute;
+        }
+        #btn{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="box1"></div>
+    <button type="button" id="btn">
+        인터벌해제
+    </button>
+    <script>
+        var positionX = 0;
+        var positionY = 0;
+        var box = document.getElementById('box1');
+        var btn = document.getElementById('btn');
+        
+        var interval = setInterval(function(){
+            positionX += 20, positionY +=20;
+            
+            box.style.top = positionY + 'px';
+
+            box.style.left = positionX + 'px';
+        }, 1000);
+
+
+
+
+
+        btn.onclick = function(){
+            clearInterval(interval);
+        }
+    </script>
+</body>
+</html>

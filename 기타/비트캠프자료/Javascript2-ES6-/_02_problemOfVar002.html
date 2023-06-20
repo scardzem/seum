@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>var의 중복선언</title>
+</head>
+<body>
+    <script>
+        var x = 1;
+        
+        if(true) {
+            //중복 선언으로 전역변수의 값을 변경하는 문제가 발생
+            var x = 100;
+        }
+
+        for(var i = 0; i < 10; i++) {
+
+        }
+        
+        document.write(x, "<br>");
+        document.write(i, "<br>");
+    </script>
+</body>
+</html>

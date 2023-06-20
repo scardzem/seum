@@ -1,0 +1,12 @@
+package com.spring.boardweb.repository;
+
+import java.util.List;
+
+import org.springframework.data.repository.CrudRepository;
+
+import com.spring.boardweb.entity.BoardFile;
+import com.spring.boardweb.entity.BoardFileId;
+
+public interface BoardFileRepository extends CrudRepository<BoardFile, BoardFileId>{
+	
+}

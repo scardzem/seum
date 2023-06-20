@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eq 선택자</title>
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <ul>
+        <li>내용1</li>
+        <li>내용2</li>
+        <li>내용3</li>
+            <ul>
+                <li>내용4</li>
+                <li>내용5</li>
+            </ul>
+    </ul>
+    
+    <script>
+        $(document).ready(function() {
+            //상속관계 상관없이 선택 요소의 인덱스 번호로만 선택함.
+            $("li").eq(3).css("backgroundColor", "blue");
+            //아래처럼 써도 같은기능
+            //$("li:eq(3)").css("backgroundColor", "blue");
+        });
+        
+    </script>
+</body>
+</html>

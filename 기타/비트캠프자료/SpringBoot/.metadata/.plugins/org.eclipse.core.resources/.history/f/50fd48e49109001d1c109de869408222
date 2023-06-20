@@ -1,0 +1,15 @@
+package com.spring.boardweb.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.spring.boardweb.entity.Board;
+import com.spring.boardweb.entity.BoardFile;
+import com.spring.boardweb.entity.BoardFileId;
+
+public interface BoardFileRepository extends JpaRepository<BoardFile, BoardFileId>{
+	//구현가능한 메소드는 find, read, query, count, get
+	List<BoardFile> findByBoard(Board board);
+
+}

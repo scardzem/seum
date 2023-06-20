@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!--
+    viewport 설정
+    width=device-width : 화면 넓이를 디바이스의 넓이로 지정
+    initial-scale=1 : 초기 화면 배율 1배율로 지정
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미디어 쿼리</title>
+    <style>
+        div{
+            background-color: blue;
+            width: 400px;
+            height: 400px;
+        }
+        /*PC 화면*/
+        @media screen and(min-width: 1024px){
+            div{
+                width: 300px;
+                height: 300px;
+            }
+        }
+
+        /*태블릿 화면*/
+        @media screen and(min-width:768px) and (max-width: 1023px){
+            div {
+                width: 100px;
+                height: 100px;
+            }
+        }
+
+        /*스마트폰 화면*/
+        @media screen and (max-width:767px){
+            div{
+                width: 300px;
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

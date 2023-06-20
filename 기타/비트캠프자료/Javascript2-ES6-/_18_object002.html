@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>계산된 속성 이름</title>
+</head>
+<body>
+    <script>
+        //ES5
+        var prefix1 = "prop";
+        var obj1 = {};
+        var i = 0;
+
+        obj1[prefix1 + "-" + ++i] = i;
+        obj1[prefix1 + "-" + ++i] = i;
+        obj1[prefix1 + "-" + ++i] = i;
+        console.log(obj1);
+
+        //ES6
+        const prefix2 = "prop";
+        let j = 0;
+
+        const obj2 = {
+            [`${prefix2}-${++j}`]: j,
+            [`${prefix2}-${++j}`]: j,
+            [`${prefix2}-${++j}`]: j
+        };
+        console.log(obj2);
+    </script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+package com.spring.boardweb.configuration;
+
+@Configuration
+public class DataConfiguration {
+
+}
