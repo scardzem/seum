@@ -4,8 +4,15 @@
 <meta charset = "UTF-8">
 <title> 날짜 정보 객체 </title>
 <script>
+	var today = new Date();
+	var nowYear = today.getFullYear();  //today객체의 연도(현재 기준2023년)
 
-	document.write("D-day: " + result + "일 남았습니다.");
+	var theDate = new Date(nowYear, 11, 31);  //월 정보는 0부터 시작이기때문에 12월 31일은 11로 작성.
+	var diffDate = theDate.getTime() - today.getTime();  //남은 날 = 특정 날짜 - 현재 날짜(밀리초 단위)
+														 //날짜 계산은 날짜.getTime()으로 밀리초로 계산한다.
+	var result = Math.ceil(diffDate / (60 * 1000 * 60 * 24));
+
+	document.write("연말 D-day: " + result + "일 남았습니다.");
 </script>
 </head>
 <body>
