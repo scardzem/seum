@@ -10,7 +10,9 @@ $(function(){
 		"background-color":"#0ff",
 		"border":"2px solid #f00"
 	}
+	$(".txt3").prevUntil(".title").css(style_1);//.txt3 위로 .title동생까지
 
+	$(".txt3").nextUntil(".txt6").css(style_1); //.txt3 아래로 .txt6 이전까지.
 });
 </script>
 </head>

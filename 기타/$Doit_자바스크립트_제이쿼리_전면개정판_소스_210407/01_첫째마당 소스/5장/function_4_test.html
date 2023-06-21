@@ -6,6 +6,25 @@
 <script>
 	var rightId = "korea";
 	var rightPw = "1234";
+
+	function logIn(id, pw){
+		if(id==rightId){
+			if(pw=rightPw){
+				document.write(id+"님 환영합니다.");
+			} else {
+				document.write("비밀번호가 틀렸습니다.");
+			}
+		} else {
+			document.write("존재하지 않는 아이디입니다.");
+		}
+	}
+
+	var userId = prompt("아이디를 입력하세요.");
+	var userPw = prompt("비밀번호를 입력하세요.");
+
+	logIn(userId, userPw);
+
+
 </script>
 </head>
 <body>

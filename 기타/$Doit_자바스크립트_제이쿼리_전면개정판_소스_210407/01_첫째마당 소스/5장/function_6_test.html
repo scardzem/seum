@@ -10,16 +10,27 @@
 </style>
 <script>
 	var num = 1;
+	function gallery(direct){
+		if(direct){
+			if(num==8) return; //num을 1 증가시켜서 다음 이미지로 이동, num이 8이면 gallery(direct) 함수 종료
+			num++;
+		} else {
+			if(num==1) return; //num일 1 감소시켜서 이전 이미지로 이동, num이 1이면 함수 종료
+			num--;
+		}
 
+		var imgTag = document.querySelector("#photo");
+		imgTag.setAttribute("src", "images/pic_" + num + ".jpg");
+	}
 </script>
 </head>
 <body>
 	<div id="galleryZone">
-		<p><img src="images/pic_1.jpg" id="photo" alt=""></p>
 		<p>
 			<button onclick="gallery(0)">이전</button>
-			<button onclick="gallery(1)">댜음</button>
+			<button onclick="gallery(1)">다음</button>
 		</p>
+		<p><img src="images/pic_1.jpg" id="photo" alt=""></p>
 	</div>
 </body>
 </html>
