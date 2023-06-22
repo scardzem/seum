@@ -6,14 +6,28 @@
 <script src="js/jquery.js"></script>
 <script>
 $(function(){
-	
+	$("#wrap p:hidden").css({				//선택한 <p> 요소 중 숨겨진 상태의 요소만 선택
+		"display":"block",
+		"background":"#ff0"
+	});
+
+	//id 값이 "zone1"인 요소의 하위 <select> 요소 중 selected 된 <option> 요소만 선택
+	var z1 = $("#zone1 :selected").val();
+	console.log(z1);
+
+	//id 값이 "zone2"인 요소의 하위 <input> 요소 중 checked된 <input> 요소만 선택
+	var z2 = $("#zone2 :checked").val();
+	console.log(z2);
+
+	var z3 = $("#zone3 :checked").val();
+	console.log(z3);
 });
 </script>
 </head>
 <body>
 	<div id="wrap">
 		<p>내용1</p>
-		<p style="display:none">내용2</p>
+		<p style="visibility:hidden">내용2</p>
 		<p>내용3</p>
 	</div>
 	<form action="#">

@@ -6,7 +6,19 @@
 <script src="js/jquery.js"></script>
 <script>
 $(function(){
- 
+	$("#inner_1").find(".txt1")
+	.css({"background-color":"yellow"});
+
+	$("#inner_1 p").filter(".txt2")
+	.css({"background-color":"aqua"});
+
+	//filter(function(){})함수의 인자값으로 익명 함수를 전달하여 익명 함수가
+	//true를 반환하면 해당 요소를 선택하도록 한다.
+	$("#inner_2 p").filter(function(idx, obj){
+		console.log(idx);
+		return idx %2 == 0;
+	})
+	.css({"background-color":"lightgreen"})
 });
 </script>
 </head>
