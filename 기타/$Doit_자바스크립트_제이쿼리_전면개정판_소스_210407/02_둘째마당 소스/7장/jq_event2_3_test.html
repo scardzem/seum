@@ -5,8 +5,10 @@
 <title> 이벤트 </title>  
 <script src="js/jquery.js"></script>
 <script>
-$(function(){
-
+$(function(){  //option 메뉴 선택하면 밑에 텍스트 나오는 예제.
+	$("#rel_site").on("change", function(){
+		$(".txt").text($(this).val());
+	});
 });
 </script>
 </head>

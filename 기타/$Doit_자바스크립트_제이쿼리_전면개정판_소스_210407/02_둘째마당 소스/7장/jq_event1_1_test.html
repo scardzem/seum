@@ -1,18 +1,63 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
 <meta charset="UTF-8">
-<title> 이벤트 </title>  
+<title> 이벤트 </title>
 <script src="js/jquery.js"></script>
 <script>
-$(function( ) {
-   
+$(function () {
+	//단독이벤트 등록 메서드(click() )
+	var $btn = "black";
+	$(".btn1").click(function () {
+		if ($btn == "red") {
+			$btn = "black";
+			$(".btn1").parent().next()
+				.css({ "color": "black" });
+			console.log($btn);
+		} else if ($btn == "black") {
+
+			$btn = "red";
+			$(".btn1").parent().next()
+				.css({ "color": "red" });
+			console.log($btn);
+		}
+	});
+	//그룹이벤트 등록 메서드(on() )
+	// var $btn = "black";
+	// $(".btn1").on("click", function () {
+	// 	if ($btn == "red") {
+	// 		$btn = "black";
+	// 		$(".btn1").parent().next()
+	// 			.css({ "color": "black" });
+	// 		console.log($btn);
+	// 	} else if ($btn == "black") {
+
+	// 		$btn = "red";
+	// 		$(".btn1").parent().next()
+	// 			.css({ "color": "red" });
+	// 		console.log($btn);
+	// 	}
+	// });
+
+	
+	$(".btn2").on("mouseover focus", function () {
+		$(".btn2").parent().next()
+			.css({ "color": "lightgreen" });
+
+		$(".btn2").on("mouseout blur", function () {
+			$(".btn2").parent().next()
+				.css({ "color": "black" });
+		});
+	})
+
 });
 </script>
 </head>
+
 <body>
 	<p>
-	<button class="btn1">버튼1</button>
+		<button class="btn1">버튼1</button>
 	</p>
 	<p>내용1</p>
 	<p>
@@ -20,4 +65,5 @@ $(function( ) {
 	</p>
 	<p>내용2</p>
 </body>
+
 </html>

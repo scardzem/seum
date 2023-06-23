@@ -6,7 +6,26 @@
 <script src="js/jquery.js"></script>
 <script>
 $(function(){
-	
+	$("#btn1")
+	.data({"text":"javascript"})  //버튼1에 text(key):javascript(value) 입력.
+	.on({
+		"mouseover": overFnc,
+		"mouseout": outFnc
+	});
+
+	$("#btn2")
+	.on({
+		"mouseover focus": overFnc,
+		"mouseout blur": outFnc
+	})
+	.data({"text": "welcome!"});
+
+	function overFnc(){
+		$(".txt").text($(this).data("text"));
+	}
+	function outFnc(){
+		$(".txt").text("");
+	}
 });
 </script>
 </head>

@@ -6,7 +6,29 @@
 <script src="js/jquery.js"></script>
 <script>
 $(function(){
+	$(document).on("keydown", keyEventFnc);  //키보드 방향키를 입력하면 text로 출력되는 예제
+	function keyEventFnc(e){
+		var direct = "";
 
+		switch (e.keyCode){
+			case 37:
+				direct = "LEFT";
+				break;
+			case 38:
+				direct = "TOP";
+				break;
+			case 39:
+				direct = "RIGHT";
+				break;
+			case 40:
+				direct = "BOTTOM";
+				break;
+		}
+
+		if(direct) {
+			$("#user_id").val(direct);
+		}
+	}
 });
 </script>
 </head>

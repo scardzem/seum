@@ -6,8 +6,20 @@
 <script src="js/jquery.js"></script>
 <script>
 $(function(){
+	$(".btn_1.on").on("mouseover focus",function(){				//그냥(?) 이벤트 등록 방식
+		alert("Hello");
+	});
+	$(".btn_1").addClass("on");		//이벤트를 등록하고 class값을 생성하면 이벤트가 정상적으로 등록되지 않음.
+
+	$(document).on("mouseover focus",".btn_2.on",function(){	//라이브 이벤트 등록 방식.
+		alert("Welcome");
+		$(".btn_1.on").trigger("focus"); //alert창 확인 눌러도 포커스 돼있어서 alert창 끌 수가 없어서 포커스 다른데 가게 만듦.
+	});
+	$(".btn_2").addClass("on");		//라이브 이벤트 등록 방식으로 이벤트를 등록하고 class값을 생성해도 이벤트가 정상적으로 등록됨.
 
 });
+
+
 </script>
 </head>
 <body>

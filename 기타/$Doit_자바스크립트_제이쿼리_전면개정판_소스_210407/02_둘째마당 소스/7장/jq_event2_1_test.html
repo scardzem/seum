@@ -5,7 +5,33 @@
 <title> 이벤트 </title>  
 <script src="js/jquery.js"></script>
 <script>
-$(function(){
+$(function(){								//focus, blur
+	$("#user_id_1, #user_pw_1").on("focus",	//focus
+	function(){
+		$(this).css({
+			"background-color":"pink"
+		});
+	});
+
+	$("#user_id_1, #user_pw_1").on("blur",	//blur
+	function(){
+		$(this).css({
+			"background-color":"#fff"
+		});
+	});
+
+	$("#frm_2").on("focusin",		//focusin, focusout은
+	function(){						//선택한대상의 하위요소 중 "입력 요소"로 포커스가 이동하면
+		$(this).css({				//이벤트를 발생시킨다.
+			"background-color":"pink"
+		});
+	});
+	$("#frm_2").on("focusout",
+	function(){
+		$(this).css({
+			"background-color":"#fff"
+		});
+	});
 
 });
 </script>
