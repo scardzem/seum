@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/ress.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?
+                        family=Montserrat:wght@100;200;300;400;500;600;700;800;900&
+                        family=Noto+Sans+KR:wght@100;300;400;500;700;900&
+                        family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Archivo+Black&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href='https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css'> <!--footer에 사용된 pretendard 글꼴-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <title>자바스크립트 테스트</title>
+    <style>
+        .cont_ban1_arrow{
+            cursor:pointer;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script>
+        // 햄버거 메뉴버튼
+        $(function(){
+            
+                $(".menu").click(function(){
+                    $(this).css({"opacity": "0", "z-index": "0"});
+                    $(".menu_open").css({"opacity": "1", "z-index": "10"});
+                    $(".open_menu_wrap").css({"visibility":"visible", "opacity":"1", "z-index": "10", "top":"110px"})
+                });
+                $(".menu_open").click(function(){
+                    $(this).css({"opacity": "0", "z-index": "0"});
+                    $(".menu").css({"opacity": "1", "z-index": "10"});
+                    $(".open_menu_wrap").css({"visibility":"hidden", "opacity": "0", "z-index": "0", "top":"130px"});
+                });
+                $(".open_menu_wrap").on("click", function(e){
+                    e.preventDefault();
+                });
+
+            //배너1 좌측 하단 텍스트
+            setTimeout(() => {
+                $(".banner_sub_title").css({"top":"78%", "opacity":"1"});
+            }, 1500);
+
+
+
+            // $(".search").mouseover(function(){
+            //     $(this).css({
+            //         "width":"150px",
+            //         "border-bottom":"1px black solid",
+            //         "text-align":"start",
+            //     });
+            // });
+            // $(".search").mouseout(function(){
+            //     $(this).css({
+            //         "width":"90px",
+            //         "border":"none",
+            //         "text-align":"end",
+            //     });
+            // });
+            
+            $(document).on("mouseover",".search",function(){
+                    var searchImg = $("<img>");
+                    searchImg.attr({
+                        "src":"images/menubutton.png",
+                        "class":"search_img",
+                    });
+                    $(this).prepend(searchImg);
+                    $(".search img").css({"float":"left"});
+                    // $(".search").attr("img","src=\"images/menubutton.png\"")
+                    $(".search")
+                    .css({
+                        "position":"relative",
+                        "float":"left",
+                        "width":"150px",
+                        "border-bottom":"1px black solid",
+                        "text-align":"start",
+                    });
+                })
+            $(document).on("mouseout",".search",function(){
+
+                        $(".search").css({
+                            "width":"90px",
+                            "border":"none",
+                            "text-align":"end",
+                        });
+                        $(".search img").remove()
+            });
+
+            //arrow 클릭 -> 배경화면 변경------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+            $(".cont_ban1_arrow").on("click",function(){
+            //화살표 클릭하면 배경이미지가 바뀌는건지 확인?------------------------------------------------------------------------------------------------------------------------------
+            });
+        });
+            
+    </script>
+
+
+    </head>
+    <body>
+    <div id="wrap">
+        <!-- <div id="area1180"></div> -->
+            <!-- header -->
+            <header id="header">
+                <div id="header-title">
+
+                    <div class="container_left">
+                        <div class="menu_bg" style="height:5500px;position:absolute;left:101px; background-color: green; visibility:hidden;">
+                            <div href="" class="menu"><img src="images/menubutton.png" alt=""></div>            <!--메뉴 버튼-->
+                            <div href="" class="menu_open"><img src="images/closebutton.png" alt="">            <!--펼친 메뉴-->
+                            </div>
+                            <div class="open_menu_wrap" style="position:sticky; opacity: 0; transition: 0.5s; top:130px; visibility:hidden;">
+                                <div class="open_menu_list"><a href="">PERFUME</a></div>
+                                <div class="open_menu_list"><a href="">BODY CARE</a></div>
+                                <div class="open_menu_list"><a href="">COSMETIC</a></div>
+                                <div class="open_menu_list"><a href="">LIP STICK</a></div>
+                            </div>
+                        </div>
+                        <a id="bbb" href="#"><img src="images/logo.png" id="logo" alt="로고"></a>
+                    </div>
+                </div>
+                <nav id="header-nav">
+
+                    <div class="container_right">
+                        <div class="header_right_txt_wrap">
+                            <div class="header_right_txt_wrap_inner search" style="transition:all 0.5s ease-out"><a href="#">Search</a></div>
+                            <div class="header_right_txt_wrap_inner"><a href="#">Login</a></div>
+                            <div class="header_right_txt_wrap_inner"><a href="#">Sign in</a></div>
+                            <div class="header_right_txt_wrap_inner"><a href="#">Cart</a></div>
+                            <div class="header_right_txt_wrap_inner"><a href="#">My Page</a></div>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            <!-- /header -->
+        
+            <!-- contents -->
+            <section id="contents">
+        
+                <div id="cont_ban1">
+                    <div class="container">
+                        <img src="images/banner-product1.png" id="main-banner" width="220px" height="685px" alt="">   <!--*****크기 수정 -10 -13-->
+                        <p class="banner_main_title">Find My<br>PERFUME</p>
+                        <p class="banner_sub_title">Let's Find<br>Your Favorite<br><span style="font-weight:bold; ">Perfume<span></p><!--좌측하단 텍스트-->
+                        <div style="position:absolute;left:370px;bottom:40px;">  <!--*****높이 수정 bottom -20-->
+                            <img class="cont_ban1_arrow left" src="images/banner_arrow_left.png" alt="">
+                            <img class="cont_ban1_arrow right" src="images/banner_arrow_right.png" style="margin-left:10px;" alt="">
+                        </div>
+                    </div>
+                </div>
+                <!--/banner_1-->
+    
+               
+        
+                
+    
+            </section>
+            <!-- /contents -->
+        
+            
+        </div>
+        <!--wrap-->
+
+
+
+
+
+
+    </body>
+
+</html>

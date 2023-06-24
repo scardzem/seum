@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+      div{
+        width:150px;
+        height:150px;
+        background:blue;
+      }
+  
+
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script>
+      $(function(){
+        $("#dd").mouseover(function(){
+          $(this).css({"width":"250px", "height":"250px"})
+        });
+        $("#dd").mouseout(function(){
+          $(this).css({"width":"150px", "height":"150px"})
+        });
+
+      });
+    </script>
+</head>
+<body>
+    <h1>가로 스크롤 예제 입니다.</h1>
+<div id="dd" style="border: 1px solid black; width: 150px; transition-duration:0.5s; transition-delay:1s;">
+</div>
+  
+
+</body>
+</html>

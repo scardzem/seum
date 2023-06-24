@@ -1,0 +1,15 @@
+﻿/* 콘텐츠 영역 확인 */    
+#area1180{
+    width:1180px;
+    position: absolute;
+    height: 12000px;
+    background: rgba(0,0,0,0.2);
+    z-index:99999;
+    left:50%;
+    top:0;
+    transform: translate(-50%, -50%);}
+.con_3_box_wrap{
+    width:3000px;
+    height:700px;
+    background-color: rgba(0,0,0,0.3);
+}
