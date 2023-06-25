@@ -20,60 +20,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
     <title>자바스크립트 테스트</title>
     <style>
-    /* header S*/
-        /* 상단 nav 밑줄 좌->우 애니메이션 */
-        .header_right_txt_wrap>div>a>span{
-            position:relative;
-        }
-        .header_right_txt_wrap>div span::after{ 
-            content: "";
-            position: absolute;
-            top: 110%;
-            left: 0;
-            width:0%;
-            height:2px;
-            background-color:#000;
-            transition: all 0.3s;
-            opacity:0;
-        }
-        .header_right_txt_wrap>div:hover>a>span::after{
-            width:100%;
-            opacity:1;
-        }
-        /*중앙->양쪽으로 밑줄 애니메이션*/
-        .header_right_txt_wrap>div:nth-child(n+2) span::after{
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        .header_right_txt_wrap>div:nth-child(1) span::after{
-            left: 100%;
-            transform: translateX(-100%);
-            opacity: 1;
-        }
-        /* search 메뉴 밑줄 좌->우 애니메이션 */
-        .header_right_txt_wrap>div>a{
-            position:relative;
-        }
-        .header_right_txt_wrap>div:nth-child(1):after{ 
-            content: "";
-            position: absolute;
-            top: 110%;
-            left: 0;
-            width:0%;
-            height:2px;
-            background-color:#4d4d4d;
-            transition: all 0.3s;
-        }
-        .header_right_txt_wrap>div:hover::after{
-            width:100%;
-            opacity:1;
-        }
-        /*우->좌로 밑줄 애니메이션*/
-        .header_right_txt_wrap>div:nth-child(1)::after{
-            left: 100%;
-            transform: translateX(-100%);
-        }
-    /* header E */
+    
 
     /*banner_1 배경 슬라이드*/
     .ban1_container_inner{
@@ -84,85 +31,44 @@
     </style>
     <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
     <script>
-        // 햄버거 메뉴버튼
         $(function(){
             
-                $(".menu").click(function(){
-                    $(this).css({"opacity": "0", "z-index": "0"});
-                    $(".menu_open").css({"opacity": "1", "z-index": "10"});
-                    $(".open_menu_wrap").css({"visibility":"visible", "opacity":"1", "z-index": "10", "top":"110px"})
-                });
-                $(".menu_open").click(function(){
-                    $(this).css({"opacity": "0", "z-index": "0"});
-                    $(".menu").css({"opacity": "1", "z-index": "10"});
-                    $(".open_menu_wrap").css({"visibility":"hidden", "opacity": "0", "z-index": "0", "top":"130px"});
-                });
-                $(".open_menu_wrap").on("click", function(e){
-                    e.preventDefault();
-                });
+            // 햄버거 메뉴버튼
+            $(".menu").click(function(){
+                $(this).css({"opacity": "0", "z-index": "0"});
+                $(".menu_open").css({"opacity": "1", "z-index": "10"});
+                $(".open_menu_wrap").css({"visibility":"visible", "opacity":"1", "z-index": "10", "top":"110px"})
+            });
+            $(".menu_open").click(function(){
+                $(this).css({"opacity": "0", "z-index": "0"});
+                $(".menu").css({"opacity": "1", "z-index": "10"});
+                $(".open_menu_wrap").css({"visibility":"hidden", "opacity": "0", "z-index": "0", "top":"130px"});
+            });
+            $(".open_menu_wrap").on("click", function(e){
+                e.preventDefault();
+            });
 
             //배너1 좌측 하단 텍스트
             setTimeout(() => {
                 $(".banner_sub_title").css({"top":"78%", "opacity":"1"});
             }, 1500);
 
-
-
-            // $(".search").mouseover(function(){
-            //     $(this).css({
-            //         "width":"150px",
-            //         "border-bottom":"1px black solid",
-            //         "text-align":"start",
-            //     });
-            // });
-            // $(".search").mouseout(function(){
-            //     $(this).css({
-            //         "width":"90px",
-            //         "border":"none",
-            //         "text-align":"end",
-            //     });
-            // });
-            
-            // $(document).on("mouseover",".search",function(){
-                    // var searchImg = $("<img>");
-                    // searchImg.attr({
-                    //     "src":"images/menubutton.png",
-                    //     "class":"search_img",
-                    // });
-                    // 돋보기 이미지 생성
-                    // $(this).prepend(searchImg); 
-                    // $(".search img").css({"float":"left"});
-                    // $(".search").attr("img","src=\"images/menubutton.png\"")
-                    // $(".search")
-                    // .css({
-                    //     "position":"relative",
-                    //     "float":"left",
-                    //     "width":"150px",
-                    //     "border-bottom":"1px black solid",
-                    //     "text-align":"start",
-                    // });
-            //     })
-            // $(document).on("mouseout",".search",function(){
-
-            //             $(".search").css({
-            //                 "width":"90px",
-            //                 "border":"none",
-            //                 "text-align":"end",
-            //             });
-            //             $(".search img").remove()
-            // });
-
             //arrow 클릭 -> banner_1 배경 슬라이드
                 document.querySelector('.cont_ban1_arrow.right').addEventListener('click',function(){
-                    document.querySelector('.ban1_container_inner').style.transform='translate(-1920px)'
+                    document.querySelector('.ban1_container_inner').style.transform='translate(-1920px)';
+                    document.querySelector('#main-banner').style.transform='translate(-1920px,-50%)';
             });
                 document.querySelector('.cont_ban1_arrow.left').addEventListener('click',function(){
-                    document.querySelector('.ban1_container_inner').style.transform='translate(0)'
+                    document.querySelector('.ban1_container_inner').style.transform='translate(0)';
+                    document.querySelector('#main-banner').style.transform='translate(-50%,-50%)';
             });
-        });
-
-        
             
+
+
+
+
+
+        }); //자동실행 E
     </script>
 
 
@@ -217,7 +123,7 @@
                             <img src="images/main-bg-1.jpg" alt="">
                             <img src="images/main-bg-2.jpg" alt="">
                         </div>
-                            <img src="images/banner-product1.png" id="main-banner" width="220px" height="685px" alt="">  
+                        <img src="images/banner-product1.png" id="main-banner" width="220px" height="685px" alt="">  
                             <p class="banner_main_title">Find My<br>PERFUME</p>
                             <p class="banner_sub_title">Let's Find<br>Your Favorite<br><span style="font-weight:bold; ">Perfume<span></p>
                             <div style="position:absolute;left:370px;bottom:40px;">
