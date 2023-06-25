@@ -20,9 +20,67 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
     <title>자바스크립트 테스트</title>
     <style>
-        .cont_ban1_arrow{
-            cursor:pointer;
+    /* header S*/
+        /* 상단 nav 밑줄 좌->우 애니메이션 */
+        .header_right_txt_wrap>div>a>span{
+            position:relative;
         }
+        .header_right_txt_wrap>div span::after{ 
+            content: "";
+            position: absolute;
+            top: 110%;
+            left: 0;
+            width:0%;
+            height:2px;
+            background-color:#000;
+            transition: all 0.3s;
+            opacity:0;
+        }
+        .header_right_txt_wrap>div:hover>a>span::after{
+            width:100%;
+            opacity:1;
+        }
+        /*중앙->양쪽으로 밑줄 애니메이션*/
+        .header_right_txt_wrap>div:nth-child(n+2) span::after{
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .header_right_txt_wrap>div:nth-child(1) span::after{
+            left: 100%;
+            transform: translateX(-100%);
+            opacity: 1;
+        }
+        /* search 메뉴 밑줄 좌->우 애니메이션 */
+        .header_right_txt_wrap>div>a{
+            position:relative;
+        }
+        .header_right_txt_wrap>div:nth-child(1):after{ 
+            content: "";
+            position: absolute;
+            top: 110%;
+            left: 0;
+            width:0%;
+            height:2px;
+            background-color:#4d4d4d;
+            transition: all 0.3s;
+        }
+        .header_right_txt_wrap>div:hover::after{
+            width:100%;
+            opacity:1;
+        }
+        /*우->좌로 밑줄 애니메이션*/
+        .header_right_txt_wrap>div:nth-child(1)::after{
+            left: 100%;
+            transform: translateX(-100%);
+        }
+    /* header E */
+
+    /*banner_1 배경 슬라이드*/
+    .ban1_container_inner{
+        transition: transform 0.5s;
+    }
+        
+
     </style>
     <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
     <script>
@@ -65,39 +123,45 @@
             //     });
             // });
             
-            $(document).on("mouseover",".search",function(){
-                    var searchImg = $("<img>");
-                    searchImg.attr({
-                        "src":"images/menubutton.png",
-                        "class":"search_img",
-                    });
-                    $(this).prepend(searchImg);
-                    $(".search img").css({"float":"left"});
+            // $(document).on("mouseover",".search",function(){
+                    // var searchImg = $("<img>");
+                    // searchImg.attr({
+                    //     "src":"images/menubutton.png",
+                    //     "class":"search_img",
+                    // });
+                    // 돋보기 이미지 생성
+                    // $(this).prepend(searchImg); 
+                    // $(".search img").css({"float":"left"});
                     // $(".search").attr("img","src=\"images/menubutton.png\"")
-                    $(".search")
-                    .css({
-                        "position":"relative",
-                        "float":"left",
-                        "width":"150px",
-                        "border-bottom":"1px black solid",
-                        "text-align":"start",
-                    });
-                })
-            $(document).on("mouseout",".search",function(){
+                    // $(".search")
+                    // .css({
+                    //     "position":"relative",
+                    //     "float":"left",
+                    //     "width":"150px",
+                    //     "border-bottom":"1px black solid",
+                    //     "text-align":"start",
+                    // });
+            //     })
+            // $(document).on("mouseout",".search",function(){
 
-                        $(".search").css({
-                            "width":"90px",
-                            "border":"none",
-                            "text-align":"end",
-                        });
-                        $(".search img").remove()
+            //             $(".search").css({
+            //                 "width":"90px",
+            //                 "border":"none",
+            //                 "text-align":"end",
+            //             });
+            //             $(".search img").remove()
+            // });
+
+            //arrow 클릭 -> banner_1 배경 슬라이드
+                document.querySelector('.cont_ban1_arrow.right').addEventListener('click',function(){
+                    document.querySelector('.ban1_container_inner').style.transform='translate(-1920px)'
             });
-
-            //arrow 클릭 -> 배경화면 변경------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-            $(".cont_ban1_arrow").on("click",function(){
-            //화살표 클릭하면 배경이미지가 바뀌는건지 확인?------------------------------------------------------------------------------------------------------------------------------
+                document.querySelector('.cont_ban1_arrow.left').addEventListener('click',function(){
+                    document.querySelector('.ban1_container_inner').style.transform='translate(0)'
             });
         });
+
+        
             
     </script>
 
@@ -122,18 +186,20 @@
                                 <div class="open_menu_list"><a href="">LIP STICK</a></div>
                             </div>
                         </div>
-                        <a id="bbb" href="#"><img src="images/logo.png" id="logo" alt="로고"></a>
+                        <a href="#"><img src="images/logo.png" id="logo" alt="로고"></a>
                     </div>
                 </div>
                 <nav id="header-nav">
 
                     <div class="container_right">
                         <div class="header_right_txt_wrap">
-                            <div class="header_right_txt_wrap_inner search" style="transition:all 0.5s ease-out"><a href="#">Search</a></div>
-                            <div class="header_right_txt_wrap_inner"><a href="#">Login</a></div>
-                            <div class="header_right_txt_wrap_inner"><a href="#">Sign in</a></div>
-                            <div class="header_right_txt_wrap_inner"><a href="#">Cart</a></div>
-                            <div class="header_right_txt_wrap_inner"><a href="#">My Page</a></div>
+                            <div class="header_right_txt_wrap_inner search">
+                                <img src="images/search.png" width="15" height="15" alt="">
+                                <a href="#"><span>Search</span></a></div>
+                            <div class="header_right_txt_wrap_inner"><a href="#"><span>Login</span></a></div>
+                            <div class="header_right_txt_wrap_inner"><a href="#"><span>Sign in</span></a></div>
+                            <div class="header_right_txt_wrap_inner"><a href="#"><span>Cart</span></a></div>
+                            <div class="header_right_txt_wrap_inner"><a href="#"><span>My Page</span></a></div>
                         </div>
                     </div>
                 </nav>
@@ -141,17 +207,23 @@
             <!-- /header -->
         
             <!-- contents -->
+
+            <!--banner_1-->
             <section id="contents">
         
                 <div id="cont_ban1">
-                    <div class="container">
-                        <img src="images/banner-product1.png" id="main-banner" width="220px" height="685px" alt="">   <!--*****크기 수정 -10 -13-->
-                        <p class="banner_main_title">Find My<br>PERFUME</p>
-                        <p class="banner_sub_title">Let's Find<br>Your Favorite<br><span style="font-weight:bold; ">Perfume<span></p><!--좌측하단 텍스트-->
-                        <div style="position:absolute;left:370px;bottom:40px;">  <!--*****높이 수정 bottom -20-->
-                            <img class="cont_ban1_arrow left" src="images/banner_arrow_left.png" alt="">
-                            <img class="cont_ban1_arrow right" src="images/banner_arrow_right.png" style="margin-left:10px;" alt="">
+                    <div class="container" style="overflow:hidden;">
+                        <div class="ban1_container_inner" style="width:3846px;">
+                            <img src="images/main-bg-1.jpg" alt="">
+                            <img src="images/main-bg-2.jpg" alt="">
                         </div>
+                            <img src="images/banner-product1.png" id="main-banner" width="220px" height="685px" alt="">  
+                            <p class="banner_main_title">Find My<br>PERFUME</p>
+                            <p class="banner_sub_title">Let's Find<br>Your Favorite<br><span style="font-weight:bold; ">Perfume<span></p>
+                            <div style="position:absolute;left:370px;bottom:40px;">
+                                <img class="cont_ban1_arrow left" src="images/banner_arrow_left.png" alt="">
+                                <img class="cont_ban1_arrow right" src="images/banner_arrow_right.png" style="margin-left:10px;" alt="">
+                            </div>
                     </div>
                 </div>
                 <!--/banner_1-->
