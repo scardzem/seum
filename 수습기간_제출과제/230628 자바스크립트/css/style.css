@@ -119,6 +119,7 @@
             justify-content: start;
             align-items: center;
             margin-right:30px;
+            transition: all 0.5s ease-out;
         }
         .header_right_txt_wrap_inner.search img{
             float: left;
@@ -134,7 +135,6 @@
             width: 150px;
             cursor: pointer;
             text-align: start;
-            transition:width 0.5s ease-out;
         }
         .header_right_txt_wrap_inner.search:hover>img{
             position: relative;
@@ -154,16 +154,18 @@
         .header_right_txt_wrap_inner:nth-child(n+2):hover{
             font-weight: 600;
         }
+        .header_right_txt_wrap_inner:first-child a span{
+            transition: all 0.3s ease-out;
+        }
         .header_right_txt_wrap_inner:first-child:hover a span{
             opacity:0.2;
-            transition: 0.3s;
         }
     
     /* 상단 nav 밑줄 좌->우 애니메이션 */
         .header_right_txt_wrap>div>a>span{
             position:relative;
         }
-        .header_right_txt_wrap>div span::after{ 
+        .header_right_txt_wrap>div:nth-child(n+2) span::after{ 
             content: "";
             position: absolute;
             top: 110%;
@@ -213,6 +215,7 @@
         }
 /* header 요소 E */
 
+
 /* banner_1 요소 S */
 
     /*  content_ban1 영역*/
@@ -223,12 +226,22 @@
             background-size: cover; */
             position: relative;
         }
-        #main-banner{
+        .bg_fade{
+            position:absolute;
+        }
+        .main_bg1_fade {
+            left:50%;
+            top:50%;
+            transform: translate(-50%,-50%);
+            transition: all 0.3s ease-in;
+            opacity: 1;
+        }
+        .main_banner{
             position: absolute;
             top: 50%;
-            left: 960px;
+            left: 50%;
             transform: translate(-50%, -50%);
-            transition: transform 0.5s;
+            transition: all 0.3s ease-in;
         }
         #cont_ban1 .container .banner_main_title{
             position:absolute;
@@ -241,6 +254,30 @@
             /* font-family: 'Archivo Black', sans-serif; */
             font-family: 'Geologica', sans-serif;
         }
+
+/*임시 시작*/
+        .main_title_fade{
+            position:absolute;
+            color:rgb(95, 216, 253); 
+            font-size: 170px;
+            top: 50%;
+            left: 50%;
+            transform:translate(-26%,-50%);
+            font-weight: 900;
+            transition: all 0.3s ease-out;
+            font-family: 'Geologica', sans-serif;
+            opacity: 0;
+        }
+        
+
+
+
+
+
+
+
+
+/*임시 끝*/
         #cont_ban1 .container .banner_sub_title{
             position: absolute;
             left: 370px;

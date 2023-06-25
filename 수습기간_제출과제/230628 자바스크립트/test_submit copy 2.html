@@ -53,22 +53,58 @@
                 $(".banner_sub_title").css({"top":"78%", "opacity":"1"});
             }, 1500);
 
-            //arrow 클릭 -> banner_1 배경 슬라이드
-                document.querySelector('.cont_ban1_arrow.right').addEventListener('click',function(){
-                    document.querySelector('.ban1_container_inner').style.transform='translate(-1920px)';
-                    document.querySelector('#main-banner').style.transform='translate(-1920px,-50%)';
-            });
-                document.querySelector('.cont_ban1_arrow.left').addEventListener('click',function(){
-                    document.querySelector('.ban1_container_inner').style.transform='translate(0)';
-                    document.querySelector('#main-banner').style.transform='translate(-50%,-50%)';
-            });
+            //arrow 클릭 -> banner_1 배경 슬라이드(화면 전체가 움직이는게 아니었음..)
+            //이거 적용하려면 #cont_ban1>.container>div 만들어서 main_bg1,2 두개 이미지 감싸줘야됨. (width 3900정도 줘야됨)
+            //     document.querySelector('.cont_ban1_arrow.right').addEventListener('click',function(){
+            //         document.querySelector('.ban1_container_inner').style.transform='translate(-1920px)';
+            //         document.querySelector('#main-banner').style.transform='translate(-1920px,-50%)';
+            // });
+            //     document.querySelector('.cont_ban1_arrow.left').addEventListener('click',function(){
+            //         document.querySelector('.ban1_container_inner').style.transform='translate(0)';
+            //         document.querySelector('#main-banner').style.transform='translate(-50%,-50%)';
+            // });
             
+            //배경클릭 -> banner_1 배경 슬라이드
+            var bg1 = "in";
+            console.log(bg1)
+            $(".main_bg1_fade, .main_bg2_fade").on("click", function(){
+                if(bg1=="in"){
+                    bg1="out";
+                    $(".main_bg1_fade").css({
+                        "transform":"translate(-30%,-50%)",
+                        "opacity":"0"
+                    });
+                    $(".main_banner").css({
+                        "transform":"translate(150%,-50%)",
+                        "opacity":"0"
+                    });
+                } else if(bg1=="out"){
+                    bg1="in"
+                    $(".main_bg1_fade, .main_banner").css({
+                        "transform":"translate(-50%,-50%)",
+                        "opacity":"1"
+                    });
+                }
+                console.log(bg1);
+            });
+
+
+            //banner_1 텍스트 hover
+            $(".banner_main_title1, .main_title_fade").hover(function(){
+                $(".main_title_fade").css({
+                    "transform":"translate(-50%, -50%)",
+                    "opacity":"0.9"
+                });
+            }, function(){
+                $(".main_title_fade").css({
+                    "transform":"translate(-26%, -50%)",
+                    "opacity":"0"
+                });
+            });
 
 
 
-
-
-        }); //자동실행 E
+        }); //자동실행함수 E
     </script>
 
 
@@ -118,13 +154,12 @@
             <section id="contents">
         
                 <div id="cont_ban1">
-                    <div class="container" style="overflow:hidden;">
-                        <div class="ban1_container_inner" style="width:3846px;">
-                            <img src="images/main-bg-1.jpg" alt="">
-                            <img src="images/main-bg-2.jpg" alt="">
-                        </div>
-                        <img src="images/banner-product1.png" id="main-banner" width="220px" height="685px" alt="">  
+                    <div class="container" style="overflow:hidden;">   <!--overflow: hidden;-->
+                        <img class="main_bg2_fade bg_fade" src="images/main-bg-2.jpg" alt="">
+                        <img class="main_bg1_fade bg_fade" src="images/main-bg-1.jpg" alt="">
+                        <img src="images/banner-product1.png" class="main_banner" width="220px" height="685px" alt="">  
                             <p class="banner_main_title">Find My<br>PERFUME</p>
+                            <p class="main_title_fade">Find My<br>PERFUME</p>
                             <p class="banner_sub_title">Let's Find<br>Your Favorite<br><span style="font-weight:bold; ">Perfume<span></p>
                             <div style="position:absolute;left:370px;bottom:40px;">
                                 <img class="cont_ban1_arrow left" src="images/banner_arrow_left.png" alt="">
