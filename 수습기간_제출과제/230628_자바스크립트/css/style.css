@@ -236,13 +236,15 @@
             transition: all 0.3s ease-in;
             opacity: 1;
         }
-        .main_banner{
+        
+        .main_banner1, .main_banner2{
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             transition: all 0.3s ease-in;
         }
+
         #cont_ban1 .container .banner_main_title{
             position:absolute;
             color: #000;

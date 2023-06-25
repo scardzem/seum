@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style></style>
+        <!-- <script
+            src="https://code.jquery.com/jquery-3.7.0.js"
+            integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+            crossorigin="anonymous"
+        ></script> -->
+        
+    </head>
+    <body>
+        <div class="container" style="width: 90vw; height: 90vw; background: #999">
+            <div id="drag-container"
+                style="
+                    width: 200px;
+                    height: 200px;
+                    background: skyblue;
+                    position: absolute;
+                    left: 100px;
+                    top: 100px;
+                    cursor: move; /* 커서 모양을 드래그 형태로 변경 */
+                "
+            ></div>
+        </div>
+    
+        <script>
+            var clr = "blue";
+            document.getElementById("drag-container").addEventListener("click", function(){
+                if(clr=="blue"){
+                    clr="red";
+                    document.getElementById("drag-container").style.background="red";
+                    console.log("inner-"+clr);
+                } else if(clr=="red"){
+                    clr="blue";
+                    document.getElementById("drag-container").style.background="skyblue";
+                    console.log("inner2"+clr);
+                }
+                console.log(clr);
+            });
+    
+            var isDragging = false;
+            var startPositionX;
+            var startPositionY;
+            var dragContainer = document.getElementById("drag-container");
+    
+            dragContainer.addEventListener("mousedown", function (event) {
+                isDragging = true;
+                startPositionX = event.clientX - parseInt(dragContainer.style.left || 0);
+                startPositionY = event.clientY - parseInt(dragContainer.style.top || 0);
+                event.preventDefault(); // 기본 이벤트 취소
+            });
+    
+            dragContainer.addEventListener("mousemove", function (event) {
+                if (isDragging) {
+                    var offsetX = event.clientX - startPositionX;
+                    var offsetY = event.clientY - startPositionY;
+                    dragContainer.style.left = offsetX + "px";
+                    // dragContainer.style.top = offsetY + "px";
+                }
+            });
+    
+            dragContainer.addEventListener("mouseup", function () {
+                isDragging = false;
+            });
+        </script>
+    </body>
+</html>

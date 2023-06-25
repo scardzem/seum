@@ -17,16 +17,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Archivo+Black&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href='https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css'> <!--footer에 사용된 pretendard 글꼴-->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
     <title>자바스크립트 테스트</title>
     <style>
-    
-
-    /*banner_1 배경 슬라이드*/
-    .ban1_container_inner{
-        transition: transform 0.5s;
-    }
-        
 
     </style>
     <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
@@ -52,17 +44,6 @@
             setTimeout(() => {
                 $(".banner_sub_title").css({"top":"78%", "opacity":"1"});
             }, 1500);
-
-            //arrow 클릭 -> banner_1 배경 슬라이드(화면 전체가 움직이는게 아니었음..)
-            //이거 적용하려면 #cont_ban1>.container>div 만들어서 main_bg1,2 두개 이미지 감싸줘야됨. (width 3900정도 줘야됨)
-            //     document.querySelector('.cont_ban1_arrow.right').addEventListener('click',function(){
-            //         document.querySelector('.ban1_container_inner').style.transform='translate(-1920px)';
-            //         document.querySelector('#main-banner').style.transform='translate(-1920px,-50%)';
-            // });
-            //     document.querySelector('.cont_ban1_arrow.left').addEventListener('click',function(){
-            //         document.querySelector('.ban1_container_inner').style.transform='translate(0)';
-            //         document.querySelector('#main-banner').style.transform='translate(-50%,-50%)';
-            // });
             
             //배경클릭 -> banner_1 배경 슬라이드
             var bg1 = "in";
@@ -74,13 +55,13 @@
                         "transform":"translate(-30%,-50%)",
                         "opacity":"0"
                     });
-                    $(".main_banner").css({
+                    $(".main_banner1").css({
                         "transform":"translate(150%,-50%)",
                         "opacity":"0"
                     });
                 } else if(bg1=="out"){
                     bg1="in"
-                    $(".main_bg1_fade, .main_banner").css({
+                    $(".main_bg1_fade, .main_banner1").css({
                         "transform":"translate(-50%,-50%)",
                         "opacity":"1"
                     });
@@ -106,8 +87,6 @@
 
         }); //자동실행함수 E
     </script>
-
-
     </head>
     <body>
     <div id="wrap">
@@ -156,8 +135,9 @@
                 <div id="cont_ban1">
                     <div class="container" style="overflow:hidden;">   <!--overflow: hidden;-->
                         <img class="main_bg2_fade bg_fade" src="images/main-bg-2.jpg" alt="">
+                        <img src="images/banner-product2.png" class="main_banner2" width="" height="" alt="">  
                         <img class="main_bg1_fade bg_fade" src="images/main-bg-1.jpg" alt="">
-                        <img src="images/banner-product1.png" class="main_banner" width="220px" height="685px" alt="">  
+                        <img src="images/banner-product1.png" class="main_banner1" width="220px" height="685px" alt="">  
                             <p class="banner_main_title">Find My<br>PERFUME</p>
                             <p class="main_title_fade">Find My<br>PERFUME</p>
                             <p class="banner_sub_title">Let's Find<br>Your Favorite<br><span style="font-weight:bold; ">Perfume<span></p>
