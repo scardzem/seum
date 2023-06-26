@@ -447,7 +447,6 @@
             transition: all 0.3s ease-out;
         }
         
-        /*임시*/
         .con1_wrap{     /*mouse이벤트 대상.*/
             width: 480px;
             height: 700px;
@@ -475,16 +474,21 @@
             transform: rotate(270deg);
             position: absolute;
             top: 50%;
-            font-size: 45px;
-            left: -146px;  /*mouseover하면 126으로*/
+            font-size: 43px;
+            left: -135px;  /*mouseover하면 126으로*/
             line-height: 1.1;
             font-family: 'Geologica', sans-serif;
             color: #fff;
             font-weight: 300;
             transition: all 0.3s ease-out;
         }
-        .con1_wrap:hover .con1_txt{      /*텍스트 애니메이션(js)*/
-            left: -126px;  /*mouseover하면 126으로*/
+        .con1_wrap:hover .con1_txt{      
+            left: -115px;  
+        }
+        .con1_txt>span{
+            position: relative;
+            left: 60px;
+            bottom:-6px;
         }
         .con1_inner_wrap{
             position: relative;
@@ -596,7 +600,7 @@
         /* con_2에 hover 창 */
         .con2_hover{
             position:absolute;
-            background-color:rgba(0,0,0,0.3);
+            background-color:rgba(0,0,0,0.5);
             width:380px;
             height:380px;
             top:0;
@@ -657,6 +661,7 @@
             font-weight:500;
             cursor:pointer;
             transition: 0.5s;
+            font-family:'Montserrat', sans-serif;
         }
         .con2_hover_item3:hover{
             background-color: #fff;
@@ -667,7 +672,7 @@
             opacity: 0;
         }
         .con2_hover:hover{
-            opacity: 0.8;
+            opacity: 0.9;
         }
 /* content_2 요소 E */
 
@@ -698,6 +703,14 @@
         /* top: 18em;
         left: 13em; */
         }
+
+        .con_3_box_wrap{
+            width:2650px;
+            height:800px;
+            /* background-color: rgba(0,0,0,0.3); */
+            z-index:20;
+            position:relative;
+        }
         #con_3 .con_3_box {
             width: 480px;
             height: 700px;
@@ -706,6 +719,7 @@
             margin-left: 20px;
             float: left;
             margin-top: 36px;
+            position:relative;
         }
         .con_3_box .item_1{
             height:42px;
@@ -715,15 +729,101 @@
             font-weight: 600;
         }
         .con_3_box .item_2{
-            height:655px;
+            height:657px;
             /* border: 1px solid #000; */
         }
-
-        .con_3_box_wrap{
-            width:3000px;
-            height:700px;
-            /* background-color: rgba(0,0,0,0.3); */
+    /*con3 >>> item_3 hover 메뉴*/
+        .con_3_box .item_3_hovoer_bg{
+            position: absolute;
+            opacity:0;
+            background-color: rgba(0,0,0,0.5);
+            width: inherit;
+            height: 657px;
+            bottom:0;
+            right:0;
+            transition: all 0.5s ease-out;
         }
+        .con_3_box .item_3_hovoer_menu{
+            position: absolute;
+            /* background-color: rgba(119, 27, 27, 0.3); */
+            width: inherit;
+            height: 657px;
+            bottom:0;
+            right:0;
+            opacity: 0;
+        }
+        .con_3_box .item_3_hovoer_menu:hover{
+            opacity: 1;
+            transition: all 0.5s ease-out;
+        }
+        .item3_bot_wrap{
+            /* background:white; */
+            width: 480px;
+            height: 200px;
+            position:absolute;
+            bottom: 0;
+        }
+
+        .dd{
+            position: relative;
+            height:200px;
+            width:420px;
+            left:50%;
+            transform:translate(-50%, 0);
+        }
+        .item3_bot_txt1{
+            /* background:red; */
+            position:absolute;
+            width:100%;
+            height: 40px;
+            top:15px;
+            color:#fff;
+            font-family: 'Geologica', sans-serif;
+            display:flex;
+            justify-content: space-between;
+            font-size: 25px;
+        }
+        .item3_p2{
+            font-family: 'Montserrat', sans-serif;
+            font-size: 23px;
+        }
+        .item3_bot_txt2{
+            /* background:green; */
+            position:absolute;
+            width:100%;
+            height:55px;
+            border-top:3px solid #fff;
+            bottom:85px;
+            color: #fff;
+            display:flex;
+            align-items: center;
+            font-size: 18px;
+        }
+        .item3_bot_txt3{
+            /* background:blue; */
+            position:absolute;
+            width:100%;
+            height:45px;
+            bottom: 30px;
+        }
+        .item3_bot_btn{
+            width:420px;
+            height:40px;
+            border: 1px solid #fff;
+            color:#fff;
+            cursor: pointer;
+            text-align: center;
+            line-height:40px;
+            font-size:20px;
+            transition: all 0.5s ease-out;
+            font-family:'Montserrat', sans-serif;
+        }
+        .item3_bot_btn:hover{
+            color:#000;
+            background:#fff;
+        }
+
+        
 /* content_3 요소 E */
 
 /* content_4 요소 S */    

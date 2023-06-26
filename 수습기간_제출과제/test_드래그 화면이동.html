@@ -24,23 +24,24 @@
                     top: 100px;
                     cursor: move; /* 커서 모양을 드래그 형태로 변경 */
                 "
-            ></div>
+            >ddd
+        <div style="width:50px;height:50px;background:red;">fff</div></div>
         </div>
     
         <script>
-            var clr = "blue";
-            document.getElementById("drag-container").addEventListener("click", function(){
-                if(clr=="blue"){
-                    clr="red";
-                    document.getElementById("drag-container").style.background="red";
-                    console.log("inner-"+clr);
-                } else if(clr=="red"){
-                    clr="blue";
-                    document.getElementById("drag-container").style.background="skyblue";
-                    console.log("inner2"+clr);
-                }
-                console.log(clr);
-            });
+            // var clr = "blue";
+            // document.getElementById("drag-container").addEventListener("click", function(){
+            //     if(clr=="blue"){
+            //         clr="red";
+            //         document.getElementById("drag-container").style.background="red";
+            //         console.log("inner-"+clr);
+            //     } else if(clr=="red"){
+            //         clr="blue";
+            //         document.getElementById("drag-container").style.background="skyblue";
+            //         console.log("inner2"+clr);
+            //     }
+            //     console.log(clr);
+            // });
     
             var isDragging = false;
             var startPositionX;
@@ -50,7 +51,7 @@
             dragContainer.addEventListener("mousedown", function (event) {
                 isDragging = true;
                 startPositionX = event.clientX - parseInt(dragContainer.style.left || 0);
-                startPositionY = event.clientY - parseInt(dragContainer.style.top || 0);
+                // startPositionY = event.clientY - parseInt(dragContainer.style.top || 0);
                 event.preventDefault(); // 기본 이벤트 취소
             });
     
