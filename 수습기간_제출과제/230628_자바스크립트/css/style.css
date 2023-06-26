@@ -257,7 +257,6 @@
             font-family: 'Geologica', sans-serif;
         }
 
-/*임시 시작*/
         .main_title_fade{
             position:absolute;
             color:rgb(95, 216, 253); 
@@ -270,16 +269,7 @@
             font-family: 'Geologica', sans-serif;
             opacity: 0;
         }
-        
-
-
-
-
-
-
-
-
-/*임시 끝*/
+ 
         #cont_ban1 .container .banner_sub_title{
             position: absolute;
             left: 370px;
@@ -318,22 +308,50 @@
         #cont_ban2 img{
             position: absolute;
         }
-        #cont_ban2 img:nth-child(1){
+        .prev_arrow{
+            top:46%;
+            left: 100px;
+            cursor: pointer;
+        }
+        .next_arrow{
+            top:46%;
+            right: 100px;
+            cursor: pointer;
+        }
+        #cont_ban2 .banner2_bg1{
             right:197px;
             top:77px;
+            transition: all 0.5s ;
         }
-        #cont_ban2 img:nth-child(2){
+        #cont_ban2 .banner2_product1{
             width:333px;
             height:500px;
             right:280px;
             top:171px;
+            transition: all 0.5s;
+        }
+        #cont_ban2 .banner2_bg2{
+            right:197px;
+            top:77px;
+            opacity: 0;
+            transition: all 0.5s;
+        }
+        #cont_ban2 .banner2_product2{
+            width:200px;
+            height:610px;
+            right:370px;
+            top:125px;
+            opacity: 0;
+            transition: all 0.5s;
         }
     /* banner2 텍스트영역 */
         .banner_2_text {
-            margin-left: 370px;
             /* padding-top: 106px; */  /*html에서 div .box_for_distance로 간격 맞춤*/
-
+            /* margin-left: 370px; */
             line-height:1;
+            position: absolute;
+            left: 370px;
+            /* top:106px; */
         }
         .banner_2_text>p{
             font-family: 'Noto Sans KR', sans-serif;
@@ -419,6 +437,93 @@
             position: absolute;
             top: 0;
             left: 370px;
+            transition: all 0.3s;
+        }
+        #con_1 .container .product2{
+            position: absolute;
+            top: 0;
+            left: 300px;
+            opacity:0;
+            transition: all 0.3s ease-out;
+        }
+        
+        /*임시*/
+        .con1_wrap{     /*mouse이벤트 대상.*/
+            width: 480px;
+            height: 700px;
+            position: absolute;
+            top:0;
+            left: 370px;
+            transition: all 0.3s ease-out;
+            opacity:0;      
+        }
+        .con1_wrap:hover{       
+            transition: all 0.3s ease-out;
+            opacity:0.9; 
+        }
+        .con1_wrap_bgout{   /* 이미지 어둡게 애니메이션(js) */
+            background-color: #000;
+            opacity:0;
+            width: 480px;
+            height: 700px;
+            position: absolute;
+            top:0;
+            left: 370px;
+            transition: all 0.3s ease-out;
+        }
+        .con1_txt{      /*텍스트 애니메이션(js)*/
+            transform: rotate(270deg);
+            position: absolute;
+            top: 50%;
+            font-size: 45px;
+            left: -146px;  /*mouseover하면 126으로*/
+            line-height: 1.1;
+            font-family: 'Geologica', sans-serif;
+            color: #fff;
+            font-weight: 300;
+            transition: all 0.3s ease-out;
+        }
+        .con1_wrap:hover .con1_txt{      /*텍스트 애니메이션(js)*/
+            left: -126px;  /*mouseover하면 126으로*/
+        }
+        .con1_inner_wrap{
+            position: relative;
+            width:100%;
+            height:100%;
+            display:flex;
+            justify-content: space-between;
+        }
+        
+        .con1_inner_left{
+            height:100%;
+            width:23%;
+            border-right: #fff solid 3px;
+        }
+        .con1_inner_right{
+            position: relative;
+            height:100%;
+            width:77%;
+        }
+        .con1_inner_right .item{
+            font-size: 20px;
+            position:absolute;
+            bottom:30px;
+            left:50%;
+            transform: translate(-50%, 0);
+            border: solid 3px #fff;
+            width:265px;
+            height: 40px;
+            text-align: center;
+            line-height: 36px;
+            color: #fff;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .con1_inner_right .item:hover{
+            color: black;
+            background-color: #fff;
+            transition: all 0.3s;
         }
 /* content_1 요소 E */
 
@@ -431,6 +536,7 @@
             align-items: center;
             font-family: 'Montserrat', sans-serif;
             /* font-family: 'Geologica', sans-serif; */
+            list-style: none;
         }
         #cont2_nav ul li{
             margin: 0 13px;
@@ -537,10 +643,11 @@
             line-height:2.5;
         }
         .con2_hover_item3{
-            /* color:#fff; */
-            font-size:20px;position:absolute;
+            font-size:20px;
+            position:absolute;
             bottom:20px;
-            left:50%;transform:translate(-50%);
+            left:50%;
+            transform:translate(-50%);
             border:solid 1px #fff; 
             width:100%;
             height:35px;
@@ -549,23 +656,18 @@
             color:#fff;
             font-weight:500;
             cursor:pointer;
-            align-content: center;
-        }
-        .con2_hover_item3 button{
-            width:100%;
-            height:100%;
+            transition: 0.5s;
         }
         .con2_hover_item3:hover{
             background-color: #fff;
             color: #000;
-            transition: 0.5s;
         }
         /*hover 효과*/
         .con2_hover{
             opacity: 0;
         }
         .con2_hover:hover{
-            opacity: 1;
+            opacity: 0.8;
         }
 /* content_2 요소 E */
 

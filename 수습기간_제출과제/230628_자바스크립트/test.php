@@ -1,94 +1,28 @@
-<!DOCTYPE html>
-<html lang="ko">
-
+<?php
+include_once("./_common.php");
+?>
+<!doctype html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/ress.css">
-    <link rel="stylesheet" href="css/style.css">
-    <!--fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?
-                        family=Montserrat:wght@100;200;300;400;500;600;700;800;900&
-                        family=Noto+Sans+KR:wght@100;300;400;500;700;900&
-                        family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Archivo+Black&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href='https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css'> <!--footer에 사용된 pretendard 글꼴-->
-    
-    <title>submit</title>
-    <style>
-    </style>
-    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
-    <script>
-        $(function(){
-            
-            // 햄버거 메뉴버튼
-            $(".menu").click(function(){
-                $(this).css({"opacity": "0", "z-index": "0"});
-                $(".menu_open").css({"opacity": "1", "z-index": "10"});
-                $(".open_menu_wrap").css({"visibility":"visible", "opacity":"1", "z-index": "10", "top":"110px"})
-            });
-            $(".menu_open").click(function(){
-                $(this).css({"opacity": "0", "z-index": "0"});
-                $(".menu").css({"opacity": "1", "z-index": "10"});
-                $(".open_menu_wrap").css({"visibility":"hidden", "opacity": "0", "z-index": "0", "top":"130px"});
-            });
-            $(".open_menu_wrap").on("click", function(e){
-                e.preventDefault();
-            });
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/ress.css">
+<link rel="stylesheet" href="css/style.css">
+<!--fonts-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?
+                    family=Montserrat:wght@100;200;300;400;500;600;700;800;900&
+                    family=Noto+Sans+KR:wght@100;300;400;500;700;900&
+                    family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Archivo+Black&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href='https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css'> <!--footer에 사용된 pretendard 글꼴-->
+<title>연습</title>
+<style>
 
-            //배너1 좌측 하단 텍스트
-            setTimeout(() => {
-                $(".banner_sub_title").css({"top":"78%", "opacity":"1"});
-            }, 1500);
-            
-            //배경클릭 -> banner_1 배경 슬라이드
-            var bg1 = "in";
-            console.log(bg1)
-            $(".main_bg1_fade, .main_bg2_fade").on("click", function(){
-                if(bg1=="in"){
-                    bg1="out";
-                    $(".main_bg1_fade").css({
-                        "transform":"translate(-30%,-50%)",
-                        "opacity":"0"
-                    });
-                    $(".main_banner1").css({
-                        "transform":"translate(150%,-50%)",
-                        "opacity":"0"
-                    });
-                } else if(bg1=="out"){
-                    bg1="in"
-                    $(".main_bg1_fade, .main_banner1").css({
-                        "transform":"translate(-50%,-50%)",
-                        "opacity":"1"
-                    });
-                }
-                console.log(bg1);
-            });
-
-
-            //banner_1 텍스트 hover
-            $(".banner_main_title1, .main_title_fade").hover(function(){
-                $(".main_title_fade").css({
-                    "transform":"translate(-50%, -50%)",
-                    "opacity":"0.9"
-                });
-            }, function(){
-                $(".main_title_fade").css({
-                    "transform":"translate(-26%, -50%)",
-                    "opacity":"0"
-                });
-            });
-
-
-
-        }); //자동실행함수 E
-    </script>
-    </head>
-    <body>
+</style>
+</head>
+<body>
     <div id="wrap">
         <!--콘텐츠 영역 확인(1180px)-->
         <!-- <div id="area1180"></div> -->
@@ -97,8 +31,8 @@
                 <div id="header-title">
 
                     <div class="container_left">
-                        <div class="menu_bg" style="height:5500px;position:absolute;left:100px; background-color: green; visibility:hidden;">
-                            <div href="" class="menu"><img src="images/menubutton.png" alt=""></div>            <!--햄버거 메뉴 버튼-->
+                        <div class="menu_bg" style="height:5500px;position:absolute;left:101px; background-color: green; visibility:hidden;">
+                            <div href="" class="menu"><img src="images/menubutton.png" alt=""></div>            <!--메뉴 버튼-->
                             <div href="" class="menu_open"><img src="images/closebutton.png" alt="">            <!--펼친 메뉴-->
                             </div>
                             <div class="open_menu_wrap" style="position:sticky; opacity: 0; transition: 0.5s; top:130px; visibility:hidden;">
@@ -192,6 +126,22 @@
                 <div id="con_1">
                     <div class="container">
                         <img src="images/br-banner-product1.jpg" class="product1" alt="">
+                        <img src="images/br-banner-product2.jpg" class="product2" alt="">
+                        <div class="con1_wrap_bgout"></div> <!--이미지 어둡게-->
+                        <div class="con1_wrap">
+                            <div class="con1_inner_wrap">
+                                <div class="con1_inner_left">
+                                    <p class="con1_txt"><span>IN THE SHOWER</span><br>86,000KRW</p>
+                                </div>
+                                <div class="con1_inner_right">
+                                    <div class="item">
+                                        Add to Cart
+                                    </div>
+                                </div>
+                                    
+                            </div>
+                        </div>
+                        
                     </div>
                 </div>
                 <!-- content_1 -->
@@ -472,5 +422,154 @@
         
         
     </body>
-
 </html>
+<script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+            
+            // 햄버거 메뉴버튼
+            $(".menu").click(function(){
+                $(this).css({"opacity": "0", "z-index": "0"});
+                $(".menu_open").css({"opacity": "1", "z-index": "10"});
+                $(".open_menu_wrap").css({"visibility":"visible", "opacity":"1", "z-index": "10", "top":"110px"})
+            });
+            $(".menu_open").click(function(){
+                $(this).css({"opacity": "0", "z-index": "0"});
+                $(".menu").css({"opacity": "1", "z-index": "10"});
+                $(".open_menu_wrap").css({"visibility":"hidden", "opacity": "0", "z-index": "0", "top":"130px"});
+            });
+            $(".open_menu_wrap").on("click", function(e){
+                e.preventDefault();
+            });
+
+            //배너1 좌측 하단 텍스트
+            setTimeout(() => {
+                $(".banner_sub_title").css({"top":"78%", "opacity":"1"});
+            }, 1500);
+            
+            //배경클릭 -> banner_1 배경 슬라이드
+            var bg1 = "in";
+            $(".main_bg1_fade, .main_bg2_fade").on("click", function(){
+                if(bg1=="in"){
+                    bg1="out";
+                    $(".main_bg1_fade").css({
+                        "transform":"translate(-30%,-50%)",
+                        "opacity":"0"
+                    });
+                    $(".main_banner1").css({
+                        "transform":"translate(150%,-50%)",
+                        "opacity":"0"
+                    });
+                } else if(bg1=="out"){
+                    bg1="in"
+                    $(".main_bg1_fade, .main_banner1").css({
+                        "transform":"translate(-50%,-50%)",
+                        "opacity":"1"
+                    });
+                }
+                console.log(bg1);
+            });
+
+
+            //banner_1 텍스트 hover
+            $(".banner_main_title1, .main_title_fade").hover(function(){
+                $(".main_title_fade").css({
+                    "transform":"translate(-50%, -50%)",
+                    "opacity":"0.9"
+                });
+            }, function(){
+                $(".main_title_fade").css({
+                    "transform":"translate(-26%, -50%)",
+                    "opacity":"0"
+                });
+            });
+
+
+            //banner2 이미지 애니메이션
+            ban2=1
+            $(".next_arrow").on("click",function(){
+                if(ban2<4) ban2++;
+                // console.log(ban2);
+                ban2_paging(ban2);
+            });  
+            $(".prev_arrow").on("click",function(){
+                if(ban2>1) ban2--;
+                // console.log(ban2);
+                ban2_paging(ban2);
+            });
+            //banner_2 페이지별 애니메이션 속성 세팅
+            function ban2_paging(ban2){
+                switch(ban2){
+                    case 0 : ban2=1;
+                        break
+                    case 1 :
+                        $(".banner2_product1").css({
+                            "opacity":"1",
+                            "right":"280px"
+                        });
+                        $(".banner2_product2, .banner2_bg2").css({"opacity":"0"});
+                        break;
+                        case 2 :
+                        $(".banner2_product1").css({
+                            "right":"350px",
+                            "opacity":"1"
+                        });
+                        $(".banner2_product2, .banner2_bg2").css({"opacity":"0"});
+                        $(".banner2_product2").css({"right":"370px"});
+                        break;
+                    case 3 :
+                        $(".banner2_product1").css({"opacity":"0"});
+                        //.banner_product2 html, css 만들어야됨
+                        $(".banner2_product2, .banner2_bg2").css({
+                            "opacity":"1",
+                        });
+                        $(".banner2_product2").css({"right":"370px"});
+                        break;
+                    case 4 :
+                        $(".banner2_product2").css({"right":"420px"});
+                        $(".banner2_product1").css({"right":"280px"});
+                        break;
+                }
+            }
+
+            //content_1 배경 클릭하면 product 바뀜
+            var con1 = 0;
+            $("#con_1>.container").on("click", function(){
+                if(con1==0){
+                    con1++;
+                    $(".product2").css({
+                        "opacity":"1",
+                        "left":"370px"
+                    });
+                    $(".product1").css({
+                        "opacity":"0"
+                    });
+                } else if(con1==1){
+                    con1--;
+                    $(".product2").css({
+                        "opacity":"0",
+                        "left":"300px"
+                    });
+                    $(".product1").css({
+                        "opacity":"1"
+                    });
+                }
+            });
+
+            //content_1 product 마우스오버 이벤트
+            $(".con1_wrap").hover(function(){
+                $(".con1_wrap_bgout").css({
+                    "opacity":"0.3"
+                });
+            }, function(){
+                $(".con1_wrap_bgout").css({
+                    "opacity":"0"
+                });
+            });
+            
+
+
+
+
+        }); //자동실행함수 E
+    </script>
