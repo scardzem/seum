@@ -71,8 +71,11 @@ include_once("./_common.php");
                         <img src="images/banner-product1.png" class="main_banner2" width="" height="" alt="">  
                         <img class="main_bg1_fade bg_fade" src="images/main-bg-1.jpg" alt="">
                         <img src="images/banner-product2.png" class="main_banner1" width="220px" height="685px" alt="">  
-                            <p class="banner_main_title">Find My<br>PERFUME</p>
-                            <p class="main_title_fade">Find My<br>PERFUME</p>
+                        
+                        <img class="banner1_main_font mainfont" src="images/findmyperfume.png" alt=""> <!--이미지로 수정-->
+                        <img class="banner1_main_font2 mainfont" src="images/findmyperfume2.png" alt=""><!--이미지로 수정-->
+                            <!-- <p class="banner_main_title">Find My<br>PERFUME</p> -->
+                            <!-- <p class="main_title_fade">Find My<br>PERFUME</p> -->
                             <p class="banner_sub_title">Let's Find<br>Your Favorite<br><span style="font-weight:bold; ">Perfume<span></p>
                             <div style="position:absolute;left:370px;bottom:40px;">
                                 <img class="cont_ban1_arrow left" src="images/banner_arrow_left.png" alt="">
@@ -87,10 +90,9 @@ include_once("./_common.php");
                         <img class="prev_arrow" src="images/prev_arrow.png" width="40" height="48" alt="">
                         <img class="next_arrow" src="images/next_arrow.png" width="40" height="48" alt="">
 
-
-
                         <img class="banner2_bg1" src="images/bg1.jpg" alt="banner_2_bg" width="373" height="597">
                         <img class="banner2_product1" src="images/banner-product1.png" alt="banner_2_product1">
+
                         <img class="banner2_bg2" src="images/bg2.jpg" alt="banner_2_bg2" width="373" height="597">
                         <img class="banner2_product2" src="images/banner-product2.png" alt="banner_2_product2">
 
@@ -106,6 +108,7 @@ include_once("./_common.php");
                             <p>현대인이 일상 생활에서 자신감과 여유로 탐색하는 많은 역할을 반영합니다.</p>
                             <br>
                             <p>Buy Now</p>
+                            <div><img class="buy_now" src="images/buynow.png" width="30" height="10" alt=""></div>
                         </div>
     
                         <div class="bottom_number">
@@ -114,7 +117,7 @@ include_once("./_common.php");
                                 <div class="ban2_bottom_center">
                                     <div class="ban2_bottom_center_border" ></div>
                                 </div>
-                                <div class="ban2_bottom_right">03</div>
+                                <div class="ban2_bottom_right">02</div>
                             </div>
                         </div>
     
@@ -125,6 +128,7 @@ include_once("./_common.php");
                 <div class="box_for_distance_2 get_distance"></div> <!-- 간격 맞추기 위해 삽입 -->
                 <div id="con_1">
                     <div class="container">
+                        <img class="con1_bg" src="images/br-banner.jpg" alt="">
                         <img src="images/br-banner-product1.jpg" class="product1" alt="">
                         <img src="images/br-banner-product2.jpg" class="product2" alt="">
                         <div class="con1_wrap_bgout"></div> <!--이미지 어둡게-->
@@ -299,53 +303,149 @@ include_once("./_common.php");
                 <!-- /content_2 -->
         
                 <div id="con_3">
-                    <div class="container">
-                        <img src="images/leftbg.jpg" alt="">
-                        <div class="con_3_txt">
-                            <p>MAKE-UP FOR YOU<br><span>View More</span></p>
+                            <div class="container">
+                                <div style="z-index:21">
+                                    <img src="images/leftbg.jpg" alt="">
+                                    <div class="con_3_txt">
+                                        <p>MAKE-UP FOR YOU<br><span>View More</span></p>
+                                    </div>
+                                    <div><img class="view_more" src="images/view_more.png" alt=""></div>
+                                </div>
+
+                                <div class="con_3_box_wrap"> <!--제품wrap-->
+
+                                    <div class="con_3_box">
+                                        <div class="item_1">001</div>
+                                        <div class="item_2"><img src="images/lip01.jpg" width="480" height="657" alt=""></div>
+                                        <!--제품 hover 메뉴-->
+                                        <div class="item_3_hovoer_bg"></div>
+                                        <div class="item_3_hovoer_menu">
+                                            <div class="item3_bot_wrap">
+                                                <div class="con3_item3_wrap_position">
+                                                    <div class="item3_bot_txt1">
+                                                        <p class="item3_p1">LIP STICK BALM</p>
+                                                        <p class="item3_p2">59,000 KRW</p>
+                                                    </div>
+                                                    <div class="item3_bot_txt2">
+                                                        5 Colors
+                                                    </div>
+                                                    <div class="item3_bot_txt3">
+                                                        <div class="item3_bot_btn">Add to Cart</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--/제품 hover 메뉴-->
+                                    </div>
+                                    <div class="con_3_box">
+                                        <div class="item_1">002</div>
+                                        <div class="item_2"><img src="images/lip02.jpg" width="480" height="657" alt=""></div>
+                                        <!--제품 hover 메뉴-->
+                                        <div class="item_3_hovoer_bg"></div>
+                                        <div class="item_3_hovoer_menu">
+                                            <div class="item3_bot_wrap">
+                                                <div class="con3_item3_wrap_position
+">
+                                                    <div class="item3_bot_txt1">
+                                                        <p class="item3_p1">LIP STICK BALM</p>
+                                                        <p class="item3_p2">59,000 KRW</p>
+                                                    </div>
+                                                    <div class="item3_bot_txt2">
+                                                        5 Colors
+                                                    </div>
+                                                    <div class="item3_bot_txt3">
+                                                        <div class="item3_bot_btn">Add to Cart</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--/제품 hover 메뉴-->
+                                    </div>
+                                    <div class="con_3_box">
+                                        <div class="item_1">003</div>
+                                        <div class="item_2"><img src="images/lip03.jpg" width="480" height="657" alt=""></div>
+                                        <!--제품 hover 메뉴-->
+                                        <div class="item_3_hovoer_bg"></div>
+                                        <div class="item_3_hovoer_menu">
+                                            <div class="item3_bot_wrap">
+                                                <div class="con3_item3_wrap_position
+">
+                                                    <div class="item3_bot_txt1">
+                                                        <p class="item3_p1">LIP STICK BALM</p>
+                                                        <p class="item3_p2">59,000 KRW</p>
+                                                    </div>
+                                                    <div class="item3_bot_txt2">
+                                                        5 Colors
+                                                    </div>
+                                                    <div class="item3_bot_txt3">
+                                                        <div class="item3_bot_btn">Add to Cart</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--/제품 hover 메뉴-->
+                                    </div>
+                                    <div class="con_3_box">
+                                        <div class="item_1">004</div>
+                                        <div class="item_2"><img src="images/lip03.jpg" width="480" height="657" alt=""></div>
+                                        <!--제품 hover 메뉴-->
+                                        <div class="item_3_hovoer_bg"></div>
+                                        <div class="item_3_hovoer_menu">
+                                            <div class="item3_bot_wrap">
+                                                <div class="con3_item3_wrap_position
+">
+                                                    <div class="item3_bot_txt1">
+                                                        <p class="item3_p1">LIP STICK BALM</p>
+                                                        <p class="item3_p2">59,000 KRW</p>
+                                                    </div>
+                                                    <div class="item3_bot_txt2">
+                                                        5 Colors
+                                                    </div>
+                                                    <div class="item3_bot_txt3">
+                                                        <div class="item3_bot_btn">Add to Cart</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--/제품 hover 메뉴-->
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
-                        <div class="con_3_box_wrap">
-                            <div class="con_3_box">
-                                <div class="item_1">001</div>
-                                <div class="item_2"><img src="images/lip01.jpg" width="480" height="657" alt=""></div>
-                            </div>
-                            <div class="con_3_box">
-                                <div class="item_1">002</div>
-                                <div class="item_2"><img src="images/lip02.jpg" width="480" height="657" alt=""></div>
-                            </div>
-                            <div class="con_3_box">
-                                <div class="item_1">003</div>
-                                <div class="item_2"><img src="images/lip03.jpg" width="480" height="657" alt=""></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /content_3 -->
+                        <!-- /content_3 -->
     
                 <div id="con_4">
                     <div class="container">
                         <ul>
                             <li>
                                 <div class="con_4_leftBox">
-                                    <div class="con_4_left_top" style="height:280px;">
-                                        <img src="images/bottom-banner1.jpg" width="280" height="280" style="border:solid 1px #000" alt="">
+                                    <div class="con_4_left_top con_4_box" style="height:280px;">
+                                        <img src="images/bottom-banner1.jpg" width="280" height="280" alt="">
+                                        <span>ABOUT BRAND</span>
                                     </div>
+                                    <div class="con4_leftBox_hover 4_hoverBox"></div>
                                     <div class="con_4_left_bottom">
                                         <p style="position: absolute; top:20px; left:0;">LOGO</p>
-                                        <p style="position: absolute; bottom:-12px; right:0;">BRAND<br>NAME</p>
-        
+                                        <p style="position: absolute; bottom:10px; right:0;">BRAND<br>NAME</p>
                                     </div>
                                 </div>
                             </li>
+
                             <li>
-                                <div class="con_4_centerBox">
-                                    <img src="images/bottom-banner2.jpg" width="580" height="580" style="border:solid 1px #000" alt="">
+                                <div class="con_4_centerBox con_4_box">
+                                    <img src="images/bottom-banner2.jpg" width="580" height="580" alt="">
+                                    <span>BRAND WORTHY</span>
                                 </div>
+                                <div class="con4_centerBox_hover 4_hoverBox"></div>
                             </li>
+
                             <li>
-                                <div class="con_4_rightBox">
-                                    <img src="images/bottom-banner3.jpg" width="280" height="580" style="border:solid 1px #000" alt="">
+                                <div class="con_4_rightBox con_4_box">
+                                    <img src="images/bottom-banner3.jpg" width="280" height="580" alt="">
+                                    <span>BRAND NEWS</span>
                                 </div>
+                                <div class="con4_rightBox_hover 4_hoverBox"></div>
                             </li>
                         </ul>
                     </div>
@@ -394,7 +494,7 @@ include_once("./_common.php");
                                         <li>1:1문의</li>
                                         <li>상품후기</li>
                                         <li>상품문의</li>
-                                        <li id="ddd">공지사항</li>
+                                        <li>공지사항</li>
                                     </ul>
                             </div>
                             <div class="midbox-bottom" >
@@ -447,9 +547,9 @@ include_once("./_common.php");
                 $(".banner_sub_title").css({"top":"78%", "opacity":"1"});
             }, 1500);
             
-            //배경클릭 -> banner_1 배경 슬라이드
+            //배너1 배경클릭 -> banner_1 배경 슬라이드
             var bg1 = "in";
-            $(".main_bg1_fade, .main_bg2_fade").on("click", function(){
+            $(".main_bg1_fade, .main_bg2_fade, .mainfont").on("click", function(){
                 if(bg1=="in"){
                     bg1="out";
                     $(".main_bg1_fade").css({
@@ -460,82 +560,95 @@ include_once("./_common.php");
                         "transform":"translate(150%,-50%)",
                         "opacity":"0"
                     });
+                    $(".banner1_main_font2").css({
+                        "transform":"translate(0, -50%)",
+                        "opacity":"0"
+                    });
                 } else if(bg1=="out"){
                     bg1="in"
                     $(".main_bg1_fade, .main_banner1").css({
                         "transform":"translate(-50%,-50%)",
                         "opacity":"1"
                     });
+                    $(".banner1_main_font2").css({
+                        "transform":"translate(-50%, -50%)",
+                        "opacity":"1",
+                    });
                 }
                 console.log(bg1);
             });
 
 
-            //banner_1 텍스트 hover
-            $(".banner_main_title1, .main_title_fade").hover(function(){
-                $(".main_title_fade").css({
-                    "transform":"translate(-50%, -50%)",
-                    "opacity":"0.9"
-                });
-            }, function(){
-                $(".main_title_fade").css({
-                    "transform":"translate(-26%, -50%)",
-                    "opacity":"0"
-                });
-            });
+        
+        //banner_2 페이지별 애니메이션 속성 세팅
+        //기존에 클으로 이미지 움직이게 했었는데 움직이는건 hover효과라고해서 수정.
+        //기존에 작동되던 코드는 230626_test_submit copy.html 깃허브에서 볼 것.
 
 
-            //banner2 이미지 애니메이션
+        
+        //banner2 이미지 애니메이션
             ban2=1
             $(".next_arrow").on("click",function(){
-                if(ban2<4) ban2++;
+                if(ban2<2) ban2++;
                 // console.log(ban2);
-                ban2_paging(ban2);
+                $(".banner2_product1, .banner2_bg1").css({
+                    "opacity":"0"
+                });
+                $(".banner2_product2, .banner2_bg2").css({
+                    "opacity":"1"
+                });
+                $(".ban2_bottom_left").text("02")
             });  
             $(".prev_arrow").on("click",function(){
                 if(ban2>1) ban2--;
                 // console.log(ban2);
-                ban2_paging(ban2);
+                $(".banner2_product1, .banner2_bg1").css({
+                    "opacity":"1"
+                });
+                $(".banner2_product2, .banner2_bg2").css({
+                    "opacity":"0"
+                });
+                $(".ban2_bottom_left").text("01")
             });
-            //banner_2 페이지별 애니메이션 속성 세팅
-            function ban2_paging(ban2){
-                switch(ban2){
-                    case 0 : ban2=1;
-                        break
-                    case 1 :
-                        $(".banner2_product1").css({
-                            "opacity":"1",
-                            "right":"280px"
-                        });
-                        $(".banner2_product2, .banner2_bg2").css({"opacity":"0"});
-                        break;
-                        case 2 :
-                        $(".banner2_product1").css({
-                            "right":"350px",
-                            "opacity":"1"
-                        });
-                        $(".banner2_product2, .banner2_bg2").css({"opacity":"0"});
-                        $(".banner2_product2").css({"right":"370px"});
-                        break;
-                    case 3 :
-                        $(".banner2_product1").css({"opacity":"0"});
-                        //.banner_product2 html, css 만들어야됨
-                        $(".banner2_product2, .banner2_bg2").css({
-                            "opacity":"1",
-                        });
-                        $(".banner2_product2").css({"right":"370px"});
-                        break;
-                    case 4 :
-                        $(".banner2_product2").css({"right":"420px"});
-                        $(".banner2_product1").css({"right":"280px"});
-                        break;
-                }
-            }
+            
+        //banner_2 hover하면 이미지 움직임
+            $("#cont_ban2 .container").hover(function(){
+                $(".banner2_product1").css({
+                    "right":"350px"
+                });
+            }, function(){
+                $(".banner2_product1").css({
+                    "right":"280px"
+                });
+            });
 
-            //content_1 배경 클릭하면 product 바뀜
-            var con1 = 0;
-            $("#con_1>.container").on("click", function(){
-                if(con1==0){
+            $("#cont_ban2 .container").hover(function(){
+                $(".banner2_product2").css({
+                    "right":"420px"
+                });
+            }, function(){
+                $(".banner2_product2").css({
+                    "right":"370px"
+                });
+            });
+
+            $("#cont_ban2 .container").hover(function(){
+                $(".buy_now").css({
+                    "left":"90px",
+                    "opacity":"1"
+                });
+            }, function(){
+                $(".buy_now").css({
+                    "left":"75px",
+                    "opacity":"0"
+                });
+            });
+
+        //content_1 배경 일정 시간마다 product 바뀜
+        var con1 = 0;
+        setInterval(function(){
+            // console.log(new Date())
+            if(con1==0){
                     con1++;
                     $(".product2").css({
                         "opacity":"1",
@@ -554,7 +667,31 @@ include_once("./_common.php");
                         "opacity":"1"
                     });
                 }
-            });
+        }, 3000);
+
+        //content_1 배경 클릭하면 product 바뀜
+            // var con1 = 0;
+            // $("#con_1 .con1_bg").on("click", function(){
+            //     if(con1==0){
+            //         con1++;
+            //         $(".product2").css({
+            //             "opacity":"1",
+            //             "left":"370px"
+            //         });
+            //         $(".product1").css({
+            //             "opacity":"0"
+            //         });
+            //     } else if(con1==1){
+            //         con1--;
+            //         $(".product2").css({
+            //             "opacity":"0",
+            //             "left":"300px"
+            //         });
+            //         $(".product1").css({
+            //             "opacity":"1"
+            //         });
+            //     }
+            // });
 
             //content_1 product 마우스오버 이벤트
             $(".con1_wrap").hover(function(){
@@ -566,10 +703,42 @@ include_once("./_common.php");
                     "opacity":"0"
                 });
             });
+
+            //content_3 좌측 View More 화살표 무빙
+            $(".con_3_txt>p>span").hover(function(){
+                $(".view_more").css({
+                    "opacity":"1",
+                    "top":"530px"
+                });
+            }, function(){
+                $(".view_more").css({
+                    "opacity":"0",
+                    "top":"545px"
+                });
+            });
             
+            // content_3 product 마우스오버 이벤트
+            $(".item_3_hovoer_menu").hover(function(){
+                $(this).prev().css({
+                    "opacity":"1"
+                });
+            }, function(){
+                $(this).prev().css({
+                    "opacity":"0"
+                });
+            });
 
-
-
-
+            // content_4 product1 마우스오버 이벤트
+            $(".4_hoverBox").hover(function(){
+                $(this).prev().children("span").css({
+                    "opacity":"1",
+                    "top":"45%"
+                });
+            }, function(){
+                $(this).prev().children("span").css({
+                    "opacity":"0",
+                    "top":"60%"
+                });
+            });
         }); //자동실행함수 E
     </script>

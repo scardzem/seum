@@ -244,7 +244,19 @@
             transform: translate(-50%, -50%);
             transition: all 0.3s ease-in;
         }
-
+        .mainfont{
+            position:absolute;
+            left:47.47%;
+            top:50%;
+            transform: translate(-50%, -50%);
+        }
+        .banner1_main_font2{
+            left:58.3%;
+            top:52.1%;
+            opacity: 1;
+            transition: all 0.3s ease-in;
+        }
+        /*배너1 텍스트, p태그용, 주석처리*/
         #cont_ban1 .container .banner_main_title{
             position:absolute;
             color: #000;
@@ -256,8 +268,8 @@
             /* font-family: 'Archivo Black', sans-serif; */
             font-family: 'Geologica', sans-serif;
         }
-
-        .main_title_fade{
+        /*배너1 텍스트, p태그용, 주석처리*/
+        .main_title_fade{  
             position:absolute;
             color:rgb(95, 216, 253); 
             font-size: 170px;
@@ -269,7 +281,7 @@
             font-family: 'Geologica', sans-serif;
             opacity: 0;
         }
- 
+        /*배너1 좌측하단 텍스트*/
         #cont_ban1 .container .banner_sub_title{
             position: absolute;
             left: 370px;
@@ -379,10 +391,19 @@
             line-height: 1.5;
             font-size: 18px;
         }
-        .banner_2_text>p:nth-last-child(1){
+        .banner_2_text>p:nth-last-child(2){
             font-family: 'Geologica', sans-serif;
             font-size: 18px;
             display:inline-block;
+        }
+        .buy_now{
+            position:relative;
+            /* left: 90px; */
+            left: 75px;
+            bottom: 5px;
+            opacity: 0;
+            transition: all 0.3s ease-out;
+            /* background:yellow; */
         }
 
     /*banner2 하단 페이지 영역*/
@@ -427,11 +448,10 @@
 
 /* content_1 요소 S */
         #con_1 .container{
-            background-image: url('../images/br-banner.jpg');
+            /* background-image: url('../images/br-banner.jpg'); */
             background-repeat: no-repeat;
             background-position: bottom;
             position: relative;
-            
         }
         #con_1 .container .product1{
             position: absolute;
@@ -684,7 +704,7 @@
         #con_3 .container img {
             float: left;
         }
-        .con_3_txt {  /* 기울인 글자 그냥 넣는거 말고 수치에 맞게 넣고싶으면 어떻게 해야하는지 질문. */
+        .con_3_txt {
         font-size: 48px;
         transform:rotate(270deg) translate(-100%); 
         position: absolute;
@@ -704,12 +724,21 @@
         left: 13em; */
         }
 
+        .view_more{
+            position:absolute;
+            left: 420px;
+            top: 545px;
+            opacity: 0;
+            transition: all 0.3s ease-out;
+        }
+
         .con_3_box_wrap{
-            width:2650px;
+            width:3050px;
             height:800px;
             /* background-color: rgba(0,0,0,0.3); */
             z-index:20;
-            position:relative;
+            /* position:relative; */
+            left: 650px;
         }
         #con_3 .con_3_box {
             width: 480px;
@@ -764,7 +793,7 @@
             bottom: 0;
         }
 
-        .dd{
+        .con3_item3_wrap_position{
             position: relative;
             height:200px;
             width:420px;
@@ -826,7 +855,10 @@
         
 /* content_3 요소 E */
 
-/* content_4 요소 S */    
+/* content_4 요소 S */   
+        .con_4_leftBox {
+            position: relative;
+        }
         #con_4 .container{
             margin-top: 119px;
         }
@@ -834,16 +866,51 @@
         #con_4 .container ul{
             display: flex;
             justify-content: center;
+            list-style: none;
+            position:relative;
         }
         #con_4 .container>ul>li:nth-child(n+2){
-            margin-left:20px
+            margin-left:20px;
+            position:relative;
         }
-        .con_4_leftBox {
-            width: auto;
-            height: auto;
-            /*영역 확인용*/
-            /* background-color: rgba(0,0,0,0.2); */
+        /*content_$ 상품별 hover효과*/
+        .con_4_box{
+            position: relative;
+            text-align: center;
         }
+
+        /*left*/
+        .con4_leftBox_hover{
+            width:276px;
+            height:276px;
+            border: 2px solid rgba(0,0,0,0.7);
+            position: absolute;
+            top:0;
+            left:0;
+            transition: all 0.3s ease-out;
+        }
+        .con4_leftBox_hover:hover{
+            content:"";
+            top:-10px;
+            left:-10px;
+        }
+        .con_4_box span{  /*텍스트 공통*/
+            opacity:0;
+            color: #fff;
+            font-size: 38px;
+            font-weight: bold;
+            transition: all 0.3s ease-out;  
+            position:absolute;
+            font-family: 'Geologica', sans-serif;
+        }
+        .con_4_left_top > span{  /*script로 이벤트*/
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 0);
+            top:60%;
+            transition: all 0.3s ease-out;
+        } /*hover*/
+        
         .con_4_leftBox .con_4_left_bottom {
             height:300px; 
             padding-top:20px;
@@ -857,6 +924,59 @@
         .con_4_left_bottom p:nth-last-child(1){
             text-align: right;
         }
+
+        /*content_4 center*/
+        .con4_centerBox_hover{
+            width:576px;
+            height:576px;
+            border:2px solid rgba(0,0,0,0.7);
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: all 0.3s ease-out;
+        }
+        .con4_centerBox_hover:hover{
+            content:"";
+            top:-10px;
+            left:-10px;
+        }
+        
+        .con_4_centerBox > span{    /*script로 이벤트*/
+            opacity:0;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 0);
+            top:60%;
+            transition: all 0.3s ease-out;
+            font-size: 48px;
+        } /*hover*/
+
+        /*content_4 right*/
+        .con4_rightBox_hover{
+            width:276px;
+            height:576px;
+            border:2px solid rgba(0,0,0,0.7);
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: all 0.2s ease-out; 
+        }
+        .con4_rightBox_hover:hover{
+            content:"";
+            top:-10px;
+            left:-10px;
+        }
+
+        .con_4_rightBox > span{    /*script로 이벤트*/
+            opacity:0;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 0);
+            top:60%;
+            transition: all 0.3s ease-out;
+            font-size: 38px;
+        } /*hover*/
+
 /* content_4 요소 E */
 
 /* footer 요소 S */
@@ -948,6 +1068,3 @@
             font-family: 'Noto Sans KR', sans-serif;
         }
 /* footer 요소 E */
-
-
-

@@ -3,10 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Document</title>
+<title>사용할 아코디언 메뉴</title>
 <style>
+    *{padding:0;margin:0;}
+
+ul{
+    list-style:none;
+    margin-top: 10.5px;
+}
+li{
+    margin-top:5px;
+}
 .accordian{
-    width:500px;
+    width:170px;
     position:relative;
     left:50%;
     transform: translateX(-50%)
@@ -17,16 +26,18 @@ input[id*="answer"]{
 input[id*="answer"]+label{
     display:block;
     /*공백 주려고 넣음*/
-    padding:20px;  
+    /* padding:20px;   */
+    /* font-weight: 900; */
     border:1px solid #000;
     border-bottom: 0;
     color:#fff;
-    font-weight: 900;
     background: blue;
     cursor:pointer;
     position:relative;
+    font-size: 27px;
 }
-input[id*="answer"]+label em{
+/*화살표 그림*/
+/* input[id*="answer"]+label em{
     position: absolute;
     top: 50%;
     right: 10px;
@@ -35,13 +46,13 @@ input[id*="answer"]+label em{
     margin-top: 15px;
     display:inline-block;
     background:url('./img/arrow.png') 0 0 no-repeat;
-}
+} */
 input[id*="answer"]+label+div{
     max-height:0;
     transition:all .35s;
     overflow:hidden;
     background:#ebf8ff;
-    font-size:11p;
+    font-size:20px;
 }
 input[id*="answer"]+label+div+p{
     display:inline-block;
@@ -57,7 +68,7 @@ input[id*="answer"]:checked + label + div{
 
     <div class="accordian">
         <input type="checkbox" id="answer01">
-        <label for="answer01">컨텐츠 제목 부분</label>
+        <label for="answer01">PERFUME</label>
         <div>
             <ul>
                 <li>MALE</li>
@@ -66,7 +77,7 @@ input[id*="answer"]:checked + label + div{
         </div>
         
         <input type="checkbox" id="answer02">
-        <label for="answer02">컨텐츠 제목 부분</label>
+        <label for="answer02">BODY CARE</label>
         <div>
             <ul>
                 <li>LOTION</li>
@@ -76,7 +87,7 @@ input[id*="answer"]:checked + label + div{
         </div>
 
         <input type="checkbox" id="answer03">
-        <label for="answer03">컨텐츠 제목 부분</label>
+        <label for="answer03">COSMETIC</label>
         <div>
             <ul>
                 <li>MASCARA</li>
@@ -88,7 +99,7 @@ input[id*="answer"]:checked + label + div{
         </div>
 
         <input type="checkbox" id="answer04">
-        <label for="answer04">컨텐츠 제목 부분</label>
+        <label for="answer04">LIP STICK</label>
         <div>
             <ul>
                 <li>LIP STICK</li>
