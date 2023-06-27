@@ -7,27 +7,18 @@
 <style>
     *{padding:0;margin:0;}
 
-ul{
-    list-style:none;
-    margin-top: 10.5px;
-}
-li{
-    margin-top:5px;
-}
+
 .accordian{
     width:170px;
     position:relative;
-    left:50%;
-    transform: translateX(-50%)
+    /* left:50%; */
+    /* transform: translateX(-50%) */
 }
-input[id*="answer"]{
+.accordian input[id*="answer"]{
     display:none;
 }
-input[id*="answer"]+label{
+.accordian input[id*="answer"]+label{
     display:block;
-    /*공백 주려고 넣음*/
-    /* padding:20px;   */
-    /* font-weight: 900; */
     border:1px solid #000;
     border-bottom: 0;
     color:#fff;
@@ -36,30 +27,30 @@ input[id*="answer"]+label{
     position:relative;
     font-size: 27px;
 }
-/*화살표 그림*/
-/* input[id*="answer"]+label em{
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    width: 30px;
-    height: 30px;
-    margin-top: 15px;
-    display:inline-block;
-    background:url('./img/arrow.png') 0 0 no-repeat;
-} */
-input[id*="answer"]+label+div{
+.accordian input[id*="answer"]+label+div{
     max-height:0;
     transition:all .35s;
     overflow:hidden;
     background:#ebf8ff;
     font-size:20px;
 }
-input[id*="answer"]+label+div+p{
+.accordian input[id*="answer"]+label+div+p{
     display:inline-block;
     padding:20px;
 }
-input[id*="answer"]:checked + label + div{
-    max-height:100px;
+.accordian input[id*="answer"]:checked + label + div{
+    max-height:150px;
+    overflow:visible;
+}
+.arcodian ul{
+    list-style:none;
+    margin-top: 10.5px;
+}
+.arcodian li{
+    margin-top:5px;
+}
+.arcodian label{
+    margin-top: 20px;
 }
 </style>
 <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>

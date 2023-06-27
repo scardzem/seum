@@ -70,15 +70,62 @@
             opacity:0;
             transition: opacity .5s ease-out;
         }
+        /* accordian 메뉴 */
+        .aco_list{
+            list-style: none;
+            padding: 0;
+            cursor: pointer;
+        }
+        .aco_list li a{
+            /* border-bottom: 2px solid #000; */
+        }
+        .aco_list li a{
+            display:block;
+            margin-top: 20px;
+            /* height:50px;
+            padding-left: 20px;
+            line-height: 50px; */
+            color: #111;
+            text-decoration: none;
+            transition: 0.2s;
+            font-size: 27px;
+            font-family: 'Geologica', sans-serif;
+            
+        }
+        .aco_list li p{
+            margin:5px 0 0 10px;
+            font-size: 20px;
+            font-family: 'Geologica', sans-serif;
+        }
+        .aco_list li p:nth-child(1){
+            margin-top: 10.5px;
+        }
+        .aco_list li a:hover{
+            /* background-color: #222; */
+            /* color: #fff; */
+        }
+        .aco_list li .text_box{
+            display: none;
+            /* padding: 10px 40px; */
+            color:#555;
+        }
 
-        .open_menu_wrap a{
+
+
+
+
+
+
+
+
+        /* .open_menu_wrap a{
             font-size: 27px;
             font-family: 'Geologica', sans-serif;
         }
 
         .open_menu_list{
             margin: 15px 0;
-        }
+        } */
 
         .container_left #logo{
             position:absolute;
