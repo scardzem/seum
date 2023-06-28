@@ -18,21 +18,9 @@ include_once("./_common.php");
 <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href='https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css'> <!--footer에 사용된 pretendard 글꼴-->
 <title>연습</title>
-<script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
-<script src="js/jquery.js"></script>
-<script src="js/jquery-ui-1.10.4.custom.min.js"></script>
-<script>
-    //드래그 무빙 코드
-    $(function() {
-	// $(".layer_popup").draggable();
-	$( ".drag_wrap" ).draggable({ containment: ".con_3_box_wrap", scroll: false, axis: "x" });
-});
-//예제
-//     $(function() {
-// 	// $(".layer_popup").draggable();
-// 	$( "#draggable3" ).draggable({ containment: "#containment-wrapper", scroll: false, axis: "x" });
-// });
-</script>
+<style>
+
+</style>
 </head>
 <body>
     <div id="wrap">
@@ -189,13 +177,13 @@ include_once("./_common.php");
         
                 <div class="box_for_distance_3 get_distance"></div> <!-- 간격 맞추기 위해 삽입 -->
                 <div id="con_2">
-                    <div class="container">
+                <div class="container">
                         <nav id="cont2_nav">
                             <ul>
-                                <li><a href=""><span>PERFUME</span></a></li>
-                                <li><a href=""><span>BODY CARE</span></a></li>
-                                <li><a href=""><span>COSMETIC</span></a></li>
-                                <li><a href=""><span>LIP STICK</span></a></li>
+                                <li><a href="">PERFUME</a></li>
+                                <li><a href="">BODY CARE</a></li>
+                                <li><a href="">COSMETIC</a></li>
+                                <li><a href="">LIP STICK</a></li>
                             </ul>
                         </nav>
                         <div id="cont_2_body">
@@ -341,7 +329,7 @@ include_once("./_common.php");
         
                 <div id="con_3">
                             <div class="container">
-                                <div class="con3_left_bg" style="z-index:21">
+                                <div style="z-index:21">
                                     <img src="images/leftbg.jpg" alt="">
                                     <div class="con_3_txt">
                                         <p>MAKE-UP FOR YOU<br><span>View More</span></p>
@@ -349,116 +337,103 @@ include_once("./_common.php");
                                     <div><img class="view_more" src="images/view_more.png" width="10" height="50"></div>
                                 </div>
 
-                                <div class="con_3_box_wrap" id="con_3_box_wrap"> <!--제품wrap-->
-                                
-                                    <div class="drag_wrap">
+                                <div class="con_3_box_wrap"> <!--제품wrap-->
 
-                                        <div class="con_3_box">
-                                            <div class="item_1">004</div>
-                                            <div class="item_2"><img src="images/lip04.png" width="480" height="657" alt="제품4"></div>
-                                            <!--제품 hover 메뉴-->
-                                            <div class="item_3_hovoer_bg"></div>
-                                            <div class="item_3_hovoer_menu">
-                                                <div class="item3_bot_wrap">
-                                                    <div class="con3_item3_wrap_position">
-                                                        <div class="item3_bot_txt1">
-                                                            <p class="item3_p1">LIP STICK BALM</p>
-                                                            <p class="item3_p2">59,000 KRW</p>
-                                                        </div>
-                                                        <div class="item3_bot_txt2">
-                                                            5 Colors
-                                                        </div>
-                                                        <div class="item3_bot_txt3">
-                                                            <div class="item3_bot_btn">Add to Cart</div>
-                                                        </div>
+                                    <div class="con_3_box">
+                                        <div class="item_1">001</div>
+                                        <div class="item_2"><img src="images/lip01.jpg" width="480" height="657" alt="제품1"></div>
+                                        <!--제품 hover 메뉴-->
+                                        <div class="item_3_hovoer_bg"></div>
+                                        <div class="item_3_hovoer_menu">
+                                            <div class="item3_bot_wrap">
+                                                <div class="con3_item3_wrap_position">
+                                                    <div class="item3_bot_txt1">
+                                                        <p class="item3_p1">LIP STICK BALM</p>
+                                                        <p class="item3_p2">59,000 KRW</p>
+                                                    </div>
+                                                    <div class="item3_bot_txt2">
+                                                        5 Colors
+                                                    </div>
+                                                    <div class="item3_bot_txt3">
+                                                        <div class="item3_bot_btn">Add to Cart</div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <!--/제품 hover 메뉴-->
                                         </div>
-                                        <div class="con_3_box">
-                                            <div class="item_1">003</div>
-                                            <div class="item_2"><img src="images/lip03.jpg" width="480" height="657" alt="제품3"></div>
-                                            <!--제품 hover 메뉴-->
-                                            <div class="item_3_hovoer_bg"></div>
-                                            <div class="item_3_hovoer_menu">
-                                                <div class="item3_bot_wrap">
-                                                    <div class="con3_item3_wrap_position">
-                                                        <div class="item3_bot_txt1">
-                                                            <p class="item3_p1">LIP STICK BALM</p>
-                                                            <p class="item3_p2">59,000 KRW</p>
-                                                        </div>
-                                                        <div class="item3_bot_txt2">
-                                                            5 Colors
-                                                        </div>
-                                                        <div class="item3_bot_txt3">
-                                                            <div class="item3_bot_btn">Add to Cart</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!--/제품 hover 메뉴-->
-                                        </div>
-                                        <div class="con_3_box">
-                                            <div class="item_1">002</div>
-                                            <div class="item_2"><img src="images/lip02.jpg" width="480" height="657" alt="제품2"></div>
-                                            <!--제품 hover 메뉴-->
-                                            <div class="item_3_hovoer_bg"></div>
-                                            <div class="item_3_hovoer_menu">
-                                                <div class="item3_bot_wrap">
-                                                    <div class="con3_item3_wrap_position">
-                                                        <div class="item3_bot_txt1">
-                                                            <p class="item3_p1">LIP STICK BALM</p>
-                                                            <p class="item3_p2">59,000 KRW</p>
-                                                        </div>
-                                                        <div class="item3_bot_txt2">
-                                                            5 Colors
-                                                        </div>
-                                                        <div class="item3_bot_txt3">
-                                                            <div class="item3_bot_btn">Add to Cart</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!--/제품 hover 메뉴-->
-                                        </div>
-                                        <div class="con_3_box">
-                                            <div class="item_1">001</div>
-                                            <div class="item_2"><img src="images/lip01.jpg" width="480" height="657" alt="제품1"></div>
-                                            <!--제품 hover 메뉴-->
-                                            <div class="item_3_hovoer_bg"></div>
-                                            <div class="item_3_hovoer_menu">
-                                                <div class="item3_bot_wrap">
-                                                    <div class="con3_item3_wrap_position">
-                                                        <div class="item3_bot_txt1">
-                                                            <p class="item3_p1">LIP STICK BALM</p>
-                                                            <p class="item3_p2">59,000 KRW</p>
-                                                        </div>
-                                                        <div class="item3_bot_txt2">
-                                                            5 Colors
-                                                        </div>
-                                                        <div class="item3_bot_txt3">
-                                                            <div class="item3_bot_btn">Add to Cart</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!--/제품 hover 메뉴-->
-                                        </div>
-
-                                        
-
-                                        
-
-                                        
-
-
-
-
-
-
+                                        <!--/제품 hover 메뉴-->
                                     </div>
-
+                                    <div class="con_3_box">
+                                        <div class="item_1">002</div>
+                                        <div class="item_2"><img src="images/lip02.jpg" width="480" height="657" alt="제품2"></div>
+                                        <!--제품 hover 메뉴-->
+                                        <div class="item_3_hovoer_bg"></div>
+                                        <div class="item_3_hovoer_menu">
+                                            <div class="item3_bot_wrap">
+                                                <div class="con3_item3_wrap_position
+">
+                                                    <div class="item3_bot_txt1">
+                                                        <p class="item3_p1">LIP STICK BALM</p>
+                                                        <p class="item3_p2">59,000 KRW</p>
+                                                    </div>
+                                                    <div class="item3_bot_txt2">
+                                                        5 Colors
+                                                    </div>
+                                                    <div class="item3_bot_txt3">
+                                                        <div class="item3_bot_btn">Add to Cart</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--/제품 hover 메뉴-->
+                                    </div>
+                                    <div class="con_3_box">
+                                        <div class="item_1">003</div>
+                                        <div class="item_2"><img src="images/lip03.jpg" width="480" height="657" alt="제품3"></div>
+                                        <!--제품 hover 메뉴-->
+                                        <div class="item_3_hovoer_bg"></div>
+                                        <div class="item_3_hovoer_menu">
+                                            <div class="item3_bot_wrap">
+                                                <div class="con3_item3_wrap_position
+">
+                                                    <div class="item3_bot_txt1">
+                                                        <p class="item3_p1">LIP STICK BALM</p>
+                                                        <p class="item3_p2">59,000 KRW</p>
+                                                    </div>
+                                                    <div class="item3_bot_txt2">
+                                                        5 Colors
+                                                    </div>
+                                                    <div class="item3_bot_txt3">
+                                                        <div class="item3_bot_btn">Add to Cart</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--/제품 hover 메뉴-->
+                                    </div>
+                                    <div class="con_3_box">
+                                        <div class="item_1">004</div>
+                                        <div class="item_2"><img src="images/lip03.jpg" width="480" height="657" alt="제품4"></div>
+                                        <!--제품 hover 메뉴-->
+                                        <div class="item_3_hovoer_bg"></div>
+                                        <div class="item_3_hovoer_menu">
+                                            <div class="item3_bot_wrap">
+                                                <div class="con3_item3_wrap_position
+">
+                                                    <div class="item3_bot_txt1">
+                                                        <p class="item3_p1">LIP STICK BALM</p>
+                                                        <p class="item3_p2">59,000 KRW</p>
+                                                    </div>
+                                                    <div class="item3_bot_txt2">
+                                                        5 Colors
+                                                    </div>
+                                                    <div class="item3_bot_txt3">
+                                                        <div class="item3_bot_btn">Add to Cart</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--/제품 hover 메뉴-->
+                                    </div>
                                 </div>
 
                             </div>
@@ -573,7 +548,7 @@ include_once("./_common.php");
         
     </body>
 </html>
-
+<script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
     <script>
         $(function(){
             
@@ -597,46 +572,23 @@ include_once("./_common.php");
             // acoAco.css("border","none");
             
             const acoAco = $('.aco_list li a');
-
             acoAco.on("click", function(){
                 const item = $(this);
 
                 // acoAco.parent().find('.text_box').stop().slideUp();
-                /*//다른거 열어도 열려있게 만드는건데
-                //열고 다른거 열고 기존거 닫으려고 하면 두 번 클릭해야 닫힘
-                //아직 해결 못함(230628)             */
-                // item.parent().find('.text_box').stop().slideUp();
+                item.parent().find('.text_box').stop().slideUp();
 
-                // if(item.hasClass('active')){
-
-                //     item.find('.text_box').stop().slideUp();
-                //     item.removeClass('active');
-                //     item.css("border-bottom","none");
-
-                //     console.log(item.hasClass('active'));
-                // } else {
-                //     console.log(item.hasClass('active'));
-
-                //     item.parent().find('.text_box').stop().slideDown();
-                //     acoAco.removeClass('active');
-                //     item.addClass('active');
-                //     item.css("border-bottom","2px solid #111");
-
-                //     console.log(item.hasClass('active'));
-                // }
-                
-
-                //toggleClass로 새로 만듦.
-                let submenu = item.parent().find('p');
-                if( submenu.is(":visible")){
-                    submenu.slideUp();
-                    item.css("border-bottom","3px solid rgba(80,80,80,0)");
-                } else {
-                    item.css("border-bottom","3px solid rgba(80,80,80,1)");
-                    submenu.slideDown();
+                if(item.hasClass('active')){
+                    item.find('.text_box').stop().slideUp();
+                    item.removeClass('active');
+                    $(this).css("border-bottom","none");
+                }else{
+                    item.parent().find('.text_box').stop().slideDown();
+                    acoAco.removeClass('active');
+                    item.addClass('active');
+                    $(this).css("border-bottom","2px solid #111");
                 }
-                item.parent().find('p').toggleClass("text_box");
-            }); 
+            });
     
 
 
@@ -825,47 +777,6 @@ include_once("./_common.php");
                     "opacity":"0"
                 });
             });
-
-            //드래그로 상품 리스트 이동 (기존)
-
-            // var isDragging = false;
-            // var startPositionX;
-            // var startPositionY;
-            // var dragContainer = document.getElementById("con_3_box_wrap");
-    
-            // dragContainer.addEventListener("mousedown", function (event) {
-            //     isDragging = true;
-            //     startPositionX = event.clientX - parseInt(dragContainer.style.left || 0);
-            //     event.preventDefault(); 
-            //     if(isDragging){
-            //         dragContainer.addEventListener("mouseout", function (event) {
-            //             isDragging=false;
-            //         });
-            //     }
-            // });
-    
-            // dragContainer.addEventListener("mousemove", function (event) {
-            //     if (isDragging) {
-            //         var offsetX = event.clientX - startPositionX;
-            //         var offsetY = event.clientY - startPositionY;
-            //         dragContainer.style.left = offsetX + "px";
-            //     }
-            // });
-    
-            // dragContainer.addEventListener("mouseup", function () {
-            //     isDragging = false;
-            // });
-
-
-            
-
-
-
-
-
-
-
-
 
             // content_4 product1 마우스오버 이벤트
             $(".4_hoverBox").hover(function(){

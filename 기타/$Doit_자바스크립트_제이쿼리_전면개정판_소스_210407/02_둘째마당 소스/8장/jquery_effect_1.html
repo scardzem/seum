@@ -25,7 +25,7 @@ $(function( ) {
 	});
 
 	$(".btn3").on("click", function( ) {
-		$(".box").slideToggle(1000, "linear");
+		$(".box").stop().slideToggle(300, "linear");
 	});
 
 	$(".btn4").on("click", function( ) {
@@ -42,6 +42,7 @@ $(function( ) {
 	.content{
 		width:400px;
 		background-color: #eee;
+		
 	}
 </style>
 </head>

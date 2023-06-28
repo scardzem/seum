@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> Plugin </title>
+<script src="js/jquery.js"></script>
+<script src="js/jquery-ui-1.10.4.custom.min.js"></script>
+<style>
+	.draggable { width: 90px; height: 50%; float: left; border:1px solid #333; }
+	#containment-wrapper { width: 95%; height:150px; border:2px solid #ccc; }
+	p { margin:0; }
+</style>
+<script>
+$(function() {
+	// $(".layer_popup").draggable();
+	$( "#draggable3" ).draggable({ containment: "#containment-wrapper", scroll: false, axis: "x" });
+});
+
+
+
+</script>
+</head>
+<body>
+
+<div id="containment-wrapper">
+  <div id="draggable3" class="draggable ui-widget-content">
+    <p>I&apos;m contained within the box</p>
+  </div>
+
+
+
+</body>
+</html>

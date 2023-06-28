@@ -16,7 +16,7 @@
         <div class="container" style="width: 90vw; height: 90vw; background: #999">
             <div id="drag-container"
                 style="
-                    width: 200px;
+                    width: 800px;
                     height: 200px;
                     background: skyblue;
                     position: absolute;
@@ -53,6 +53,11 @@
                 startPositionX = event.clientX - parseInt(dragContainer.style.left || 0);
                 // startPositionY = event.clientY - parseInt(dragContainer.style.top || 0);
                 event.preventDefault(); // 기본 이벤트 취소
+                if(isDragging){  //영역 벗어나면 드래그 멈춤
+                    dragContainer.addEventListener("mouseout", function (event) {
+                        isDragging=false;
+                    });
+                }
             });
     
             dragContainer.addEventListener("mousemove", function (event) {
