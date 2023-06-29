@@ -1,19 +1,10 @@
 <?php include_once("./_common.php"); ?>
 
 <?php
-    $age = 24;
+    $str = "welcome to everdevel";
 
-    switch ($age){
-        case ($age >= 10 && $age <= 19):
-            echo "10대입니다.";
-            break;
-
-        case ($age >= 20 && $age <= 29):
-            echo "20대입니다.";
-            break;
-
-        case ($age >= 30 && $age <= 39):
-            echo "30대입니다.";
-            break;
-    }
+    //변수 str에 있는 everdevel을 beancent로 치환
+    $changeWord = str_replace('everdevel','beancent',$str);
+    echo $changeWord;
 ?>
+
