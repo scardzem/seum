@@ -1,7 +1,7 @@
 <?php
     include $_SERVER['DOCUMENT_ROOT'].'/php/108-2-connectDB.php';
 
-    $sql = "INSERT INTO myMember(userId, name, password, ";
+    $sql = "INSERT INTO jsh_myMember(userId, name, password, ";  //테이블명 jsh_myMember로 
     $sql .= "phone, email, birthDay, gender, regTime) VALUES ";
 
     $member = array();
@@ -22,7 +22,7 @@
 
         $query = $sql.$m;
 
-        $res = $dbConnect->query($query);
+        $res = sql_query($sql);   //이거 책 예제랑 다름. 
 
         if($res) {
             echo "데이터 입력 성공<br>";

@@ -1,23 +1,22 @@
-<?php include_once("./_common.php"); ?>
-
 <?php
-    function checkEmail($email){
-        $emailCheck = filter_Var($email, FILTER_VALIDATE_EMAIL);
+include_once("./_common.php");
 
-        $returnInfo = false;
-        if($emailCheck){
-            $returnInfo = true;
-        }
+$sql = "SELECT name, userId ,password,phone,email,birthDay, gender, regTime FROM jsh_myMember";
+$result =  sql_query($sql);
 
-        return $returnInfo;
+$dataCount = $result->num_rows;
 
-    }
+for($i = 0; $i < $dataCount; $i++){
+    $memberInfo = $result->fetch_array(MYSQLI_NUM);
+    echo "이름 : ".$memberInfo[0];
+    echo "아이디 : ".$memberInfo[1];
+    echo "비밀번호 : ".$memberInfo[2];
+    echo "전화번호 : ".$memberInfo[3];
+    echo "이메일 : ".$memberInfo[4];
+    echo "생일 : ".$memberInfo[5];
+    echo "성별 : ".$memberInfo[6];
+    echo "<br>";
+ 
+}
 
-    $email = "mybookforweb@gmail.com";
-
-    if (checkEmail($email)) {
-        echo "{$email}는 올바른 이메일 주소 입니다.";
-    } else {
-        echo "{$email}는 잘못된 이메일 주소 입니다.";
-    }
 ?>
