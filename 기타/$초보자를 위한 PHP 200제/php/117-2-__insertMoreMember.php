@@ -1,7 +1,7 @@
 <?php
     include $_SERVER['DOCUMENT_ROOT'].'/php/108-2-connectDB.php';
 
-    $sql = "INSERT INTO jsh_myMember(userId, name, password, ";  //테이블명 jsh_myMember로 
+    $sql = "INSERT INTO myMember(userId, name, password, ";  //테이블명 jsh_myMember로 
     $sql .= "phone, email, birthDay, gender, regTime) VALUES ";
 
     $member = array();
@@ -22,7 +22,9 @@
 
         $query = $sql.$m;
 
-        $res = sql_query($sql);   //이거 책 예제랑 다름. 
+        $res = $dbConnect->query($query);  //
+        //$res = sql_query($query);   //책 예제랑 다름. 여기는 http://cmme2017.godohosting.com/cmme/bbs/register_form.php 여기서 회원가입버튼 누르면 action 어디로 가는지 찾은다음
+                                        //filezila에서 그 파일 열어보면 INSERT INTO를 PHP에서 어떻게 DB로 처리하는지 나오는데, 그게 왼쪽에 저 문장임.
 
         if($res) {
             echo "데이터 입력 성공<br>";
