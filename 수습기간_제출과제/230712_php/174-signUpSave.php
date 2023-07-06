@@ -116,13 +116,19 @@
 
         if ($result) {
             $sql2 = "SELECT myMemberID FROM jsh_member WHERE email = '{$email}'";
+            $result2 = sql_query($sql2);
+            if($result2){
+                $row = $result->fetch_array(MYSQL_ASSOC);
+                $memberIdVal = $row['myMemberID'];
+            }
             // $_SESSION['memberID'] = $dbConnect->insert_id;
-            $_SESSION['memberID'] = $dbConnect->insert_id;  //$dbConnect->insert_id 여기서 insert_id를 쓰면 $result가 true일 때니까 위에 insert문이 true라는 의미.
+            //$_SESSION['memberID'] = $dbConnect->insert_id;  //$dbConnect->insert_id 여기서 insert_id를 쓰면 $result가 true일 때니까 위에 insert문이 true라는 의미.
                                                             //회원가입 창이고, 테이블 구조 보면 memberId가 있는데 위에 insert문에서는 안 썼다. 왜냐면 자동으로 생성되니까(auto_increment)
                                                             //지금 이 문장은 세션에 'memberID'변수에 $dbConnect->insert_id 이 값을 대입한다는 건데, insert_id가 
                                                             //값을 하나씩 추가해준다고 한다. 그걸 memberID에 넣어서 세션으로 사용하는 것인데, 세션의 사용 이유가 본인 확인이니까
                                                             //$dbConnect를 건드릴 수 없는 지금은 우측의 저 부분을 지우고 위에 SELECT문으로 방금 윗줄에서 insert 한 정보의 email, pw를 select 해서
                                                             //이 줄의 우변에 넣어서 값을 대입해주면 원래 하려고 하는 기능이 작동 될 것.
+            $_SESSION['memberID'] = $memberIDVal;  //$dbConnect->insert_id; id를 만들어서 세션에 넣는 대신 PK인 memberID의 값(해당 email과 일치하는 사람의 memberId)을 대입
             $_SESSION['nickName'] = $nickName;
             Header("Location:../index.php");
         } else {
