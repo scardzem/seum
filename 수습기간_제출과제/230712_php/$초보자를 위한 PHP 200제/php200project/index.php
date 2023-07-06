@@ -1,8 +1,7 @@
 <?php
-header('Content-Type: text/html; charset=utf-8');//추가
-include_once("./_common.php");
+    header('Content-Type: text/html; charset=utf-8');//추가
+    include $_SERVER['DOCUMENT_ROOT'].'/php200project/common/171-session.php';
 ?>
-
 <!doctype html>
 <html>
 <head>
