@@ -1,22 +1,25 @@
 <?php
+    include_once("./_common.php");
     header('Content-Type: text/html; charset=utf-8');//추가
+
+
     //전체 레코드 수 구하기
-    $sql = "SELECT count(boardID) FROM board";
-    $result = $dbConnect->query($sql);
+    $sql = "SELECT count(boardID) FROM jsh_board";
+    $result = sql_query($sql);
 
     $boardTotalCount = $result->fetch_array(MYSQLI_ASSOC);
     $boardTotalCount = $boardTotalCount['count(boardID)'];
 
     //총 페이지 수
-    $totalPage = ceil($boardTotalCount / $numView);
+    $totalPage = ceil($boardTotalCount / $numView);     //$numView는 183 예제에 선언되어 있다.
 
     //처음 페이지 이동 링크
-    echo "<a href='./183-list.php?page=1'>처음</a>&nbsp;";
+    echo "<a href='183-list.php?page=1'>처음</a>&nbsp;";
 
     //이전 페이지 이동 링크
-    if($page != 1){
+    if($page != 1){     //$page가 1이면 이전 페이지 버튼을 표시하지 않는다.
         $previousPage = $page - 1;
-        echo "<a href='./183-list.php?page={$previousPage}'>이전</a>";
+        echo "<a href='183-list.php?page={$previousPage}'>이전</a>";
     }
 
     //현재 페이지의 앞 뒤 페이지 수 표시수

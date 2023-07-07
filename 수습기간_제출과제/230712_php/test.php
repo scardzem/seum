@@ -2,39 +2,33 @@
 include_once("./_common.php"); 
 ?>
 
-<?php 
-$selectorName = $_POST['selectorName'];
+<?php
+    header('Content-Type: text/html; charset=utf-8');//추가
+    //전체 레코드 수 구하기
+    // $sql = "SELECT count(boardID) FROM jsh_board";
+    // $sql = "SELECT * FROM jsh_member";
+    // $result = sql_query($sql);
 
-    if($selectorName == ''){
-        echo '값을 입력하세요.';
-    } else {
-        $float = $_POST['float'];
-        $width = (int) $_POST['width'];
-        $height = (int) $_POST['height'];
-        $background = $_POST['background'];
+    // $boardTotalCount = $result->fetch_array(MYSQLI_ASSOC);
+    // $boardTotalCount = $boardTotalCount['count(boardID)'];
 
-        $marginTop = (int) $_POST['marginTop'];
-        $marginRight = (int) $_POST['marginRight'];
-        $marginBottom = (int) $_POST['marginBottom'];
-        $marginLeft = (int) $_POST['marginLeft'];
+    // var_dump($boardTotalCount);
+    // echo $result."<br>";
+    // var_dump($result);
 
-        //update 할 것
-        $sql = "UPDATE jsh_controlCSS SET floata = '{$float}',";
-        $sql .= " width = '{$width}', height = '{$height}',";
-        $sql .= "background = '{$background}', marginTop = '{$marginTop}',";
-        $sql .= "marginRight = '{$marginRight}', marginBottom = '{$marginBottom}',";
-        $sql .= "marginLeft = '{$marginLeft}' WHERE selectorName = '{$selectorName}'";
-        $result = sql_query($sql);
+    $sql = "SELECT name FROM jsh_myMember";  //jsh_myMember 테이블의 레코드(행, row)를 불러오는 쿼리.
+    $result = sql_query($sql);  //쿼리 송신
 
-        if( $result ){
-            echo '변경완료';
-        }else{
-            echo '실패';
-        }
+    $dataCount = $result->num_rows;              //num_rows를 쓰면 불러온 레코드의 수를 반환한다.
+
+    for($i = 0; $i<$dataCount; $i++){
+        $memberInfo = $result -> fetch_array(MYSQLI_ASSOC);
+        echo "이름 : ".$memberInfo[0];
+        echo "<br>";
+        echo "아이디 : ".$memberInfo[1];
+        echo "<hr>";
+        var_dump($dataCount);
+        
+        echo "<br>";
     }
-
-    echo '<br>';
-    echo "<a href='./index.php'>CSS 디자인 페이지로 이동</a>";
-    echo '<br>';
-    echo "<a href='./ex.php'>CSS 컨트롤 페이지로 이동</a>";
 ?>

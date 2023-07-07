@@ -1625,6 +1625,6 @@ echo $cssSource;  //생성한 CSS 코드를 출력
 */
 
 
-
+//178. board 테이블 생성 쿼리 - phpMyAdmin에서 생성함. (532)
 
 ?>
