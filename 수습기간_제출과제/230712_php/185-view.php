@@ -32,7 +32,7 @@
 
             echo "<a href='183-list.php'>목록으로 이동</a> &nbsp;&nbsp;&nbsp;";
             echo "<a href='180-writeForm.php?boardID={$boardID}'>글 수정</a> &nbsp;&nbsp;&nbsp;";
-            echo "<a href='202-deleteBoard.php'>글 삭제</a>";
+            echo "<a href='201-deleteBoard.php?boardID={$boardID}'>글 삭제</a>";
         } else {
             echo "잘못된 접근입니다.";
             exit;

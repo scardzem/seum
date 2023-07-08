@@ -12,32 +12,27 @@
         $sql .= "WHERE b.boardID = {$boardID}";
         $result = sql_query($sql);
         
-
+        
         if( $result ) {
+            //업데이트에 보낼 값들
+            echo "<form name=\"\">";
+            echo "<input type=\"hidden\" name=\"\">";
+            echo "</form>";
             $contentInfo = $result->fetch_array(MYSQLI_ASSOC);
-            var_dump($contentInfo); //들어온 값 확인
-            echo "<br><br>수정하는 페이지<br>";
-
-
+            // var_dump($contentInfo); //들어온 값 확인
             echo "<br><br>";
-            echo "제목 : <input type='text' name='title' value='".$contentInfo['title']."'>";   //{$변수}보다 .$변수로 연결하는 방식을 고도몰에서는 주로 사용한다.
-            echo "<br><br>";
-            // echo "제목 : " . $contentInfo['title'] . "<br>";
-            
-            
-            echo "작성자 : " . $contentInfo['nickname'] . "<br>";
+            echo "제목 : ".$contentInfo['title']."<br>";
+            echo "작성자 : ".$contentInfo['nickname']."<br>";
             $regDate = date("Y-m-d h:i");
             echo "게시일 : {$regDate}<br><br>";
             echo "내용 <br>";
-            echo "<textarea>";
-            echo $contentInfo['content'];
-            echo "</textarea>";
-            echo '<br><br>';
-            echo ""
+            echo $contentInfo['content'].'<br><br>';
+
+            
+
             echo "<a href='183-list.php'>목록으로 이동</a> &nbsp;&nbsp;&nbsp;";
-            echo "<a href='183-list.php'>완료</a> &nbsp;&nbsp;&nbsp;";
-            echo "<a href='185-view.php?boardID={$boardID}'>취소</a>";
-            echo $boardID;
+            echo "<a href='180-writeForm.php?boardID={$boardID}'>글 수정</a> &nbsp;&nbsp;&nbsp;";
+            echo "<a href='201-deleteBoard.php?boardID={$boardID}'>글 삭제</a>";
         } else {
             echo "잘못된 접근입니다.";
             exit;
