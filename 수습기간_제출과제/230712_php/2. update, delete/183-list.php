@@ -2,7 +2,7 @@
     include_once("./_common.php");
     header('Content-Type: text/html; charset=utf-8');//추가
     // include $_SERVER['DOCUMENT_ROOT'].'/php200project/common/171-session.php';
-    include '179-checkSignSession.php';
+    // include '179-checkSignSession.php';
     // include $_SERVER['DOCUMENT_ROOT'].'/php200project/connection/163-connection.php';
 ?>
 <!doctype html>

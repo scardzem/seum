@@ -1,11 +1,6 @@
 <?php
     header('Content-Type: text/html; charset=utf-8');   //추가
 
-    // 서버 /www/cmme2017.godohosting.com 여기까지가 root.
-    // include $_SERVER['DOCUMENT_ROOT'].'/php200project/common/171-session.php';
-    // include $_SERVER['DOCUMENT_ROOT'].'/php200project/connection/163-connection.php';
-    // include "171-session.php";       //<- 이런 에러 나와서 뺐음 : Warning: session_start() [function.session-start]: Cannot send session cache limiter - headers already sent (output started at /www/cmme2017.godohosting.com/cmme/jsh/171-session.php:6) in /www/cmme2017.godohosting.com/cmme/jsh/171-session.php on line 6
-    // include "../connection/163-connection.php";
     include_once("./_common.php");
 
     $email = $_POST['userEmail'];  //signInForm.php에서 이메일 주소 보낸 값

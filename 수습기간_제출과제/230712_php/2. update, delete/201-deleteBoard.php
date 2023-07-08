@@ -11,7 +11,8 @@
         echo $boardID;
         echo "삭제 완료"."<br>";
         // echo "<a href='183-list.php'>목록으로 이동</a>";
-        echo "<script>location.replace('183-list.php')</script>";
+        // echo "<script>location.replace('183-list.php')</script>";
+        Header("Location:183-list.php");  //삭제하고 list 페이지로 이동
     } else {
         echo "잘못된 접근입니다.";
         exit;
