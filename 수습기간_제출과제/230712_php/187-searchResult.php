@@ -3,7 +3,7 @@
     header('Content-Type: text/html; charset=utf-8');//추가
     // include $_SERVER['DOCUMENT_ROOT'].'/php200project/common/171-session.php';
     // include $_SERVER['DOCUMENT_ROOT'].'/php200project/connection/163-connection.php';
-    include '179-checkSignSession.php';
+    // include '179-checkSignSession.php';
 
     $searchKeyword = sql_real_escape_string($_POST['searchKeyword']);
     $searchOption = sql_real_escape_string($_POST['option']);

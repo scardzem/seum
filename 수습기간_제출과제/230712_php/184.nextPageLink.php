@@ -46,7 +46,7 @@
             $nowPageColor = 'hotpink';
         }
         echo "&nbsp<a href='./183-list.php?page={$i}'";
-        echo "style='color:{$nowPageColor}'>{$i}</a>&nbsp";
+        echo "style='color:{$nowPageColor}; text-decoration: none'>{$i}</a>&nbsp";
     }
 
     //다음 페이지 이동 링크

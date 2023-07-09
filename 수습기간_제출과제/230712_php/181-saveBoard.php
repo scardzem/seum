@@ -2,12 +2,14 @@
     include_once("./_common.php");
     header('Content-Type: text/html; charset=utf-8');//추가
     
-    include '179-checkSignSession.php'; //로그인을 해야 181-saveBoard.php에 접근할 수 있도록 함.
+    // include '179-checkSignSession.php'; //로그인을 해야 181-saveBoard.php에 접근할 수 있도록 함.
 
     $boardID = $_POST['boardID'];
     // echo "받은 boardID : "."$boardID"."<br>";
     $title = $_POST['title'];
     $content = $_POST['content'];
+    $nickname = $_POST['nickname'];
+    $boardPw = $_POST['boardPw'];
 
     if($title != null && $title != ''){
         // $title = sql_real_escape_string($title);  //real_escape_string()함수는 문자열 속 특수문자가 쿼리문에서 오류를 일으키지 않도록 하는 기능.
@@ -26,7 +28,7 @@
         exit;
     }
 
-    $memberID = $_SESSION['jsh_memberID'];  //board테이블의 memberID필드에 입력할 값을 변수에 대입.
+    // $memberID = $_SESSION['jsh_memberID'];  //board테이블의 memberID필드에 입력할 값을 변수에 대입.
 
     $regTime = time();
 
@@ -36,14 +38,13 @@
             $result = sql_query($sql);
         if($result){
             echo "<script>location.replace('185-view.php?boardID={$boardID}')</script>";
-            // echo "<a href='185-view.php?boardID={$boardID}'>수정된 글 확인</a>";
         } else {
-            echo "저장 실패";
+            echo "저장 실패1";
             echo "<a href='185-view.php?boardID={$boardID}'>게시글로 돌아가기</a>";
         }
     } else {
-        $sql = "INSERT INTO jsh_board (memberID, title, content, regTime) ";
-        $sql .= "VALUES ({$memberID},'{$title}','{$content}',{$regTime})";
+        $sql = "INSERT INTO jsh_board (title, content, regTime, nickname, boardPw) ";
+        $sql .= "VALUES ('{$title}','{$content}',{$regTime}, '{$nickname}', '{$boardPw}')";
         $result = sql_query($sql);
 
 
@@ -53,7 +54,7 @@
             echo "<a href='./183-list.php'>게시글 목록으로 이동</a>";
             exit;
         } else {
-            echo "저장 실패 - 관리자에게 문의";
+            echo "저장 실패2 - 관리자에게 문의"."<br>";
             echo "<a href='./183-list.php'>게시글 목록으로 이동</a>";
             exit;
         }
