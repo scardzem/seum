@@ -9,20 +9,21 @@
     $boardID = $_GET['boardID'];
     $boardUpdate = $_GET['update'];
     $boardDel = $_GET['delete'];
-    $baordPw = $_POST['boardPw'];
+    $boardPw = $_POST['boardPw'];
     
 
-    echo "업데이트 get : ".$boardUpdate;
-    echo "<br>";
-    echo "delete get : ".$boardDel;
-    echo "<br>";
+    // echo "업데이트 get : ".$boardUpdate;
+    // echo "<br>";
+    // echo "delete get : ".$boardDel;
+    // echo "<br>";
+    // echo "입력한 비밀번호 : ".$boardPw;
+    // echo "<br>";
 
     $sql = "SELECT boardID, boardPw FROM jsh_board ";
     $sql .= "WHERE boardID = {$boardID} AND boardPw = {$boardPw}";
     $result = sql_query($sql);
 
     $boardPwInfo = $result->fetch_array(MYSQLI_ASSOC);
-
     if($result){
         if($result->num_rows == 0){
             echo "비밀번호가 틀렸습니다.";
@@ -33,11 +34,11 @@
             exit;
         } else {
             if(isset($boardDel)){
-                // Header("Location:201-deleteBoard.php?boardID={$boardID}");
-                echo "{$boardID}번 글 삭제완료."."<br>";
+                Header("Location:201-deleteBoard.php?boardID={$boardID}");
+                // echo "{$boardID}번 글 삭제완료."."<br>";
             } else if (isset($boardUpdate)){
-                // Header("Location:180-writeForm.php?boardID={$boardID}");
-                echo "{$boardID}번 글 수정완료."."<br>";
+                Header("Location:180-writeForm.php?boardID={$boardID}");
+                // echo "{$boardID}번 글 수정완료."."<br>";
             } else{
                 echo "<br>";
                 // echo "비밀번호 맞음. 입력한 비밀번호 : ".$boardPw;
