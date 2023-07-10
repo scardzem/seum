@@ -12,7 +12,7 @@ include_once("./_common.php");
     <br>
     <a href="183-list.php">게시판</a>
     <br>
-    <a href="nickNameSet.php">기존자료 닉네임세팅</a>
+    <!-- <a href="nickNameSet.php">기존자료 닉네임세팅</a> -->
 
     
     <!-- <br>
