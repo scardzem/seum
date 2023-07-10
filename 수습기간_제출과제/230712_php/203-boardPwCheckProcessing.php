@@ -20,12 +20,12 @@
     // echo "<br>";
 
     $sql = "SELECT boardID, boardPw FROM jsh_board ";
-    $sql .= "WHERE boardID = {$boardID} AND boardPw = {$boardPw}";
+    $sql .= "WHERE boardID = {$boardID} AND boardPw = '{$boardPw}'";
     $result = sql_query($sql);
 
     $boardPwInfo = $result->fetch_array(MYSQLI_ASSOC);
-    if($result){
-        if($result->num_rows == 0){
+    // if($result){
+        if($result->num_rows == 0 || !$result){
             echo "비밀번호가 틀렸습니다.";
             echo "<br>";
             echo "<a href='183-list.php'>목록으로</a>"."<br>";
@@ -45,9 +45,9 @@
                 Header("Location:185-view.php?boardID={$boardID}");
             }
         }
-    } else {
-        echo "접근 불가. 관리자에게 문의하세요.";
-    }
+    // } else {
+    //     echo "접근 불가. 관리자에게 문의하세요.";
+    // }
 
 
 ?>

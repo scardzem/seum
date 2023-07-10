@@ -6,13 +6,7 @@
 <html>
 <head>
     <style>
-        .wrap{
-            width: 1000px;
-            height: 800px;
-            position: relative;
-            left: 50%;
-            transform: translate(-50%, 0);
-        }
+        .wrap{width: 1000px; height: 800px; position: relative; left: 50%; transform: translate(-50%, 0); }
     </style>
 <title>게시물 목록</title>
 </head>
@@ -102,7 +96,8 @@
                         }
                         echo "<td><a href='185-view.php?boardID={$boardInfo['boardID']}'>{$boardInfo['title']}</a></td>";
                         echo "<td>{$boardInfo['nickname']}</td>";  //닉네임
-                        echo "<td>".date('Y-m-d H:i', $boardInfo['regTime'])."</td>";
+                        // echo "<td>".date('Y-m-d H:i', $boardInfo['regTime'])."</td>"; //saveBoard.php에서 날짜를 time()으로 입력하게 하면 이 함수로 날짜형식으로 출력하게 한다.
+                        echo "<td>".$boardInfo['regTime']."</td>";
                         echo "</tr>";
                     }
 
