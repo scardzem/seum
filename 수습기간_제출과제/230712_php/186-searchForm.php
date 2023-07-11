@@ -1,18 +1,19 @@
-<?php header('Content-Type: text/html; charset=utf-8');//추가 ?>
+<?php include_once("./_common.php"); header('Content-Type: text/html; charset=utf-8');//추가 ?>
 
-<!-- <form name="search" method="post" action="187-searchResult.php?search=search"> -->
-<form name="search">
+<!-- amos jsh 230711 기본값으로 GET요청, submit->현재페이지로 action  -->
+<form name="search" style="display:inline-block;">
+
+    <!-- amos jsh 230711 검색어 키워드를 포함해서 GET 요청 보냄 -->
     <input type="text" name="searchKeyword" placeholder="검색어 입력" value="<?php echo $searchKeyword?>" required />
     <?php
-    $optionKey = array('title', 'content', 'tandc', 'torc');
-    $optionVal = array('title'=>'제목', 'content'=>'내용', 'tandc'=>'제목과 내용', 'torc'=>'제목 또는 내용');
-    // echo var_dump($optionVal);
+    //amos jsh 230711 출력되는 option 이름을 한글로 표시하기 위한 변수
+    $optionKrName = array('title', 'content', 'tandc', 'torc');
     ?>
     <select name="option">
         <?php 
-        
-        for($i=0;$i<sizeof($optionKey);$i++){
-            switch($optionKey[$i]){
+        //amos jsh 230711 옵션값을 한글로 텍스트 변경해서 변수에 저장
+        for($i=0;$i<sizeof($optionKrName);$i++){
+            switch($optionKrName[$i]){
                 case 'title':
                     $val = '제목';
                     break;
@@ -27,19 +28,14 @@
                     break;
             }
             
-            if($optionKey[$i]==$searchOption){
-                echo "<option value='{$optionKey[$i]}' selected> {$val} </option>";
-            } else if($optionKey[$i]!=$searchOption){
-                
-
-                echo "<option value='{$optionKey[$i]}'>";
-                echo "{$val}</option>";
+            //amos jsh 230711 option 목록을 출력할 때 검색조건과 일치하는 경우 selected 값을 줘서 페이지 이동 시 선택 옵션이 유지되도록 함
+            if($optionKrName[$i]==$searchOption){
+                echo "<option value='{$optionKrName[$i]}' selected> {$val} </option>";
+            } else if($optionKrName[$i]!=$searchOption){
+                echo "<option value='{$optionKrName[$i]}'>";
+                echo $val."</option>";
             }
         }
-        // echo "<option value='title'>제목</option>";
-        // echo "<option value='content'>내용</option>";
-        // echo "<option value='tandc'>제목과 내용</option>";
-        // echo "<option value='torc'>제목 또는 내용</option>";
         ?>
     </select>
     <input type="submit" value="검색" />

@@ -25,30 +25,6 @@
             break;
     }
 
-    // $sql = "SELECT b.boardID, b.title, m.nickname, b.regTime FROM jsh_board b ";
-    // $sql .= "JOIN jsh_member m ON (b.memberID = m.memberID) ";
-
-    // switch ($searchOption) {    //검색 옵션이 선택되어 있고, 검색어가 있을 때 검색한 텍스트가 포함되어 있는 값을 조회
-    //     case 'title':
-    //         $sql .= "WHERE b.title LIKE '%{$searchKeyword}%'";
-    //         break;
-    //     case 'content':
-    //         $sql .= "WHERE b.content LIKE '%{$searchKeyword}%'";
-    //         break;
-    //     case 'tandc':
-    //         $sql .= "WHERE b.title LIKE '%{$searchKeyword}%'";
-    //         $sql .= " AND ";
-    //         $sql .= "b.content LIKE '%{$searchKeyword}%'";
-    //         break;
-    //     case 'torc':
-    //         $sql .= "WHERE b.title LIKE '%{$searchKeyword}%'";
-    //         $sql .= " OR ";
-    //         $sql .= "b.content LIKE '%{$searchKeyword}%'";
-    //         break;
-    // }
-
-
-
     if(isset($_GET['page'])){
         $page = (int) $_GET['page'];
     }else{
@@ -58,14 +34,9 @@
 
     $firstLimitValue = ($numView * $page) - $numView;
 
-
-
-
-
+    
     $sql = "SELECT boardID, title, nickname, regTime FROM jsh_board ";
     
-    // $sql .= "JOIN jsh_member m ON (b.memberID = m.memberID) ";
-
     switch ($searchOption) {    //검색 옵션이 선택되어 있고, 검색어가 있을 때 검색한 텍스트가 포함되어 있는 값을 조회
         case 'title':
             $sql .= "WHERE title LIKE '%{$searchKeyword}%'";
@@ -104,7 +75,6 @@
 <body>
 <a href="180-writeForm.php">글작성하기</a>
 <a href="183-list.php">목록으로</a>
-<!-- <a href="signIn/177-signOut.php">로그아웃</a> -->
 <table>
     <thead>
     <th>번호</th>
