@@ -3,7 +3,7 @@
     header('Content-Type: text/html; charset=utf-8');//추가
 
     
-
+    echo "<div style='width:500px;position:relative;left:50%;transform:translate(-50%,0);'>";
     echo "<h3>비밀번호 확인하는 페이지</h3>"."<br>";
 
     $boardID = $_GET['boardID'];
@@ -16,7 +16,10 @@
     $boardPwInfo = $result->fetch_array(MYSQLI_ASSOC);
     if($result){
         if($result->num_rows == 0 || !$result){
+            
             echo "비밀번호가 틀렸습니다.";
+            echo "<br>";
+            echo "<a href='185-view.php?boardID={$boardID}'>게시글로 이동</a> &nbsp;&nbsp;&nbsp;";
             echo "<br>";
             echo "<a href='183-list.php'>목록으로</a>"."<br>";
             echo "<br>";
@@ -33,6 +36,6 @@
     } else {
         echo "접근 불가. 관리자에게 문의하세요.";
     }
-
+    echo "</div>";
 
 ?>

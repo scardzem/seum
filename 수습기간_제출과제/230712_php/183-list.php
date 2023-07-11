@@ -49,8 +49,6 @@
         $firstLimitValue = ($numView * $page) - $numView;
 
         //amos jsh 230711 검색 키워드, 옵션 변수에 저장(입력한 특수문자가 코드에 영향을 미치지 않도록 escape_string 사용)
-        // $searchOption = sql_real_escape_string($_GET['option']);
-        // $searchKeyword = sql_real_escape_string($_GET['searchKeyword']);
         $searchOption = $_GET['option'];
         $searchKeyword = $_GET['searchKeyword'];
 
@@ -121,7 +119,6 @@
             ?>
         </div>
     <!-- <br><a href="1_inputData.php">데이터 추가</a>
-    &nbsp;&nbsp;<a href="2_truncate.php">데이터 초기화</a> -->
 </div>
 </body>
 </html>

@@ -1,6 +1,7 @@
 <?php
     include_once("./_common.php");
     header('Content-Type: text/html; charset=utf-8');//추가
+    echo "<div style='position:relative;width:500px;left:50%;transform:translate(-50%, 0%)'>";
     echo "<h3>비밀번호 확인 페이지</h3>";
     echo "<br><br><br>";
 
@@ -23,12 +24,12 @@
         } else {
             echo "문제 발생. 관리자에게 문의하세요";
         }
-        echo "제목 : ".$dataInfo['title']."<br>";
-        echo "비밀번호 : "."<input type='password' name='boardPw' required>"."<br>";
+        echo "글 제목 : ".$dataInfo['title']."<br>";
+        echo "비밀번호 : "."<input type='password' name='boardPw' required>"."<br><br>";
         echo "<input type='submit' value = '확인' /> ";
         echo " <a href='185-view.php?boardID={$boardID}'><button type='button'>취소</button></a>";
         echo "</form>";
-        
+        echo "</div>";
     } else {
         echo "관리자에게 문의하세요."."<br>";
     }

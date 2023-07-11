@@ -21,7 +21,10 @@
                 $regDate = date("Y-m-d");
                 echo "게시일 : {$regDate}<br><br>";
                 echo "내용 <br>";
-                echo $contentInfo['content'].'<br><br>';
+                echo "<textarea style='width:400px;border:solid 1px #999;' rows='10' readonly>";
+                echo $contentInfo['content']."</textarea>";
+                echo "<br>";
+                // echo $contentInfo['content'].'<br><br>';
                 echo "<a href='183-list.php'>목록으로 이동</a> &nbsp;&nbsp;&nbsp;";
                 //amos 230711 수정, 삭제 요청 GET update, delete 담아서 보냄
                 echo "<a href='202-boardPwCheck.php?boardID={$boardID}&update=update'>글 수정</a> &nbsp;&nbsp;&nbsp;";
