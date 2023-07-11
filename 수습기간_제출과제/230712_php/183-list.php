@@ -100,7 +100,6 @@
                         }
                         echo "<td><a href='185-view.php?boardID={$boardInfo['boardID']}'>{$boardInfo['title']}</a></td>";
                         echo "<td>{$boardInfo['nickname']}</td>";
-                        // echo "<td>".date('Y-m-d H:i', $boardInfo['regTime'])."</td>"; //saveBoard.php에서 날짜를 time()으로 입력하게 하면 이 함수로 날짜형식으로 출력하게 한다.
                         echo "<td>".$boardInfo['regTime']."</td>";
                         echo "</tr>";
                     }

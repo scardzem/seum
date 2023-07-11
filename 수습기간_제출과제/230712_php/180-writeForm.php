@@ -17,7 +17,6 @@ if(isset($_GET['boardID']) && (int) $_GET['boardID']>0){
 <head>
 </head>
 <body>
-<!-- <form name="boardWrite" method="post" <?php echo "action='181-saveBoard.php'"?>> -->
 <div style="position:relative;width:700px;left:50%;transform:translate(-50%, 0%);">
     <form name="boardWrite" method="post" action='181-saveBoard.php'>
         <input type="hidden" name="boardID" value = "<?php echo $boardID ?>">

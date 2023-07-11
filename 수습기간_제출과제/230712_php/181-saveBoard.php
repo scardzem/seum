@@ -26,8 +26,6 @@
         $sql .= "VALUES ('{$title}','{$content}', NOW(), '{$nickname}', '{$boardPw}')";
         $result = sql_query($sql);
         if($result){
-            // echo "저장 완료"."<br><br>";
-            // echo "<a href='./183-list.php'>게시글 목록으로 이동</a>";
             Header("Location:183-list.php");
             exit;
         } else {
