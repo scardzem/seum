@@ -35,15 +35,12 @@ if(isset($_GET['boardID']) && (int) $_GET['boardID']>0){
         ?></textarea>
         <br>
     <?php
+        //amos 230711 boardID를 받아오지 않았을 때(신규 글쓰기) 닉네임과 비밀번호 입력
         if(!isset($_GET['boardID'])){
         echo "<p>닉네임 : <input type='text' name='nickname' required> </p>";
         echo "<p>비밀번호 : <input type='password' name='boardPw' required> </p>";
         }
     ?>
-        <!-- <p>닉네임 : <input type="text" name="nickname" required> </p>
-        <br>
-        <p>비밀번호 : <input type="password" name="boardPw" required> </p>
-        <br> -->
         
     <?php
         echo "<a href=\"183-list.php\">목록으로 이동</a>"

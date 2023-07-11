@@ -12,6 +12,7 @@
         
         if( $result ) {
                 $contentInfo = $result->fetch_array(MYSQLI_ASSOC);
+                echo "<div style='position:relative;width:700px;left:50%;transform:translate(-50%, 0%)'>";
                 echo "<h2>View</h2>";
                 echo "<br><br>";
                 echo "제목 : ".$contentInfo['title']."<br>";
@@ -25,6 +26,7 @@
                 //amos 230711 수정, 삭제 요청 GET update, delete 담아서 보냄
                 echo "<a href='202-boardPwCheck.php?boardID={$boardID}&update=update'>글 수정</a> &nbsp;&nbsp;&nbsp;";
                 echo "<a href='202-boardPwCheck.php?boardID={$boardID}&delete=delete'>글 삭제</a>";
+                echo "</div>";
         } else {
             echo "잘못된 접근입니다1.";
             exit;
