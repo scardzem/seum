@@ -3,14 +3,27 @@
     header('Content-Type: text/html; charset=utf-8');//추가
     // include '179-checkSignSession.php';
 
-    
-if(isset($_GET['boardID']) && (int) $_GET['boardID']>0){
+    //(과제 제출본)문제점 - 이렇게 되어 있을땐 수정하는 페이지에서 url을 복사해서 다시 접속해보면 비밀번호 검증 없이 수정 페이지로 접속할 수 있다.
+// if(isset($_GET['boardID']) && (int) $_GET['boardID']>0){
+//     $boardID = $_GET['boardID'];
+//         $sql = "SELECT boardID, title, content, regTime FROM jsh_board ";
+//         $sql .= "WHERE boardID = {$boardID}";
+//         $result = sql_query($sql);
+//     $updateInfo = $result->fetch_array(MYSQLI_ASSOC);
+// }
+
+//비밀번호 받아야만 수정하는 페이지 작동하도록. 서버에서 폴더가 삭제돼서 나중에 기능 되는지 확인해볼것(230711)
+//
+if((int) $_GET['boardID']>0 && $_POST['boardPw']){
     $boardID = $_GET['boardID'];
         $sql = "SELECT boardID, title, content, regTime FROM jsh_board ";
         $sql .= "WHERE boardID = {$boardID}";
         $result = sql_query($sql);
     $updateInfo = $result->fetch_array(MYSQLI_ASSOC);
+} else{
+    echo "잘못된 접근입니다. 관리자에게 문의하세요.";
 }
+
 ?>
 <!doctype html>
 <html>
